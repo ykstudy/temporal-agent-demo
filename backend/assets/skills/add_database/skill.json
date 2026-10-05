@@ -1,0 +1,112 @@
+{
+  "contract_version": "1.1.0",
+  "skill_id": "add_database",
+  "skill_version": "3.0.1",
+  "skill_hash": "53f65ddfdb83da27ab1713b2f4d9647ca715b128904771212555bccba155a8f3",
+  "name": "add_database",
+  "description": "结构示例：完整声明该技能输入、依赖与受控生成输出。",
+  "supported_stacks": [
+    "golang"
+  ],
+  "parameters_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "database": {
+        "default": "postgres",
+        "enum": [
+          "postgres",
+          "mysql",
+          "sqlite"
+        ],
+        "type": "string"
+      },
+      "orm": {
+        "default": "gorm",
+        "enum": [
+          "gorm",
+          "sqlx"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "database",
+      "orm"
+    ]
+  },
+  "default_parameters": {
+    "database": "postgres",
+    "orm": "gorm"
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "input_contract": {
+    "schema_ref": "agent.schema.json#/$defs/DatabaseParameters",
+    "file_sha256": "f11c18cd067de88d68400524b46d28890352bf0fd74c8abba4fc5a41fe35db9f"
+  },
+  "output_contract": {
+    "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+    "file_sha256": "f11c18cd067de88d68400524b46d28890352bf0fd74c8abba4fc5a41fe35db9f"
+  },
+  "template_dependencies": [
+    {
+      "template_id": "database",
+      "template_version": "3.0.1",
+      "files": [
+        {
+          "path": "render-program.json",
+          "sha256": "17051b2232f474d074037cc3146e734e8eebc6f92ae281f62be56a306faec6f1",
+          "content_ref": {
+            "object_type": "template_content",
+            "object_id": "template_content_17051b2232f474d074037cc3146e734e8eebc6f92ae281f62be56a306faec6f1",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "17051b2232f474d074037cc3146e734e8eebc6f92ae281f62be56a306faec6f1"
+          }
+        }
+      ],
+      "manifest_hash": "520c782a46e01c45e4f531e5cb0985f32a89d7dbc6432a358e17dc945247d171"
+    }
+  ],
+  "write_paths": [
+    "go.mod",
+    "internal/database/database.go",
+    "internal/database/database_test.go",
+    "internal/database/isolation_test.go",
+    "migrations/001_initial.sql"
+  ],
+  "required_permissions": [
+    "tool_go",
+    "workspace_read",
+    "workspace_write"
+  ],
+  "required_tools": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.5",
+      "platform": "darwin_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "post_commands": [
+    {
+      "command_id": "go.test",
+      "executable": "go",
+      "arguments": [
+        "test",
+        "./..."
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    }
+  ],
+  "required_check_ids": [
+    "check.go_build",
+    "check.go_test",
+    "check.secret_boundary"
+  ]
+}

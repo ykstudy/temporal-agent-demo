@@ -1,0 +1,11 @@
+{
+  "contract_version": "1.2.0",
+  "sources": {
+    "common.schema.json": "6fb120230330833e2a1ce29da895eeb41a6d74135459e422cb3a29305896b63d",
+    "agent.schema.json": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+    "message.schema.json": "0a4882b6aeaeb06bd7e3771938dbc8b22b90b17f5978cdfb6a85649bcf9bbc9b"
+  },
+  "canonicalizer": "Python rfc8785==0.1.4",
+  "scope": "Synthetic structural and hash fixtures, not actual execution or approval evidence. Receipt external binding hashes are format-only zero sentinels; semantic closure validation must reject them as execution facts. Existing 1.1 fixtures remain byte-for-byte unchanged.",
+  "fixture_sha256": "5eb9ba1947cdfc138d889a00dc1d029a2ac251a022f26efaa4734be8c0e84d1b"
+}

@@ -1,0 +1,89 @@
+{
+  "kind": "cross_language_jcs_vectors",
+  "reference": "https://www.rfc-editor.org/rfc/rfc8785",
+  "positive": [
+    {
+      "id": "property-order",
+      "input_json": "{\"z\":1, \"a\": [true, null, \"x\"]}",
+      "expected_canonical": "{\"a\":[true,null,\"x\"],\"z\":1}",
+      "expected_sha256": "cc31fc728ab32ccfd6543dd8cce686b9633b3c47fbec82c88a466688f3a8cb81",
+      "source": "RFC 8785 section 3.2.3"
+    },
+    {
+      "id": "negative-zero-and-exponents",
+      "input_json": "[-0.0,1e-7,1e-6,1e20,1e21,4.50,2e-3]",
+      "expected_canonical": "[0,1e-7,0.000001,100000000000000000000,1e+21,4.5,0.002]",
+      "expected_sha256": "f202d8727aa40da2dcbf0f606b7930477a82458a4d5a0c25beeb0a8b65a1ed59",
+      "source": "RFC 8785 section 3.2.2.3"
+    },
+    {
+      "id": "rfc-rounding",
+      "input_json": "[333333333.33333329,1E30,4.50,2e-3,0.000000000000000000000000001]",
+      "expected_canonical": "[333333333.3333333,1e+30,4.5,0.002,1e-27]",
+      "expected_sha256": "7c6bc86d861387d823ae596b79ca0b26567dddc22a77acb1f4e06d441f555adf",
+      "source": "RFC 8785 section 3.2.2"
+    },
+    {
+      "id": "utf16-property-order",
+      "input_json": "{\"דּ\":7,\"😀\":6,\"€\":5,\"ö\":4,\"\\u0080\":3,\"1\":2,\"\\r\":1}",
+      "expected_canonical": "{\"\\r\":1,\"1\":2,\"\":3,\"ö\":4,\"€\":5,\"😀\":6,\"דּ\":7}",
+      "expected_sha256": "4bd52d82f332c2e5c7206abd57c74b45dd4f0fef63ab7af87b8bde4481e450e7",
+      "source": "RFC 8785 section 3.2.3"
+    },
+    {
+      "id": "unicode-not-normalized",
+      "input_json": "{\"é\":\"é\",\"é\":\"é\"}",
+      "expected_canonical": "{\"é\":\"é\",\"é\":\"é\"}",
+      "expected_sha256": "2b8599359615227d4bffe298511d6d9520d9cf98c59adf9541e6e023e41ffe7b",
+      "source": "RFC 8785 section 3.1"
+    },
+    {
+      "id": "escaping",
+      "input_json": "{\"x\":\"<>&/\\u000f\\n\\t\\\\\\\"\"}",
+      "expected_canonical": "{\"x\":\"<>&/\\u000f\\n\\t\\\\\\\"\"}",
+      "expected_sha256": "46d2d5683ac8c6674f49e66145f98a51d87d5f01db34cdcca0418654d2ced0fe",
+      "source": "RFC 8785 section 3.2.2.2"
+    },
+    {
+      "id": "safe-integer-maximum",
+      "input_json": "[9007199254740991,-9007199254740991]",
+      "expected_canonical": "[9007199254740991,-9007199254740991]",
+      "expected_sha256": "84bad60c1793654a7cdca854230af90af531ecc8f7656e2c7b2bd91890017b37",
+      "source": "HASHING.md interoperable integer limit"
+    }
+  ],
+  "strict_json_negative": [
+    {
+      "id": "duplicate-key",
+      "input_json": "{\"x\":1,\"x\":2}"
+    },
+    {
+      "id": "escaped-duplicate-key",
+      "input_json": "{\"x\":1,\"\\u0078\":2}"
+    },
+    {
+      "id": "nan",
+      "input_json": "[NaN]"
+    },
+    {
+      "id": "infinity",
+      "input_json": "[Infinity]"
+    },
+    {
+      "id": "overflow-exponent",
+      "input_json": "[1e999]"
+    },
+    {
+      "id": "unsafe-integer",
+      "input_json": "[9007199254740992]"
+    },
+    {
+      "id": "lone-surrogate-value",
+      "input_json": "{\"x\":\"\\udead\"}"
+    },
+    {
+      "id": "lone-surrogate-key",
+      "input_json": "{\"\\ud800\":1}"
+    }
+  ]
+}

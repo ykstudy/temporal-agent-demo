@@ -1,0 +1,13 @@
+{
+  "scope": "Independent test fixtures, not production capability releases",
+  "sources": {
+    "jcs-vectors.json": {
+      "source": "validation/contracts/fixtures/jcs-vectors.json",
+      "sha256": "04e3afb1711278132afcfbb44f2cf6de5e0b26b092ea5ebe42cc3e17b2a2779f"
+    },
+    "definition-snapshot.valid.json": {
+      "source": "validation/contracts/fixtures/definition-snapshot.valid.json",
+      "sha256": "6fce808ada208aaf1a692b76936cdf30b810b1c0caed9de35e78bfb9e2d4746e"
+    }
+  }
+}

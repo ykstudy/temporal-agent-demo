@@ -1,0 +1,53 @@
+package logging
+
+import (
+    "bytes"
+    "errors"
+    "io"
+    "log/slog"
+    "os"
+    "strings"
+    "testing"
+    "time"
+)
+func TestConsoleAndRedaction(t *testing.T) {
+    t.Setenv("AUTH_SECRET","a-private-canary-value")
+    var out bytes.Buffer
+    if err:=configure(&out,Config{Output:"console"});err!=nil{t.Fatal(err)}
+    slog.Error("event a-private-canary-value", "password","private-password", "nested", slog.GroupValue(slog.String("token","private-token")), "request", map[string]any{"password":"private-map-password", "meta":[]any{map[string]string{"token":"private-map-token"}}})
+    result:=out.String()
+    if !strings.Contains(result,"event") || strings.Contains(result,"a-private-canary-value") || strings.Contains(result,"private-password") || strings.Contains(result,"private-token") || strings.Contains(result,"private-map-password") || strings.Contains(result,"private-map-token"){t.Fatal("logging redaction failed")}
+}
+func TestFileAppendRotationAndRetention(t *testing.T){
+    t.Chdir(t.TempDir())
+    cfg:=Config{Output:"file",Path:"logs/app.log",MaxSize:1<<20,MaxBackups:3,MaxAge:168*time.Hour}
+    w,err:=openRotating(cfg);if err!=nil{t.Fatal(err)}
+    line:=[]byte(strings.Repeat("x",600000))
+    for i:=0;i<5;i++{if _,err=w.Write(line);err!=nil{t.Fatal(err)}}
+    if err=w.Close();err!=nil{t.Fatal(err)}
+    if _,err=os.Stat("logs/app.log.4");!os.IsNotExist(err){t.Fatal("backup count exceeded")}
+    for _,path:=range []string{"logs/app.log","logs/app.log.1","logs/app.log.2","logs/app.log.3"}{if _,err=os.Stat(path);err!=nil{t.Fatal(err)}}
+    old:=time.Now().Add(-8*24*time.Hour);if err=os.Chtimes("logs/app.log.3",old,old);err!=nil{t.Fatal(err)}
+    w,err=openRotating(cfg);if err!=nil{t.Fatal(err)};defer w.Close()
+    if _,err=os.Stat("logs/app.log.3");!os.IsNotExist(err){t.Fatal("expired backup retained")}
+    if _,err=w.Write([]byte("tail"));err!=nil{t.Fatal(err)}
+    content,err:=os.ReadFile("logs/app.log");if err!=nil||len(content)!=600004{t.Fatal("restart did not append")}
+    if _,err=w.Write(make([]byte,(1<<20)+1));err==nil{t.Fatal("oversize record accepted")}
+}
+type brokenWriter struct{}
+func(brokenWriter)Write([]byte)(int,error){return 0,errors.New("injected write failure")}
+func TestWriteFailurePolicyAndStderrFailure(t *testing.T){
+    old:=os.Stderr;closed,err:=os.OpenFile(os.DevNull,os.O_WRONLY,0);if err!=nil{t.Fatal(err)};closed.Close();os.Stderr=closed;defer func(){os.Stderr=old}()
+    for _,policy:=range []string{"degrade","fail_closed"}{
+        if err:=configure(brokenWriter{},Config{Output:"console",OnWriteError:policy});err!=nil{t.Fatal(err)}
+        slog.Error("failure")
+        status:=Status();if status.Status!="degraded"||status.Failures!=1||status.Ready!=(policy=="degrade"){t.Fatal("write failure was hidden")}
+    }
+    m:=&monitor{};w:=observedWriter{out:io.Discard,monitor:m};if _,err=w.Write([]byte("ok"));err!=nil{t.Fatal(err)}
+}
+func TestRejectUnsafeInitialization(t *testing.T){
+    t.Chdir(t.TempDir());cfg:=Config{Output:"file",Path:"../escape.log",MaxSize:1<<20,MaxBackups:3,MaxAge:168*time.Hour}
+    if _,err:=openRotating(cfg);err==nil{t.Fatal("escaping log path accepted")}
+    cfg.Path="logs/app.log";if err:=os.Symlink(t.TempDir(),"logs");err!=nil{t.Skip("symlinks unavailable")}
+    if _,err:=openRotating(cfg);err==nil{t.Fatal("symlink log path accepted")}
+}

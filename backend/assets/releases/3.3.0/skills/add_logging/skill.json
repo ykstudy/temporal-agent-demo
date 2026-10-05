@@ -1,0 +1,161 @@
+{
+  "contract_version": "1.4.0",
+  "skill_id": "add_logging",
+  "skill_version": "3.3.0",
+  "skill_hash": "5678c7e4fbdf4438b53d93ca3abc91b13cdf04c19bf6665042c51acdd753743f",
+  "name": "结构化日志",
+  "description": "默认console/json/info，file仅受控logs目录并有轮转与故障策略。",
+  "supported_stacks": [
+    "golang"
+  ],
+  "parameters_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "log_level": {
+        "default": "info",
+        "enum": [
+          "debug",
+          "info",
+          "warn",
+          "error"
+        ],
+        "type": "string"
+      },
+      "log_format": {
+        "default": "json",
+        "enum": [
+          "json",
+          "text"
+        ],
+        "type": "string"
+      },
+      "log_output": {
+        "default": "console",
+        "enum": [
+          "console",
+          "file"
+        ],
+        "type": "string"
+      },
+      "log_path": {
+        "default": "logs/app.log",
+        "pattern": "^logs/[A-Za-z0-9._/-]+$",
+        "type": "string"
+      },
+      "log_max_size": {
+        "default": 10485760,
+        "maximum": 1073741824,
+        "minimum": 1048576,
+        "type": "integer"
+      },
+      "log_max_backups": {
+        "default": 3,
+        "maximum": 100,
+        "minimum": 1,
+        "type": "integer"
+      },
+      "log_max_age": {
+        "default": "168h",
+        "maxLength": 64,
+        "minLength": 2,
+        "type": "string"
+      },
+      "log_on_write_error": {
+        "default": "degrade",
+        "enum": [
+          "degrade",
+          "fail_closed"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "log_level",
+      "log_format",
+      "log_output",
+      "log_path",
+      "log_max_size",
+      "log_max_backups",
+      "log_max_age",
+      "log_on_write_error"
+    ]
+  },
+  "default_parameters": {
+    "log_format": "json",
+    "log_level": "info",
+    "log_max_age": "168h",
+    "log_max_backups": 3,
+    "log_max_size": 10485760,
+    "log_on_write_error": "degrade",
+    "log_output": "console",
+    "log_path": "logs/app.log"
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "input_contract": {
+    "schema_ref": "agent.schema.json#/$defs/LoggingParameters",
+    "file_sha256": "c14ea1d94888534d33c2caf31d064de25875dd1e4476dd0da4cd234e5bd1b48c"
+  },
+  "output_contract": {
+    "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+    "file_sha256": "c14ea1d94888534d33c2caf31d064de25875dd1e4476dd0da4cd234e5bd1b48c"
+  },
+  "template_dependencies": [
+    {
+      "template_id": "logging",
+      "template_version": "3.1.0",
+      "files": [
+        {
+          "path": "render-program.json",
+          "sha256": "499b20402dd7f04e21a84bd0c8546d9b793c135f0ce2e07ea08b37145f46e3fc",
+          "content_ref": {
+            "object_type": "template_content",
+            "object_id": "template_content_499b20402dd7f04e21a84bd0c8546d9b793c135f0ce2e07ea08b37145f46e3fc",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "499b20402dd7f04e21a84bd0c8546d9b793c135f0ce2e07ea08b37145f46e3fc"
+          }
+        }
+      ],
+      "manifest_hash": "3d88797204f14081a2cfae3597bf123b7cc1425b6d2d3bbd0a70be73b667261c"
+    }
+  ],
+  "write_paths": [
+    "internal/logging/logging.go",
+    "internal/logging/logging_test.go"
+  ],
+  "required_permissions": [
+    "tool_go",
+    "workspace_read",
+    "workspace_write"
+  ],
+  "required_tools": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.5",
+      "platform": "darwin_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "post_commands": [
+    {
+      "command_id": "go.test",
+      "executable": "go",
+      "arguments": [
+        "test",
+        "./..."
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    }
+  ],
+  "required_check_ids": [
+    "check.go_build",
+    "check.go_test",
+    "check.secret_boundary"
+  ]
+}

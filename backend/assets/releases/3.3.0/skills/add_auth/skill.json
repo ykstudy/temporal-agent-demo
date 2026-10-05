@@ -1,0 +1,106 @@
+{
+  "contract_version": "1.4.0",
+  "skill_id": "add_auth",
+  "skill_version": "3.3.0",
+  "skill_hash": "e4588fc8b5b66a2d97b0f1a7aabb9f798160c4161a53b240afe9532d1cf8b65a",
+  "name": "add_auth",
+  "description": "结构示例：完整声明该技能输入、依赖与受控生成输出。",
+  "supported_stacks": [
+    "golang"
+  ],
+  "parameters_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "auth": {
+        "default": "jwt",
+        "enum": [
+          "jwt",
+          "session"
+        ],
+        "type": "string"
+      },
+      "token_ttl": {
+        "default": "24h",
+        "maxLength": 64,
+        "minLength": 2,
+        "type": "string"
+      }
+    },
+    "required": [
+      "auth",
+      "token_ttl"
+    ]
+  },
+  "default_parameters": {
+    "auth": "jwt",
+    "token_ttl": "24h"
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "input_contract": {
+    "schema_ref": "agent.schema.json#/$defs/AuthenticationParameters",
+    "file_sha256": "c14ea1d94888534d33c2caf31d064de25875dd1e4476dd0da4cd234e5bd1b48c"
+  },
+  "output_contract": {
+    "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+    "file_sha256": "c14ea1d94888534d33c2caf31d064de25875dd1e4476dd0da4cd234e5bd1b48c"
+  },
+  "template_dependencies": [
+    {
+      "template_id": "auth",
+      "template_version": "3.1.0",
+      "files": [
+        {
+          "path": "render-program.json",
+          "sha256": "184eb404c503c30a3d46cb3fb56b6d887da83b8910c801d6733b304726841cb0",
+          "content_ref": {
+            "object_type": "template_content",
+            "object_id": "template_content_184eb404c503c30a3d46cb3fb56b6d887da83b8910c801d6733b304726841cb0",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "184eb404c503c30a3d46cb3fb56b6d887da83b8910c801d6733b304726841cb0"
+          }
+        }
+      ],
+      "manifest_hash": "c650af35e59949af16629c869ec8c0c17a464da4c6de4806af61c22ba2afcbc5"
+    }
+  ],
+  "write_paths": [
+    "internal/auth/auth.go",
+    "internal/auth/auth_test.go"
+  ],
+  "required_permissions": [
+    "tool_go",
+    "workspace_read",
+    "workspace_write"
+  ],
+  "required_tools": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.5",
+      "platform": "darwin_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "post_commands": [
+    {
+      "command_id": "go.test",
+      "executable": "go",
+      "arguments": [
+        "test",
+        "./..."
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    }
+  ],
+  "required_check_ids": [
+    "check.go_build",
+    "check.go_test",
+    "check.secret_boundary"
+  ]
+}

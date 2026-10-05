@@ -1,0 +1,27 @@
+{
+  "cgo_enabled": false,
+  "contract_version": "1.2.0",
+  "definition_hash": "816e847d34581158c3743c96a91554a7f541db53eb8e2d4c7f1e476838e14c5b",
+  "definition_version": "3.1.2",
+  "source_definition_hash": "f3493b1ea12811fc72aab7e9557cd84b90b1a411c099ba1db02b416f083e68da",
+  "tool": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.5",
+      "platform": "darwin_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "variants": [
+    {
+      "go_mod_sha256": "e6d9dc9680e049e4c19971c7ad035b54fa1d5ce648d19fd5538f091b7e0a0a72",
+      "go_sum_sha256": "550c2e32f74c167f5a903d0484d388e8fce62337031f20aa5d297c0de48c075d",
+      "variant": "sqlite_gorm"
+    },
+    {
+      "go_mod_sha256": "f6bcd8a6762e5f0c37c0fc8f14b2f9c40ea933e912fcc98b28c42c95578d173b",
+      "go_sum_sha256": "946811c0aedee2c08d4e82213578505958112079fe4b5a7f545fdc90aa891d05",
+      "variant": "sqlite_sqlx"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentstudio.invalid/contracts/1.3.0/common.schema.json",
+  "title": "项目创建 Agent 公共字段契约 1.3.0",
+  "$comment": "目标规范；.invalid 是稳定标识，不是运行时下载地址。所有引用离线登记。",
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "Hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "RunState": {
+      "enum": [
+        "INTAKE",
+        "CLARIFY",
+        "PLAN",
+        "IMPLEMENT",
+        "VERIFY",
+        "DELIVER",
+        "DONE",
+        "PAUSED",
+        "BLOCKED",
+        "FAILED",
+        "CANCELLED"
+      ]
+    },
+    "ExecutionMode": {
+      "enum": [
+        "temporal",
+        "local"
+      ]
+    },
+    "DecisionMode": {
+      "enum": [
+        "model",
+        "rules"
+      ]
+    },
+    "DeliveryMode": {
+      "enum": [
+        "gitlab",
+        "local"
+      ]
+    },
+    "Modes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "execution_mode",
+        "decision_mode",
+        "delivery_mode"
+      ],
+      "properties": {
+        "execution_mode": {
+          "$ref": "#/$defs/ExecutionMode"
+        },
+        "decision_mode": {
+          "$ref": "#/$defs/DecisionMode"
+        },
+        "delivery_mode": {
+          "$ref": "#/$defs/DeliveryMode"
+        }
+      }
+    },
+    "PositiveVersion": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "RelativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)[A-Za-z0-9._/-]+$"
+    },
+    "ObjectRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_type",
+        "object_id",
+        "object_version",
+        "source_version",
+        "hash"
+      ],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "run",
+            "message",
+            "proposal",
+            "definition",
+            "plan",
+            "manifest",
+            "verification_report",
+            "artifact",
+            "summary",
+            "skill",
+            "schema",
+            "template",
+            "approval",
+            "decision",
+            "validation",
+            "execution",
+            "evidence",
+            "workspace",
+            "template_content",
+            "context",
+            "budget",
+            "budget_reservation",
+            "budget_settlement",
+            "verification_candidate",
+            "package",
+            "ci_artifact"
+          ]
+        },
+        "object_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "object_version": {
+          "$ref": "#/$defs/PositiveVersion"
+        },
+        "source_version": {
+          "$ref": "#/$defs/PositiveVersion"
+        },
+        "hash": {
+          "$ref": "#/$defs/Hash"
+        }
+      }
+    }
+  }
+}

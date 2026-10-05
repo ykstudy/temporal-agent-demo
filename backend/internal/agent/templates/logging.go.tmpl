@@ -1,0 +1,166 @@
+package logging
+
+import (
+    "errors"
+    "encoding/json"
+    "fmt"
+    "io"
+    "log/slog"
+    "os"
+    "path/filepath"
+    "strings"
+    "sync"
+    "sync/atomic"
+    "time"
+)
+
+type Config struct { Output, Path, OnWriteError string; MaxSize int64; MaxBackups int; MaxAge time.Duration }
+type Health struct { Status string `json:"status"`; Failures uint64 `json:"failures"`; Ready bool `json:"ready"` }
+type monitor struct { failures atomic.Uint64; failClosed bool }
+var current = struct { sync.Mutex; monitor *monitor; closer io.Closer }{}
+
+func Configure(out io.Writer) error {
+    age, err := time.ParseDuration({{quote .LogMaxAge}})
+    if err != nil { return err }
+    return configure(out, Config{Output:{{quote .LogOutput}}, Path:{{quote .LogPath}}, MaxSize:{{.LogMaxSize}}, MaxBackups:{{.LogMaxBackups}}, MaxAge:age, OnWriteError:{{quote .LogOnWriteError}}})
+}
+func configure(out io.Writer, cfg Config) error {
+    var closer io.Closer
+    if cfg.Output == "file" {
+        sink, err := openRotating(cfg)
+        if err != nil { return errors.New("log file initialization failed") }
+        out, closer = sink, sink
+    }
+    if out == nil { return errors.New("log output is required") }
+    m := &monitor{failClosed:cfg.OnWriteError=="fail_closed"}
+    writer := &observedWriter{out:out, monitor:m}
+    level := map[string]slog.Level{"debug":slog.LevelDebug,"info":slog.LevelInfo,"warn":slog.LevelWarn,"error":slog.LevelError}["{{.LogLevel}}"]
+    opts := &slog.HandlerOptions{Level:level, ReplaceAttr:redact}
+{{if eq .LogFormat "json"}}    handler := slog.NewJSONHandler(writer, opts)
+{{else}}    handler := slog.NewTextHandler(writer, opts)
+{{end}}    current.Lock()
+    if current.closer != nil { _ = current.closer.Close() }
+    current.monitor, current.closer = m, closer
+    slog.SetDefault(slog.New(handler))
+    current.Unlock()
+    return nil
+}
+func Status() Health {
+    current.Lock(); m:=current.monitor; current.Unlock()
+    if m == nil { return Health{Status:"unconfigured", Ready:false} }
+    failures := m.failures.Load()
+    if failures > 0 { return Health{Status:"degraded", Failures:failures, Ready:!m.failClosed} }
+    return Health{Status:"ok", Ready:true}
+}
+func Ready() bool { return Status().Ready }
+func Close() error {
+    current.Lock(); defer current.Unlock()
+    if current.closer == nil { return nil }
+    err:=current.closer.Close(); current.closer=nil
+    if err!=nil && current.monitor!=nil { current.monitor.failures.Add(1) }
+    return err
+}
+func sensitiveKey(key string) bool {
+    key = strings.ToLower(key)
+    for _, sensitive := range []string{"secret","password","passwd","token","authorization","credential","dsn","api_key"} { if strings.Contains(key,sensitive) { return true } }
+    return false
+}
+func redactText(value string) string {
+    for _, name := range []string{"AUTH_SECRET","DATABASE_DSN","AI_API_KEY","GITLAB_TOKEN"} { if secret:=os.Getenv(name);secret!="" { value=strings.ReplaceAll(value,secret,"[redacted]") } }
+    return value
+}
+func redactJSON(value any) any {
+    switch v := value.(type) {
+    case string: return redactText(v)
+    case map[string]any: for key,item := range v { if sensitiveKey(key) { v[key]="[redacted]" } else { v[key]=redactJSON(item) } }; return v
+    case []any: for i,item:=range v { v[i]=redactJSON(item) };return v
+    default: return value
+    }
+}
+func redact(_ []string, attr slog.Attr) slog.Attr {
+    if sensitiveKey(attr.Key) { return slog.String(attr.Key,"[redacted]") }
+    switch attr.Value.Kind() {
+    case slog.KindString: attr.Value=slog.StringValue(redactText(attr.Value.String()))
+    case slog.KindAny:
+        if err,ok:=attr.Value.Any().(error);ok { attr.Value=slog.StringValue(redactText(err.Error()));return attr }
+        encoded,err:=json.Marshal(attr.Value.Any());var value any
+        if err!=nil || json.Unmarshal(encoded,&value)!=nil { attr.Value=slog.StringValue("[unserializable]") } else { attr.Value=slog.AnyValue(redactJSON(value)) }
+    }
+    return attr
+}
+type observedWriter struct { out io.Writer; monitor *monitor }
+func (w *observedWriter) Write(p []byte) (int,error) {
+    n,err:=w.out.Write(p)
+    if err==nil && n!=len(p) { err=io.ErrShortWrite }
+    if err!=nil {
+        w.monitor.failures.Add(1)
+        // A fixed diagnostic cannot expose provider errors or credential values.
+        _,_ = fmt.Fprintln(os.Stderr,"structured logging write failed; health=degraded")
+    }
+    return n,err
+}
+type rotatingWriter struct { mu sync.Mutex; root *os.Root; cfg Config; file *os.File; size int64 }
+func openRotating(cfg Config) (*rotatingWriter,error) {
+    if cfg.Output!="file" || !strings.HasPrefix(cfg.Path,"logs/") || cfg.Path=="" || filepath.IsAbs(cfg.Path) || strings.Contains(cfg.Path,"\\") || filepath.Clean(cfg.Path)!=cfg.Path { return nil,errors.New("invalid log path") }
+    for _, part:=range strings.Split(cfg.Path,"/") { if part=="." || part==".." || part=="" { return nil,errors.New("invalid log path") } }
+    if cfg.MaxSize<1<<20 || cfg.MaxSize>1<<30 || cfg.MaxBackups<1 || cfg.MaxBackups>100 || cfg.MaxAge<time.Hour || cfg.MaxAge>365*24*time.Hour { return nil,errors.New("invalid rotation limits") }
+    root,err:=os.OpenRoot(".");if err!=nil{return nil,err}
+    w:=&rotatingWriter{root:root,cfg:cfg}
+    parent:=filepath.Dir(cfg.Path)
+    prefix:=""
+    if parent!="." { for _,part:=range strings.Split(parent,"/") {
+        prefix=filepath.Join(prefix,part)
+        if err=w.regular(prefix,true);err!=nil{root.Close();return nil,err}
+        if err=root.Mkdir(prefix,0700);err!=nil&&!os.IsExist(err){root.Close();return nil,err}
+    } }
+    if err=w.cleanup();err!=nil{root.Close();return nil,err}
+    if err=w.open();err!=nil{root.Close();return nil,err}
+    return w,nil
+}
+func(w *rotatingWriter)regular(path string,directory bool)error{
+    prefix:="";parts:=strings.Split(path,"/")
+    for i,part:=range parts{
+        prefix=filepath.Join(prefix,part);info,err:=w.root.Lstat(prefix)
+        if os.IsNotExist(err){continue};if err!=nil{return err}
+        isDirectory:=directory||i<len(parts)-1
+        if info.Mode()&os.ModeSymlink!=0 || (isDirectory&&!info.IsDir()) || (!isDirectory&&!info.Mode().IsRegular()) {return errors.New("log path must not contain symlinks or special files")}
+    };return nil
+}
+func(w *rotatingWriter)open()error{
+    if err:=w.regular(w.cfg.Path,false);err!=nil{return err}
+    f,err:=w.root.OpenFile(w.cfg.Path,os.O_CREATE|os.O_WRONLY|os.O_APPEND,0600);if err!=nil{return err}
+    info,err:=f.Stat();if err!=nil{f.Close();return err};w.file,w.size=f,info.Size();return nil
+}
+func(w *rotatingWriter)backup(i int)string{return fmt.Sprintf("%s.%d",w.cfg.Path,i)}
+func(w *rotatingWriter)cleanup()error{
+    for i:=1;i<=w.cfg.MaxBackups;i++{
+        path:=w.backup(i);if err:=w.regular(path,false);err!=nil{return err}
+        info,err:=w.root.Lstat(path);if os.IsNotExist(err){continue};if err!=nil{return err}
+        if time.Since(info.ModTime())>w.cfg.MaxAge {if err=w.root.Remove(path);err!=nil{return err}}
+    };return nil
+}
+func(w *rotatingWriter)rotate()error{
+    if err:=w.file.Sync();err!=nil{return err};if err:=w.file.Close();err!=nil{return err};w.file=nil
+    if err:=w.cleanup();err!=nil{return err}
+    oldest:=w.backup(w.cfg.MaxBackups);if err:=w.root.Remove(oldest);err!=nil&&!os.IsNotExist(err){return err}
+    for i:=w.cfg.MaxBackups-1;i>=1;i--{
+        old,next:=w.backup(i),w.backup(i+1)
+        if err:=w.regular(old,false);err!=nil{return err}
+        if err:=w.root.Rename(old,next);err!=nil&&!os.IsNotExist(err){return err}
+    }
+    if err:=w.regular(w.cfg.Path,false);err!=nil{return err}
+    if err:=w.root.Rename(w.cfg.Path,w.backup(1));err!=nil{return err}
+    return w.open()
+}
+func(w *rotatingWriter)Write(p []byte)(int,error){
+    w.mu.Lock();defer w.mu.Unlock()
+    if int64(len(p))>w.cfg.MaxSize {return 0,errors.New("log record exceeds max_size")}
+    if w.file==nil {return 0,errors.New("log output is closed")}
+    if err:=w.cleanup();err!=nil{return 0,err}
+    if w.size+int64(len(p))>w.cfg.MaxSize {if err:=w.rotate();err!=nil{return 0,err}}
+    n,err:=w.file.Write(p);w.size+=int64(n);return n,err
+}
+func(w *rotatingWriter)Close()error{
+    w.mu.Lock();defer w.mu.Unlock();var err error
+    if w.file!=nil {err=w.file.Close();w.file=nil};if e:=w.root.Close();err==nil{err=e};return err
+}

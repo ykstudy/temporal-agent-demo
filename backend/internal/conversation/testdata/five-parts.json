@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "contract_version": "1.4.0",
+  "run_id": "run-example",
+  "message_id": "message-example",
+  "sequence": 3,
+  "source_version": 1,
+  "state_sequence": 2,
+  "role": "assistant",
+  "created_at": "2026-10-02T02:00:00Z",
+  "modes": {
+    "execution_mode": "temporal",
+    "decision_mode": "rules",
+    "delivery_mode": "local"
+  },
+  "parts": [
+    {
+      "part_id": "part-text",
+      "part_version": 1,
+      "type": "text",
+      "fallback_text": "项目方案待确认",
+      "text": "项目方案待确认。",
+      "format": "markdown"
+    },
+    {
+      "part_id": "part-progress",
+      "part_version": 1,
+      "type": "component",
+      "fallback_text": "只读组件摘要",
+      "component_id": "cmp-part-progress",
+      "component_version": 1,
+      "component_type": "progress",
+      "component_schema": "urn:agentstudio:component:progress:1.0.0",
+      "payload": {
+        "state": "PLAN",
+        "summary": "等待明确确认；未执行项目生成。"
+      }
+    },
+    {
+      "part_id": "part-diff",
+      "part_version": 1,
+      "type": "diff",
+      "fallback_text": "README 标题变化",
+      "object_ref": {
+        "object_type": "proposal",
+        "object_id": "proposal-example",
+        "object_version": 1,
+        "source_version": 1,
+        "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "summary": "更新项目标题",
+      "changes": [
+        {
+          "path": "README.md",
+          "operation": "update",
+          "before": "# old",
+          "after": "# example"
+        }
+      ]
+    },
+    {
+      "part_id": "part-choice",
+      "part_version": 1,
+      "type": "choice",
+      "fallback_text": "请选择日志方式",
+      "prompt": "日志输出方式",
+      "selection_mode": "single",
+      "choices": [
+        {
+          "choice_id": "console",
+          "label": "控制台"
+        },
+        {
+          "choice_id": "file",
+          "label": "受控文件目录"
+        }
+      ]
+    },
+    {
+      "part_id": "part-action",
+      "part_version": 1,
+      "type": "action",
+      "fallback_text": "确认前请查看完整方案",
+      "label": "确认方案",
+      "intent": {
+        "command_id": "command-accept-example",
+        "action": "accept",
+        "target": {
+          "object_type": "run",
+          "object_id": "run-example",
+          "object_version": 2,
+          "source_version": 1,
+          "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "required_proposal_ref": {
+          "object_type": "proposal",
+          "object_id": "proposal-example",
+          "object_version": 1,
+          "source_version": 1,
+          "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    }
+  ]
+}

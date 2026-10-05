@@ -1,0 +1,91 @@
+{
+  "command": [
+    "go",
+    "mod",
+    "tidy"
+  ],
+  "contract_version": "1.2.0",
+  "definition_hash": "54efd5a3fe2b054c708c993592a007385201692d9a784d0e1ecbd46956a1e4b7",
+  "definition_version": "3.1.0",
+  "source_definition_hash": "45cfaa983628b2ca23c9e2eb9a537d7428a4ce1d6078ab68eae0f8e36de01608",
+  "tool": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.5",
+      "platform": "darwin_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "variants": [
+    {
+      "database": "",
+      "go_mod_bytes": 42,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_bytes": 0,
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "module_name": "locked-template-project",
+      "orm": "",
+      "variant": "none"
+    },
+    {
+      "database": "mysql",
+      "go_mod_bytes": 344,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_bytes": 1139,
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "module_name": "locked-template-project",
+      "orm": "gorm",
+      "variant": "mysql_gorm"
+    },
+    {
+      "database": "mysql",
+      "go_mod_bytes": 178,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_bytes": 934,
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "module_name": "locked-template-project",
+      "orm": "sqlx",
+      "variant": "mysql_sqlx"
+    },
+    {
+      "database": "postgres",
+      "go_mod_bytes": 550,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_bytes": 3102,
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "module_name": "locked-template-project",
+      "orm": "gorm",
+      "variant": "postgres_gorm"
+    },
+    {
+      "database": "postgres",
+      "go_mod_bytes": 114,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_bytes": 841,
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "module_name": "locked-template-project",
+      "orm": "sqlx",
+      "variant": "postgres_sqlx"
+    },
+    {
+      "database": "sqlite",
+      "go_mod_bytes": 300,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_bytes": 974,
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "module_name": "locked-template-project",
+      "orm": "gorm",
+      "variant": "sqlite_gorm"
+    },
+    {
+      "database": "sqlite",
+      "go_mod_bytes": 125,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_bytes": 933,
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "module_name": "locked-template-project",
+      "orm": "sqlx",
+      "variant": "sqlite_sqlx"
+    }
+  ]
+}
