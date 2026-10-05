@@ -1,0 +1,140 @@
+{
+  "reference": "process-diagram",
+  "purpose": "selected Vue SVG renderers; self-contained copy with source provenance; no runtime path dependency",
+  "files": [
+    {
+      "source": "/Users/admin/git/process-diagram/src/diagram.css",
+      "file": "frontend/src/review/diagrams/diagram.css",
+      "source_sha256": "d16505c497d29687ac567c08d2d274d97a8a1dedb2fa88db33891454cf0bf90a"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/lib/diagram-types.ts",
+      "file": "frontend/src/review/diagrams/lib/diagram-types.ts",
+      "source_sha256": "4ef518e9ebcda077429fcf98c4246fbf9e5b388cdc513f4092ff1843ded6d1c0"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/lib/diagram-export.ts",
+      "file": "frontend/src/review/diagrams/lib/diagram-export.ts",
+      "source_sha256": "9f3dafa76cb721b2ee000b466ab8715a2c06ec8b774cb000a337d0e3eb8f4105"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/business/StateDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/business/StateDiagram.vue",
+      "source_sha256": "61273f1b8fad1f9108a91f96aba45d2e9577bd7928d4c8fe0498c3ea4016928a"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/business/SwimlaneDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/business/SwimlaneDiagram.vue",
+      "source_sha256": "770d2cae8330eef6ace84d83309d914a52f776cae979307a9ca817855bfe61ab"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/business/geometry.ts",
+      "file": "frontend/src/review/diagrams/components/diagrams/business/geometry.ts",
+      "source_sha256": "fcb396f563f1cada43f645559b68c12e70bc298b9491d088ccc9c6440299ce61"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/business/business.css",
+      "file": "frontend/src/review/diagrams/components/diagrams/business/business.css",
+      "source_sha256": "cfa5a04588b862268dec3b0ca164a2fc1ca889eaefbfeac5895a1a2705111d9f"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/structure/KnowledgeDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/structure/KnowledgeDiagram.vue",
+      "source_sha256": "3cd19bfcd15ef19d4ab5ee0375c5981d1dcbace6fa77354decc556d96cf7f655"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/structure/RelationCanvas.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/structure/RelationCanvas.vue",
+      "source_sha256": "3ba49786a07d3e651ff91f518a8542dcfddf93c6c42d356a6e3523adcca48086"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/structure/TimelineDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/structure/TimelineDiagram.vue",
+      "source_sha256": "43c057d0865f74222b7350a796187df875d79f0953e5e7b1163a86fe663e6131"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/structure/layout.ts",
+      "file": "frontend/src/review/diagrams/components/diagrams/structure/layout.ts",
+      "source_sha256": "dfda733f00179f296ec1159895ac867cf7b17eaf9e79bf45905bb967a05de79a"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/ArchitectureDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/ArchitectureDiagram.vue",
+      "source_sha256": "d13e9ef60dd1b4dec0417e71f3003d727dc544dd79b0219144885951a76c8cb1"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/DependencyDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/DependencyDiagram.vue",
+      "source_sha256": "e1bac2b41435e287528c7d8820822bb4c6a712d56390773d15253591155a0e86"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/SequenceDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/SequenceDiagram.vue",
+      "source_sha256": "6a23d126b5013363447bf857f7ec429aa45d45776ffb0667b6ca80f30201a7b1"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/DataFlowDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/DataFlowDiagram.vue",
+      "source_sha256": "4f093371a526ddc2d5d1115e0afe15fc55e5f68a7211341b541c0de99296c85d"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/LineageDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/LineageDiagram.vue",
+      "source_sha256": "1d0758764d90d55c9e9a7b1ef3fa4e1b96f54f7ddb7d5f989e4869d322d26b9d"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/ClassDiagram.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/ClassDiagram.vue",
+      "source_sha256": "b780d62bd4cdf3fd9e2f1d054de0e241dba97b1d613b1f6847f1ec7f62080599"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/TechnicalIcon.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalIcon.vue",
+      "source_sha256": "ee6dedd212c40dae871d636979dcbe136b3e256d7e98f04d752aca09a26856ce"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/TechnicalEdge.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalEdge.vue",
+      "source_sha256": "e44bded724627ba8bae1dca671401748c0d572591035e1a26112d7472dc325c4"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/TechnicalNode.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalNode.vue",
+      "source_sha256": "47c80f4b4fc312d34213ace9074151356465d1410ab3cd2e29d03bdf4c3ce827"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/TechnicalDefs.vue",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalDefs.vue",
+      "source_sha256": "25e6f9fe773e3f694a704524a7eb7301def1f86db1caa8c280aa0cf258ba93c0"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/layout.ts",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/layout.ts",
+      "source_sha256": "22c2b89352fcc74e015f99aeca7a1feb9c8c929b67e484f55e02f9ecdcd2fe4f"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/components/diagrams/technical/technical.css",
+      "file": "frontend/src/review/diagrams/components/diagrams/technical/technical.css",
+      "source_sha256": "0010d35128742ebf799158d5717365f40f1e4b134f9d05f417883e6cf11889c6"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/data/diagrams/business.ts",
+      "file": "frontend/src/review/diagrams/data/diagrams/business.ts",
+      "adaptation": "type definitions only; example datasets excluded"
+    },
+    {
+      "source": "/Users/admin/git/process-diagram/src/data/diagrams/technical.ts",
+      "file": "frontend/src/review/diagrams/data/diagrams/technical.ts",
+      "adaptation": "type definitions only; example datasets excluded"
+    }
+  ],
+  "local_adaptations": {
+    "ClassDiagram.vue": "JSON Schema objects without method semantics; compact fields, core-chain filtering at workbench, separated edge hit/label layers, collision avoidance and dotted label leaders.",
+    "RelationCanvas.vue": "Full horizontal radius included in viewBox; wrapped long labels, read-only empty message.",
+    "diagram-export.ts": "Export snapshot helper exposed; downstream review wrapper adds provenance and PNG text metadata.",
+    "data/diagrams": "Only type declarations copied; all examples removed.",
+    "ArchitectureDiagram.vue": "Three columns per layer with content-driven height, preserving all target modules and the product/design/validation boundaries.",
+    "StateDiagram.vue": "Card-width action wrapping/ellipsis; pseudo-state labels; complete source selections preserved.",
+    "SwimlaneDiagram.vue": "Role, task and note text constrained to their lane/card widths; complete bindings preserved."
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-10-02T02:05:30.178398+00:00",
+  "settings": {
+    "base_url": "http://127.0.0.1:18095",
+    "suite": "model-retry",
+    "expected_execution_mode": "temporal",
+    "max_expiry_wait_seconds": 90,
+    "gitlab_agent_url": null,
+    "malformed_agent_url": null,
+    "fixture_url": "http://127.0.0.1:18102",
+    "owned_crash_requested": false
+  },
+  "evidence_dir": "/Users/admin/git/temporal- agent-demo/validation/reports/20261002T020530Z-a33ae84a0b",
+  "cases": [
+    {
+      "name": "public API preflight",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T02:05:30.178448+00:00",
+      "status": "passed",
+      "execution_mode": "temporal",
+      "decision_mode": "model",
+      "go_available": true,
+      "duration_ms": 22,
+      "first_exchange": 1,
+      "last_exchange": 2
+    },
+    {
+      "name": "model create transient 503, same-ID recovery/replay and payload conflict",
+      "proof_kind": "mock-provider-and-public-retry",
+      "started_at": "2026-10-02T02:05:30.200966+00:00",
+      "status": "passed",
+      "provider_kind": "mock",
+      "fixture_id": "fixture-a23f2707658b",
+      "run_id": "run_validation_a33ae84a0b_model_retry",
+      "first_http_status": 503,
+      "first_error_code": "model_unavailable",
+      "state_after_retry": "PLAN",
+      "business_command_id_stable": true,
+      "model_requests": 2,
+      "workflow": {
+        "applicable": true,
+        "authoritative_state": "PLAN",
+        "execution_mode": "temporal",
+        "execution_run_id": "01a0fa5c-071e-7348-a39b-fe8501af870e",
+        "query": {
+          "commands_processed": 2,
+          "run_id": "run_validation_a33ae84a0b_model_retry",
+          "source_version": 2,
+          "state": "PLAN",
+          "state_sequence": 12
+        },
+        "source_version": 2,
+        "state_sequence": 12,
+        "workflow_id": "agentstudio/run_validation_a33ae84a0b_model_retry"
+      },
+      "actual_temporal": true,
+      "actual_model_called": false,
+      "duration_ms": 516,
+      "first_exchange": 3,
+      "last_exchange": 13
+    }
+  ],
+  "runs": [
+    {
+      "id": "run_validation_a33ae84a0b_model_retry",
+      "base_url": "http://127.0.0.1:18095"
+    }
+  ],
+  "proof_boundary": "Public HTTP, event and delivered artifact observations only. Fixtures are mock providers; this does not prove live GitLab/Runner/model, hidden filesystem effects or production deployment.",
+  "service": {
+    "health": {
+      "mode": "temporal",
+      "ok": true,
+      "temporal_connected": true
+    },
+    "bootstrap": {
+      "approval_ttl_seconds": 60,
+      "decision_mode": "model",
+      "definition": {
+        "definition_id": "project-creation-agent",
+        "version": "2.0.0",
+        "hash": "5494aca87deba32669fdd25c44f6821092165a680708f36deae266a50cbca84b",
+        "template_version": "2.0.0",
+        "template_hash": "4eefbfe4d734d8e8a2a643be176b4fe34d6e60caddc518f4ac34bb9a62078f0f",
+        "skill_versions": {
+          "add_auth": "2.0.0",
+          "add_database": "2.0.0",
+          "add_logging": "2.0.0"
+        },
+        "action_schema_version": "2.0.0",
+        "tools": {
+          "go": "go1.25.5",
+          "temporal_sdk": "v1.38.0"
+        },
+        "allowed_actions": [
+          "scaffold",
+          "skills",
+          "verify",
+          "repo",
+          "ci",
+          "deliver"
+        ],
+        "budget": {
+          "max_commands": 256,
+          "max_model_attempts": 32,
+          "max_files": 128,
+          "max_artifact_bytes": 2097152,
+          "max_step_attempts": 3
+        }
+      },
+      "delivery_mode": "local",
+      "execution_mode": "temporal",
+      "gitlab_base_url": "https://gitlab.com",
+      "gitlab_configured": false,
+      "mode": "temporal",
+      "model_configured": true,
+      "provider": "openai-compatible",
+      "skills": [
+        {
+          "id": "add_database",
+          "name": "数据库",
+          "description": "数据库连接、迁移和 ORM 配置",
+          "parameters": {
+            "database": [
+              "postgres",
+              "mysql",
+              "sqlite"
+            ],
+            "orm": [
+              "gorm",
+              "sqlx"
+            ]
+          }
+        },
+        {
+          "id": "add_auth",
+          "name": "身份认证",
+          "description": "JWT 或 session 认证与凭据校验",
+          "parameters": {
+            "auth": [
+              "jwt",
+              "session"
+            ]
+          }
+        },
+        {
+          "id": "add_logging",
+          "name": "结构化日志",
+          "description": "slog 日志、级别与格式",
+          "parameters": {
+            "log_format": [
+              "json",
+              "text"
+            ],
+            "log_level": [
+              "debug",
+              "info",
+              "warn",
+              "error"
+            ]
+          }
+        }
+      ],
+      "temporal_connected": true
+    }
+  },
+  "finished_at": "2026-10-02T02:05:30.718103+00:00",
+  "exit_code": 0,
+  "passed": true,
+  "http_exchange_count": 13
+}

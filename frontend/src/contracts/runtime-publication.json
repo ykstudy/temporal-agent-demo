@@ -1,0 +1,10 @@
+{
+  "runtime_version": "1.0.0",
+  "source": "design/contracts/runtime/1.0.0/runtime.schema.json",
+  "sha256": "8ce4c2641684b76dde0f073cee699f94a2f9f4122efb1b0f872c0e7cbc3a32bc",
+  "references": {
+    "agent.schema.json": "c14ea1d94888534d33c2caf31d064de25875dd1e4476dd0da4cd234e5bd1b48c",
+    "common.schema.json": "9ec3c208dbc277158d758730ed8d7c7538f9c2a7e2a5faa50ff45d355a5ce558",
+    "message.schema.json": "ece7bc72f43ed508aa1086c663ff6edb10941bfb74f9f8e5672f129cecdf68ee"
+  }
+}

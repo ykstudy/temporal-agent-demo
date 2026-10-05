@@ -1,0 +1,7 @@
+export class ApiError extends Error {status:number;code:string;constructor(message:string,status:number,code:string){super(message);this.status=status;this.code=code;}}
+export async function request<T>(path:string,init?:RequestInit):Promise<T>{const response=await fetch('/api'+path,{...init,headers:{'Content-Type':'application/json',...init?.headers}});const data=await response.json();if(!response.ok)throw new ApiError(data.error||data.message||'请求失败',response.status,data.code||'request_failed');return data as T;}
+export function post<T>(path:string,data:unknown):Promise<T>{return request<T>(path,{method:'POST',body:JSON.stringify(data)});}
+export const uniqueId=()=>crypto.randomUUID();
+export const time=(value:string)=>new Date(value).toLocaleTimeString('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'});
+export const date=(value:string)=>new Date(value).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+export const stateLabel=(state:string)=>({INTAKE:'等待需求',CLARIFY:'补充需求',PLAN:'等待确认',IMPLEMENT:'项目生成',VERIFY:'测试与构建',DELIVER:'准备交付',WAITING_INPUT:'补充需求',WAITING_CONFIRM:'等待确认',WAITING_HUMAN:'等待确认',PLANNING:'整理方案',READY:'等待确认',EXECUTING:'项目生成',GENERATING:'项目生成',RUNNING:'执行中',VERIFYING:'交付验证',COMPLETED:'已完成',DONE:'已完成',PAUSED:'已挂起',BLOCKED:'等待配置',FAILED:'执行失败',CANCELLED:'已取消',REJECTED:'已拒绝'}[state.toUpperCase()]||state);

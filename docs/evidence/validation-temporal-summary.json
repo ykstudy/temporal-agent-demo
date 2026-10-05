@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-10-02T01:58:22.660149+00:00",
+  "settings": {
+    "base_url": "http://127.0.0.1:18094",
+    "suite": "core",
+    "expected_execution_mode": "temporal",
+    "max_expiry_wait_seconds": 90,
+    "gitlab_agent_url": null,
+    "malformed_agent_url": null,
+    "fixture_url": null,
+    "owned_crash_requested": true
+  },
+  "evidence_dir": "/Users/admin/git/temporal- agent-demo/validation/reports/20261002T015822Z-4ee5ba3e1f",
+  "cases": [
+    {
+      "name": "public API preflight",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T01:58:22.660202+00:00",
+      "status": "passed",
+      "execution_mode": "temporal",
+      "decision_mode": "rules",
+      "go_available": true,
+      "duration_ms": 24,
+      "first_exchange": 1,
+      "last_exchange": 2
+    },
+    {
+      "name": "short-TTL expiry setup",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T01:58:22.684975+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_expiry",
+      "lifetime_seconds": 60.0,
+      "issued_at": "2026-10-02T01:58:22.816845Z",
+      "expires_at": "2026-10-02T01:59:22.816845Z",
+      "duration_ms": 212,
+      "first_exchange": 3,
+      "last_exchange": 3
+    },
+    {
+      "name": "requirements, revision, preview, stale/hash/idempotent approval and actual generation",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T01:58:22.898198+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_delivery",
+      "changes": 13,
+      "download_status": 400,
+      "boundary": "No public artifact/ZIP/manifest. Hidden private filesystem effects are not inspected.",
+      "source_version": 4,
+      "state_sequence": 28,
+      "snapshot_hash": "96a06d309e3f4f0216615b90e6bc39f13ff5836d874a1b1cb71332cf14c1f586",
+      "event_id": "run_validation_4ee5ba3e1f_delivery-9",
+      "required_checks": [
+        {
+          "name": "approved_sources",
+          "passed": true,
+          "detail": "不可变源代码与批准快照一致；依赖元数据由获准工具整理",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "artifact_manifest",
+          "passed": true,
+          "detail": "164dc945c8c8e1134e93b4d27af0fa918b96529e0e29bbae2444db8466cea568",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "go mod tidy",
+          "passed": true,
+          "detail": "exit status 0",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "go test ./...",
+          "passed": true,
+          "detail": "?   \tvalidation-4ee5ba3e1f/cmd/server\t[no test files]\nok  \tvalidation-4ee5ba3e1f/internal/auth\t0.017s\nok  \tvalidation-4ee5ba3e1f/internal/logging\t0.127s\nok  \tvalidation-4ee5ba3e1f/internal/server\t0.022s",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "go build ./...",
+          "passed": true,
+          "detail": "exit status 0",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "file:go.mod",
+          "passed": true,
+          "detail": "存在",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "file:.gitignore",
+          "passed": true,
+          "detail": "存在",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "file:.gitlab-ci.yml",
+          "passed": true,
+          "detail": "存在",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "file:README.md",
+          "passed": true,
+          "detail": "存在",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "secret_boundary",
+          "passed": true,
+          "detail": "忽略规则存在，执行器凭据未进入产物",
+          "status": "passed",
+          "source_version": 4
+        },
+        {
+          "name": "zip_integrity",
+          "passed": true,
+          "detail": "ZIP逐文件内容/hash与同源manifest一致",
+          "status": "passed",
+          "source_version": 4
+        }
+      ],
+      "generation": "actual Agent execution; not a model/provider fixture",
+      "duration_ms": 3026,
+      "first_exchange": 4,
+      "last_exchange": 31
+    },
+    {
+      "name": "delivered ZIP hashes, artifact boundary and real project /healthz",
+      "proof_kind": "actual-delivered-project",
+      "started_at": "2026-10-02T01:58:25.925046+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_delivery",
+      "zip_sha256": "1e8c3c9230e6c8f4d93a46e14916c97aad1918b2c45591e6ef8321e70beb5803",
+      "manifest_file_count": 13,
+      "zip_file_count": 14,
+      "entrypoint": "./cmd/server",
+      "runtime_health": {
+        "logging": {
+          "status": "ok",
+          "failures": 0,
+          "ready": true
+        },
+        "project": "validation-4ee5ba3e1f",
+        "status": "ok"
+      },
+      "actual_project_started": true,
+      "provider_kind": "actual generated project",
+      "duration_ms": 795,
+      "first_exchange": 32,
+      "last_exchange": 35
+    },
+    {
+      "name": "terminal retry, pause/resume/reject/cancel",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T01:58:26.721698+00:00",
+      "status": "passed",
+      "parent_run_id": "run_validation_4ee5ba3e1f_delivery",
+      "successor_run_id": "run_bdb1518fdcecbcd5ba353255",
+      "final_state": "CANCELLED",
+      "duration_ms": 751,
+      "first_exchange": 36,
+      "last_exchange": 43
+    },
+    {
+      "name": "missing GitLab dependency blocks",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T01:58:27.473923+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_blocked",
+      "state": "BLOCKED",
+      "reason": "需要 GITLAB_TOKEN 与 GITLAB_NAMESPACE_ID；尚未创建远程仓库，不会改为本地DONE",
+      "provider_kind": "unconfigured, not mock success",
+      "duration_ms": 2205,
+      "first_exchange": 44,
+      "last_exchange": 58
+    },
+    {
+      "name": "real Temporal Continue-As-New, compression and concurrent HTTP commands",
+      "proof_kind": "actual-temporal",
+      "started_at": "2026-10-02T01:58:29.679964+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_long",
+      "workflow_id": "agentstudio/run_validation_4ee5ba3e1f_long",
+      "initial_execution_run_id": "01a0fa55-9c72-789a-ab3b-b346947a4097",
+      "continued_execution_run_id": "231cc14c-6577-45f5-a051-3f1ba7e13746",
+      "long_messages": 21,
+      "concurrent_requests": 11,
+      "unique_concurrent_commands": 9,
+      "summary_count": 22,
+      "actual_temporal": true,
+      "duration_ms": 4522,
+      "first_exchange": 59,
+      "last_exchange": 96
+    },
+    {
+      "name": "real Temporal running VERIFY crash and owned worker restart",
+      "proof_kind": "actual-temporal-and-owned-process",
+      "started_at": "2026-10-02T01:58:34.203437+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_crash",
+      "workflow_id": "agentstudio/run_validation_4ee5ba3e1f_crash",
+      "execution_run_id": "01a0fa55-ae1f-7d24-8a8b-bf3e125fa858",
+      "observed_stage_at_crash": "VERIFY",
+      "owned_launcher_generation_before": 1,
+      "owned_launcher_generation_after": 2,
+      "actual_process_crash": true,
+      "actual_temporal_activity_recovery": true,
+      "duration_ms": 94971,
+      "first_exchange": 97,
+      "last_exchange": 718
+    },
+    {
+      "name": "expired proposal and registered confirmation replay",
+      "proof_kind": "public-http",
+      "started_at": "2026-10-02T02:00:09.176344+00:00",
+      "status": "passed",
+      "run_id": "run_validation_4ee5ba3e1f_expiry",
+      "code": "proposal_expired",
+      "registered_approval_replay_after_ttl": true,
+      "duration_ms": 104,
+      "first_exchange": 719,
+      "last_exchange": 722
+    }
+  ],
+  "runs": [
+    {
+      "id": "run_validation_4ee5ba3e1f_expiry",
+      "base_url": "http://127.0.0.1:18094"
+    },
+    {
+      "id": "run_validation_4ee5ba3e1f_delivery",
+      "base_url": "http://127.0.0.1:18094"
+    },
+    {
+      "id": "run_bdb1518fdcecbcd5ba353255",
+      "base_url": "http://127.0.0.1:18094"
+    },
+    {
+      "id": "run_validation_4ee5ba3e1f_blocked",
+      "base_url": "http://127.0.0.1:18094"
+    },
+    {
+      "id": "run_validation_4ee5ba3e1f_long",
+      "base_url": "http://127.0.0.1:18094"
+    },
+    {
+      "id": "run_validation_4ee5ba3e1f_crash",
+      "base_url": "http://127.0.0.1:18094"
+    }
+  ],
+  "proof_boundary": "Public HTTP, event and delivered artifact observations only. Fixtures are mock providers; this does not prove live GitLab/Runner/model, hidden filesystem effects or production deployment.",
+  "service": {
+    "health": {
+      "mode": "temporal",
+      "ok": true,
+      "temporal_connected": true
+    },
+    "bootstrap": {
+      "approval_ttl_seconds": 60,
+      "decision_mode": "rules",
+      "definition": {
+        "definition_id": "project-creation-agent",
+        "version": "2.0.0",
+        "hash": "284d5f604c63a6066a2ea63f8a7e4bbeb3f5087e22959c56ea6e20e2cb2b4b4a",
+        "template_version": "2.0.0",
+        "template_hash": "23ad0a877df8e99f2985c655006c66a34216f9a00693de0e0feb0788dcb42817",
+        "skill_versions": {
+          "add_auth": "2.0.0",
+          "add_database": "2.0.0",
+          "add_logging": "2.0.0"
+        },
+        "action_schema_version": "2.0.0",
+        "tools": {
+          "go": "go1.25.5",
+          "temporal_sdk": "v1.38.0"
+        },
+        "allowed_actions": [
+          "scaffold",
+          "skills",
+          "verify",
+          "repo",
+          "ci",
+          "deliver"
+        ],
+        "budget": {
+          "max_commands": 256,
+          "max_model_attempts": 32,
+          "max_files": 128,
+          "max_artifact_bytes": 2097152,
+          "max_step_attempts": 3
+        }
+      },
+      "delivery_mode": "local",
+      "execution_mode": "temporal",
+      "gitlab_base_url": "https://gitlab.com",
+      "gitlab_configured": false,
+      "mode": "temporal",
+      "model_configured": false,
+      "provider": "rules",
+      "skills": [
+        {
+          "id": "add_database",
+          "name": "数据库",
+          "description": "数据库连接、迁移和 ORM 配置",
+          "parameters": {
+            "database": [
+              "postgres",
+              "mysql",
+              "sqlite"
+            ],
+            "orm": [
+              "gorm",
+              "sqlx"
+            ]
+          }
+        },
+        {
+          "id": "add_auth",
+          "name": "身份认证",
+          "description": "JWT 或 session 认证与凭据校验",
+          "parameters": {
+            "auth": [
+              "jwt",
+              "session"
+            ]
+          }
+        },
+        {
+          "id": "add_logging",
+          "name": "结构化日志",
+          "description": "slog 日志、级别与格式",
+          "parameters": {
+            "log_format": [
+              "json",
+              "text"
+            ],
+            "log_level": [
+              "debug",
+              "info",
+              "warn",
+              "error"
+            ]
+          }
+        }
+      ],
+      "temporal_connected": true
+    }
+  },
+  "finished_at": "2026-10-02T02:00:09.282135+00:00",
+  "exit_code": 0,
+  "passed": true,
+  "http_exchange_count": 722
+}

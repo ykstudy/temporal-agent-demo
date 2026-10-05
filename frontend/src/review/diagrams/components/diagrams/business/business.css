@@ -1,0 +1,22 @@
+.dg-business { color: var(--dg-text, #20263e); font-family: Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; }
+.dg-business .b-node { cursor: pointer; outline: none; }
+.dg-business .b-shape { fill: var(--dg-surface, #fff); stroke: var(--dg-border, #dee3ed); stroke-width: 1.5; transition: stroke .15s, filter .15s; }
+.dg-business .b-node:hover .b-shape, .dg-business .b-node:focus-visible .b-shape, .dg-business .b-node.is-selected .b-shape { stroke: var(--dg-accent, #6265e8); stroke-width: 2.5; filter: drop-shadow(0 3px 6px #6265e81c); }
+.dg-business .b-title { font-size: 18px; fill: var(--dg-text, #20263e); font-weight: 600; text-anchor: middle; }
+.dg-business .b-caption { font-size: 13px; fill: var(--dg-muted, #8890a5); text-anchor: middle; }
+.dg-business .b-caption-end { text-anchor: end; }
+.dg-business .b-edge { fill: none; stroke: var(--dg-accent, #6265e8); stroke-width: 2; stroke-linejoin: round; }
+.dg-business .b-edge.tone-warning { stroke: var(--dg-warning, #d5a34d); }
+.dg-business .b-edge.tone-success { stroke: var(--dg-success, #47a58b); }
+.dg-business .b-edge.tone-muted { stroke: var(--dg-muted, #8890a5); }
+.dg-business .b-edge-label { font-size: 13px; fill: var(--dg-muted, #8890a5); text-anchor: middle; paint-order: stroke; stroke: var(--dg-canvas, #fff); stroke-width: 7; stroke-linejoin: round; }
+.dg-business .b-marker { fill: var(--dg-accent, #6265e8); }
+.dg-business .b-marker-warning { fill: var(--dg-warning, #d5a34d); }
+.dg-business .b-marker-success { fill: var(--dg-success, #47a58b); }
+.dg-business .b-marker-muted { fill: var(--dg-muted, #8890a5); }
+.dg-business .b-note { font-size: 14px; fill: var(--dg-muted, #8890a5); }
+.dg-business .b-chip { fill: var(--dg-soft, #f0efff); stroke: none; }
+.dg-business .b-soft { fill: var(--dg-soft, #f0efff); }
+.dg-business .b-success { fill: color-mix(in srgb, var(--dg-success, #47a58b) 12%, var(--dg-surface, #fff)); stroke: color-mix(in srgb, var(--dg-success, #47a58b) 48%, var(--dg-border, #dee3ed)); }
+.dg-business .b-warning { fill: color-mix(in srgb, var(--dg-warning, #d5a34d) 12%, var(--dg-surface, #fff)); stroke: color-mix(in srgb, var(--dg-warning, #d5a34d) 48%, var(--dg-border, #dee3ed)); }
+.dg-business .b-region { fill: color-mix(in srgb, var(--dg-soft, #f0efff) 35%, var(--dg-canvas, #fff)); stroke: var(--dg-border, #dee3ed); }

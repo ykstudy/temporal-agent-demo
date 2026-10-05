@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "late_snapshot_keeps_selected_run",
+      "passed": true
+    },
+    {
+      "name": "late_file_keeps_latest_file",
+      "passed": true
+    },
+    {
+      "name": "late_artifact_cannot_cross_run",
+      "passed": true
+    },
+    {
+      "name": "client_clock_expiry_disables_confirmation",
+      "passed": true
+    },
+    {
+      "name": "race_console_health",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

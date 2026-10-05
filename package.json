@@ -1,0 +1,14 @@
+{
+  "name": "temporal-agent-studio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "dev:ui": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "check": "npm --prefix frontend run check",
+    "test": "cd backend && go test ./...",
+    "review:data": "python3 scripts/build-review-data.py --self-test",
+    "review:check": "python3 scripts/build-review-data.py --check --self-test"
+  }
+}
