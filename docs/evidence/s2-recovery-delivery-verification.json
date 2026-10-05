@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-10-03T00:04:36.794819+00:00",
+  "stage": "S2 ongoing; not accepted",
+  "stage_completed_count": 1,
+  "execution_prompts_total": 8,
+  "user_stop_condition": "Stop goal immediately after S2 exit acceptance; do not start S3",
+  "source_manifest": "docs/evidence/s2-recovery-delivery-source-audit.json",
+  "source_aggregate_sha256": "c80e0c835d9fe1dbffa70cd05d8e25f656a3fdf49823ce6573f81cd062f96830",
+  "configuration": {
+    "go": "go1.25.5",
+    "platform": "darwin_amd64",
+    "execution_mode": "local",
+    "decision_mode": [
+      "rules",
+      "model with mock HTTP provider"
+    ],
+    "gitlab": "mock only",
+    "public_default": "definition 3.0.1 / contract 1.1.0",
+    "controlled_test_release": "definition 3.2.0 / contract 1.3.0",
+    "public_3_2_creation": "definition_not_ready"
+  },
+  "checks": [
+    {
+      "name": "recovery_and_reconciliation_race",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-delivery-race.log",
+      "log_sha256": "403a2ffaecf7b5c3b143396e6de26cf7a9f49e2c080477779a18b1245f4b5000",
+      "scope": "581.333s; compiled before later Workflow outer failure fix; actual tool execution, mock model/GitLab, test-created full Run",
+      "command": "go test -race ./internal/agent -run ^TestControl(Candidate|ReconcileCommand|Tools(NetworkTablesVersionBoundary|TimeoutConsumesAttemptAndPreservesSources)) -count=1 -v"
+    },
+    {
+      "name": "runtime_outer_failure_race",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-runtime-race.log",
+      "log_sha256": "85c8f3040e2d7e38acb8bc358e837f5c382b0d6816da2f90751316001645a81f",
+      "scope": "17.671s; targeted later Workflow fix; constructed lifecycle checkpoints, no real Temporal service",
+      "command": "go test -race ./internal/agent -run ^TestControlRuntimeOuterFailurePreservesRecoveryStageAndTerminalFacts$ -count=1"
+    },
+    {
+      "name": "governance_race",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-governance-race.log",
+      "log_sha256": "62140334cf420ca0335bceceae3d2538d921ee51d60277a5dfad73bf4f7a822f",
+      "scope": "149.065s; full governance package, no live provider",
+      "command": "go test -race ./internal/governance -count=1"
+    },
+    {
+      "name": "commands_recovery_regression",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-command-regression.log",
+      "log_sha256": "a4f4022f1e180929dc79f40959d07c89cb2e1cbd412b0fcde388cb1fcd63a1b1",
+      "scope": "150.601s; selected existing command, recovery, semantic and execution tests; not full backend"
+    },
+    {
+      "name": "sqlite_cold_runs",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-sqlite-cold-runs.log",
+      "log_sha256": "adf201813cfc8d5ec37697f2b6d713276c9fb057fecd071c6396dc0c677c40ea",
+      "scope": "160.529s; two fresh controlled Go caches; actual GORM/sqlx VERIFY, not package/remote/Temporal",
+      "command": "CONTROL_SQLITE_REAL_TEST=1 go test ./internal/agent -run ^TestControlPureSQLiteColdRuns$ -count=1 -v"
+    },
+    {
+      "name": "generated_contracts",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-delivery-generated.log",
+      "log_sha256": "670261ce822df3f8647b64ce09f13e85a9fa1815bf73dc1c58f572865f7d1611",
+      "scope": "174 schema-derived Go types and 9 versioned exact-byte schemas",
+      "command": "python3 scripts/generate-contracts.py --check"
+    },
+    {
+      "name": "vet",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-delivery-vet.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "Latest Workflow code included in completed tool session 17775"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-delivery-build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "Latest Workflow code included in completed tool session 17775"
+    },
+    {
+      "name": "release13_export_oracle",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-release13-exports.log",
+      "log_sha256": "0c4ee6eee2bafa4c8c5662d6071188074e6172eeac43bcb9a52dd94665702524",
+      "scope": "4 public exports, 284 enumerated objects including repeated dependencies, 629 refs, 1712 structural and 3 hash negatives; no complete semantic/HTTP/remote oracle",
+      "command": "/tmp/temporal-agent-contract-oracle-env/bin/python -m validation.contracts.release13_check --audit-export docs/evidence/s2-candidate-revision/rules-reapproval-done.json --audit-export docs/evidence/s2-candidate-revision/model-revision-plan.json --audit-export docs/evidence/s2-sqlite-cold-runs/sqlite_gorm.json --audit-export docs/evidence/s2-sqlite-cold-runs/sqlite_sqlx.json --report validation/reports/contracts-s2/release13-exports.json"
+    },
+    {
+      "name": "release12_oracle_regression",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-recovery-oracle-1.2.log",
+      "log_sha256": "83f10fc9ed2478c64e9d24f8d93517ce5a868248184818aba9f5bd2f1aa016f3",
+      "scope": "1058 synthetic self-test cases, 502 refs; no product path",
+      "command": "/tmp/temporal-agent-contract-oracle-env/bin/python -m validation.contracts.s2_self_test --report validation/reports/contracts-s2/recovery-regression-1.2.json"
+    }
+  ],
+  "output_directory_correction": "Tests initially exported via relative output paths under backend/internal/docs/evidence; files were moved byte-for-byte to stable docs/evidence paths. First independent export read failed on missing path; final read succeeded without changing objects or schemas. Future exports must specify an absolute directory.",
+  "not_covered": [
+    "Actual controlled git push/CI and complete remote receipt chain",
+    "Public S2 create/approve/seven actions and complete C07-C10 oracle",
+    "Current-code real Temporal service, CAN and crash/update recovery",
+    "Browser, Linux sandbox, container build and live third parties",
+    "S3-S8"
+  ]
+}

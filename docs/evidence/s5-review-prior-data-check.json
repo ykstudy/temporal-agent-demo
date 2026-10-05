@@ -1,0 +1,220 @@
+{
+  "recorded_at": "2026-10-02T09:23:59.172451+00:00",
+  "passed": true,
+  "scope": "readonly design review publication; not Agent behavior or v2 conformance",
+  "validator": {
+    "package": "jsonschema[format]",
+    "version": "4.25.1",
+    "draft": "2020-12",
+    "date_time_assertion": true
+  },
+  "command": "build-review-data.py --self-test",
+  "bundle_sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+  "schema_sha256": "aedd4f32c50d9827cae27962e964a32f265e500ba702a54ec2d98a144921ca81",
+  "published_schema_sha256": "aedd4f32c50d9827cae27962e964a32f265e500ba702a54ec2d98a144921ca81",
+  "publication": {
+    "path": "frontend/src/review/publication.generated.json",
+    "bundle_sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+    "schema_sha256": "aedd4f32c50d9827cae27962e964a32f265e500ba702a54ec2d98a144921ca81"
+  },
+  "publication_manifest_sha256": "9d7df5dc5d7fd9a64c2e8a0332ad16ab3cda6ec21d9801331c237ddefd1fa6fa",
+  "publication_self_tests": [
+    {
+      "name": "modified published bundle digest",
+      "passed": true,
+      "rejected": "build-fixed publication digest mismatch; regenerate and rebuild frontend"
+    },
+    {
+      "name": "modified published Schema digest",
+      "passed": true,
+      "rejected": "build-fixed publication digest mismatch; regenerate and rebuild frontend"
+    }
+  ],
+  "baseline": {
+    "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+    "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+    "contract_version": "1.0.0"
+  },
+  "checks": {
+    "meta_schema": true,
+    "publication_schema": true,
+    "format_assertions": true,
+    "offline": true,
+    "frozen_baseline": true,
+    "source_digests": true,
+    "all_element_bindings": true,
+    "endpoints_and_ownership": true,
+    "eleven_models": true,
+    "knowledge_registry": {
+      "entities": 137,
+      "relations": 529
+    },
+    "contract_semantic_bindings": 18,
+    "state_events": 44,
+    "gaps": 21,
+    "cases": 18,
+    "coverage_dimensions": 5,
+    "design_timeline_only": true,
+    "bundle_bytes": 1876064,
+    "build_fixed_publication_digests": true
+  },
+  "self_tests": [
+    {
+      "name": "dangling source",
+      "passed": true,
+      "rejected": "dangling model source"
+    },
+    {
+      "name": "unknown endpoint",
+      "passed": true,
+      "rejected": "dangling endpoint: transition.326187dbab30b50e9fe5"
+    },
+    {
+      "name": "wrong review schema version",
+      "passed": true,
+      "rejected": "1 was expected\n\nFailed validating 'const' in schema['properties']['schema_version']:\n    {'const': 1}\n\nOn instance['schema_version']:\n    2"
+    },
+    {
+      "name": "changed frozen baseline",
+      "passed": true,
+      "rejected": "frozen baseline mismatch"
+    },
+    {
+      "name": "false target pass",
+      "passed": true,
+      "rejected": "target evidence falsely promoted"
+    },
+    {
+      "name": "terminal resume",
+      "passed": true,
+      "rejected": "state transitions differ from frozen table"
+    },
+    {
+      "name": "design timeline called historical",
+      "passed": true,
+      "rejected": "design timeline cannot claim actual history"
+    },
+    {
+      "name": "source text changed",
+      "passed": true,
+      "rejected": "source digest drift: AGENTS.md"
+    },
+    {
+      "name": "missing element binding",
+      "passed": true,
+      "rejected": "unbound diagram element: state"
+    },
+    {
+      "name": "missing gap",
+      "passed": true,
+      "rejected": "gap/case coverage incomplete"
+    },
+    {
+      "name": "semantic predicate source missing",
+      "passed": true,
+      "rejected": "contract semantic binding source/predicate mismatch"
+    },
+    {
+      "name": "invented semantic field predicate",
+      "passed": true,
+      "rejected": "contract semantic binding source/predicate mismatch"
+    }
+  ],
+  "sources": 128,
+  "models": [
+    {
+      "id": "state",
+      "diagram_type": "state",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 58,
+      "bindings": 63
+    },
+    {
+      "id": "responsibility",
+      "diagram_type": "swimlane",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 23,
+      "bindings": 23
+    },
+    {
+      "id": "sequence",
+      "diagram_type": "sequence",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 25,
+      "bindings": 25
+    },
+    {
+      "id": "contracts",
+      "diagram_type": "class",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 505,
+      "bindings": 1060
+    },
+    {
+      "id": "lineage",
+      "diagram_type": "lineage",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 26,
+      "bindings": 26
+    },
+    {
+      "id": "architecture",
+      "diagram_type": "architecture",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 69,
+      "bindings": 69
+    },
+    {
+      "id": "coverage",
+      "diagram_type": "coverage",
+      "scope": "current",
+      "status": "planned",
+      "elements": 156,
+      "bindings": 156
+    },
+    {
+      "id": "versions",
+      "diagram_type": "timeline",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 7,
+      "bindings": 7
+    },
+    {
+      "id": "knowledge",
+      "diagram_type": "knowledge",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 666,
+      "bindings": 666
+    },
+    {
+      "id": "skills",
+      "diagram_type": "dependency",
+      "scope": "design",
+      "status": "planned",
+      "elements": 24,
+      "bindings": 24
+    },
+    {
+      "id": "context",
+      "diagram_type": "dataflow",
+      "scope": "design",
+      "status": "docs_ready",
+      "elements": 21,
+      "bindings": 21
+    }
+  ],
+  "not_proven": [
+    "Vue browser functionality",
+    "export SVG/PNG fidelity",
+    "S1-S5 runtime v2 conformance",
+    "real model/GitLab Runner or production"
+  ]
+}

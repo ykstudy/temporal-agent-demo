@@ -1,0 +1,738 @@
+{
+  "passed": true,
+  "scope": "all named schema definitions exercised; public positive instances distinct from synthetic language tests; does not assert every possible branch or scenario",
+  "named_definitions": 149,
+  "observed_public_named_definitions": 127,
+  "synthetic_only": [
+    "ActionIntent",
+    "ActionPart",
+    "ArtifactManifestPayload",
+    "Choice",
+    "ChoicePart",
+    "ClarificationPayload",
+    "ControlRequest",
+    "CreateRunRequest",
+    "DefinitionSelection",
+    "Diagnosis",
+    "DiffChange",
+    "DiffPart",
+    "ErrorResponse",
+    "Failure",
+    "JsonValue",
+    "MessageRequest",
+    "SnapshotEvent",
+    "SummaryAdvice",
+    "VerificationCandidate",
+    "VerificationCandidateFile",
+    "VerificationReportPayload",
+    "WorkflowCheckpoint"
+  ],
+  "missing": [],
+  "reports": [
+    {
+      "path": "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "sha256": "8eb05b1e979995e2b0656027dd1905b47d251951ecf5ac7471d87304cb2ebbc8",
+      "counts": {
+        "semantic": 12,
+        "schema": 3,
+        "structure": 3933
+      }
+    },
+    {
+      "path": "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "sha256": "ead24c34ec8820b65c690d9aa8652f2fb6e3a5f79219c0a8e301b0a40b95a67c",
+      "counts": {
+        "semantic": 6,
+        "schema": 3,
+        "structure": 3068
+      }
+    },
+    {
+      "path": "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "sha256": "f5c126e5642f83bdf27e78aa9361b253be882bdc6ce1f7de9b48a20774e2ff43",
+      "counts": {
+        "semantic": 6,
+        "structure": 2275
+      }
+    },
+    {
+      "path": "validation/reports/s5-oracles/supplemental-shapes.json",
+      "sha256": "44c8ce85f9956f65ef6053ed7b84549f8cbe8cec3888410b0134264144d378f0",
+      "structural_negatives": 307
+    },
+    {
+      "path": "validation/reports/s5-schema-sweep-model-summary/summary.json",
+      "sha256": "1159186ac0cf4eb812eec40be8198e35dab8532c5d7700e019e530d165baab97",
+      "counts": {
+        "semantic": 6,
+        "structure": 2288
+      }
+    }
+  ],
+  "public_coverage": {
+    "ActionProtocol": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ActionType": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ActionValidation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "AgentDefinition": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ApplySkillParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "Approval": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "ApprovalBinding": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "ArtifactEntry": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "ArtifactManifest": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "AuthenticationParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetCounters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetLedger": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetPolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetReservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetSettlement": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetTotals": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "BudgetWindow": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "CIJobEvidence": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "CandidateAction": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "CheckDefinition": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "CommandReceipt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "CompletionPolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ComponentPart": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ContextMessage": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ContextPolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ContextRecord": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ConversationAuditBundle": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "CreateRepositoryParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "DatabaseParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "DecisionAdvice": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "DecisionMode": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "DecisionProposal": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "DefinitionSnapshot": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "DeliveryMode": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "DeliveryTarget": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ExecutionMode": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ExecutionRequest": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "FileChange": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "GitCommandPolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "GitExecutionPolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "GitLabTarget": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "GoModulePolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "Hash": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "HistoryEvent": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "HttpEndpoint": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "Id": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "IntegerParameterSchema": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "LocalTarget": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "LoggingParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "MessageEnvelope": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ModelUsage": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "Modes": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ObjectRef": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ObjectReference": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "OperationRecord": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "PackageParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "PackageReceipt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "ParameterPropertySchema": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "Part": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "PartBase": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "PermissionSnapshot": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "PositiveVersion": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "PostCommand": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "PreflightCheck": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ProgressPayload": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ProjectPlan": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "Proposal": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ProposalDiffPayload": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "PushRepositoryParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RelativePath": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RemoteArtifactEvidence": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteBranchObservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteCommitObservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteExecutionReceipt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteFileEvidence": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteJobListObservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemotePipelineObservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemotePipelineVariables": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteProjectObservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RemoteReadObservation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "RepositoryPolicy": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RequiredCheck": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RunSnapshot": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RunState": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeActivityAttempt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeAuditEvent": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeAuditTrail": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeBudgetStatus": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeCheckpoint": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeCorrelation": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeFailureDiagnosis": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json"
+    ],
+    "RuntimeHealth": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeHealthCheck": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeMetrics": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeServiceMetrics": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "RuntimeView": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "S2AuditBundle": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ScaffoldParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "SchemaDependency": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SchemaReference": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SkillDefinition": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SkillParameterSchema": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SkillReference": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SkillSelection": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json"
+    ],
+    "Step": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "StepAttempt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "StringParameterSchema": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SystemPrompt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "TemplateDependency": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "TemplateFile": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "TextPart": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "Timestamp": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ToolExecutionReceipt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "ToolIdentity": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "TriggerCIParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json"
+    ],
+    "Usage": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "ValidationFinding": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "VerificationReport": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "VerifyParameters": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "WorkspaceReceipt": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "WorkspaceReference": [
+      "validation/reports/s5-schema-sweep-final-local/summary.json",
+      "validation/reports/s5-schema-sweep-final-model/summary.json"
+    ],
+    "ProviderBinding": [
+      "validation/reports/s5-schema-sweep-final-model/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SummaryAttempt": [
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SummaryGenerator": [
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SummaryRecord": [
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ],
+    "SummarySource": [
+      "validation/reports/s5-schema-sweep-final-temporal/summary.json",
+      "validation/reports/s5-schema-sweep-model-summary/summary.json"
+    ]
+  }
+}

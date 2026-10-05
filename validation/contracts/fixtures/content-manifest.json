@@ -1,0 +1,53 @@
+{
+  "kind": "synthetic_oracle_fixture",
+  "not_product_evidence": true,
+  "shape_source": "design/contracts/examples/run-snapshot-intake.valid.json",
+  "shape_source_sha256": "4dbaa61deccf721e5b0aec67756cc5d9429d85d2b993fca646da64f32989ba10",
+  "contract_version": "1.1.0",
+  "files": [
+    {
+      "ref": {
+        "object_type": "template_content",
+        "object_id": "template_content_135744eeee7e30c1b68f0ad9784d07f4cf083d58786893ec0dee356b56a8c19b",
+        "object_version": 1,
+        "source_version": 1,
+        "hash": "135744eeee7e30c1b68f0ad9784d07f4cf083d58786893ec0dee356b56a8c19b"
+      },
+      "path": "content/135744eeee7e30c1b68f0ad9784d07f4cf083d58786893ec0dee356b56a8c19b",
+      "size": 109
+    },
+    {
+      "ref": {
+        "object_type": "template_content",
+        "object_id": "template_content_68086c50c98e4024ad7c7b6080b28a40b6e3805b07115957122ec2446ce022d1",
+        "object_version": 1,
+        "source_version": 1,
+        "hash": "68086c50c98e4024ad7c7b6080b28a40b6e3805b07115957122ec2446ce022d1"
+      },
+      "path": "content/68086c50c98e4024ad7c7b6080b28a40b6e3805b07115957122ec2446ce022d1",
+      "size": 97
+    },
+    {
+      "ref": {
+        "object_type": "template_content",
+        "object_id": "template_content_86b6a6ce0db1993916a4d5dfd3a306aae0d297f69c018ba678517c522da3ca2d",
+        "object_version": 1,
+        "source_version": 1,
+        "hash": "86b6a6ce0db1993916a4d5dfd3a306aae0d297f69c018ba678517c522da3ca2d"
+      },
+      "path": "content/86b6a6ce0db1993916a4d5dfd3a306aae0d297f69c018ba678517c522da3ca2d",
+      "size": 93
+    },
+    {
+      "ref": {
+        "object_type": "template_content",
+        "object_id": "template_content_b6088df627b2aca87c977c1ab0c7a93b51255db59fb79df677394dd55854fe55",
+        "object_version": 1,
+        "source_version": 1,
+        "hash": "b6088df627b2aca87c977c1ab0c7a93b51255db59fb79df677394dd55854fe55"
+      },
+      "path": "content/b6088df627b2aca87c977c1ab0c7a93b51255db59fb79df677394dd55854fe55",
+      "size": 102
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-04T17:59:43.809Z",
+  "browser_path": "Playwright: Browser plugin not available",
+  "run_id": "browser_runtime_1791136769036",
+  "checks": [
+    {
+      "name": "public_create_for_observation",
+      "passed": true
+    },
+    {
+      "name": "public_cancel_processed",
+      "passed": true
+    },
+    {
+      "name": "actual_service_health",
+      "passed": true
+    },
+    {
+      "name": "cancel_not_failed_and_requirements_not_controls",
+      "passed": true
+    },
+    {
+      "name": "local_does_not_invent_temporal",
+      "passed": true
+    },
+    {
+      "name": "full_audit_chain_validated",
+      "passed": true
+    },
+    {
+      "name": "cross_run_observation_rejected",
+      "passed": true
+    },
+    {
+      "name": "unavailable_is_not_cached_success",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "no_page_exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual runtime HTTP/health/audit and explicit network faults; no provider/CI calls"
+}

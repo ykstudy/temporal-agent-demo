@@ -1,0 +1,78 @@
+{
+  "recorded_at": "2026-10-03T01:15:19.542020+00:00",
+  "scope": "Project creation Agent and its own runtime/delivery only",
+  "goal_stop": "Latest user request: wrap up and finish now; supersedes waiting for full S2",
+  "stage": "S1 accepted; S2 incomplete; S3-S8 not entered",
+  "source_manifest": "docs/evidence/s2-controlled-push-source-audit.json",
+  "source_aggregate_sha256": "b3cf46eb7f169c2503ee38e81c955eea0e93297535eaea0ddeb37c59cefc8fa4",
+  "configuration": {
+    "platform": "darwin_amd64",
+    "go": "go1.25.5",
+    "modes": "local/rules/gitlab",
+    "git_remote": "actual loopback bare Git HTTP backend",
+    "gitlab_api": "mock; branch/tree/files/commit derived from actual bare repository",
+    "upstream": "explicit synthetic workspace and Go receipts; approved bytes supplied in test",
+    "publication": "3.2/1.3 test-only; public default stays 3.0.1/1.1"
+  },
+  "checks": [
+    {
+      "name": "normal_push_selected_subtests",
+      "status": "partial_suite",
+      "log": "docs/evidence/s2-controlled-push-tests.log",
+      "sha256": "3c905292315cb20bcc47c491b9c478d772e16d6bc8eea82bbf2e02dd72bd391c",
+      "scope": "Normal/lost-response push subtests passed in 137.21s; the encompassing 180.334s suite failed because the first recovery fixture omitted immutable objects. Fixture was corrected; its subsequent race run was interrupted, not accepted."
+    },
+    {
+      "name": "sandbox",
+      "status": "passed",
+      "log": "docs/evidence/s2-controlled-push-sandbox.log",
+      "sha256": "85b2f24a50211f9181c20c3bf8146cfb9ec62f16498f885e467726da129bd6f7",
+      "scope": "2.778s; actual six Git commands, exact remote SHA, no persisted credential, unrelated file read/write and network port denied."
+    },
+    {
+      "name": "recovery_race",
+      "status": "interrupted_by_user",
+      "log": "docs/evidence/s2-controlled-push-recovery-race.log",
+      "sha256": "a0faf4890ac1d10d81fde04f1bf733ea80eddde67c5232c4cb62d16d266bd097",
+      "scope": "Stopped task-owned process group; exit 143. No completed acceptance of the corrected launch checkpoint fixture."
+    },
+    {
+      "name": "push_race",
+      "status": "interrupted_by_user",
+      "log": "docs/evidence/s2-controlled-push-race.log",
+      "sha256": "e11e48c8fdfee5f018f53b55239a99da0ab80bebe86af78a9ccdb4ba25ce0123",
+      "scope": "Stopped task-owned process group; exit 143. No whole-suite race result."
+    },
+    {
+      "name": "create_and_legacy_regression",
+      "status": "interrupted_by_user",
+      "log": "docs/evidence/s2-controlled-push-create-regression.log",
+      "sha256": "ad121d797f151be00ccc98d8e4088ee70878d3486a2f8df9cc3efeebb041570c",
+      "scope": "Some completed cases are visible in the log; whole suite stopped with exit 143, not passed."
+    },
+    {
+      "name": "vet",
+      "status": "passed",
+      "log": "docs/evidence/s2-controlled-push-vet.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "go vet ./... exited 0 on final product source; later edits only tests, validation sample selection and docs."
+    },
+    {
+      "name": "build",
+      "status": "passed",
+      "log": "docs/evidence/s2-controlled-push-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "go build ./... exited 0 on final product source."
+    }
+  ],
+  "not_covered": [
+    "Complete corrected checkpoint recovery acceptance",
+    "Final race and broader regression completion",
+    "Independent export checker with new action variants was edited but not rerun",
+    "Controlled CI and remote completion",
+    "Remaining parameter revision, approval expiry and terminal new-Run paths",
+    "Public 1.3 C07-C10 and real Temporal acceptance",
+    "Live GitLab/Runner, model, browser and container",
+    "S2 full exit and S3-S8"
+  ]
+}

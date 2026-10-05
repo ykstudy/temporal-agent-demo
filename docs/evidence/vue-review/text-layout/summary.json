@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-02T09:32:41.398Z",
+  "checks": [
+    {
+      "name": "state_text_within_cards",
+      "passed": true
+    },
+    {
+      "name": "state_full_inspector_binding",
+      "passed": true
+    },
+    {
+      "name": "responsibility_text_within_cards",
+      "passed": true
+    },
+    {
+      "name": "responsibility_full_inspector_binding",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

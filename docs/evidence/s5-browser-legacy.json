@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-04T18:02:57.789Z",
+  "browser_path": "Playwright: Browser plugin not available",
+  "checks": [
+    {
+      "name": "explicit_legacy_fixture_created",
+      "passed": true
+    },
+    {
+      "name": "legacy_readonly_no_write_controls",
+      "passed": true
+    },
+    {
+      "name": "old_record_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "expected_network_status": "409 legacy_contract_incomplete is the published read-only negotiation, not a page exception"
+}

@@ -1,0 +1,324 @@
+{
+  "audit_at": "2026-10-02T18:54:53.066999+08:00",
+  "scope": "Read-only source audit and execution prompts for project creation Agent and business Run jobs",
+  "git_revision": null,
+  "git_revision_note": "Workspace has no .git; the fingerprint identifies inspected source and schema files, not a Git commit.",
+  "source_and_schema_file_count": 77,
+  "source_and_schema_manifest_sha256": "32256be2dd814c64869b30de6a86ce9cd8c2b5adb5dfb12f78c905b29b761959",
+  "fingerprint_algorithm": "SHA-256 of sorted UTF-8 relative path + NUL + lowercase file SHA-256 + LF records",
+  "product_tests_run": false,
+  "external_writes_performed": false,
+  "live_model_verified": false,
+  "live_gitlab_verified": false,
+  "runtime_configuration": "No product service was started or changed for this audit.",
+  "files": [
+    {
+      "path": "backend/cmd/server/main.go",
+      "sha256": "4e3328585641c0b9cac4b3a180a5bc54dbe0948ea2796b716675d8a25821795a"
+    },
+    {
+      "path": "backend/go.mod",
+      "sha256": "25a1e6f6a4d19e03de49237bb90f73aa20ef341c5aca734c137ab595c9f181de"
+    },
+    {
+      "path": "backend/go.sum",
+      "sha256": "f2b6a8d6068dbce589fc0d1d3481991298688b4654b731fd330afd485e0bd486"
+    },
+    {
+      "path": "backend/internal/agent/agent_test.go",
+      "sha256": "af9a74f6130e5785429250dba497f350e0f107178559e77ffb5e3ec5848385b2"
+    },
+    {
+      "path": "backend/internal/agent/contracts.go",
+      "sha256": "9a01ad4e019f92b34869af04dbb0177afa7a1325ad5772a7c2d372cbd18d0b6e"
+    },
+    {
+      "path": "backend/internal/agent/contracts_test.go",
+      "sha256": "c1ba30d88a0fdd75fa0d950cae96d4b90bcb4a5cf7f288f09a6475640897ab7c"
+    },
+    {
+      "path": "backend/internal/agent/execution.go",
+      "sha256": "eee3eb29e5cf94e03a3f4973bfc88fdc53c21291f669b3b8858e55fad130626f"
+    },
+    {
+      "path": "backend/internal/agent/gitlab.go",
+      "sha256": "ecf5ce23b0f6c6f425a6e84b1d7177cadbe5ad74275a020aee8f639814caaddc"
+    },
+    {
+      "path": "backend/internal/agent/http.go",
+      "sha256": "7e911a5c7242ba7e22ecbee0c3886b65aba3417d27825bac3cf4a838c47d531c"
+    },
+    {
+      "path": "backend/internal/agent/model.go",
+      "sha256": "46011795e1713b64592ac10065a0fb706f8d0ad62467b25fb8fc96f449fa973d"
+    },
+    {
+      "path": "backend/internal/agent/providers_test.go",
+      "sha256": "5bb60c5150dd8d59392fcbefbe5ebb5de9ac08beff1a813c89b8bb95da3346b6"
+    },
+    {
+      "path": "backend/internal/agent/service.go",
+      "sha256": "cff14d2874760887921b4864041b38ba01b94de4664d0922173a4e3a2e2aee49"
+    },
+    {
+      "path": "backend/internal/agent/store.go",
+      "sha256": "c61e620eb2a5017ac4417097ce79f8eb26b3e38a30761d23007e5ffa5b134460"
+    },
+    {
+      "path": "backend/internal/agent/templates/logging.go.tmpl",
+      "sha256": "2041b64eeb708bafc183fd8a125e6288f2a68b6a95aeca07b49e3ae02316cc39"
+    },
+    {
+      "path": "backend/internal/agent/templates/logging_test.go.tmpl",
+      "sha256": "eef995a5d975ab0f0a521b3e848374b1d029c50244a4f528073cc89f0cfeb8f5"
+    },
+    {
+      "path": "backend/internal/agent/templates.go",
+      "sha256": "c02250e6f495dd7e488fe7fc4ce36b7ee933014fa11484f1120eb5c705b80255"
+    },
+    {
+      "path": "backend/internal/agent/templates_runtime_test.go",
+      "sha256": "69229abedc800fd6dfe609a88ec6f4aa33c5521de7f44a1a0d1b308afd10d322"
+    },
+    {
+      "path": "backend/internal/agent/types.go",
+      "sha256": "c4987a222e95f4130cc44b8af19fbcbe34bd970d38d9a4a3d439fe47a2c5421e"
+    },
+    {
+      "path": "backend/internal/agent/verification.go",
+      "sha256": "569db15ce1b84d459f9c40f55389abff8f77acf9b02f73878afc1e29722d9f73"
+    },
+    {
+      "path": "backend/internal/agent/workflow.go",
+      "sha256": "0bc1995d29dab12effbf3c278080fde8e37346f492df58404044c2749d2c6c18"
+    },
+    {
+      "path": "backend/internal/agent/workflow_test.go",
+      "sha256": "d1c6354872435cb81cd23773d1ae4d3ce341de141759b8a66fe30c0f1497b987"
+    },
+    {
+      "path": "design/contracts/schemas/agent.schema.json",
+      "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+    },
+    {
+      "path": "design/contracts/schemas/common.schema.json",
+      "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+    },
+    {
+      "path": "design/contracts/schemas/message.schema.json",
+      "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "sha256": "9217442eae3edaf2236f6bf548b218be71e99fd7bcde26b540d7dabbbd8dd39e"
+    },
+    {
+      "path": "frontend/src/Workspace.vue",
+      "sha256": "7c0d5d417e9168ccf35d0ecea5e3a4eaf52a1bcea078f32c75f6e22dfa772a57"
+    },
+    {
+      "path": "frontend/src/components/Inspector.vue",
+      "sha256": "6b02aa7b3ef9063594eae03ca42cd9340be8129e4ee0506953d8b11ff9edc110"
+    },
+    {
+      "path": "frontend/src/components/MarkdownMessage.vue",
+      "sha256": "f6dee973522097882f9dada7f18c399e04d89681cba2ffc7a2126a1b6f78cd56"
+    },
+    {
+      "path": "frontend/src/components/ProposalCard.vue",
+      "sha256": "b7dac368a2dcc00ea9b15c7ba187fd68cbfee18c62d2dba84274a5cf50b2db3d"
+    },
+    {
+      "path": "frontend/src/components/Sidebar.vue",
+      "sha256": "c3c9f4254561b5b63c639e949bd5e672c4b645f168b2c31d088768cc61808a03"
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "sha256": "43c906bcf41f98ac47657947cafe3956bae0d4d5df69ddba80424014f2d426aa"
+    },
+    {
+      "path": "frontend/src/lib/markdown.ts",
+      "sha256": "0e0726a5f1ed7872fc70b40fc3b80d096c6c877ef4f587b195231e40be42a182"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "sha256": "e9005424d98d41859dd4b704046abb016933eaee7043089e4ebe757b4ae84c23"
+    },
+    {
+      "path": "frontend/src/markdown-plugins.d.ts",
+      "sha256": "0417d143eea04694c1ed60e41c054179f99a79692269b43a57a5ed801c5fc3e2"
+    },
+    {
+      "path": "frontend/src/review/CoverageDiagram.vue",
+      "sha256": "10b4eafe9e58b1c83c7159165fc6e7468ba0f4bf2085818269617e04aa00de3b"
+    },
+    {
+      "path": "frontend/src/review/DiagramRenderer.vue",
+      "sha256": "ac6ff2f4cdb6a4e64c3548fb489c11ebb13923912f8b35e5d0abd6ccd2916e8b"
+    },
+    {
+      "path": "frontend/src/review/ReviewWorkbench.vue",
+      "sha256": "076a55503ab652f407b209006ed1c68e301931a512f001775d4e6795906bf566"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/business/StateDiagram.vue",
+      "sha256": "623d254ff4bd75c068d21969aaf00dcfea5db063fb2fbefe1e7536231d2df8fd"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/business/SwimlaneDiagram.vue",
+      "sha256": "35014ca5042654b6a5c761539fb65e3d6e8baa053e4f6680a4ec7b6687fc725c"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/business/business.css",
+      "sha256": "cfa5a04588b862268dec3b0ca164a2fc1ca889eaefbfeac5895a1a2705111d9f"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/business/geometry.ts",
+      "sha256": "fcb396f563f1cada43f645559b68c12e70bc298b9491d088ccc9c6440299ce61"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/structure/KnowledgeDiagram.vue",
+      "sha256": "3cd19bfcd15ef19d4ab5ee0375c5981d1dcbace6fa77354decc556d96cf7f655"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/structure/RelationCanvas.vue",
+      "sha256": "2c5dd798550ab8633d1d7f5f39df55094e392f3a348963488abbc2f71f35cc76"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/structure/TimelineDiagram.vue",
+      "sha256": "43c057d0865f74222b7350a796187df875d79f0953e5e7b1163a86fe663e6131"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/structure/layout.ts",
+      "sha256": "dfda733f00179f296ec1159895ac867cf7b17eaf9e79bf45905bb967a05de79a"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/ArchitectureDiagram.vue",
+      "sha256": "36e53dae220f75c26881c02b8a0aed4b50d0f5726f56958f988efbae650e32b9"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/ClassDiagram.vue",
+      "sha256": "1e022362e7a0568b279b9a8934a70ba5bc36d9b403b5862d5319c2448e2cdcaf"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/DataFlowDiagram.vue",
+      "sha256": "4f093371a526ddc2d5d1115e0afe15fc55e5f68a7211341b541c0de99296c85d"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/DependencyDiagram.vue",
+      "sha256": "e1bac2b41435e287528c7d8820822bb4c6a712d56390773d15253591155a0e86"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/LineageDiagram.vue",
+      "sha256": "1d0758764d90d55c9e9a7b1ef3fa4e1b96f54f7ddb7d5f989e4869d322d26b9d"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/SequenceDiagram.vue",
+      "sha256": "6a23d126b5013363447bf857f7ec429aa45d45776ffb0667b6ca80f30201a7b1"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalDefs.vue",
+      "sha256": "25e6f9fe773e3f694a704524a7eb7301def1f86db1caa8c280aa0cf258ba93c0"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalEdge.vue",
+      "sha256": "e44bded724627ba8bae1dca671401748c0d572591035e1a26112d7472dc325c4"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalIcon.vue",
+      "sha256": "ee6dedd212c40dae871d636979dcbe136b3e256d7e98f04d752aca09a26856ce"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/TechnicalNode.vue",
+      "sha256": "47c80f4b4fc312d34213ace9074151356465d1410ab3cd2e29d03bdf4c3ce827"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/layout.ts",
+      "sha256": "22c2b89352fcc74e015f99aeca7a1feb9c8c929b67e484f55e02f9ecdcd2fe4f"
+    },
+    {
+      "path": "frontend/src/review/diagrams/components/diagrams/technical/technical.css",
+      "sha256": "0010d35128742ebf799158d5717365f40f1e4b134f9d05f417883e6cf11889c6"
+    },
+    {
+      "path": "frontend/src/review/diagrams/data/diagrams/business.ts",
+      "sha256": "8f7ebc592f6830f7c7e10b4aa131c34dacd16cfda570c75892a9fb2d39141cf7"
+    },
+    {
+      "path": "frontend/src/review/diagrams/data/diagrams/technical.ts",
+      "sha256": "cf814edea58293a2e746ca0d07663d753eef51e570c82998ebba034b26e6b387"
+    },
+    {
+      "path": "frontend/src/review/diagrams/diagram.css",
+      "sha256": "d16505c497d29687ac567c08d2d274d97a8a1dedb2fa88db33891454cf0bf90a"
+    },
+    {
+      "path": "frontend/src/review/diagrams/lib/diagram-export.ts",
+      "sha256": "01aa675f421d136b90c1734f482fe8147c168363ef1255cd8d3a17ed96475d04"
+    },
+    {
+      "path": "frontend/src/review/diagrams/lib/diagram-types.ts",
+      "sha256": "4ef518e9ebcda077429fcf98c4246fbf9e5b388cdc513f4092ff1843ded6d1c0"
+    },
+    {
+      "path": "frontend/src/review/export.ts",
+      "sha256": "26c7579450206a228f6fb4c6d2fc106bc03915ddd37dacf93724c85dfce15b92"
+    },
+    {
+      "path": "frontend/src/review/load.ts",
+      "sha256": "9385137bd408208c970b3f6a63a2dc7bbe0036b98294d0fcbe8804560abbe39d"
+    },
+    {
+      "path": "frontend/src/review/review.css",
+      "sha256": "bd169c96e82ae9665791e9bc78f34020f999627221ec168421da152ef5eb6097"
+    },
+    {
+      "path": "frontend/src/review/types.ts",
+      "sha256": "ee6410fee4f39b598fae970091b9649a4877edfb97f8e1faca8697df19459d9e"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "sha256": "eb597cc544aecd14b5d320e5109d8dbee41a5a5c17f6e5b3bdab9279934d01df"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "sha256": "ca1f3cd3429453c100af47861c9b6f15f7bb86550341fff5c018f41cd72dd6a7"
+    },
+    {
+      "path": "validation/browser/races.mjs",
+      "sha256": "7dd04266e45169d94654d9cb6edbc21217bf7c0907dd1677e8afd51ebb5c02d8"
+    },
+    {
+      "path": "validation/browser/review.mjs",
+      "sha256": "c02dac74569db478023cc7e909a00e4b2e83daf282781d99f7a58c7a7270155f"
+    },
+    {
+      "path": "validation/browser/smoke.mjs",
+      "sha256": "350b1c1aca917590c203f0bab8f76465108f15420df3eefb9023717bcbd6a76c"
+    },
+    {
+      "path": "validation/browser/source-bound.mjs",
+      "sha256": "b975dd4791149a7a03d086a0fd88f0d6fcc94ad9583f17c8ba5f4b612539bda4"
+    },
+    {
+      "path": "validation/fixtures.py",
+      "sha256": "9b033ad5198c142190d44fc0bc25b1828919b6495b2bbab6ff19a53682e19772"
+    },
+    {
+      "path": "validation/http_client.py",
+      "sha256": "fb034294b74280ede664449c2f94ce6b6b23888f646ddf6e00ada4e10692d905"
+    },
+    {
+      "path": "validation/launcher_client.py",
+      "sha256": "ce3f8d3901d45fddd3c67389fe12ac35cbaaff360b0f2f1e0cec75fb9f0ccb03"
+    },
+    {
+      "path": "validation/scenarios.py",
+      "sha256": "8753f45bbaa63ca5a64fda6906793066b6979ec21d99311e39a18ecbeb99b36f"
+    },
+    {
+      "path": "validation/start.py",
+      "sha256": "4b6da3519fe1235de0a3ce6706b06a86e25d21b6bb2c1d5bd85902c8f9b4a881"
+    }
+  ]
+}

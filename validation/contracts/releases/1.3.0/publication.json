@@ -1,0 +1,26 @@
+{
+  "publication_source": "design/contracts/releases/1.3.0",
+  "files": [
+    {
+      "path": "agent.schema.json",
+      "source": "design/contracts/releases/1.3.0/agent.schema.json",
+      "schema_id": "https://agentstudio.invalid/contracts/1.3.0/agent.schema.json",
+      "size": 206103,
+      "sha256": "3be1f562fd4db146a31761b261d575b09d707fa7ebb6b846405b8ea36f09434f"
+    },
+    {
+      "path": "common.schema.json",
+      "source": "design/contracts/releases/1.3.0/common.schema.json",
+      "schema_id": "https://agentstudio.invalid/contracts/1.3.0/common.schema.json",
+      "size": 3188,
+      "sha256": "f801bc4253afe6ab3542e9471366e5c66b68fcb0239330b8530aa4220c68f16b"
+    },
+    {
+      "path": "message.schema.json",
+      "source": "design/contracts/releases/1.3.0/message.schema.json",
+      "schema_id": "https://agentstudio.invalid/contracts/1.3.0/message.schema.json",
+      "size": 17486,
+      "sha256": "dd276ce629351cb8d08bca3cc4cbdf104db03879d6e5243b24f0e25cbd0e98d1"
+    }
+  ]
+}

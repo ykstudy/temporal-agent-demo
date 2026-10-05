@@ -1,0 +1,791 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentstudio.invalid/contracts/1.3.0/message.schema.json",
+  "title": "Project Agent canonical message protocol",
+  "description": "Target v2 contract. Current legacy /api DTOs do not satisfy this schema. Compatibility readers must not promote adapted history into executable messages.",
+  "$ref": "#/$defs/MessageEnvelope",
+  "$defs": {
+    "MessageEnvelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "contract_version",
+        "run_id",
+        "message_id",
+        "sequence",
+        "source_version",
+        "state_sequence",
+        "role",
+        "created_at",
+        "modes",
+        "parts"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "contract_version": {
+          "const": "1.3.0"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "message_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "sequence": {
+          "$ref": "common.schema.json#/$defs/PositiveVersion"
+        },
+        "source_version": {
+          "$ref": "common.schema.json#/$defs/PositiveVersion"
+        },
+        "state_sequence": {
+          "$ref": "common.schema.json#/$defs/PositiveVersion"
+        },
+        "role": {
+          "enum": [
+            "user",
+            "assistant",
+            "system",
+            "tool"
+          ]
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "modes": {
+          "$ref": "common.schema.json#/$defs/Modes"
+        },
+        "reply_to_message_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "command_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/Part"
+          }
+        }
+      }
+    },
+    "ObjectRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/ObjectRef"
+        }
+      ],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "run",
+            "message",
+            "proposal",
+            "definition",
+            "plan",
+            "manifest",
+            "verification_report",
+            "artifact",
+            "summary"
+          ]
+        }
+      }
+    },
+    "Part": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/TextPart"
+        },
+        {
+          "$ref": "#/$defs/ComponentPart"
+        },
+        {
+          "$ref": "#/$defs/DiffPart"
+        },
+        {
+          "$ref": "#/$defs/ChoicePart"
+        },
+        {
+          "$ref": "#/$defs/ActionPart"
+        }
+      ]
+    },
+    "PartBase": {
+      "type": "object",
+      "required": [
+        "part_id",
+        "part_version",
+        "type",
+        "fallback_text"
+      ],
+      "properties": {
+        "part_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "part_version": {
+          "const": 1
+        },
+        "type": {
+          "type": "string"
+        },
+        "fallback_text": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      }
+    },
+    "TextPart": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/PartBase"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": [
+        "text",
+        "format"
+      ],
+      "properties": {
+        "type": {
+          "const": "text"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 65536
+        },
+        "format": {
+          "enum": [
+            "plain",
+            "markdown"
+          ]
+        }
+      }
+    },
+    "ComponentPart": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/PartBase"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": [
+        "component_id",
+        "component_version",
+        "component_type",
+        "component_schema",
+        "payload"
+      ],
+      "properties": {
+        "type": {
+          "const": "component"
+        },
+        "component_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "component_version": {
+          "$ref": "common.schema.json#/$defs/PositiveVersion"
+        },
+        "component_type": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,63}$"
+        },
+        "component_schema": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "payload": true
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "component_type": {
+              "const": "clarification"
+            },
+            "component_schema": {
+              "const": "urn:agentstudio:component:clarification:1.0.0"
+            },
+            "payload": {
+              "$ref": "#/$defs/ClarificationPayload"
+            }
+          }
+        },
+        {
+          "properties": {
+            "component_type": {
+              "const": "proposal_diff"
+            },
+            "component_schema": {
+              "const": "urn:agentstudio:component:proposal_diff:1.0.0"
+            },
+            "payload": {
+              "$ref": "#/$defs/ProposalDiffPayload"
+            }
+          }
+        },
+        {
+          "properties": {
+            "component_type": {
+              "const": "progress"
+            },
+            "component_schema": {
+              "const": "urn:agentstudio:component:progress:1.0.0"
+            },
+            "payload": {
+              "$ref": "#/$defs/ProgressPayload"
+            }
+          }
+        },
+        {
+          "properties": {
+            "component_type": {
+              "const": "artifact_manifest"
+            },
+            "component_schema": {
+              "const": "urn:agentstudio:component:artifact_manifest:1.0.0"
+            },
+            "payload": {
+              "$ref": "#/$defs/ArtifactManifestPayload"
+            }
+          }
+        },
+        {
+          "properties": {
+            "component_type": {
+              "const": "verification_report"
+            },
+            "component_schema": {
+              "const": "urn:agentstudio:component:verification_report:1.0.0"
+            },
+            "payload": {
+              "$ref": "#/$defs/VerificationReportPayload"
+            }
+          }
+        },
+        {
+          "properties": {
+            "component_type": {
+              "not": {
+                "enum": [
+                  "clarification",
+                  "proposal_diff",
+                  "progress",
+                  "artifact_manifest",
+                  "verification_report"
+                ]
+              }
+            },
+            "component_schema": {
+              "type": "string",
+              "pattern": "^urn:agentstudio:component:[a-z][a-z0-9_]{0,63}:[0-9]+\\.[0-9]+\\.[0-9]+$"
+            },
+            "payload": {
+              "$ref": "#/$defs/JsonValue"
+            }
+          }
+        }
+      ]
+    },
+    "ClarificationPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question",
+        "field_ids"
+      ],
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "field_ids": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/Id"
+          }
+        }
+      }
+    },
+    "ProposalDiffPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposal_ref",
+        "summary",
+        "changed_paths"
+      ],
+      "properties": {
+        "proposal_ref": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/ObjectRef"
+            },
+            {
+              "properties": {
+                "object_type": {
+                  "const": "proposal"
+                }
+              }
+            }
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "changed_paths": {
+          "type": "array",
+          "maxItems": 128,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/RelativePath"
+          }
+        }
+      }
+    },
+    "ProgressPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "summary"
+      ],
+      "properties": {
+        "state": {
+          "$ref": "common.schema.json#/$defs/RunState"
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "delivery_step": {
+          "enum": [
+            "remote_repo",
+            "remote_ci",
+            "package"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "delivery_step"
+            ]
+          },
+          "then": {
+            "properties": {
+              "state": {
+                "const": "DELIVER"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ArtifactManifestPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest_ref",
+        "artifact_count",
+        "summary"
+      ],
+      "properties": {
+        "manifest_ref": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/ObjectRef"
+            },
+            {
+              "properties": {
+                "object_type": {
+                  "const": "manifest"
+                }
+              }
+            }
+          ]
+        },
+        "artifact_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 128
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      }
+    },
+    "VerificationReportPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_ref",
+        "result",
+        "summary"
+      ],
+      "properties": {
+        "report_ref": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/ObjectRef"
+            },
+            {
+              "properties": {
+                "object_type": {
+                  "const": "verification_report"
+                }
+              }
+            }
+          ]
+        },
+        "result": {
+          "enum": [
+            "not_ready",
+            "passed",
+            "failed"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      }
+    },
+    "DiffPart": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/PartBase"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": [
+        "object_ref",
+        "summary",
+        "changes"
+      ],
+      "properties": {
+        "type": {
+          "const": "diff"
+        },
+        "object_ref": {
+          "$ref": "#/$defs/ObjectRef"
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "changes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "$ref": "#/$defs/DiffChange"
+          }
+        }
+      }
+    },
+    "DiffChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "operation",
+        "before",
+        "after"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "operation": {
+          "enum": [
+            "add",
+            "update",
+            "delete"
+          ]
+        },
+        "before": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 32768
+        },
+        "after": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 32768
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "operation": {
+              "const": "add"
+            },
+            "before": {
+              "type": "null"
+            },
+            "after": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "properties": {
+            "operation": {
+              "const": "update"
+            },
+            "before": {
+              "type": "string"
+            },
+            "after": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "properties": {
+            "operation": {
+              "const": "delete"
+            },
+            "before": {
+              "type": "string"
+            },
+            "after": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "ChoicePart": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/PartBase"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": [
+        "prompt",
+        "selection_mode",
+        "choices"
+      ],
+      "properties": {
+        "type": {
+          "const": "choice"
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "selection_mode": {
+          "enum": [
+            "single",
+            "multiple"
+          ]
+        },
+        "choices": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "$ref": "#/$defs/Choice"
+          }
+        }
+      }
+    },
+    "Choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "choice_id",
+        "label"
+      ],
+      "properties": {
+        "choice_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      }
+    },
+    "ActionPart": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/PartBase"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "required": [
+        "label",
+        "intent"
+      ],
+      "properties": {
+        "type": {
+          "const": "action"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "intent": {
+          "$ref": "#/$defs/ActionIntent"
+        }
+      }
+    },
+    "ActionIntent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "command_id",
+        "action",
+        "target"
+      ],
+      "properties": {
+        "command_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "action": {
+          "enum": [
+            "accept",
+            "reject",
+            "revise",
+            "pause",
+            "resume",
+            "cancel",
+            "retry",
+            "reconcile"
+          ]
+        },
+        "target": {
+          "$ref": "#/$defs/ObjectRef"
+        },
+        "required_proposal_ref": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/ObjectRef"
+            },
+            {
+              "properties": {
+                "object_type": {
+                  "const": "proposal"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "enum": [
+                  "accept",
+                  "reject",
+                  "revise"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "required_proposal_ref"
+            ]
+          }
+        },
+        {
+          "properties": {
+            "target": {
+              "properties": {
+                "object_type": {
+                  "const": "run"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "reconcile"
+              }
+            },
+            "required": [
+              "action"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "required_proposal_ref"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "RelativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)[A-Za-z0-9._/-]+$"
+    },
+    "JsonValue": {
+      "description": "Unknown component data only. Depth <= 8 and serialized UTF-8 <= 64 KiB are mandatory semantic limits in addition to this per-container schema.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string",
+          "maxLength": 8192
+        },
+        {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/JsonValue"
+          }
+        },
+        {
+          "type": "object",
+          "maxProperties": 64,
+          "propertyNames": {
+            "maxLength": 64
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          }
+        }
+      ]
+    }
+  }
+}

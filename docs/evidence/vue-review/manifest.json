@@ -1,0 +1,212 @@
+{
+  "recorded_at": "2026-10-02T09:50:14.877266+00:00",
+  "scope": "Archived Vue migration and readonly review evidence; independent categories, not Agent v2/live acceptance",
+  "bundle_sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+  "files": [
+    {
+      "path": "docs/evidence/vue-review/bundle-check.json",
+      "sha256": "67d136d1acc05fb9157b852d1e5ed38abd1708c3c87ee65ede59c663258bbce1",
+      "bytes": 822
+    },
+    {
+      "path": "docs/evidence/vue-review/migration/browser-done-desktop.png",
+      "sha256": "7faeac024327281cd2052ce0e3ced873d058240a386b0de5ce04c42ce7847a13",
+      "bytes": 205886
+    },
+    {
+      "path": "docs/evidence/vue-review/migration/browser-done-mobile.png",
+      "sha256": "c76de022c9c146cc9e8e68aa6d3847f2f397190769773d144c203d04c1205bd0",
+      "bytes": 75011
+    },
+    {
+      "path": "docs/evidence/vue-review/migration/browser-plan-desktop.png",
+      "sha256": "39d85a052da4e3410acab8d72f08882480bcfde9950475ce5e031acd232ba115",
+      "bytes": 176171
+    },
+    {
+      "path": "docs/evidence/vue-review/migration/browser-races.json",
+      "sha256": "25e67d9cdba389b9fecc4ad99b6473c567ccaa06c2a39cf8be67b438dc5c9518",
+      "bytes": 467
+    },
+    {
+      "path": "docs/evidence/vue-review/migration/browser-summary.json",
+      "sha256": "b3bb2bcb002b38e49cd472109b0acc15eb1a3a3b6931eb82a38e9b797a4b9a04",
+      "bytes": 1044
+    },
+    {
+      "path": "docs/evidence/vue-review/preflight.json",
+      "sha256": "3ad45e13d309b6081eb462d0ebb57c9d4bfedbc22ea7b7536b268477db5e16ee",
+      "bytes": 1408
+    },
+    {
+      "path": "docs/evidence/vue-review/preservation.json",
+      "sha256": "e0a4601a8da333c408d4a95efb70b12f589f0e973a8b8b2f8af11dd9498a1544",
+      "bytes": 7256
+    },
+    {
+      "path": "docs/evidence/vue-review/qa-index.json",
+      "sha256": "413898528d044988312c43a8104bc1b61bbc845d41cbf312034d2fb05c602189",
+      "bytes": 12648
+    },
+    {
+      "path": "docs/evidence/vue-review/review/exports/contracts-core.png",
+      "sha256": "b342044406e86ccd28c88c821a27796794f1c9151a4cee532866cd71ae38797c",
+      "bytes": 415762
+    },
+    {
+      "path": "docs/evidence/vue-review/review/exports/contracts-core.svg",
+      "sha256": "29cadf7caa1476144a40f787f3fcd8b5bd85199f64b185f86a606483de546fb2",
+      "bytes": 219616
+    },
+    {
+      "path": "docs/evidence/vue-review/review/exports/contracts.png",
+      "sha256": "05f7733d33ca6dd228876ef579a35ff4171c2d57715d073a2752e92078b8fa94",
+      "bytes": 3395482
+    },
+    {
+      "path": "docs/evidence/vue-review/review/exports/contracts.svg",
+      "sha256": "13517d51aaf1b669d699f94ebf8c8870a8418cd1e97b3c5482a9b813f1967f58",
+      "bytes": 6033120
+    },
+    {
+      "path": "docs/evidence/vue-review/review/exports/knowledge-searched.svg",
+      "sha256": "22769317d43aa2451e5bf49824861f97df57f5203992329a6ab1582415d6fa6d",
+      "bytes": 22330
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-architecture-desktop.png",
+      "sha256": "cbc8d363fc7258ff5f66eb6ff6d6706e853efc20f0807b71b4ffb335fa7f77b9",
+      "bytes": 228929
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-bundle.json",
+      "sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+      "bytes": 2302593
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-context-desktop.png",
+      "sha256": "5fc994f2400059bb056f972c5ccd534578b31eeeb04dbd4506cefbb6c225d24f",
+      "bytes": 220208
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-contracts-desktop.png",
+      "sha256": "8230428292fb4c62e00f3845d2ba2dd8da05e9518a883ca1b134f66fdf6a7b1e",
+      "bytes": 252788
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-coverage-desktop.png",
+      "sha256": "4854eed65639b55a928d0134acbfede498eae4674f7c9225f36a907736ac0f11",
+      "bytes": 255443
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-coverage-details.png",
+      "sha256": "a7f968957f1850435aa4b8e5a244502b7be24d02c3436ff9072c7119c6ad7bad",
+      "bytes": 216288
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-dark.png",
+      "sha256": "eca9d265b1e8b0107fb74b825e60516d9bec85791ee9d2970facfab263033f04",
+      "bytes": 283136
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-knowledge-desktop.png",
+      "sha256": "43dbc3f943432e12c129ed2a5e60740a4d68aa8be1dd8d52d45814529342908c",
+      "bytes": 209105
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-knowledge-filtered.png",
+      "sha256": "a00c9d50f4ffefcaf07bbd82cab2958b235874132860b5b438136e90bbddb1da",
+      "bytes": 287000
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-lineage-desktop.png",
+      "sha256": "1d0e9a951632998169d23ddac43a811b081180489e423b2a767a62fc539bfedc",
+      "bytes": 246421
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-mobile.png",
+      "sha256": "49b00e6b069a3a7e2535bb43124baa8b468aee26b4d4c67b163636dbe8824f11",
+      "bytes": 52602
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-responsibility-desktop.png",
+      "sha256": "c6c9a1af664de278c1c1a921e6b8fcc9d8c07ccd0536e5ddb734301f72565bba",
+      "bytes": 161663
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-sequence-desktop.png",
+      "sha256": "841ce31d118ea4ed5449b48c2e6cb666e32038562530e6bd89158fe3d5cdc88f",
+      "bytes": 210009
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-skills-desktop.png",
+      "sha256": "c963207d5f52b9c9daf803d560f6c19247ab3a7d82a6eb00540438ec731c7607",
+      "bytes": 195828
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-source-dialog.png",
+      "sha256": "8d6e559aa1a6c250e0d6da1f878bf7afb9397d92a66b38310c81efd2fbb97f86",
+      "bytes": 232035
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-state-desktop.png",
+      "sha256": "a26616845b263466687d48c8a1bb385b870f3602e8271d7094db2d43b01678bb",
+      "bytes": 194043
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-summary.json",
+      "sha256": "c6228a37a66350a823727a436d158cafc6aa1030dab621c0ee7505db661d7df5",
+      "bytes": 36165
+    },
+    {
+      "path": "docs/evidence/vue-review/review/review-versions-desktop.png",
+      "sha256": "b7803cd88da74762bc0e667afc4750b7ed85dcb17ebd18eab70b3f029f86a438",
+      "bytes": 210798
+    },
+    {
+      "path": "docs/evidence/vue-review/review/workspace-readonly-mobile.png",
+      "sha256": "2326f4ba5f367efd9eeafabfeb14b2acfe88f098e5f287f696f1a8da306677a8",
+      "bytes": 37058
+    },
+    {
+      "path": "docs/evidence/vue-review/source-bound/baseline_invariants_false.png",
+      "sha256": "56ddc491647f71138802e1c03538d0ca5cf806e77ab14339266802c061b90049",
+      "bytes": 50530
+    },
+    {
+      "path": "docs/evidence/vue-review/source-bound/network_schema_relaxed_with_extra.png",
+      "sha256": "56ddc491647f71138802e1c03538d0ca5cf806e77ab14339266802c061b90049",
+      "bytes": 50530
+    },
+    {
+      "path": "docs/evidence/vue-review/source-bound/schema_source_text_resigned.png",
+      "sha256": "56ddc491647f71138802e1c03538d0ca5cf806e77ab14339266802c061b90049",
+      "bytes": 50530
+    },
+    {
+      "path": "docs/evidence/vue-review/source-bound/source-bound-summary.json",
+      "sha256": "058f655b982f966a2ed266b1ea468aeaf2907cad4129de94454561191e3453f8",
+      "bytes": 4598
+    },
+    {
+      "path": "docs/evidence/vue-review/source-bound/valid_publication_control.png",
+      "sha256": "a26616845b263466687d48c8a1bb385b870f3602e8271d7094db2d43b01678bb",
+      "bytes": 194043
+    },
+    {
+      "path": "docs/evidence/vue-review/text-layout/responsibility.png",
+      "sha256": "1ad39704d665d6eff79d5b85118e1836164617b2f2ea4d769d84e9fdce113b70",
+      "bytes": 158118
+    },
+    {
+      "path": "docs/evidence/vue-review/text-layout/state.png",
+      "sha256": "8022df2094336cc2179b1cbefd91b689779aedb5c9e2f0733a66dd9a40a55947",
+      "bytes": 202647
+    },
+    {
+      "path": "docs/evidence/vue-review/text-layout/summary.json",
+      "sha256": "973854d158a45fdde8824088fdfb322df79ed54fd309dbc874411a9cbfcdffd2",
+      "bytes": 431
+    }
+  ]
+}

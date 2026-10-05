@@ -1,0 +1,4847 @@
+{
+  "approval": {
+    "accepted_at": "2026-10-02T02:00:01Z",
+    "actor_id": "synthetic-actor",
+    "allowed_actions": [
+      "scaffold",
+      "apply_skill",
+      "verify",
+      "create_repository",
+      "push_repository",
+      "trigger_ci",
+      "package"
+    ],
+    "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+    "approval_id": "synthetic-approval",
+    "contract_version": "1.2.0",
+    "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+    "delivery_target": {
+      "instance_url": "http://127.0.0.1:1",
+      "namespace_id": "1",
+      "namespace_path": "synthetic",
+      "project_path": "synthetic-project",
+      "provider": "gitlab",
+      "ref": "main",
+      "visibility": "private"
+    },
+    "expires_at": "2026-10-02T02:30:00Z",
+    "issued_at": "2026-10-02T02:00:00Z",
+    "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+    "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+    "proposal_id": "synthetic-proposal",
+    "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+    "proposal_version": 1,
+    "revoked_at": null,
+    "run_id": "synthetic-s2-run",
+    "source_version": 1,
+    "started_at": "2026-10-02T02:00:10Z",
+    "status": "started"
+  },
+  "approval_history": [
+    {
+      "accepted_at": "2026-10-02T02:00:01Z",
+      "actor_id": "synthetic-actor",
+      "allowed_actions": [
+        "scaffold",
+        "apply_skill",
+        "verify",
+        "create_repository",
+        "push_repository",
+        "trigger_ci",
+        "package"
+      ],
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "contract_version": "1.2.0",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "delivery_target": {
+        "instance_url": "http://127.0.0.1:1",
+        "namespace_id": "1",
+        "namespace_path": "synthetic",
+        "project_path": "synthetic-project",
+        "provider": "gitlab",
+        "ref": "main",
+        "visibility": "private"
+      },
+      "expires_at": "2026-10-02T02:30:00Z",
+      "issued_at": "2026-10-02T02:00:00Z",
+      "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_id": "synthetic-proposal",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "proposal_version": 1,
+      "revoked_at": null,
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": null,
+      "status": "accepted"
+    }
+  ],
+  "audit_hash": "8270ee7b341464da0c4aced93bd013a41a494e79aa502062cc3046ae5a7ce5ea",
+  "budget": {
+    "ci_windows": [
+      {
+        "deadline_at": "2026-10-02T02:31:20Z",
+        "kind": "ci_poll",
+        "max_attempts": 128,
+        "operation_id": "synthetic-operation-8",
+        "scope_id": "ci_poll:synthetic-operation-8",
+        "source_version": 1,
+        "started_at": "2026-10-02T02:01:20Z",
+        "window_id": "synthetic-window-ci_poll"
+      }
+    ],
+    "contract_version": "1.2.0",
+    "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+    "execution_deadline_at": "2026-10-02T04:00:10Z",
+    "execution_started_at": "2026-10-02T02:00:10Z",
+    "ledger_hash": "5ca772624928c9b722bee44401ffd3da768f018af92ebc0da75437345cbd9d25",
+    "ledger_version": 1,
+    "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+    "reconciliation_windows": [
+      {
+        "deadline_at": "2026-10-02T02:31:25Z",
+        "kind": "reconciliation_read",
+        "max_attempts": 64,
+        "operation_id": "synthetic-operation-6",
+        "scope_id": "reconciliation_read:synthetic-operation-6",
+        "source_version": 1,
+        "started_at": "2026-10-02T02:01:25Z",
+        "window_id": "synthetic-window-reconciliation_read"
+      }
+    ],
+    "reservations": [
+      {
+        "attempt_id": "synthetic-attempt-1",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": null,
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": null,
+        "kind": "command",
+        "operation_id": null,
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": null,
+        "reservation_hash": "8edc5e1905aa9dd2569c2145295e0ea24c231ff38f539283c98997ceaa386d05",
+        "reservation_id": "synthetic-reservation-1",
+        "reserved_at": "2026-10-02T02:00:00Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "synthetic-command",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-2",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-1",
+        "kind": "action",
+        "operation_id": "synthetic-operation-1",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "1aac153ca389fda05cc8da6c32b3fbf000de8018c4a145ba7c2d41f1685fe50b",
+        "reservation_hash": "8c6c59e5f8fc96907a9aacd96aaea08c0d3973efab2a79d8656c7ba9a01dd2a2",
+        "reservation_id": "synthetic-reservation-2",
+        "reserved_at": "2026-10-02T02:00:10Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "scaffold",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-3",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-2",
+        "kind": "action",
+        "operation_id": "synthetic-operation-2",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "4ef45631891090e184f5ee90ad7d50dda937fd3d48266f005a3cb5727626336a",
+        "reservation_hash": "84c3e1bb6817a4c3688ac3557f93e705207cd967ae4ff0e5390aec81ed939e93",
+        "reservation_id": "synthetic-reservation-3",
+        "reserved_at": "2026-10-02T02:00:13Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "apply_skill:add_auth",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-4",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-3",
+        "kind": "action",
+        "operation_id": "synthetic-operation-3",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "3c68a0f04929e1b838c48e8f0a8f4d5116da0f2c58412b23211e986af232735e",
+        "reservation_hash": "ef8437ae08b12b1d714cd1262be9345d31b3d5539253be904266e61d6b335853",
+        "reservation_id": "synthetic-reservation-4",
+        "reserved_at": "2026-10-02T02:00:16Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "apply_skill:add_database",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-5",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-4",
+        "kind": "action",
+        "operation_id": "synthetic-operation-4",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "a4c18654adef13aba604e6546a5493f57c6d738ce5cd114b24094665775d2cde",
+        "reservation_hash": "40c2bd230fb87edede77ef7a8af2dc51a84cc626105090a1279e7856dd06536d",
+        "reservation_id": "synthetic-reservation-5",
+        "reserved_at": "2026-10-02T02:00:19Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "apply_skill:add_logging",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-6",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-5",
+        "kind": "action",
+        "operation_id": "synthetic-operation-5",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+        "reservation_hash": "5811914ca050bf7bda90b6f4ef33baabd040614ca5a4259902093e7fc8f03294",
+        "reservation_id": "synthetic-reservation-6",
+        "reserved_at": "2026-10-02T02:00:22Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "verify",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-7",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T02:12:22Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-5",
+        "kind": "tool",
+        "operation_id": "synthetic-operation-5",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+        "reservation_hash": "e5e1ea6d8ee023fb380e61ce9372a32ba404f2991399d5018b9971e7ee1323a9",
+        "reservation_id": "synthetic-reservation-7",
+        "reserved_at": "2026-10-02T02:00:22Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "tool:go.mod_tidy",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-8",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T02:12:23Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-5",
+        "kind": "tool",
+        "operation_id": "synthetic-operation-5",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+        "reservation_hash": "c8e99685776f3e63b2eaeef9f70680762d2a349d8e43aa7a511f845a2254e533",
+        "reservation_id": "synthetic-reservation-8",
+        "reserved_at": "2026-10-02T02:00:23Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "tool:go.test",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-9",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T02:12:24Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-5",
+        "kind": "tool",
+        "operation_id": "synthetic-operation-5",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+        "reservation_hash": "72e98f5ebf631a66cbbf0b8b5ef79efc02528f5f8b45d04cddce0982ae011f96",
+        "reservation_id": "synthetic-reservation-9",
+        "reserved_at": "2026-10-02T02:00:24Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "tool:go.build",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-10",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-6",
+        "kind": "action",
+        "operation_id": "synthetic-operation-6",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "d30f9d2e9d98a0db7b0c42049fc41ae74d621e9f002458bc2e489d5389748c91",
+        "reservation_hash": "8f7497bf3bf9a595a322afa708eb6769ae8fcc98e8e91b4de05e0dee8e3782c5",
+        "reservation_id": "synthetic-reservation-10",
+        "reserved_at": "2026-10-02T02:00:25Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "create_repository",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-11",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-7",
+        "kind": "action",
+        "operation_id": "synthetic-operation-7",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "2d1e63f58d35c9f9d668601864271b2a631f9efae7c122bc6c22fe4f9fd155df",
+        "reservation_hash": "c6ab65c94a671dc2f238161a2b216a1f892c9c3c4a39e016b45a13f8bff2d547",
+        "reservation_id": "synthetic-reservation-11",
+        "reserved_at": "2026-10-02T02:00:28Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "push_repository",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-12",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-8",
+        "kind": "action",
+        "operation_id": "synthetic-operation-8",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "c4839a718545e5b0153841a7f3c3b061c0a7e04a443eb8bc9877009a055eec60",
+        "reservation_hash": "c2d1a575968b8a1dc2c40e592cf7060078b3a11ea99d8f2d7851807b7170e36f",
+        "reservation_id": "synthetic-reservation-12",
+        "reserved_at": "2026-10-02T02:00:31Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "trigger_ci",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-13",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T04:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-9",
+        "kind": "action",
+        "operation_id": "synthetic-operation-9",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "119790dec51bf615b59a5e4b5d7014e8be712d8248958062802e7cebb6ef43b6",
+        "reservation_hash": "68bbc9bde36940b827c7e3c399421ec80a6542f4173f7cfaa8a3cc5a6cedc247",
+        "reservation_id": "synthetic-reservation-13",
+        "reserved_at": "2026-10-02T02:00:34Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "package",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-14",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T02:31:20Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-8",
+        "kind": "ci_poll",
+        "operation_id": "synthetic-operation-8",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "c4839a718545e5b0153841a7f3c3b061c0a7e04a443eb8bc9877009a055eec60",
+        "reservation_hash": "9e4b6ceffe4167d2edad3c26b933198e1e131d105ff78001d55f6498a7e1f2c2",
+        "reservation_id": "synthetic-reservation-14",
+        "reserved_at": "2026-10-02T02:01:20Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "ci_poll:synthetic-operation-8",
+        "source_version": 1,
+        "units": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-15",
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "deadline_at": "2026-10-02T02:31:25Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-6",
+        "kind": "reconciliation_read",
+        "operation_id": "synthetic-operation-6",
+        "policy_hash": "1bf6f7fc28e76a71d36dfa73e96f94b4588646054e68770892f027e205b7ca73",
+        "request_hash": "d30f9d2e9d98a0db7b0c42049fc41ae74d621e9f002458bc2e489d5389748c91",
+        "reservation_hash": "5ceae796373ca1e88799d2eae791d751fdebc25ad00e06536927c981e5bea575",
+        "reservation_id": "synthetic-reservation-15",
+        "reserved_at": "2026-10-02T02:01:25Z",
+        "run_id": "synthetic-s2-run",
+        "scope_id": "reconciliation_read:synthetic-operation-6",
+        "source_version": 1,
+        "units": 1
+      }
+    ],
+    "run_id": "synthetic-s2-run",
+    "settlements": [
+      {
+        "attempt_id": "synthetic-attempt-1",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "8edc5e1905aa9dd2569c2145295e0ea24c231ff38f539283c98997ceaa386d05",
+        "reservation_id": "synthetic-reservation-1",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:01Z",
+        "settlement_hash": "89b60846941207223914c5d97876ac492e4e0bbe54c885a358c85c41f043bedb",
+        "settlement_id": "synthetic-settlement-1",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-2",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "8c6c59e5f8fc96907a9aacd96aaea08c0d3973efab2a79d8656c7ba9a01dd2a2",
+        "reservation_id": "synthetic-reservation-2",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:11Z",
+        "settlement_hash": "23917982a60f475f54b16aa10690500ab519b12e87fcd8357d9afe7264b3b386",
+        "settlement_id": "synthetic-settlement-2",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-3",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "84c3e1bb6817a4c3688ac3557f93e705207cd967ae4ff0e5390aec81ed939e93",
+        "reservation_id": "synthetic-reservation-3",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:14Z",
+        "settlement_hash": "55606a93058d82aa0b402d7c97c781f6caf38fb1056a0e681d7ea86b31d8b5c8",
+        "settlement_id": "synthetic-settlement-3",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-4",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "ef8437ae08b12b1d714cd1262be9345d31b3d5539253be904266e61d6b335853",
+        "reservation_id": "synthetic-reservation-4",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:17Z",
+        "settlement_hash": "662d931c18cef7fd9cc96f76b6cafa1b524c35e6cf104bb48507eea09e8ec437",
+        "settlement_id": "synthetic-settlement-4",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-5",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "40c2bd230fb87edede77ef7a8af2dc51a84cc626105090a1279e7856dd06536d",
+        "reservation_id": "synthetic-reservation-5",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:20Z",
+        "settlement_hash": "63c1186f33fc967d6757aac4886e24207e0bd28e99b85283fdbcc6266b3b4445",
+        "settlement_id": "synthetic-settlement-5",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-7",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "e5e1ea6d8ee023fb380e61ce9372a32ba404f2991399d5018b9971e7ee1323a9",
+        "reservation_id": "synthetic-reservation-7",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:23Z",
+        "settlement_hash": "3ba965630bab29e13efea096487252727c07225a3896ae46b1d51f032d6f5ec3",
+        "settlement_id": "synthetic-settlement-7",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-8",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "c8e99685776f3e63b2eaeef9f70680762d2a349d8e43aa7a511f845a2254e533",
+        "reservation_id": "synthetic-reservation-8",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:24Z",
+        "settlement_hash": "dfdc8ae833da9bd52af871c51c888893d792c3c7a95897cd04310727482ea64b",
+        "settlement_id": "synthetic-settlement-8",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-6",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 3000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "5811914ca050bf7bda90b6f4ef33baabd040614ca5a4259902093e7fc8f03294",
+        "reservation_id": "synthetic-reservation-6",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:25Z",
+        "settlement_hash": "1e41e7e01a6b17323e223dd172807bb03abca2c98b8315da851de4c075d9423e",
+        "settlement_id": "synthetic-settlement-6",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-9",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "72e98f5ebf631a66cbbf0b8b5ef79efc02528f5f8b45d04cddce0982ae011f96",
+        "reservation_id": "synthetic-reservation-9",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:25Z",
+        "settlement_hash": "e54524ade8f038ab6e250f1f631e5f7c94e16b52096be5984d97dea540bace48",
+        "settlement_id": "synthetic-settlement-9",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-10",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "8f7497bf3bf9a595a322afa708eb6769ae8fcc98e8e91b4de05e0dee8e3782c5",
+        "reservation_id": "synthetic-reservation-10",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:26Z",
+        "settlement_hash": "92aa9eecda23ae884975409157cd342e0dfbc093edc400f834e9e5eb1463eb65",
+        "settlement_id": "synthetic-settlement-10",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-11",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "c6ab65c94a671dc2f238161a2b216a1f892c9c3c4a39e016b45a13f8bff2d547",
+        "reservation_id": "synthetic-reservation-11",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:29Z",
+        "settlement_hash": "128b19faaf5536d6a68ef60da8b0c5adf95ae32530e0bb015182db9b8a971f2d",
+        "settlement_id": "synthetic-settlement-11",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-12",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "c2d1a575968b8a1dc2c40e592cf7060078b3a11ea99d8f2d7851807b7170e36f",
+        "reservation_id": "synthetic-reservation-12",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:32Z",
+        "settlement_hash": "f01adfacc24d675304e24ae660b123a5c56f43a0a9ee7dfa9ebb237fecda7118",
+        "settlement_id": "synthetic-settlement-12",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-13",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "68bbc9bde36940b827c7e3c399421ec80a6542f4173f7cfaa8a3cc5a6cedc247",
+        "reservation_id": "synthetic-reservation-13",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:00:35Z",
+        "settlement_hash": "c618d7a6120aea45a937d87993e2a57eb3062d32838059fe35a6750a62d256be",
+        "settlement_id": "synthetic-settlement-13",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-14",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "9e4b6ceffe4167d2edad3c26b933198e1e131d105ff78001d55f6498a7e1f2c2",
+        "reservation_id": "synthetic-reservation-14",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:01:21Z",
+        "settlement_hash": "73c00f88a650a983394b67acd861c7b06f6fa68ee30069b13c2c9eef3402b2b6",
+        "settlement_id": "synthetic-settlement-14",
+        "source_version": 1
+      },
+      {
+        "attempt_id": "synthetic-attempt-15",
+        "consumed_units": 1,
+        "contract_version": "1.2.0",
+        "elapsed_ms": 1000,
+        "measurement_source": "actual",
+        "outcome": "succeeded",
+        "reservation_hash": "5ceae796373ca1e88799d2eae791d751fdebc25ad00e06536927c981e5bea575",
+        "reservation_id": "synthetic-reservation-15",
+        "run_id": "synthetic-s2-run",
+        "settled_at": "2026-10-02T02:01:26Z",
+        "settlement_hash": "109bab7bf09ca3956c22aced0d74d262432af5c8095da8eee558d8b2967df05e",
+        "settlement_id": "synthetic-settlement-15",
+        "source_version": 1
+      }
+    ],
+    "totals": {
+      "consumed": {
+        "action": 9,
+        "ci_poll": 1,
+        "command": 1,
+        "model": 0,
+        "reconciliation_read": 1,
+        "tool": 3
+      },
+      "measured_elapsed_ms": 17000,
+      "released": {
+        "action": 0,
+        "ci_poll": 0,
+        "command": 0,
+        "model": 0,
+        "reconciliation_read": 0,
+        "tool": 0
+      },
+      "reserved": {
+        "action": 0,
+        "ci_poll": 0,
+        "command": 0,
+        "model": 0,
+        "reconciliation_read": 0,
+        "tool": 0
+      },
+      "unknown": {
+        "action": 0,
+        "ci_poll": 0,
+        "command": 0,
+        "model": 0,
+        "reconciliation_read": 0,
+        "tool": 0
+      },
+      "unknown_elapsed_attempts": 0
+    },
+    "updated_at": "2026-10-02T02:01:40Z"
+  },
+  "contexts": [
+    {
+      "context_hash": "82b277fcfb0bf0207cbb286b634213df8ea3b7d68629480e2c3a15049b1adda6",
+      "context_id": "synthetic-context-1",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:10Z",
+      "decision_id": "synthetic-decision-1",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 10
+    },
+    {
+      "context_hash": "f1ada388c75e41fa205b10e3dccf0feca3542722633f4c36c182b0ca91859986",
+      "context_id": "synthetic-context-2",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:13Z",
+      "decision_id": "synthetic-decision-2",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 11
+    },
+    {
+      "context_hash": "0afb1a80d37a9609dcb2e7a8408a1e121a299e1892c6a0850172590706abba8e",
+      "context_id": "synthetic-context-3",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:16Z",
+      "decision_id": "synthetic-decision-3",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 12
+    },
+    {
+      "context_hash": "0764b1ac5e7022e436161932c571f81405516455e184f9f93e2b2261c9dc41c3",
+      "context_id": "synthetic-context-4",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:19Z",
+      "decision_id": "synthetic-decision-4",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 13
+    },
+    {
+      "context_hash": "d1da78d68d9e26d4dc2d9684e14e276c5ea0f83273cda6d7bb3a0bff16858435",
+      "context_id": "synthetic-context-5",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:22Z",
+      "decision_id": "synthetic-decision-5",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 14
+    },
+    {
+      "context_hash": "f0852d41ed9e4a68807e694a77f2977766d40be8b07a5406256ba375049b02a3",
+      "context_id": "synthetic-context-6",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:25Z",
+      "decision_id": "synthetic-decision-6",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 15
+    },
+    {
+      "context_hash": "10f4eb002829bd49b2e4d2b8653e6ef49424c3115a7bcc290bdd68816eb726b8",
+      "context_id": "synthetic-context-7",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:28Z",
+      "decision_id": "synthetic-decision-7",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 16
+    },
+    {
+      "context_hash": "69779fb81c9324f1d8fcb75c0742bc562a4ce817a1ed10f377ec2c4575b6c322",
+      "context_id": "synthetic-context-8",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:31Z",
+      "decision_id": "synthetic-decision-8",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 17
+    },
+    {
+      "context_hash": "cc52dff3c5760e0e73749023e324f36d4f00389aadf531ef7f0ad4ea0b55ba02",
+      "context_id": "synthetic-context-9",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:34Z",
+      "decision_id": "synthetic-decision-9",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "messages": [
+        {
+          "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+          "role": "system"
+        },
+        {
+          "content": "Create a synthetic project.",
+          "role": "user"
+        }
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 18
+    }
+  ],
+  "contract_version": "1.2.0",
+  "created_at": "2026-10-02T02:01:40Z",
+  "decisions": [
+    {
+      "advice": {
+        "action": {
+          "action_type": "scaffold",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f"
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:10Z",
+      "decision_hash": "bb704e107629087d3a1253e352016a3d16adcec3eed28e48031ad3f71db14690",
+      "decision_id": "synthetic-decision-1",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 10
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "auth": "jwt",
+                "token_ttl": "24h"
+              },
+              "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+              "skill_id": "add_auth",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:13Z",
+      "decision_hash": "3729e38042892b6bb7a39d628d289bc72db704d8d82a40098a139e5387c0cd02",
+      "decision_id": "synthetic-decision-2",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 11
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "database": "postgres",
+                "orm": "gorm"
+              },
+              "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+              "skill_id": "add_database",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:16Z",
+      "decision_hash": "a3b7febfddb0ca6a229ad8548b47d768172f25e8844652d8205dfa26668c8c7e",
+      "decision_id": "synthetic-decision-3",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 12
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "log_format": "json",
+                "log_level": "info",
+                "log_max_age": "168h",
+                "log_max_backups": 3,
+                "log_max_size": 10485760,
+                "log_on_write_error": "degrade",
+                "log_output": "console",
+                "log_path": "logs/app.log"
+              },
+              "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+              "skill_id": "add_logging",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:19Z",
+      "decision_hash": "adc59dbc362692139a971d64bd8dca7c326ff1a46d23993c893658cfaad5b052",
+      "decision_id": "synthetic-decision-4",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 13
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "verify",
+          "parameters": {
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            },
+            "required_check_ids": [
+              "check.go_build",
+              "check.go_mod_tidy",
+              "check.go_test"
+            ]
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:22Z",
+      "decision_hash": "7edbfa0b275acf97cddf90a44941bde00e9b092a05ca0f8d2d722e047258b508",
+      "decision_id": "synthetic-decision-5",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 14
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "create_repository",
+          "parameters": {
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:25Z",
+      "decision_hash": "e2ec5c3172ecf618927dea9bb3feb0271d40da5d76a288ef782d632efc5e37ec",
+      "decision_id": "synthetic-decision-6",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 15
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "push_repository",
+          "parameters": {
+            "expected_branch_sha": null,
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            },
+            "project_id": 1,
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:28Z",
+      "decision_hash": "ed03fea0d8dd20550f4fe80536867a13586bbd959267a8646f1fa7c07c903f9a",
+      "decision_id": "synthetic-decision-7",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 16
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "trigger_ci",
+          "parameters": {
+            "ci_config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "project_id": 1,
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:31Z",
+      "decision_hash": "a763e23e151f6c3fe2f44dd646493540641f360a458aa3eef3b219d63c382477",
+      "decision_id": "synthetic-decision-8",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 17
+    },
+    {
+      "advice": {
+        "action": {
+          "action_type": "package",
+          "parameters": {
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:34Z",
+      "decision_hash": "d268abb0ee1ab5343cbbbca684e5ae4d0a3d23065620897660dc1169ebc09b5e",
+      "decision_id": "synthetic-decision-9",
+      "decision_mode": "rules",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "input_context_hash": "a47b1032b3f3ee0a665d9dfc834800d0bf084109d54eea6b683d71ce54f61a34",
+      "input_message_refs": [
+        {
+          "hash": "796cdffb4c2543f7101b2d73ef8e12197dbaf3ab960faf049cfc0af44702cd23",
+          "object_id": "synthetic-message",
+          "object_type": "message",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "model_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "provider_request_id": null,
+        "status": "not_applicable",
+        "total_tokens": null
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 18
+    }
+  ],
+  "definition_snapshot": {
+    "bound_at": "2026-10-02T00:00:00Z",
+    "contract_version": "1.2.0",
+    "definition": {
+      "action_protocol": {
+        "action_validation_schema": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/ActionValidation"
+        },
+        "allowed_actions": [
+          "scaffold",
+          "apply_skill",
+          "verify",
+          "create_repository",
+          "push_repository",
+          "trigger_ci",
+          "package"
+        ],
+        "decision_proposal_schema": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/DecisionProposal"
+        },
+        "execution_request_schema": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/ExecutionRequest"
+        },
+        "model_output_schema": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/DecisionAdvice"
+        }
+      },
+      "available_skills": [
+        {
+          "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+          "skill_id": "add_auth",
+          "skill_version": "2.0.0-synthetic"
+        },
+        {
+          "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+          "skill_id": "add_database",
+          "skill_version": "2.0.0-synthetic"
+        },
+        {
+          "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+          "skill_id": "add_logging",
+          "skill_version": "2.0.0-synthetic"
+        }
+      ],
+      "budget_policy": {
+        "max_artifact_bytes": 2097152,
+        "max_ci_poll_attempts": 128,
+        "max_ci_wait_seconds": 1800,
+        "max_commands": 256,
+        "max_execution_seconds": 7200,
+        "max_files": 128,
+        "max_model_attempts": 32,
+        "max_reconciliation_attempts": 64,
+        "max_reconciliation_seconds": 1800,
+        "max_step_attempts": 3,
+        "max_tool_seconds": 720
+      },
+      "completion_policy": {
+        "allow_unverified_done": false,
+        "completion_authority": "deterministic_validator",
+        "external_validation_authority": false,
+        "required_checks": [
+          {
+            "check_id": "check.approved_sources",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "source",
+            "required_evidence_types": [
+              "source_hash"
+            ],
+            "title": "批准源代码"
+          },
+          {
+            "check_id": "check.artifact_manifest",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "manifest",
+            "required_evidence_types": [
+              "manifest_hash"
+            ],
+            "title": "工件清单"
+          },
+          {
+            "check_id": "check.ci_config_file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "file",
+            "required_evidence_types": [
+              "file_hash"
+            ],
+            "title": "CI配置"
+          },
+          {
+            "check_id": "check.gitignore_file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "file",
+            "required_evidence_types": [
+              "file_hash"
+            ],
+            "title": "忽略配置"
+          },
+          {
+            "check_id": "check.gitlab_ci",
+            "delivery_modes": [
+              "gitlab"
+            ],
+            "kind": "ci",
+            "required_evidence_types": [
+              "pipeline_jobs",
+              "coverage_report",
+              "build_artifact"
+            ],
+            "title": "流水线作业与产物"
+          },
+          {
+            "check_id": "check.go_build",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "tool",
+            "required_evidence_types": [
+              "tool_exit"
+            ],
+            "title": "真实构建"
+          },
+          {
+            "check_id": "check.go_mod_file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "file",
+            "required_evidence_types": [
+              "file_hash"
+            ],
+            "title": "模块文件"
+          },
+          {
+            "check_id": "check.go_mod_tidy",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "tool",
+            "required_evidence_types": [
+              "tool_exit"
+            ],
+            "title": "依赖整理"
+          },
+          {
+            "check_id": "check.go_test",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "tool",
+            "required_evidence_types": [
+              "tool_exit"
+            ],
+            "title": "真实测试"
+          },
+          {
+            "check_id": "check.readme_file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "file",
+            "required_evidence_types": [
+              "file_hash"
+            ],
+            "title": "启动说明"
+          },
+          {
+            "check_id": "check.remote_commit",
+            "delivery_modes": [
+              "gitlab"
+            ],
+            "kind": "remote_commit",
+            "required_evidence_types": [
+              "commit_tree"
+            ],
+            "title": "提交内容"
+          },
+          {
+            "check_id": "check.remote_repository",
+            "delivery_modes": [
+              "gitlab"
+            ],
+            "kind": "remote_repository",
+            "required_evidence_types": [
+              "remote_identity"
+            ],
+            "title": "仓库身份"
+          },
+          {
+            "check_id": "check.secret_boundary",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "secret_boundary",
+            "required_evidence_types": [
+              "secret_scan"
+            ],
+            "title": "秘密边界"
+          },
+          {
+            "check_id": "check.zip_integrity",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "kind": "package",
+            "required_evidence_types": [
+              "zip_integrity"
+            ],
+            "title": "交付包"
+          }
+        ]
+      },
+      "context_policy": {
+        "compression_threshold": 20,
+        "compression_unit": "message",
+        "max_tokens": 8000,
+        "output_reserve_tokens": 1800,
+        "protocol_reserve_tokens": 128,
+        "recent_messages": 10,
+        "summary_generation": "follow_decision_mode",
+        "summary_generator_version": "1.0.0",
+        "summary_tokens": 2000
+      },
+      "contract_version": "1.2.0",
+      "default_ci": "gitlab_ci",
+      "definition_hash": "36ed71ea7b8d515c93d9231a9cd6e93a5d885e0beba19160e8accd390a7bbd64",
+      "definition_id": "synthetic-s2-agent",
+      "definition_version": "2.0.0-synthetic",
+      "post_commands": [
+        {
+          "arguments": [
+            "mod",
+            "tidy"
+          ],
+          "command_id": "go.mod_tidy",
+          "cwd_scope": "run_workspace",
+          "environment_policy": "isolated",
+          "executable": "go",
+          "max_attempts": 3,
+          "timeout_seconds": 720
+        },
+        {
+          "arguments": [
+            "test",
+            "./..."
+          ],
+          "command_id": "go.test",
+          "cwd_scope": "run_workspace",
+          "environment_policy": "isolated",
+          "executable": "go",
+          "max_attempts": 3,
+          "timeout_seconds": 720
+        },
+        {
+          "arguments": [
+            "build",
+            "./..."
+          ],
+          "command_id": "go.build",
+          "cwd_scope": "run_workspace",
+          "environment_policy": "isolated",
+          "executable": "go",
+          "max_attempts": 3,
+          "timeout_seconds": 720
+        }
+      ],
+      "repository_policy": {
+        "allowed_providers": [
+          "local",
+          "gitlab"
+        ],
+        "overwrite_existing_unowned_project": false,
+        "require_explicit_namespace": true,
+        "required_ref": "main",
+        "unknown_write_policy": "block_and_reconcile_original_operation",
+        "visibility": "private"
+      },
+      "required_tools": [
+        {
+          "binary_sha256": null,
+          "platform": "linux_amd64",
+          "tool_id": "go",
+          "version": "go1.25.0"
+        }
+      ],
+      "supported_stacks": [
+        "golang"
+      ],
+      "system_prompt": {
+        "content": "Independent S2 synthetic fixture. Advice never authorizes execution.",
+        "sha256": "ba3935b37e5093512183a47472f73b070ba977b9ecdebbf1bbe965f8ddd21c07"
+      }
+    },
+    "definition_hash": "36ed71ea7b8d515c93d9231a9cd6e93a5d885e0beba19160e8accd390a7bbd64",
+    "definition_id": "synthetic-s2-agent",
+    "definition_version": "2.0.0-synthetic",
+    "provider_binding": null,
+    "schema_dependencies": [
+      {
+        "contract_version": "1.2.0",
+        "schema_uri": "agent.schema.json",
+        "sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98"
+      },
+      {
+        "contract_version": "1.2.0",
+        "schema_uri": "common.schema.json",
+        "sha256": "6fb120230330833e2a1ce29da895eeb41a6d74135459e422cb3a29305896b63d"
+      },
+      {
+        "contract_version": "1.2.0",
+        "schema_uri": "message.schema.json",
+        "sha256": "0a4882b6aeaeb06bd7e3771938dbc8b22b90b17f5978cdfb6a85649bcf9bbc9b"
+      }
+    ],
+    "skills": [
+      {
+        "conflicts": [],
+        "contract_version": "1.2.0",
+        "default_parameters": {
+          "auth": "jwt",
+          "token_ttl": "24h"
+        },
+        "dependencies": [],
+        "description": "结构示例：完整声明该技能输入、依赖与受控生成输出。",
+        "input_contract": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/AuthenticationParameters"
+        },
+        "name": "add_auth",
+        "output_contract": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/ArtifactManifest"
+        },
+        "parameters_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": false,
+          "properties": {
+            "auth": {
+              "default": "jwt",
+              "enum": [
+                "jwt",
+                "session"
+              ],
+              "type": "string"
+            },
+            "token_ttl": {
+              "default": "24h",
+              "maxLength": 64,
+              "minLength": 2,
+              "type": "string"
+            }
+          },
+          "required": [
+            "auth",
+            "token_ttl"
+          ],
+          "type": "object"
+        },
+        "post_commands": [
+          {
+            "arguments": [
+              "test",
+              "./..."
+            ],
+            "command_id": "go.test",
+            "cwd_scope": "run_workspace",
+            "environment_policy": "isolated",
+            "executable": "go",
+            "max_attempts": 3,
+            "timeout_seconds": 720
+          }
+        ],
+        "required_check_ids": [
+          "check.go_build",
+          "check.go_test",
+          "check.secret_boundary"
+        ],
+        "required_permissions": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "required_tools": [
+          {
+            "binary_sha256": null,
+            "platform": "linux_amd64",
+            "tool_id": "go",
+            "version": "go1.25.0"
+          }
+        ],
+        "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+        "skill_id": "add_auth",
+        "skill_version": "2.0.0-synthetic",
+        "supported_stacks": [
+          "golang"
+        ],
+        "template_dependencies": [
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+                  "object_id": "template_content_89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "internal/auth/auth.go.tmpl",
+                "sha256": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a"
+              }
+            ],
+            "manifest_hash": "136840e2a2e4d41be534baaf5516619a11db9135e47b4c71c1537ca726058e33",
+            "template_id": "add_auth",
+            "template_version": "2.0.0-synthetic"
+          }
+        ],
+        "write_paths": [
+          "internal/auth/auth.go",
+          "internal/auth/auth_test.go"
+        ]
+      },
+      {
+        "conflicts": [],
+        "contract_version": "1.2.0",
+        "default_parameters": {
+          "database": "postgres",
+          "orm": "gorm"
+        },
+        "dependencies": [],
+        "description": "结构示例：完整声明该技能输入、依赖与受控生成输出。",
+        "input_contract": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/DatabaseParameters"
+        },
+        "name": "add_database",
+        "output_contract": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/ArtifactManifest"
+        },
+        "parameters_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": false,
+          "properties": {
+            "database": {
+              "default": "postgres",
+              "enum": [
+                "postgres",
+                "mysql",
+                "sqlite"
+              ],
+              "type": "string"
+            },
+            "orm": {
+              "default": "gorm",
+              "enum": [
+                "gorm",
+                "sqlx"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "database",
+            "orm"
+          ],
+          "type": "object"
+        },
+        "post_commands": [
+          {
+            "arguments": [
+              "test",
+              "./..."
+            ],
+            "command_id": "go.test",
+            "cwd_scope": "run_workspace",
+            "environment_policy": "isolated",
+            "executable": "go",
+            "max_attempts": 3,
+            "timeout_seconds": 720
+          }
+        ],
+        "required_check_ids": [
+          "check.go_build",
+          "check.go_test",
+          "check.secret_boundary"
+        ],
+        "required_permissions": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "required_tools": [
+          {
+            "binary_sha256": null,
+            "platform": "linux_amd64",
+            "tool_id": "go",
+            "version": "go1.25.0"
+          }
+        ],
+        "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+        "skill_id": "add_database",
+        "skill_version": "2.0.0-synthetic",
+        "supported_stacks": [
+          "golang"
+        ],
+        "template_dependencies": [
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+                  "object_id": "template_content_adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "internal/database/database.go.tmpl",
+                "sha256": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30"
+              }
+            ],
+            "manifest_hash": "746cc9c6f20e3b9d35f904259dd36bb00357ceb9125435e270341084a393d847",
+            "template_id": "add_database",
+            "template_version": "2.0.0-synthetic"
+          }
+        ],
+        "write_paths": [
+          "internal/database/database.go",
+          "internal/database/database_test.go"
+        ]
+      },
+      {
+        "conflicts": [],
+        "contract_version": "1.2.0",
+        "default_parameters": {
+          "log_format": "json",
+          "log_level": "info",
+          "log_max_age": "168h",
+          "log_max_backups": 3,
+          "log_max_size": 10485760,
+          "log_on_write_error": "degrade",
+          "log_output": "console",
+          "log_path": "logs/app.log"
+        },
+        "dependencies": [],
+        "description": "默认console/json/info，file仅受控logs目录并有轮转与故障策略。",
+        "input_contract": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/LoggingParameters"
+        },
+        "name": "结构化日志",
+        "output_contract": {
+          "file_sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+          "schema_ref": "agent.schema.json#/$defs/ArtifactManifest"
+        },
+        "parameters_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": false,
+          "properties": {
+            "log_format": {
+              "default": "json",
+              "enum": [
+                "json",
+                "text"
+              ],
+              "type": "string"
+            },
+            "log_level": {
+              "default": "info",
+              "enum": [
+                "debug",
+                "info",
+                "warn",
+                "error"
+              ],
+              "type": "string"
+            },
+            "log_max_age": {
+              "default": "168h",
+              "maxLength": 64,
+              "minLength": 2,
+              "type": "string"
+            },
+            "log_max_backups": {
+              "default": 3,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "log_max_size": {
+              "default": 10485760,
+              "maximum": 1073741824,
+              "minimum": 1048576,
+              "type": "integer"
+            },
+            "log_on_write_error": {
+              "default": "degrade",
+              "enum": [
+                "degrade",
+                "fail_closed"
+              ],
+              "type": "string"
+            },
+            "log_output": {
+              "default": "console",
+              "enum": [
+                "console",
+                "file"
+              ],
+              "type": "string"
+            },
+            "log_path": {
+              "default": "logs/app.log",
+              "pattern": "^logs/[A-Za-z0-9._/-]+$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "log_level",
+            "log_format",
+            "log_output",
+            "log_path",
+            "log_max_size",
+            "log_max_backups",
+            "log_max_age",
+            "log_on_write_error"
+          ],
+          "type": "object"
+        },
+        "post_commands": [
+          {
+            "arguments": [
+              "test",
+              "./..."
+            ],
+            "command_id": "go.test",
+            "cwd_scope": "run_workspace",
+            "environment_policy": "isolated",
+            "executable": "go",
+            "max_attempts": 3,
+            "timeout_seconds": 720
+          }
+        ],
+        "required_check_ids": [
+          "check.go_build",
+          "check.go_test",
+          "check.secret_boundary"
+        ],
+        "required_permissions": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "required_tools": [
+          {
+            "binary_sha256": null,
+            "platform": "linux_amd64",
+            "tool_id": "go",
+            "version": "go1.25.0"
+          }
+        ],
+        "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+        "skill_id": "add_logging",
+        "skill_version": "2.0.0-synthetic",
+        "supported_stacks": [
+          "golang"
+        ],
+        "template_dependencies": [
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+                  "object_id": "template_content_d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "internal/logging/logging.go.tmpl",
+                "sha256": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15"
+              }
+            ],
+            "manifest_hash": "e0b8a1fc76fe0d06fbcb95fe48671e32e8dac467f8363e4376cb6859d2193879",
+            "template_id": "logging",
+            "template_version": "2.0.0-synthetic"
+          }
+        ],
+        "write_paths": [
+          "internal/logging/logging.go",
+          "internal/logging/logging_test.go"
+        ]
+      }
+    ],
+    "snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+    "snapshot_version": 1,
+    "template_dependencies": [
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+              "object_id": "template_content_89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "internal/auth/auth.go.tmpl",
+            "sha256": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a"
+          }
+        ],
+        "manifest_hash": "136840e2a2e4d41be534baaf5516619a11db9135e47b4c71c1537ca726058e33",
+        "template_id": "add_auth",
+        "template_version": "2.0.0-synthetic"
+      },
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+              "object_id": "template_content_adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "internal/database/database.go.tmpl",
+            "sha256": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30"
+          }
+        ],
+        "manifest_hash": "746cc9c6f20e3b9d35f904259dd36bb00357ceb9125435e270341084a393d847",
+        "template_id": "add_database",
+        "template_version": "2.0.0-synthetic"
+      },
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+              "object_id": "template_content_20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "cmd/server/main.go.tmpl",
+            "sha256": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d"
+          }
+        ],
+        "manifest_hash": "21e2d152af6abcf09994878ccd50c69d3e8b87944a0604983b1d72f457b5c039",
+        "template_id": "go_base",
+        "template_version": "2.0.0-synthetic"
+      },
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+              "object_id": "template_content_d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "internal/logging/logging.go.tmpl",
+            "sha256": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15"
+          }
+        ],
+        "manifest_hash": "e0b8a1fc76fe0d06fbcb95fe48671e32e8dac467f8363e4376cb6859d2193879",
+        "template_id": "logging",
+        "template_version": "2.0.0-synthetic"
+      }
+    ],
+    "tool_bindings": [
+      {
+        "binary_sha256": null,
+        "platform": "linux_amd64",
+        "tool_id": "go",
+        "version": "go1.25.0"
+      }
+    ]
+  },
+  "executions": [
+    {
+      "action": {
+        "action_type": "scaffold",
+        "parameters": {
+          "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f"
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:10Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-1",
+      "operation_id": "synthetic-operation-1",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "1aac153ca389fda05cc8da6c32b3fbf000de8018c4a145ba7c2d41f1685fe50b",
+      "required_permission_ids": [
+        "workspace_write"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 10,
+      "validation_hash": "1d14d28b18a3acb00cdc20556959c3004022294d53bee8e923d70ca437f69fa8",
+      "validation_id": "synthetic-validation-1",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "apply_skill",
+        "parameters": {
+          "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+          "selection": {
+            "parameters": {
+              "auth": "jwt",
+              "token_ttl": "24h"
+            },
+            "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+            "skill_id": "add_auth",
+            "skill_version": "2.0.0-synthetic"
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:13Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-2",
+      "operation_id": "synthetic-operation-2",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "4ef45631891090e184f5ee90ad7d50dda937fd3d48266f005a3cb5727626336a",
+      "required_permission_ids": [
+        "tool_go",
+        "workspace_read",
+        "workspace_write"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 11,
+      "validation_hash": "131ee7872023a370eb5500d37244b06109e53925715d5e5bc7b9790f9a94e277",
+      "validation_id": "synthetic-validation-2",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "apply_skill",
+        "parameters": {
+          "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+          "selection": {
+            "parameters": {
+              "database": "postgres",
+              "orm": "gorm"
+            },
+            "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+            "skill_id": "add_database",
+            "skill_version": "2.0.0-synthetic"
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:16Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-3",
+      "operation_id": "synthetic-operation-3",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "3c68a0f04929e1b838c48e8f0a8f4d5116da0f2c58412b23211e986af232735e",
+      "required_permission_ids": [
+        "tool_go",
+        "workspace_read",
+        "workspace_write"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 12,
+      "validation_hash": "aff8bc9925b14476f3929c6cb2341bbd5e147fdd97130d0b90e473fac61449b4",
+      "validation_id": "synthetic-validation-3",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "apply_skill",
+        "parameters": {
+          "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+          "selection": {
+            "parameters": {
+              "log_format": "json",
+              "log_level": "info",
+              "log_max_age": "168h",
+              "log_max_backups": 3,
+              "log_max_size": 10485760,
+              "log_on_write_error": "degrade",
+              "log_output": "console",
+              "log_path": "logs/app.log"
+            },
+            "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+            "skill_id": "add_logging",
+            "skill_version": "2.0.0-synthetic"
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:19Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-4",
+      "operation_id": "synthetic-operation-4",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "a4c18654adef13aba604e6546a5493f57c6d738ce5cd114b24094665775d2cde",
+      "required_permission_ids": [
+        "tool_go",
+        "workspace_read",
+        "workspace_write"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 13,
+      "validation_hash": "53910c5ccf24fcea9ea436b3ad4e734f155b8eefae5155afcf640f14d66494d0",
+      "validation_id": "synthetic-validation-4",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "verify",
+        "parameters": {
+          "manifest_ref": {
+            "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+            "object_id": "synthetic-manifest-4",
+            "object_type": "manifest",
+            "object_version": 4,
+            "source_version": 1
+          },
+          "required_check_ids": [
+            "check.go_build",
+            "check.go_mod_tidy",
+            "check.go_test"
+          ]
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:22Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-5",
+      "operation_id": "synthetic-operation-5",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+      "required_permission_ids": [
+        "tool_go",
+        "workspace_read",
+        "workspace_write"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 14,
+      "validation_hash": "f4c0c4871d8a09cf2f1fb291f901a5a5ed99a3987e5bd87617e5f5f5f72c0424",
+      "validation_id": "synthetic-validation-5",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "create_repository",
+        "parameters": {
+          "target": {
+            "instance_url": "http://127.0.0.1:1",
+            "namespace_id": "1",
+            "namespace_path": "synthetic",
+            "project_path": "synthetic-project",
+            "provider": "gitlab",
+            "ref": "main",
+            "visibility": "private"
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:25Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-6",
+      "operation_id": "synthetic-operation-6",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "d30f9d2e9d98a0db7b0c42049fc41ae74d621e9f002458bc2e489d5389748c91",
+      "required_permission_ids": [
+        "gitlab_create"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 15,
+      "validation_hash": "76c3b94ba4c12e5d76edcb537257eda8273f5eab7b2c8310f22b8a729b4fb622",
+      "validation_id": "synthetic-validation-6",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "push_repository",
+        "parameters": {
+          "expected_branch_sha": null,
+          "manifest_ref": {
+            "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+            "object_id": "synthetic-manifest-4",
+            "object_type": "manifest",
+            "object_version": 4,
+            "source_version": 1
+          },
+          "project_id": 1,
+          "target": {
+            "instance_url": "http://127.0.0.1:1",
+            "namespace_id": "1",
+            "namespace_path": "synthetic",
+            "project_path": "synthetic-project",
+            "provider": "gitlab",
+            "ref": "main",
+            "visibility": "private"
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:28Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-7",
+      "operation_id": "synthetic-operation-7",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "2d1e63f58d35c9f9d668601864271b2a631f9efae7c122bc6c22fe4f9fd155df",
+      "required_permission_ids": [
+        "gitlab_push",
+        "workspace_read"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 16,
+      "validation_hash": "08b5c43ce7acb3fe0d2c26197ee8831ee4c9187b61c97a9d0a5a54eb08db1fde",
+      "validation_id": "synthetic-validation-7",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "trigger_ci",
+        "parameters": {
+          "ci_config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "project_id": 1,
+          "target": {
+            "instance_url": "http://127.0.0.1:1",
+            "namespace_id": "1",
+            "namespace_path": "synthetic",
+            "project_path": "synthetic-project",
+            "provider": "gitlab",
+            "ref": "main",
+            "visibility": "private"
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:31Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-8",
+      "operation_id": "synthetic-operation-8",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "c4839a718545e5b0153841a7f3c3b061c0a7e04a443eb8bc9877009a055eec60",
+      "required_permission_ids": [
+        "gitlab_ci"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 17,
+      "validation_hash": "df0fefdf02fa992b20d108a8851d9d900cd000e8cf54c5a4213e67f239c487ee",
+      "validation_id": "synthetic-validation-8",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "action": {
+        "action_type": "package",
+        "parameters": {
+          "manifest_ref": {
+            "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+            "object_id": "synthetic-manifest-4",
+            "object_type": "manifest",
+            "object_version": 4,
+            "source_version": 1
+          }
+        }
+      },
+      "approval": {
+        "approval_id": "synthetic-approval",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "expires_at": "2026-10-02T02:30:00Z",
+        "issued_at": "2026-10-02T02:00:00Z",
+        "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+        "proposal_id": "synthetic-proposal",
+        "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+        "proposal_version": 1,
+        "source_version": 1
+      },
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:34Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-9",
+      "operation_id": "synthetic-operation-9",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "request_hash": "119790dec51bf615b59a5e4b5d7014e8be712d8248958062802e7cebb6ef43b6",
+      "required_permission_ids": [
+        "package_write",
+        "workspace_read"
+      ],
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence_at_validation": 18,
+      "validation_hash": "5a79b72a44f35a66f041e75bf22c3d92e5bb1525bbbc56716e469adee5592914",
+      "validation_id": "synthetic-validation-9",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    }
+  ],
+  "manifest": {
+    "contract_version": "1.2.0",
+    "created_at": "2026-10-02T02:00:20Z",
+    "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+    "files": [
+      {
+        "artifact_id": "synthetic-artifact-1",
+        "media_type": "text/plain",
+        "path": "README.md",
+        "sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+        "size": 35
+      },
+      {
+        "artifact_id": "synthetic-artifact-2",
+        "media_type": "text/plain",
+        "path": "internal/auth/auth.go",
+        "sha256": "25c81de82724fe667e09cc265b7395956769cda353586bad864f9c6901aed8fa",
+        "size": 47
+      },
+      {
+        "artifact_id": "synthetic-artifact-3",
+        "media_type": "text/plain",
+        "path": "internal/database/database.go",
+        "sha256": "79b531ed5591adcbdbd122e0968ce7cd78972e150e1e50ca118f87b6b481f7f5",
+        "size": 55
+      },
+      {
+        "artifact_id": "synthetic-artifact-4",
+        "media_type": "text/plain",
+        "path": "internal/logging/logging.go",
+        "sha256": "bfa55f0da2a1213e210d4f6edd514b8138378343980f87f5ec5011e898bd7781",
+        "size": 53
+      }
+    ],
+    "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+    "manifest_id": "synthetic-manifest-4",
+    "manifest_version": 4,
+    "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+    "proposal_id": "synthetic-proposal",
+    "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+    "proposal_version": 1,
+    "run_id": "synthetic-s2-run",
+    "source_version": 1
+  },
+  "manifest_history": [
+    {
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:11Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "files": [
+        {
+          "artifact_id": "synthetic-artifact-1",
+          "media_type": "text/plain",
+          "path": "README.md",
+          "sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+          "size": 35
+        }
+      ],
+      "hash": "9e0ffd73902cce28f4614ea05659fddce8b7529c69cc0cc0566f08e68b760050",
+      "manifest_id": "synthetic-manifest-1",
+      "manifest_version": 1,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_id": "synthetic-proposal",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "proposal_version": 1,
+      "run_id": "synthetic-s2-run",
+      "source_version": 1
+    },
+    {
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:14Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "files": [
+        {
+          "artifact_id": "synthetic-artifact-1",
+          "media_type": "text/plain",
+          "path": "README.md",
+          "sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+          "size": 35
+        },
+        {
+          "artifact_id": "synthetic-artifact-2",
+          "media_type": "text/plain",
+          "path": "internal/auth/auth.go",
+          "sha256": "25c81de82724fe667e09cc265b7395956769cda353586bad864f9c6901aed8fa",
+          "size": 47
+        }
+      ],
+      "hash": "fb9f8868ea608776226c975f5d9fd26ba5197a856a1b116e8c64b603ee8c726d",
+      "manifest_id": "synthetic-manifest-2",
+      "manifest_version": 2,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_id": "synthetic-proposal",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "proposal_version": 1,
+      "run_id": "synthetic-s2-run",
+      "source_version": 1
+    },
+    {
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:17Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "files": [
+        {
+          "artifact_id": "synthetic-artifact-1",
+          "media_type": "text/plain",
+          "path": "README.md",
+          "sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+          "size": 35
+        },
+        {
+          "artifact_id": "synthetic-artifact-2",
+          "media_type": "text/plain",
+          "path": "internal/auth/auth.go",
+          "sha256": "25c81de82724fe667e09cc265b7395956769cda353586bad864f9c6901aed8fa",
+          "size": 47
+        },
+        {
+          "artifact_id": "synthetic-artifact-3",
+          "media_type": "text/plain",
+          "path": "internal/database/database.go",
+          "sha256": "79b531ed5591adcbdbd122e0968ce7cd78972e150e1e50ca118f87b6b481f7f5",
+          "size": 55
+        }
+      ],
+      "hash": "abb3a5b338e0cc4185131174f9fe65e8569a097a6e5f25e936506bcfa5643fac",
+      "manifest_id": "synthetic-manifest-3",
+      "manifest_version": 3,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_id": "synthetic-proposal",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "proposal_version": 1,
+      "run_id": "synthetic-s2-run",
+      "source_version": 1
+    },
+    {
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:20Z",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "files": [
+        {
+          "artifact_id": "synthetic-artifact-1",
+          "media_type": "text/plain",
+          "path": "README.md",
+          "sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+          "size": 35
+        },
+        {
+          "artifact_id": "synthetic-artifact-2",
+          "media_type": "text/plain",
+          "path": "internal/auth/auth.go",
+          "sha256": "25c81de82724fe667e09cc265b7395956769cda353586bad864f9c6901aed8fa",
+          "size": 47
+        },
+        {
+          "artifact_id": "synthetic-artifact-3",
+          "media_type": "text/plain",
+          "path": "internal/database/database.go",
+          "sha256": "79b531ed5591adcbdbd122e0968ce7cd78972e150e1e50ca118f87b6b481f7f5",
+          "size": 55
+        },
+        {
+          "artifact_id": "synthetic-artifact-4",
+          "media_type": "text/plain",
+          "path": "internal/logging/logging.go",
+          "sha256": "bfa55f0da2a1213e210d4f6edd514b8138378343980f87f5ec5011e898bd7781",
+          "size": 53
+        }
+      ],
+      "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+      "manifest_id": "synthetic-manifest-4",
+      "manifest_version": 4,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_id": "synthetic-proposal",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "proposal_version": 1,
+      "run_id": "synthetic-s2-run",
+      "source_version": 1
+    }
+  ],
+  "messages": [
+    {
+      "command_id": "synthetic-command",
+      "contract_version": "1.2.0",
+      "created_at": "2026-10-02T02:00:00Z",
+      "message_id": "synthetic-message",
+      "modes": {
+        "decision_mode": "rules",
+        "delivery_mode": "gitlab",
+        "execution_mode": "local"
+      },
+      "parts": [
+        {
+          "fallback_text": "Create a synthetic project.",
+          "format": "plain",
+          "part_id": "synthetic-text",
+          "part_version": 1,
+          "text": "Create a synthetic project.",
+          "type": "text"
+        }
+      ],
+      "role": "user",
+      "run_id": "synthetic-s2-run",
+      "schema_version": 2,
+      "sequence": 1,
+      "source_version": 1,
+      "state_sequence": 1
+    }
+  ],
+  "modes": {
+    "decision_mode": "rules",
+    "delivery_mode": "gitlab",
+    "execution_mode": "local"
+  },
+  "operations": [
+    {
+      "action_type": "scaffold",
+      "created_at": "2026-10-02T02:00:10Z",
+      "evidence_refs": [
+        {
+          "hash": "85148121aa933415ecb078729f75cb21f9f7b5d275515b7e65482d14bf809117",
+          "object_id": "synthetic-workspace-receipt-1",
+          "object_type": "workspace",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "external_object_id": null,
+      "operation_id": "synthetic-operation-1",
+      "operation_sequence": 1,
+      "request_hash": "1aac153ca389fda05cc8da6c32b3fbf000de8018c4a145ba7c2d41f1685fe50b",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "9a2603bd4e26e12b16cb56cf48cab69233894a6db13ca3ce042819152465bd4b",
+      "updated_at": "2026-10-02T02:00:11Z"
+    },
+    {
+      "action_type": "apply_skill",
+      "created_at": "2026-10-02T02:00:13Z",
+      "evidence_refs": [
+        {
+          "hash": "93fa556f4b8295599dbc87ba9cedcb9d2871d3ec4a12f38bf10f6157c802e874",
+          "object_id": "synthetic-workspace-receipt-2",
+          "object_type": "workspace",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "external_object_id": null,
+      "operation_id": "synthetic-operation-2",
+      "operation_sequence": 2,
+      "request_hash": "4ef45631891090e184f5ee90ad7d50dda937fd3d48266f005a3cb5727626336a",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "01190e8c1509de9192e03f64bb3ec6fe3548eb4aa9d820eb6ccc5ce336a8c96c",
+      "updated_at": "2026-10-02T02:00:14Z"
+    },
+    {
+      "action_type": "apply_skill",
+      "created_at": "2026-10-02T02:00:16Z",
+      "evidence_refs": [
+        {
+          "hash": "c06d41ed36282faf60cb34de8fde69de2c6681e8cbe1dbf255fbc8e066a0d728",
+          "object_id": "synthetic-workspace-receipt-3",
+          "object_type": "workspace",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "external_object_id": null,
+      "operation_id": "synthetic-operation-3",
+      "operation_sequence": 3,
+      "request_hash": "3c68a0f04929e1b838c48e8f0a8f4d5116da0f2c58412b23211e986af232735e",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "a925448d37e167e747c7018c199fb9b82b10af53beb73e583160abf36460524e",
+      "updated_at": "2026-10-02T02:00:17Z"
+    },
+    {
+      "action_type": "apply_skill",
+      "created_at": "2026-10-02T02:00:19Z",
+      "evidence_refs": [
+        {
+          "hash": "07f53475240aaab45e1f1cd4473c936d091d99b42178622055ee933ca62a7bdb",
+          "object_id": "synthetic-workspace-receipt-4",
+          "object_type": "workspace",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "external_object_id": null,
+      "operation_id": "synthetic-operation-4",
+      "operation_sequence": 4,
+      "request_hash": "a4c18654adef13aba604e6546a5493f57c6d738ce5cd114b24094665775d2cde",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "39a8a602d89aa36a89f695402bd6098462d855758182f501ee15b12db00e304e",
+      "updated_at": "2026-10-02T02:00:20Z"
+    },
+    {
+      "action_type": "verify",
+      "created_at": "2026-10-02T02:00:22Z",
+      "evidence_refs": [
+        {
+          "hash": "18aa6aae4840967a65e4639523e3188fa63f31b3dafdf9467837315c6fd73ff8",
+          "object_id": "synthetic-tool-receipt-1",
+          "object_type": "evidence",
+          "object_version": 1,
+          "source_version": 1
+        },
+        {
+          "hash": "b80ee5102594bf805fa4e8be8cfb32dfcb58447cde2e6d9d4c956baf50247d26",
+          "object_id": "synthetic-tool-receipt-2",
+          "object_type": "evidence",
+          "object_version": 1,
+          "source_version": 1
+        },
+        {
+          "hash": "c6995b7c6400d6109363b8de82ccffedb2be451271fdf3b3e5d954e780a05a39",
+          "object_id": "synthetic-tool-receipt-3",
+          "object_type": "evidence",
+          "object_version": 1,
+          "source_version": 1
+        }
+      ],
+      "external_object_id": null,
+      "operation_id": "synthetic-operation-5",
+      "operation_sequence": 5,
+      "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "615244d931ce8ee71789c661b69c21d9199ba76c2d9041a1c15469d75a85021a",
+      "updated_at": "2026-10-02T02:00:25Z"
+    },
+    {
+      "action_type": "create_repository",
+      "created_at": "2026-10-02T02:00:25Z",
+      "evidence_refs": [],
+      "external_object_id": "6",
+      "operation_id": "synthetic-operation-6",
+      "operation_sequence": 6,
+      "request_hash": "d30f9d2e9d98a0db7b0c42049fc41ae74d621e9f002458bc2e489d5389748c91",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "0f2b5b263b10481aa7c3bc824aa6e7b8549a0244843008e279019e7c1e426296",
+      "updated_at": "2026-10-02T02:00:26Z"
+    },
+    {
+      "action_type": "push_repository",
+      "created_at": "2026-10-02T02:00:28Z",
+      "evidence_refs": [],
+      "external_object_id": "7",
+      "operation_id": "synthetic-operation-7",
+      "operation_sequence": 7,
+      "request_hash": "2d1e63f58d35c9f9d668601864271b2a631f9efae7c122bc6c22fe4f9fd155df",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "7d56eaf8b762b7254dbcd739a5796132ca0ecc2f8e5a9ba61375d74503dda904",
+      "updated_at": "2026-10-02T02:00:29Z"
+    },
+    {
+      "action_type": "trigger_ci",
+      "created_at": "2026-10-02T02:00:31Z",
+      "evidence_refs": [],
+      "external_object_id": "8",
+      "operation_id": "synthetic-operation-8",
+      "operation_sequence": 8,
+      "request_hash": "c4839a718545e5b0153841a7f3c3b061c0a7e04a443eb8bc9877009a055eec60",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "fae6b216045e993ec4b9c4414e8bbd1475b8851fd118f3ed1feb8b7584ebed35",
+      "updated_at": "2026-10-02T02:00:32Z"
+    },
+    {
+      "action_type": "package",
+      "created_at": "2026-10-02T02:00:34Z",
+      "evidence_refs": [],
+      "external_object_id": null,
+      "operation_id": "synthetic-operation-9",
+      "operation_sequence": 9,
+      "request_hash": "119790dec51bf615b59a5e4b5d7014e8be712d8248958062802e7cebb6ef43b6",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "status": "verified",
+      "target_hash": "d685f567ee875a09c56ec369fcb293f6cf4594b58f85656dd22e4e950cff67f1",
+      "updated_at": "2026-10-02T02:00:35Z"
+    }
+  ],
+  "permission_history": [
+    {
+      "actor_id": "synthetic-actor",
+      "allowed_permissions": [
+        "gitlab_ci",
+        "gitlab_create",
+        "gitlab_push",
+        "package_write",
+        "tool_go",
+        "workspace_read",
+        "workspace_write"
+      ],
+      "delivery_target": {
+        "instance_url": "http://127.0.0.1:1",
+        "namespace_id": "1",
+        "namespace_path": "synthetic",
+        "project_path": "synthetic-project",
+        "provider": "gitlab",
+        "ref": "main",
+        "visibility": "private"
+      },
+      "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+      "permission_version": 1,
+      "revoked": false,
+      "updated_at": "2026-10-02T02:00:00Z"
+    }
+  ],
+  "permission_snapshot": {
+    "actor_id": "synthetic-actor",
+    "allowed_permissions": [
+      "gitlab_ci",
+      "gitlab_create",
+      "gitlab_push",
+      "package_write",
+      "tool_go",
+      "workspace_read",
+      "workspace_write"
+    ],
+    "delivery_target": {
+      "instance_url": "http://127.0.0.1:1",
+      "namespace_id": "1",
+      "namespace_path": "synthetic",
+      "project_path": "synthetic-project",
+      "provider": "gitlab",
+      "ref": "main",
+      "visibility": "private"
+    },
+    "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+    "permission_version": 1,
+    "revoked": false,
+    "updated_at": "2026-10-02T02:00:00Z"
+  },
+  "plan": {
+    "contract_version": "1.2.0",
+    "delivery_target": {
+      "instance_url": "http://127.0.0.1:1",
+      "namespace_id": "1",
+      "namespace_path": "synthetic",
+      "project_path": "synthetic-project",
+      "provider": "gitlab",
+      "ref": "main",
+      "visibility": "private"
+    },
+    "description": "Synthetic S2 oracle fixture",
+    "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+    "project_name": "synthetic-project",
+    "selected_skills": [
+      {
+        "parameters": {
+          "auth": "jwt",
+          "token_ttl": "24h"
+        },
+        "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+        "skill_id": "add_auth",
+        "skill_version": "2.0.0-synthetic"
+      },
+      {
+        "parameters": {
+          "database": "postgres",
+          "orm": "gorm"
+        },
+        "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+        "skill_id": "add_database",
+        "skill_version": "2.0.0-synthetic"
+      },
+      {
+        "parameters": {
+          "log_format": "json",
+          "log_level": "info",
+          "log_max_age": "168h",
+          "log_max_backups": 3,
+          "log_max_size": 10485760,
+          "log_on_write_error": "degrade",
+          "log_output": "console",
+          "log_path": "logs/app.log"
+        },
+        "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+        "skill_id": "add_logging",
+        "skill_version": "2.0.0-synthetic"
+      }
+    ],
+    "tech_stack": "golang",
+    "template_dependencies": [
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+              "object_id": "template_content_89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "internal/auth/auth.go.tmpl",
+            "sha256": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a"
+          }
+        ],
+        "manifest_hash": "136840e2a2e4d41be534baaf5516619a11db9135e47b4c71c1537ca726058e33",
+        "template_id": "add_auth",
+        "template_version": "2.0.0-synthetic"
+      },
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+              "object_id": "template_content_adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "internal/database/database.go.tmpl",
+            "sha256": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30"
+          }
+        ],
+        "manifest_hash": "746cc9c6f20e3b9d35f904259dd36bb00357ceb9125435e270341084a393d847",
+        "template_id": "add_database",
+        "template_version": "2.0.0-synthetic"
+      },
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+              "object_id": "template_content_20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "cmd/server/main.go.tmpl",
+            "sha256": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d"
+          }
+        ],
+        "manifest_hash": "21e2d152af6abcf09994878ccd50c69d3e8b87944a0604983b1d72f457b5c039",
+        "template_id": "go_base",
+        "template_version": "2.0.0-synthetic"
+      },
+      {
+        "files": [
+          {
+            "content_ref": {
+              "hash": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+              "object_id": "template_content_d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+              "object_type": "template_content",
+              "object_version": 1,
+              "source_version": 1
+            },
+            "path": "internal/logging/logging.go.tmpl",
+            "sha256": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15"
+          }
+        ],
+        "manifest_hash": "e0b8a1fc76fe0d06fbcb95fe48671e32e8dac467f8363e4376cb6859d2193879",
+        "template_id": "logging",
+        "template_version": "2.0.0-synthetic"
+      }
+    ]
+  },
+  "proposal": {
+    "allowed_actions": [
+      "scaffold",
+      "apply_skill",
+      "verify",
+      "create_repository",
+      "push_repository",
+      "trigger_ci",
+      "package"
+    ],
+    "changes": [
+      {
+        "after": "Synthetic approved file: README.md\n",
+        "after_sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+        "before": null,
+        "before_sha256": null,
+        "operation": "create",
+        "path": "README.md"
+      },
+      {
+        "after": "Synthetic approved file: internal/auth/auth.go\n",
+        "after_sha256": "25c81de82724fe667e09cc265b7395956769cda353586bad864f9c6901aed8fa",
+        "before": null,
+        "before_sha256": null,
+        "operation": "create",
+        "path": "internal/auth/auth.go"
+      },
+      {
+        "after": "Synthetic approved file: internal/database/database.go\n",
+        "after_sha256": "79b531ed5591adcbdbd122e0968ce7cd78972e150e1e50ca118f87b6b481f7f5",
+        "before": null,
+        "before_sha256": null,
+        "operation": "create",
+        "path": "internal/database/database.go"
+      },
+      {
+        "after": "Synthetic approved file: internal/logging/logging.go\n",
+        "after_sha256": "bfa55f0da2a1213e210d4f6edd514b8138378343980f87f5ec5011e898bd7781",
+        "before": null,
+        "before_sha256": null,
+        "operation": "create",
+        "path": "internal/logging/logging.go"
+      }
+    ],
+    "checks": [
+      {
+        "check_id": "check.synthetic",
+        "detail": "Synthetic fixture check",
+        "passed": true
+      }
+    ],
+    "contract_version": "1.2.0",
+    "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+    "expires_at": "2026-10-02T02:30:00Z",
+    "impact": [
+      "Synthetic oracle objects, not observed execution"
+    ],
+    "issued_at": "2026-10-02T02:00:00Z",
+    "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+    "plan": {
+      "contract_version": "1.2.0",
+      "delivery_target": {
+        "instance_url": "http://127.0.0.1:1",
+        "namespace_id": "1",
+        "namespace_path": "synthetic",
+        "project_path": "synthetic-project",
+        "provider": "gitlab",
+        "ref": "main",
+        "visibility": "private"
+      },
+      "description": "Synthetic S2 oracle fixture",
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "project_name": "synthetic-project",
+      "selected_skills": [
+        {
+          "parameters": {
+            "auth": "jwt",
+            "token_ttl": "24h"
+          },
+          "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+          "skill_id": "add_auth",
+          "skill_version": "2.0.0-synthetic"
+        },
+        {
+          "parameters": {
+            "database": "postgres",
+            "orm": "gorm"
+          },
+          "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+          "skill_id": "add_database",
+          "skill_version": "2.0.0-synthetic"
+        },
+        {
+          "parameters": {
+            "log_format": "json",
+            "log_level": "info",
+            "log_max_age": "168h",
+            "log_max_backups": 3,
+            "log_max_size": 10485760,
+            "log_on_write_error": "degrade",
+            "log_output": "console",
+            "log_path": "logs/app.log"
+          },
+          "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+          "skill_id": "add_logging",
+          "skill_version": "2.0.0-synthetic"
+        }
+      ],
+      "tech_stack": "golang",
+      "template_dependencies": [
+        {
+          "files": [
+            {
+              "content_ref": {
+                "hash": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+                "object_id": "template_content_89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+                "object_type": "template_content",
+                "object_version": 1,
+                "source_version": 1
+              },
+              "path": "internal/auth/auth.go.tmpl",
+              "sha256": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a"
+            }
+          ],
+          "manifest_hash": "136840e2a2e4d41be534baaf5516619a11db9135e47b4c71c1537ca726058e33",
+          "template_id": "add_auth",
+          "template_version": "2.0.0-synthetic"
+        },
+        {
+          "files": [
+            {
+              "content_ref": {
+                "hash": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+                "object_id": "template_content_adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+                "object_type": "template_content",
+                "object_version": 1,
+                "source_version": 1
+              },
+              "path": "internal/database/database.go.tmpl",
+              "sha256": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30"
+            }
+          ],
+          "manifest_hash": "746cc9c6f20e3b9d35f904259dd36bb00357ceb9125435e270341084a393d847",
+          "template_id": "add_database",
+          "template_version": "2.0.0-synthetic"
+        },
+        {
+          "files": [
+            {
+              "content_ref": {
+                "hash": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+                "object_id": "template_content_20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+                "object_type": "template_content",
+                "object_version": 1,
+                "source_version": 1
+              },
+              "path": "cmd/server/main.go.tmpl",
+              "sha256": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d"
+            }
+          ],
+          "manifest_hash": "21e2d152af6abcf09994878ccd50c69d3e8b87944a0604983b1d72f457b5c039",
+          "template_id": "go_base",
+          "template_version": "2.0.0-synthetic"
+        },
+        {
+          "files": [
+            {
+              "content_ref": {
+                "hash": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+                "object_id": "template_content_d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+                "object_type": "template_content",
+                "object_version": 1,
+                "source_version": 1
+              },
+              "path": "internal/logging/logging.go.tmpl",
+              "sha256": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15"
+            }
+          ],
+          "manifest_hash": "e0b8a1fc76fe0d06fbcb95fe48671e32e8dac467f8363e4376cb6859d2193879",
+          "template_id": "logging",
+          "template_version": "2.0.0-synthetic"
+        }
+      ]
+    },
+    "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+    "proposal_id": "synthetic-proposal",
+    "proposal_version": 1,
+    "required_permission_ids": [
+      "gitlab_ci",
+      "gitlab_create",
+      "gitlab_push",
+      "package_write",
+      "tool_go",
+      "workspace_read",
+      "workspace_write"
+    ],
+    "run_id": "synthetic-s2-run",
+    "snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+    "source_version": 1,
+    "status": "accepted",
+    "title": "Synthetic seven-action proposal"
+  },
+  "proposal_history": [
+    {
+      "allowed_actions": [
+        "scaffold",
+        "apply_skill",
+        "verify",
+        "create_repository",
+        "push_repository",
+        "trigger_ci",
+        "package"
+      ],
+      "changes": [
+        {
+          "after": "Synthetic approved file: README.md\n",
+          "after_sha256": "5c14b41d2e1946cc53aa1dac3542f6ad57dff4a8391ffbc5509efa64e943ec15",
+          "before": null,
+          "before_sha256": null,
+          "operation": "create",
+          "path": "README.md"
+        },
+        {
+          "after": "Synthetic approved file: internal/auth/auth.go\n",
+          "after_sha256": "25c81de82724fe667e09cc265b7395956769cda353586bad864f9c6901aed8fa",
+          "before": null,
+          "before_sha256": null,
+          "operation": "create",
+          "path": "internal/auth/auth.go"
+        },
+        {
+          "after": "Synthetic approved file: internal/database/database.go\n",
+          "after_sha256": "79b531ed5591adcbdbd122e0968ce7cd78972e150e1e50ca118f87b6b481f7f5",
+          "before": null,
+          "before_sha256": null,
+          "operation": "create",
+          "path": "internal/database/database.go"
+        },
+        {
+          "after": "Synthetic approved file: internal/logging/logging.go\n",
+          "after_sha256": "bfa55f0da2a1213e210d4f6edd514b8138378343980f87f5ec5011e898bd7781",
+          "before": null,
+          "before_sha256": null,
+          "operation": "create",
+          "path": "internal/logging/logging.go"
+        }
+      ],
+      "checks": [
+        {
+          "check_id": "check.synthetic",
+          "detail": "Synthetic fixture check",
+          "passed": true
+        }
+      ],
+      "contract_version": "1.2.0",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "expires_at": "2026-10-02T02:30:00Z",
+      "impact": [
+        "Synthetic oracle objects, not observed execution"
+      ],
+      "issued_at": "2026-10-02T02:00:00Z",
+      "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+      "plan": {
+        "contract_version": "1.2.0",
+        "delivery_target": {
+          "instance_url": "http://127.0.0.1:1",
+          "namespace_id": "1",
+          "namespace_path": "synthetic",
+          "project_path": "synthetic-project",
+          "provider": "gitlab",
+          "ref": "main",
+          "visibility": "private"
+        },
+        "description": "Synthetic S2 oracle fixture",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "project_name": "synthetic-project",
+        "selected_skills": [
+          {
+            "parameters": {
+              "auth": "jwt",
+              "token_ttl": "24h"
+            },
+            "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+            "skill_id": "add_auth",
+            "skill_version": "2.0.0-synthetic"
+          },
+          {
+            "parameters": {
+              "database": "postgres",
+              "orm": "gorm"
+            },
+            "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+            "skill_id": "add_database",
+            "skill_version": "2.0.0-synthetic"
+          },
+          {
+            "parameters": {
+              "log_format": "json",
+              "log_level": "info",
+              "log_max_age": "168h",
+              "log_max_backups": 3,
+              "log_max_size": 10485760,
+              "log_on_write_error": "degrade",
+              "log_output": "console",
+              "log_path": "logs/app.log"
+            },
+            "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+            "skill_id": "add_logging",
+            "skill_version": "2.0.0-synthetic"
+          }
+        ],
+        "tech_stack": "golang",
+        "template_dependencies": [
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+                  "object_id": "template_content_89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "internal/auth/auth.go.tmpl",
+                "sha256": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a"
+              }
+            ],
+            "manifest_hash": "136840e2a2e4d41be534baaf5516619a11db9135e47b4c71c1537ca726058e33",
+            "template_id": "add_auth",
+            "template_version": "2.0.0-synthetic"
+          },
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+                  "object_id": "template_content_adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "internal/database/database.go.tmpl",
+                "sha256": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30"
+              }
+            ],
+            "manifest_hash": "746cc9c6f20e3b9d35f904259dd36bb00357ceb9125435e270341084a393d847",
+            "template_id": "add_database",
+            "template_version": "2.0.0-synthetic"
+          },
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+                  "object_id": "template_content_20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "cmd/server/main.go.tmpl",
+                "sha256": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d"
+              }
+            ],
+            "manifest_hash": "21e2d152af6abcf09994878ccd50c69d3e8b87944a0604983b1d72f457b5c039",
+            "template_id": "go_base",
+            "template_version": "2.0.0-synthetic"
+          },
+          {
+            "files": [
+              {
+                "content_ref": {
+                  "hash": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+                  "object_id": "template_content_d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+                  "object_type": "template_content",
+                  "object_version": 1,
+                  "source_version": 1
+                },
+                "path": "internal/logging/logging.go.tmpl",
+                "sha256": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15"
+              }
+            ],
+            "manifest_hash": "e0b8a1fc76fe0d06fbcb95fe48671e32e8dac467f8363e4376cb6859d2193879",
+            "template_id": "logging",
+            "template_version": "2.0.0-synthetic"
+          }
+        ]
+      },
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_id": "synthetic-proposal",
+      "proposal_version": 1,
+      "required_permission_ids": [
+        "gitlab_ci",
+        "gitlab_create",
+        "gitlab_push",
+        "package_write",
+        "tool_go",
+        "workspace_read",
+        "workspace_write"
+      ],
+      "run_id": "synthetic-s2-run",
+      "snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "source_version": 1,
+      "status": "pending",
+      "title": "Synthetic seven-action proposal"
+    }
+  ],
+  "run_id": "synthetic-s2-run",
+  "schema_version": 2,
+  "source_version": 1,
+  "state": "DELIVER",
+  "state_sequence": 50,
+  "tool_receipts": [
+    {
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "arguments": [
+        "mod",
+        "tidy"
+      ],
+      "attempt_id": "synthetic-attempt-7",
+      "command_id": "go.mod_tidy",
+      "completed_at": "2026-10-02T02:00:23Z",
+      "contract_version": "1.2.0",
+      "cwd_scope": "run_workspace",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "environment_policy": "isolated",
+      "execution_id": "synthetic-execution-5",
+      "exit_code": 0,
+      "input_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "operation_id": "synthetic-operation-5",
+      "output": "synthetic redacted output\n",
+      "output_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "output_sha256": "716cdc764c75fa595b73c92063e7444edd09e438f7953fc70a6fe25654443bcb",
+      "output_truncated": false,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "18aa6aae4840967a65e4639523e3188fa63f31b3dafdf9467837315c6fd73ff8",
+      "receipt_id": "synthetic-tool-receipt-1",
+      "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:22Z",
+      "status": "succeeded",
+      "tool": {
+        "binary_sha256": null,
+        "platform": "linux_amd64",
+        "tool_id": "go",
+        "version": "go1.25.0"
+      },
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "arguments": [
+        "test",
+        "./..."
+      ],
+      "attempt_id": "synthetic-attempt-8",
+      "command_id": "go.test",
+      "completed_at": "2026-10-02T02:00:24Z",
+      "contract_version": "1.2.0",
+      "cwd_scope": "run_workspace",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "environment_policy": "isolated",
+      "execution_id": "synthetic-execution-5",
+      "exit_code": 0,
+      "input_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "operation_id": "synthetic-operation-5",
+      "output": "synthetic redacted output\n",
+      "output_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "output_sha256": "716cdc764c75fa595b73c92063e7444edd09e438f7953fc70a6fe25654443bcb",
+      "output_truncated": false,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "b80ee5102594bf805fa4e8be8cfb32dfcb58447cde2e6d9d4c956baf50247d26",
+      "receipt_id": "synthetic-tool-receipt-2",
+      "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:23Z",
+      "status": "succeeded",
+      "tool": {
+        "binary_sha256": null,
+        "platform": "linux_amd64",
+        "tool_id": "go",
+        "version": "go1.25.0"
+      },
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    },
+    {
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "arguments": [
+        "build",
+        "./..."
+      ],
+      "attempt_id": "synthetic-attempt-9",
+      "command_id": "go.build",
+      "completed_at": "2026-10-02T02:00:25Z",
+      "contract_version": "1.2.0",
+      "cwd_scope": "run_workspace",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "environment_policy": "isolated",
+      "execution_id": "synthetic-execution-5",
+      "exit_code": 0,
+      "input_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "operation_id": "synthetic-operation-5",
+      "output": "synthetic redacted output\n",
+      "output_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "output_sha256": "716cdc764c75fa595b73c92063e7444edd09e438f7953fc70a6fe25654443bcb",
+      "output_truncated": false,
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "c6995b7c6400d6109363b8de82ccffedb2be451271fdf3b3e5d954e780a05a39",
+      "receipt_id": "synthetic-tool-receipt-3",
+      "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:24Z",
+      "status": "succeeded",
+      "tool": {
+        "binary_sha256": null,
+        "platform": "linux_amd64",
+        "tool_id": "go",
+        "version": "go1.25.0"
+      },
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      }
+    }
+  ],
+  "validations": [
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-1",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "scaffold",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f"
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:10Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-1",
+        "operation_id": "synthetic-operation-1",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "1aac153ca389fda05cc8da6c32b3fbf000de8018c4a145ba7c2d41f1685fe50b",
+        "required_permission_ids": [
+          "workspace_write"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 10,
+        "validation_hash": "1d14d28b18a3acb00cdc20556959c3004022294d53bee8e923d70ca437f69fa8",
+        "validation_id": "synthetic-validation-1",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "scaffold",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f"
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 10,
+      "validated_at": "2026-10-02T02:00:10Z",
+      "validation_hash": "1d14d28b18a3acb00cdc20556959c3004022294d53bee8e923d70ca437f69fa8",
+      "validation_id": "synthetic-validation-1",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-2",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "auth": "jwt",
+                "token_ttl": "24h"
+              },
+              "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+              "skill_id": "add_auth",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:13Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-2",
+        "operation_id": "synthetic-operation-2",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "4ef45631891090e184f5ee90ad7d50dda937fd3d48266f005a3cb5727626336a",
+        "required_permission_ids": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 11,
+        "validation_hash": "131ee7872023a370eb5500d37244b06109e53925715d5e5bc7b9790f9a94e277",
+        "validation_id": "synthetic-validation-2",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "auth": "jwt",
+                "token_ttl": "24h"
+              },
+              "skill_hash": "ff4063c5c75bebde4c9b519c7aa9d1b125d271b0a46058338d58db65fc8135e5",
+              "skill_id": "add_auth",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 11,
+      "validated_at": "2026-10-02T02:00:13Z",
+      "validation_hash": "131ee7872023a370eb5500d37244b06109e53925715d5e5bc7b9790f9a94e277",
+      "validation_id": "synthetic-validation-2",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-3",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "database": "postgres",
+                "orm": "gorm"
+              },
+              "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+              "skill_id": "add_database",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:16Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-3",
+        "operation_id": "synthetic-operation-3",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "3c68a0f04929e1b838c48e8f0a8f4d5116da0f2c58412b23211e986af232735e",
+        "required_permission_ids": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 12,
+        "validation_hash": "aff8bc9925b14476f3929c6cb2341bbd5e147fdd97130d0b90e473fac61449b4",
+        "validation_id": "synthetic-validation-3",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "database": "postgres",
+                "orm": "gorm"
+              },
+              "skill_hash": "26357c0420c2a47c6f5934d04b7b4dad2ddf281b5b8cafc2a858cbe06a0d7909",
+              "skill_id": "add_database",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 12,
+      "validated_at": "2026-10-02T02:00:16Z",
+      "validation_hash": "aff8bc9925b14476f3929c6cb2341bbd5e147fdd97130d0b90e473fac61449b4",
+      "validation_id": "synthetic-validation-3",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-4",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "log_format": "json",
+                "log_level": "info",
+                "log_max_age": "168h",
+                "log_max_backups": 3,
+                "log_max_size": 10485760,
+                "log_on_write_error": "degrade",
+                "log_output": "console",
+                "log_path": "logs/app.log"
+              },
+              "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+              "skill_id": "add_logging",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:19Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-4",
+        "operation_id": "synthetic-operation-4",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "a4c18654adef13aba604e6546a5493f57c6d738ce5cd114b24094665775d2cde",
+        "required_permission_ids": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 13,
+        "validation_hash": "53910c5ccf24fcea9ea436b3ad4e734f155b8eefae5155afcf640f14d66494d0",
+        "validation_id": "synthetic-validation-4",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "apply_skill",
+          "parameters": {
+            "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+            "selection": {
+              "parameters": {
+                "log_format": "json",
+                "log_level": "info",
+                "log_max_age": "168h",
+                "log_max_backups": 3,
+                "log_max_size": 10485760,
+                "log_on_write_error": "degrade",
+                "log_output": "console",
+                "log_path": "logs/app.log"
+              },
+              "skill_hash": "45cec0321d1e09c04be8456ebd4fa77e24739dba6355f01ee98bde9a1e85a079",
+              "skill_id": "add_logging",
+              "skill_version": "2.0.0-synthetic"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 13,
+      "validated_at": "2026-10-02T02:00:19Z",
+      "validation_hash": "53910c5ccf24fcea9ea436b3ad4e734f155b8eefae5155afcf640f14d66494d0",
+      "validation_id": "synthetic-validation-4",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-5",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "verify",
+          "parameters": {
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            },
+            "required_check_ids": [
+              "check.go_build",
+              "check.go_mod_tidy",
+              "check.go_test"
+            ]
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:22Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-5",
+        "operation_id": "synthetic-operation-5",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "cdc0462dd281a153ecd1a06c276a42b768516368e471d35bee6de0bdcc6b142e",
+        "required_permission_ids": [
+          "tool_go",
+          "workspace_read",
+          "workspace_write"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 14,
+        "validation_hash": "f4c0c4871d8a09cf2f1fb291f901a5a5ed99a3987e5bd87617e5f5f5f72c0424",
+        "validation_id": "synthetic-validation-5",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "verify",
+          "parameters": {
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            },
+            "required_check_ids": [
+              "check.go_build",
+              "check.go_mod_tidy",
+              "check.go_test"
+            ]
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 14,
+      "validated_at": "2026-10-02T02:00:22Z",
+      "validation_hash": "f4c0c4871d8a09cf2f1fb291f901a5a5ed99a3987e5bd87617e5f5f5f72c0424",
+      "validation_id": "synthetic-validation-5",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-6",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "create_repository",
+          "parameters": {
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:25Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-6",
+        "operation_id": "synthetic-operation-6",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "d30f9d2e9d98a0db7b0c42049fc41ae74d621e9f002458bc2e489d5389748c91",
+        "required_permission_ids": [
+          "gitlab_create"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 15,
+        "validation_hash": "76c3b94ba4c12e5d76edcb537257eda8273f5eab7b2c8310f22b8a729b4fb622",
+        "validation_id": "synthetic-validation-6",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "create_repository",
+          "parameters": {
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 15,
+      "validated_at": "2026-10-02T02:00:25Z",
+      "validation_hash": "76c3b94ba4c12e5d76edcb537257eda8273f5eab7b2c8310f22b8a729b4fb622",
+      "validation_id": "synthetic-validation-6",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-7",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "push_repository",
+          "parameters": {
+            "expected_branch_sha": null,
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            },
+            "project_id": 1,
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:28Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-7",
+        "operation_id": "synthetic-operation-7",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "2d1e63f58d35c9f9d668601864271b2a631f9efae7c122bc6c22fe4f9fd155df",
+        "required_permission_ids": [
+          "gitlab_push",
+          "workspace_read"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 16,
+        "validation_hash": "08b5c43ce7acb3fe0d2c26197ee8831ee4c9187b61c97a9d0a5a54eb08db1fde",
+        "validation_id": "synthetic-validation-7",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "push_repository",
+          "parameters": {
+            "expected_branch_sha": null,
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            },
+            "project_id": 1,
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 16,
+      "validated_at": "2026-10-02T02:00:28Z",
+      "validation_hash": "08b5c43ce7acb3fe0d2c26197ee8831ee4c9187b61c97a9d0a5a54eb08db1fde",
+      "validation_id": "synthetic-validation-7",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-8",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "trigger_ci",
+          "parameters": {
+            "ci_config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "project_id": 1,
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:31Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-8",
+        "operation_id": "synthetic-operation-8",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "c4839a718545e5b0153841a7f3c3b061c0a7e04a443eb8bc9877009a055eec60",
+        "required_permission_ids": [
+          "gitlab_ci"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 17,
+        "validation_hash": "df0fefdf02fa992b20d108a8851d9d900cd000e8cf54c5a4213e67f239c487ee",
+        "validation_id": "synthetic-validation-8",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "trigger_ci",
+          "parameters": {
+            "ci_config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "project_id": 1,
+            "target": {
+              "instance_url": "http://127.0.0.1:1",
+              "namespace_id": "1",
+              "namespace_path": "synthetic",
+              "project_path": "synthetic-project",
+              "provider": "gitlab",
+              "ref": "main",
+              "visibility": "private"
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 17,
+      "validated_at": "2026-10-02T02:00:31Z",
+      "validation_hash": "df0fefdf02fa992b20d108a8851d9d900cd000e8cf54c5a4213e67f239c487ee",
+      "validation_id": "synthetic-validation-8",
+      "verdict": "allowed"
+    },
+    {
+      "contract_version": "1.2.0",
+      "decision_id": "synthetic-decision-9",
+      "decision_kind": "action",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_request": {
+        "action": {
+          "action_type": "package",
+          "parameters": {
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            }
+          }
+        },
+        "approval": {
+          "approval_id": "synthetic-approval",
+          "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+          "expires_at": "2026-10-02T02:30:00Z",
+          "issued_at": "2026-10-02T02:00:00Z",
+          "permission_hash": "bc9a4db20c6635a5d2c1a2ace2d5fd1f27a61b2d98472565ffdebca1dd64b5aa",
+          "proposal_id": "synthetic-proposal",
+          "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+          "proposal_version": 1,
+          "source_version": 1
+        },
+        "command_id": "synthetic-command",
+        "contract_version": "1.2.0",
+        "created_at": "2026-10-02T02:00:34Z",
+        "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+        "execution_id": "synthetic-execution-9",
+        "operation_id": "synthetic-operation-9",
+        "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+        "request_hash": "119790dec51bf615b59a5e4b5d7014e8be712d8248958062802e7cebb6ef43b6",
+        "required_permission_ids": [
+          "package_write",
+          "workspace_read"
+        ],
+        "run_id": "synthetic-s2-run",
+        "source_version": 1,
+        "state_sequence_at_validation": 18,
+        "validation_hash": "5a79b72a44f35a66f041e75bf22c3d92e5bb1525bbbc56716e469adee5592914",
+        "validation_id": "synthetic-validation-9",
+        "workspace": {
+          "run_id": "synthetic-s2-run",
+          "storage_key": "synthetic/project",
+          "workspace_id": "synthetic-workspace"
+        }
+      },
+      "findings": [
+        {
+          "code": "allowed",
+          "detail": "Synthetic rule fixture",
+          "passed": true,
+          "rule_id": "rule.synthetic"
+        }
+      ],
+      "normalized_advice": {
+        "action": {
+          "action_type": "package",
+          "parameters": {
+            "manifest_ref": {
+              "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+              "object_id": "synthetic-manifest-4",
+              "object_type": "manifest",
+              "object_version": 4,
+              "source_version": 1
+            }
+          }
+        },
+        "completion_hint": null,
+        "diagnosis": null,
+        "kind": "action",
+        "plan": null,
+        "question": null,
+        "reason": "Synthetic deterministic scheduled action"
+      },
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "state_sequence": 18,
+      "validated_at": "2026-10-02T02:00:34Z",
+      "validation_hash": "5a79b72a44f35a66f041e75bf22c3d92e5bb1525bbbc56716e469adee5592914",
+      "validation_id": "synthetic-validation-9",
+      "verdict": "allowed"
+    }
+  ],
+  "workspace_receipts": [
+    {
+      "action_type": "scaffold",
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "attempt_id": "synthetic-attempt-2",
+      "completed_at": "2026-10-02T02:00:11Z",
+      "contract_version": "1.2.0",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-1",
+      "input_manifest_ref": null,
+      "operation_id": "synthetic-operation-1",
+      "output_manifest_ref": {
+        "hash": "9e0ffd73902cce28f4614ea05659fddce8b7529c69cc0cc0566f08e68b760050",
+        "object_id": "synthetic-manifest-1",
+        "object_type": "manifest",
+        "object_version": 1,
+        "source_version": 1
+      },
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "85148121aa933415ecb078729f75cb21f9f7b5d275515b7e65482d14bf809117",
+      "receipt_id": "synthetic-workspace-receipt-1",
+      "request_hash": "1aac153ca389fda05cc8da6c32b3fbf000de8018c4a145ba7c2d41f1685fe50b",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:10Z",
+      "status": "succeeded",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      },
+      "written_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "action_type": "apply_skill",
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "attempt_id": "synthetic-attempt-3",
+      "completed_at": "2026-10-02T02:00:14Z",
+      "contract_version": "1.2.0",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-2",
+      "input_manifest_ref": {
+        "hash": "9e0ffd73902cce28f4614ea05659fddce8b7529c69cc0cc0566f08e68b760050",
+        "object_id": "synthetic-manifest-1",
+        "object_type": "manifest",
+        "object_version": 1,
+        "source_version": 1
+      },
+      "operation_id": "synthetic-operation-2",
+      "output_manifest_ref": {
+        "hash": "fb9f8868ea608776226c975f5d9fd26ba5197a856a1b116e8c64b603ee8c726d",
+        "object_id": "synthetic-manifest-2",
+        "object_type": "manifest",
+        "object_version": 2,
+        "source_version": 1
+      },
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "93fa556f4b8295599dbc87ba9cedcb9d2871d3ec4a12f38bf10f6157c802e874",
+      "receipt_id": "synthetic-workspace-receipt-2",
+      "request_hash": "4ef45631891090e184f5ee90ad7d50dda937fd3d48266f005a3cb5727626336a",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:13Z",
+      "status": "succeeded",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      },
+      "written_paths": [
+        "internal/auth/auth.go"
+      ]
+    },
+    {
+      "action_type": "apply_skill",
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "attempt_id": "synthetic-attempt-4",
+      "completed_at": "2026-10-02T02:00:17Z",
+      "contract_version": "1.2.0",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-3",
+      "input_manifest_ref": {
+        "hash": "fb9f8868ea608776226c975f5d9fd26ba5197a856a1b116e8c64b603ee8c726d",
+        "object_id": "synthetic-manifest-2",
+        "object_type": "manifest",
+        "object_version": 2,
+        "source_version": 1
+      },
+      "operation_id": "synthetic-operation-3",
+      "output_manifest_ref": {
+        "hash": "abb3a5b338e0cc4185131174f9fe65e8569a097a6e5f25e936506bcfa5643fac",
+        "object_id": "synthetic-manifest-3",
+        "object_type": "manifest",
+        "object_version": 3,
+        "source_version": 1
+      },
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "c06d41ed36282faf60cb34de8fde69de2c6681e8cbe1dbf255fbc8e066a0d728",
+      "receipt_id": "synthetic-workspace-receipt-3",
+      "request_hash": "3c68a0f04929e1b838c48e8f0a8f4d5116da0f2c58412b23211e986af232735e",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:16Z",
+      "status": "succeeded",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      },
+      "written_paths": [
+        "internal/database/database.go"
+      ]
+    },
+    {
+      "action_type": "apply_skill",
+      "approval_hash": "4585bad367f7992a07f6ba3deda52d91468603a2b7042f1266a1782cada101c8",
+      "approval_id": "synthetic-approval",
+      "attempt_id": "synthetic-attempt-5",
+      "completed_at": "2026-10-02T02:00:20Z",
+      "contract_version": "1.2.0",
+      "definition_snapshot_hash": "e5d9edb3d664140853e0f85080e09ca61667748ea3397a61721bad6a8c2304e7",
+      "execution_id": "synthetic-execution-4",
+      "input_manifest_ref": {
+        "hash": "abb3a5b338e0cc4185131174f9fe65e8569a097a6e5f25e936506bcfa5643fac",
+        "object_id": "synthetic-manifest-3",
+        "object_type": "manifest",
+        "object_version": 3,
+        "source_version": 1
+      },
+      "operation_id": "synthetic-operation-4",
+      "output_manifest_ref": {
+        "hash": "3746dc8c78bec6d9228c1732faefa67f43e2f635009c49e4bc923b24f240d4f2",
+        "object_id": "synthetic-manifest-4",
+        "object_type": "manifest",
+        "object_version": 4,
+        "source_version": 1
+      },
+      "plan_hash": "ebf3439e86cde610a9d8652f7b40f38660a1bbdeac6d445473561040b20ccc4f",
+      "proposal_snapshot_hash": "ccf90299d553ce2985c64233652ff265be170df12a18ae2a83b573804107e9f1",
+      "receipt_hash": "07f53475240aaab45e1f1cd4473c936d091d99b42178622055ee933ca62a7bdb",
+      "receipt_id": "synthetic-workspace-receipt-4",
+      "request_hash": "a4c18654adef13aba604e6546a5493f57c6d738ce5cd114b24094665775d2cde",
+      "run_id": "synthetic-s2-run",
+      "source_version": 1,
+      "started_at": "2026-10-02T02:00:19Z",
+      "status": "succeeded",
+      "workspace": {
+        "run_id": "synthetic-s2-run",
+        "storage_key": "synthetic/project",
+        "workspace_id": "synthetic-workspace"
+      },
+      "written_paths": [
+        "internal/logging/logging.go"
+      ]
+    }
+  ]
+}

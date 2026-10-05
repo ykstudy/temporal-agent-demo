@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "at": "2026-10-04T18:18:31.552255+00:00",
+  "scope": "G21 documentation CLI flags and actual mock public health route; no live or product acceptance",
+  "examples": [
+    {
+      "script": "validation/start.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/scenarios.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/fixtures.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/start.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/start.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/scenarios.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/start.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/scenarios.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/scenarios.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/fixtures.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/start.py",
+      "flags_verified": true
+    },
+    {
+      "script": "validation/scenarios.py",
+      "flags_verified": true
+    }
+  ],
+  "correct_route": "/fixture/health",
+  "typo_route_rejected": true
+}

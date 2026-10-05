@@ -1,0 +1,76 @@
+{
+  "recorded_at": "2026-10-02T13:13:08.030958+00:00",
+  "stage": "S2 foundation in progress; exit gate not met",
+  "source_manifest": "docs/evidence/s2-foundation-source-audit.json",
+  "source_aggregate_sha256": "5aeeb07268dee3203036bce651c2c80ddda1f7b0ab2bc99b94f237c10bb291fc",
+  "source_count": 181,
+  "default_definition_version": "3.0.1",
+  "default_contract_version": "1.1.0",
+  "default_definition_hash": "45cfaa983628b2ca23c9e2eb9a537d7428a4ce1d6078ab68eae0f8e36de01608",
+  "product_code_checks": [
+    {
+      "command": "go test ./...",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-go-test.log"
+    },
+    {
+      "command": "go test -race ./internal/agent ./internal/storage -run 'Test(Canonical|Control|Model|Frozen|FailedCommand|Store|Objects)' -count=1",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-race.log"
+    },
+    {
+      "command": "go test -race ./internal/agent -run '^Test(ControlChain|Canonical|ControlBudget|ModelAdvice)' -count=1",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-final-chain-race.log"
+    },
+    {
+      "command": "go test -race ./internal/storage -count=1",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-final-storage-race.log"
+    },
+    {
+      "command": "go test ./internal/agent -run '^TestCanonicalReadOnlyRoutes' -count=1",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-readiness-test.log"
+    },
+    {
+      "command": "go vet ./...",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-vet.log"
+    },
+    {
+      "command": "go build ./...",
+      "working_directory": "backend",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-build.log"
+    },
+    {
+      "command": "python3 scripts/generate-contracts.py --check",
+      "working_directory": ".",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-foundation-generated.log"
+    }
+  ],
+  "oracle_evidence_kind": "independent synthetic/mock; no product S2 HTTP executor connected",
+  "oracle_reports": [
+    "validation/reports/contracts-s2/oracle-1.2-self-test.json",
+    "validation/reports/contracts-s2/compat-1.1-self-test.json",
+    "validation/reports/contracts-s2/compat-1.1-decision-self-test.json",
+    "validation/reports/contracts-s2/transport-mock/summary.json"
+  ],
+  "not_covered": [
+    "S2 command pipeline and real seven-action scheduler/executor",
+    "S2 local/Temporal execution request authorization and recovery",
+    "S2 actual process deadlines and receipts",
+    "VERIFY same-source bounded retry and new-source reapproval path",
+    "S2 unknown remote write count/reconciliation with product HTTP oracle",
+    "full v2 API/messages/summary/frontend",
+    "live model/GitLab/Temporal or browser acceptance"
+  ]
+}

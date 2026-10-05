@@ -1,0 +1,39 @@
+{
+  "kind": "synthetic_oracle_fixture",
+  "not_product_evidence": true,
+  "contract_version": "1.2.0",
+  "shape_source": "validation/contracts/fixtures/definition-snapshot.valid.json",
+  "shape_source_sha256": "6fce808ada208aaf1a692b76936cdf30b810b1c0caed9de35e78bfb9e2d4746e",
+  "publication": "validation/contracts/releases/1.2.0/publication.json",
+  "audit_hash": "8270ee7b341464da0c4aced93bd013a41a494e79aa502062cc3046ae5a7ce5ea",
+  "content": [
+    {
+      "sha256": "0a4882b6aeaeb06bd7e3771938dbc8b22b90b17f5978cdfb6a85649bcf9bbc9b",
+      "size": 17073
+    },
+    {
+      "sha256": "20da52f4be23984688d187fccea4898bcdeea18cabb065e1d4f482834540582d",
+      "size": 90
+    },
+    {
+      "sha256": "2907f0b3536892a31fa9ba2623da38a0d91d4a9d6b6f0116738ba4a09bf16f98",
+      "size": 145350
+    },
+    {
+      "sha256": "6fb120230330833e2a1ce29da895eeb41a6d74135459e422cb3a29305896b63d",
+      "size": 3100
+    },
+    {
+      "sha256": "89e8b2fb7e4bbc51b8b954f4842bc238e8abcc119049baecad9462a6199e7c0a",
+      "size": 94
+    },
+    {
+      "sha256": "adf73ed7e0a731ddab48c773ff619c427613aac3a07fd3693b47aa9cf5baac30",
+      "size": 106
+    },
+    {
+      "sha256": "d49efed9507ff3a49c070749cc2882789f0b23bb54efb2cef53d4aaa26207b15",
+      "size": 99
+    }
+  ]
+}

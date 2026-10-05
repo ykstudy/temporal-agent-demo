@@ -1,0 +1,99 @@
+{
+  "scope": "Only verified task-owned processes stopped. Shared Temporal17433 and unrelated18157-18159 untouched.",
+  "stopped": [
+    {
+      "output_dir": "validation/reports/s3-local-service",
+      "owned_pid": 50642,
+      "launcher_pid": 50612,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "output_dir": "validation/reports/s3-temporal-service-2",
+      "owned_pid": 51647,
+      "launcher_pid": 51625,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "output_dir": "validation/reports/s4-local-service",
+      "owned_pid": 63618,
+      "launcher_pid": 63597,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "output_dir": "validation/reports/s4-temporal-service",
+      "owned_pid": 63624,
+      "launcher_pid": 63604,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "output_dir": "validation/reports/s4-context-local-service",
+      "owned_pid": 70031,
+      "launcher_pid": 69990,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "output_dir": "validation/reports/s5-local-model-service",
+      "owned_pid": 84493,
+      "launcher_pid": 84485,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "output_dir": "validation/reports/s5-temporal-model-service",
+      "owned_pid": 84775,
+      "launcher_pid": 84758,
+      "action": "SIGTERM_owned_launcher",
+      "data_preserved": true
+    },
+    {
+      "owned_pid": 69040,
+      "port": 18164,
+      "action": "SIGTERM_owned_old_Vite"
+    },
+    {
+      "owned_pid": 70025,
+      "port": 18166,
+      "action": "SIGTERM_owned_old_Vite"
+    },
+    {
+      "owned_pid": 74302,
+      "port": 18169,
+      "action": "SIGTERM_owned_old_Vite"
+    },
+    {
+      "owned_pid": 90379,
+      "port": 18173,
+      "action": "SIGTERM_owned_fixture",
+      "evidence_preserved": true
+    },
+    {
+      "owned_pid": 76861,
+      "launcher_pid": 76674,
+      "action": "SIGTERM_owned_runtime_Temporal_worker",
+      "shared_Temporal_service_stopped": false
+    },
+    {
+      "owned_pid": 76776,
+      "action": "SIGTERM_owned_temporary_preview"
+    },
+    {
+      "owned_pid": 98947,
+      "action": "SIGTERM_owned_temporary_preview"
+    },
+    {
+      "owned_pid": 99265,
+      "action": "SIGTERM_owned_temporary_preview"
+    }
+  ],
+  "retained": {
+    "product_api": "http://127.0.0.1:18170",
+    "built_frontend": "http://127.0.0.1:18178",
+    "health": "ready HTTP200",
+    "data_and_reports": "preserved"
+  }
+}

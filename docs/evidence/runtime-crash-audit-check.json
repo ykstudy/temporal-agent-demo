@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-04T17:55:04.215201+00:00",
+  "status": "passed",
+  "actual_temporal": true,
+  "observations": [
+    {
+      "run_id": "s2_f469ab90c9_crash",
+      "state": "CANCELLED",
+      "retries": 1,
+      "unknown_attempts": 1,
+      "attempts": 9
+    },
+    {
+      "run_id": "run_6312ac807322ed47082e2119",
+      "state": "DONE",
+      "retries": 0,
+      "unknown_attempts": 0,
+      "attempts": 8
+    }
+  ]
+}

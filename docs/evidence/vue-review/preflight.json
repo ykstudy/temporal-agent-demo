@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-10-02T09:40:59.195414+00:00",
+  "browser_url": "http://127.0.0.1:15182",
+  "api_url": "http://127.0.0.1:18111",
+  "health": {
+    "mode": "local",
+    "ok": true,
+    "temporal_connected": false
+  },
+  "modes": {
+    "execution_mode": "local",
+    "decision_mode": "rules",
+    "delivery_mode": "local"
+  },
+  "bundle_sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+  "bundle_generated_at": "2026-10-02T09:23:49.476116Z",
+  "source_count": 128,
+  "build": {
+    "command": "npm --prefix frontend run build",
+    "status": "passed",
+    "typecheck": "vue-tsc --noEmit",
+    "vite": "7.3.6",
+    "seconds": 2.54
+  },
+  "dist_assets": [
+    {
+      "path": "frontend/dist/assets/index-CABI4HvY.css",
+      "size": 12092,
+      "sha256": "98a026c25616287c900836103986fa1871cfb7f2e9104bd0339fae9d09a70b23"
+    },
+    {
+      "path": "frontend/dist/assets/ReviewWorkbench-DMurJs_h.css",
+      "size": 20251,
+      "sha256": "0dec82d00b37ce275e485fae397d8693610c0df54196557c2f194d4165694496"
+    },
+    {
+      "path": "frontend/dist/assets/index-M_F59mRD.js",
+      "size": 201830,
+      "sha256": "015bf20d8e90e5ba9e7f961f04102d50e2624749e4effd677a8de8a05f93e1c2"
+    },
+    {
+      "path": "frontend/dist/assets/ReviewWorkbench-CxwfJ1zQ.js",
+      "size": 322533,
+      "sha256": "fe80fafa68e49dffb8c58a698939d4e53dfa3a27426fdf38f55ca3afaa72aa4d"
+    }
+  ]
+}

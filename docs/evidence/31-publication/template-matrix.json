@@ -1,0 +1,835 @@
+{
+  "cases": [
+    {
+      "approved_files_hash": "c16b65657f4c6b811282c803378bbc5d20efc476546ac44ceb8a5beab4c1fd2a",
+      "combination": "none/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 564,
+        "mod tidy": 47,
+        "test ./...": 878
+      },
+      "files": 10,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "6dc98286ce8055a093e45b574f1b95a7008fe57c547b501f4a9e5d1555a324e6",
+      "combination": "none/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 479,
+        "mod tidy": 35,
+        "test ./...": 599
+      },
+      "files": 12,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "618cb904982e83f4ebeb72a4145d7f5803aa8e42dd75ace4f76540a41b54b6ad",
+      "combination": "none/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 469,
+        "mod tidy": 37,
+        "test ./...": 638
+      },
+      "files": 12,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "fc3363ea67723235d0f4cd40c471c038a8c4cb210a99f951028c122a3b38619e",
+      "combination": "none/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 468,
+        "mod tidy": 34,
+        "test ./...": 535
+      },
+      "files": 12,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "28615db59942ac363700cfd3817a3165c69ac594b76857ee310986c403de5b3a",
+      "combination": "none/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 461,
+        "mod tidy": 34,
+        "test ./...": 691
+      },
+      "files": 14,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "4227b2ae2935969b77c22059d7e7c43c2d367d6cb5df8e4c5f6c8ec6443d1782",
+      "combination": "none/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 472,
+        "mod tidy": 36,
+        "test ./...": 691
+      },
+      "files": 14,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "9323a0ea5946be8a9a97710a7a00b5833daf52f938a773c3c8a156ed4189c185",
+      "combination": "none/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 465,
+        "mod tidy": 37,
+        "test ./...": 491
+      },
+      "files": 12,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "f4da1ebafd64363da11eba7024a79aaf5756a27d27eb7fa0f119b7e0b830b827",
+      "combination": "none/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 486,
+        "mod tidy": 35,
+        "test ./...": 725
+      },
+      "files": 14,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "3852e8d9e060754682dd60a49b70a3887f018a86833a1213f2ae0570a00ed8f1",
+      "combination": "none/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 468,
+        "mod tidy": 34,
+        "test ./...": 672
+      },
+      "files": 14,
+      "go_mod_sha256": "ada210d35d86671bbf5a0edccf790760d2509de91b7e49bc4d24541341aa3ffd",
+      "go_sum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "491443f6b27bc52443c44ab96265c12e687057b69c8850664fce88bf9daf1919",
+      "combination": "mysql_gorm/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 634,
+        "mod tidy": 45,
+        "test ./...": 880
+      },
+      "files": 13,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "a618e79c20988a077ad95923d7aecc2d28592eeec524f702c36dabcdfaf8c2f6",
+      "combination": "mysql_gorm/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 664,
+        "mod tidy": 39,
+        "test ./...": 948
+      },
+      "files": 15,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "eee233ecbc429f0f2a491d41c01842f1d982e011ad10d6ddd4b2ef0bd82d7c18",
+      "combination": "mysql_gorm/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 675,
+        "mod tidy": 39,
+        "test ./...": 954
+      },
+      "files": 15,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "4a82fe468c7b299b684d075cadc2bc8e426dfca5d1f0b7011ab2e96006a6b701",
+      "combination": "mysql_gorm/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 622,
+        "mod tidy": 39,
+        "test ./...": 823
+      },
+      "files": 15,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "597ac3bc9d5208ff1cbf8ea8afcecf7caed472415ba2df8fa753eed94094c097",
+      "combination": "mysql_gorm/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 606,
+        "mod tidy": 36,
+        "test ./...": 972
+      },
+      "files": 17,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "eb21eecd276b78f75c585ac56855edf48b266751e18f22bb558ed5be3754cf45",
+      "combination": "mysql_gorm/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 771,
+        "mod tidy": 43,
+        "test ./...": 1122
+      },
+      "files": 17,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "d9ab00fc4d8bbcfd13a7671959ccb99694c22adc8dce213081b0aa40fed5c745",
+      "combination": "mysql_gorm/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 794,
+        "mod tidy": 41,
+        "test ./...": 944
+      },
+      "files": 15,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "21a6d510167026769e9612ffc3be53a9f6de3428f1f05da96ea46ba2a21d747f",
+      "combination": "mysql_gorm/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 772,
+        "mod tidy": 45,
+        "test ./...": 1231
+      },
+      "files": 17,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "b2843b707c800b676973cb3dc12b359544bbd5a69289294b171445d1cde75077",
+      "combination": "mysql_gorm/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 640,
+        "mod tidy": 43,
+        "test ./...": 1058
+      },
+      "files": 17,
+      "go_mod_sha256": "f16b99ce1e1375c6765244e0fc85dd91afd97bbfa24fe6d209eb3baaedac243c",
+      "go_sum_sha256": "0d9becf7f97671bbbac4db490cffc8739c5e817b0a1d8b0ec2d6af85d3e54da7",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "b654fc2ba26dd804890880629e5f7966d1982e6715a33ea269c3e9e731b7a40a",
+      "combination": "mysql_sqlx/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 490,
+        "mod tidy": 35,
+        "test ./...": 577
+      },
+      "files": 13,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "6e7cd6dee4fd113b3dee2becf37e036bff4649523efb0e8e588b917e02e9560d",
+      "combination": "mysql_sqlx/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 549,
+        "mod tidy": 41,
+        "test ./...": 728
+      },
+      "files": 15,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "2938f2656645bcb149b093a54d87c64df277ad338191b0877ecf8a6b1472efdb",
+      "combination": "mysql_sqlx/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 592,
+        "mod tidy": 42,
+        "test ./...": 1781
+      },
+      "files": 15,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "1614e6eec3e639d6681819221e2ece65f1f4740019545a9b022e15c0480e8a0b",
+      "combination": "mysql_sqlx/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 583,
+        "mod tidy": 35,
+        "test ./...": 652
+      },
+      "files": 15,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "917321c7d50896f836deeed73ba17df13189f766daf9673326dbd3592fce2eb8",
+      "combination": "mysql_sqlx/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 486,
+        "mod tidy": 48,
+        "test ./...": 890
+      },
+      "files": 17,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "4ec0c6b7a24c2f3b0cc52b3e303020f7809836518627116f0d4d53a5ab2a883c",
+      "combination": "mysql_sqlx/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 591,
+        "mod tidy": 48,
+        "test ./...": 1162
+      },
+      "files": 17,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "215131ae3be697b258e1985590393fc82f1466c0b817734b66862b37f7143eba",
+      "combination": "mysql_sqlx/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 687,
+        "mod tidy": 56,
+        "test ./...": 1378
+      },
+      "files": 15,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "bfa831c0a2e4da1bb0611677527c83d27c3903b647116212ac496f9130cba84d",
+      "combination": "mysql_sqlx/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 593,
+        "mod tidy": 39,
+        "test ./...": 1337
+      },
+      "files": 17,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "d2dbd5aa6b7d3bdca864822474640b143bfe02de49b24d951de62324a8d4f938",
+      "combination": "mysql_sqlx/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 554,
+        "mod tidy": 47,
+        "test ./...": 1945
+      },
+      "files": 17,
+      "go_mod_sha256": "e41848a5994db00850bb85276c4ae537e74f6beb649df5b44122f2aff3e65b11",
+      "go_sum_sha256": "71a82f87e17823a72cc54acf05f027b8c952079142e902b4fc42c5f204a8fb0a",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "655294f8880789781f29454dde45f5ae22609343f825524ae461a7d79ba743e2",
+      "combination": "postgres_gorm/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 963,
+        "mod tidy": 53,
+        "test ./...": 1680
+      },
+      "files": 13,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "11e9eea6e0640858179289b0617b6429dec056170e6ebd7d000ca20ffc412812",
+      "combination": "postgres_gorm/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 981,
+        "mod tidy": 39,
+        "test ./...": 1938
+      },
+      "files": 15,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "53d0d714259d9a4ad58fe1b3044c139324d74d38c178119fc997fa05d0c2a0ab",
+      "combination": "postgres_gorm/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 767,
+        "mod tidy": 39,
+        "test ./...": 1485
+      },
+      "files": 15,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "900e3b4e8617a83bbae733fbf6ca17a616985015abdee2e434d8d93ed328c7ce",
+      "combination": "postgres_gorm/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 766,
+        "mod tidy": 46,
+        "test ./...": 1025
+      },
+      "files": 15,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "c98df33736add4ba6287a243894cbc41a46cf93ca45f9df9a6a1e155c86e3cfe",
+      "combination": "postgres_gorm/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 828,
+        "mod tidy": 41,
+        "test ./...": 1033
+      },
+      "files": 17,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "dc0ff7a7f36ea906f7172d53b15228ad974dcfa9510a718b8f1c586fa5b5331e",
+      "combination": "postgres_gorm/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 820,
+        "mod tidy": 41,
+        "test ./...": 1048
+      },
+      "files": 17,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "97ac5ee5595c62952c3809e38b5d199fb8a60e468c4b5a133bdb3ff07a4e3854",
+      "combination": "postgres_gorm/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 711,
+        "mod tidy": 37,
+        "test ./...": 887
+      },
+      "files": 15,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "f4616a8453c767883dd1e14c400453b2d6b8cf7d29bd82433c4b93c90b596340",
+      "combination": "postgres_gorm/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 816,
+        "mod tidy": 39,
+        "test ./...": 1035
+      },
+      "files": 17,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "ff252c472e01a9502304ee7e4c20492c474a562a55a7b49ce97df2e5065b6c10",
+      "combination": "postgres_gorm/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 713,
+        "mod tidy": 36,
+        "test ./...": 1059
+      },
+      "files": 17,
+      "go_mod_sha256": "5ff399041b9358fa303d75c48a167c67e3603fec844a453776c8abb295fd5b56",
+      "go_sum_sha256": "090bafa7665351fca709a44b6affc253e9621a3f5867ba1e7fe3c21109f7088b",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "5063af002631baad8a1d11bddc12e5c1f906e97b68d87730a72adf752688e0fa",
+      "combination": "postgres_sqlx/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 526,
+        "mod tidy": 42,
+        "test ./...": 596
+      },
+      "files": 13,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "f55dc20362c7bf0cbaec0a0df00275a2e866cd48d979fc1540a41115afb240c1",
+      "combination": "postgres_sqlx/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 524,
+        "mod tidy": 35,
+        "test ./...": 684
+      },
+      "files": 15,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "e13223f13a5ff586411695e4117b901805939e606f4836c89c56ff483ec09428",
+      "combination": "postgres_sqlx/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 551,
+        "mod tidy": 36,
+        "test ./...": 756
+      },
+      "files": 15,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "f48a55d6357effbf6ba1f7f8558714db02bc02ff4c3ca5364556fc3877798ba1",
+      "combination": "postgres_sqlx/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 550,
+        "mod tidy": 40,
+        "test ./...": 1210
+      },
+      "files": 15,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "69a83b82a355a0b75bf57e69840b0bdae7d064402a3bd2ddde25817727c70c04",
+      "combination": "postgres_sqlx/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 535,
+        "mod tidy": 36,
+        "test ./...": 800
+      },
+      "files": 17,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "5853dfcebe440cdf1ffe9164c20bf911de4824a7e313a1dfce616c2baac6448a",
+      "combination": "postgres_sqlx/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 505,
+        "mod tidy": 35,
+        "test ./...": 815
+      },
+      "files": 17,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "290a52b3c4ec6e73215431322ab25e8a633e5f5188a80d7d1a0a469ec8b865a9",
+      "combination": "postgres_sqlx/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 519,
+        "mod tidy": 36,
+        "test ./...": 635
+      },
+      "files": 15,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "7a4e03e3c619ab6a723f75a5c28e447ebcc8d825313f80e0d9ff59d0eebd6063",
+      "combination": "postgres_sqlx/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 455,
+        "mod tidy": 36,
+        "test ./...": 787
+      },
+      "files": 17,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "f1cfbf97cb0f527c426f9534de03128e366debec5136d0c0f21491ceb43b926d",
+      "combination": "postgres_sqlx/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 595,
+        "mod tidy": 43,
+        "test ./...": 802
+      },
+      "files": 17,
+      "go_mod_sha256": "e347bb70e2dc83366172f66149afb0f3eb2176145003095e2d43e01b94241fce",
+      "go_sum_sha256": "2658dc06f2dd6c9b45f14b2705ca224061522246db65af856de452c4873e5bc0",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "43426b482b77be96311b1b05935d768777ccbca8776386fc5b431d411d11bc30",
+      "combination": "sqlite_gorm/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 2600,
+        "mod tidy": 36,
+        "test ./...": 1127
+      },
+      "files": 14,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "f12bb4293bd1d51c4732a74f61ba5483b9dec4836a5f38f9d2924873600b0358",
+      "combination": "sqlite_gorm/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 2644,
+        "mod tidy": 38,
+        "test ./...": 1182
+      },
+      "files": 16,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "94d00f2f4b7445d6d4ab20ab865fc18d312603529ee7a11099c3cdb8df20dfa9",
+      "combination": "sqlite_gorm/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 2797,
+        "mod tidy": 38,
+        "test ./...": 1191
+      },
+      "files": 16,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "47d6219ddcea59d4e46c1bcd118bec49d9dbc2cf82413ecf977718ac80643c4d",
+      "combination": "sqlite_gorm/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 2869,
+        "mod tidy": 46,
+        "test ./...": 2074
+      },
+      "files": 16,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "e404bd88732f33241186564e820c85efb2cb82feac9e69ab399b9efd7b54ab86",
+      "combination": "sqlite_gorm/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 3025,
+        "mod tidy": 36,
+        "test ./...": 1987
+      },
+      "files": 18,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "dc7be44cdc430fdb7efe0f129c43af85b2bfe754114c684bdfc7f063d66bdae1",
+      "combination": "sqlite_gorm/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 3433,
+        "mod tidy": 45,
+        "test ./...": 2245
+      },
+      "files": 18,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "833826df1fef39830ca0d9adbd1842451e112e729465c60b6496aaa9e3cf4b15",
+      "combination": "sqlite_gorm/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 3303,
+        "mod tidy": 36,
+        "test ./...": 2221
+      },
+      "files": 16,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "64a9998af9f85b5ea2d466d65bacf7414a10a4f3590529ade45bfd35bfcc3a9f",
+      "combination": "sqlite_gorm/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 2766,
+        "mod tidy": 43,
+        "test ./...": 1983
+      },
+      "files": 18,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "4b1307b9a81c97161b6c0714bd9d05ca1df34efe79abaf3a83753dbb1ec77cb4",
+      "combination": "sqlite_gorm/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 2597,
+        "mod tidy": 39,
+        "test ./...": 1285
+      },
+      "files": 18,
+      "go_mod_sha256": "221eac4923ce165d774540fc8a9168d4eaf8daa94f3f71a363c2c57a9186afc2",
+      "go_sum_sha256": "8775a36b43f052de15dfcb97501e5d51d21844603d689c75506c95fe747a56a8",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "d62fb4f571c203eabc46c2f2f2ad7968ab96b194653b0ef09907f3b945c1c1c0",
+      "combination": "sqlite_sqlx/auth_none/logging_none",
+      "elapsed_ms": {
+        "build ./...": 2195,
+        "mod tidy": 34,
+        "test ./...": 730
+      },
+      "files": 14,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "672da2033a93dc8a6784471d4122cd69322b505e603fcf22ef018c373d804be2",
+      "combination": "sqlite_sqlx/auth_none/logging_console",
+      "elapsed_ms": {
+        "build ./...": 2715,
+        "mod tidy": 58,
+        "test ./...": 1240
+      },
+      "files": 16,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "52ff1254564b071d5427ebbcda1b9670e897440560947bce51ef171652cdab90",
+      "combination": "sqlite_sqlx/auth_none/logging_file",
+      "elapsed_ms": {
+        "build ./...": 2327,
+        "mod tidy": 78,
+        "test ./...": 1187
+      },
+      "files": 16,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "cc188a63e5862ce6b2788903bf579a3706875644cae8ff6a67a600c77ab29f79",
+      "combination": "sqlite_sqlx/auth_jwt/logging_none",
+      "elapsed_ms": {
+        "build ./...": 2297,
+        "mod tidy": 37,
+        "test ./...": 742
+      },
+      "files": 16,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "7d2e1406ad35c3d1c9bfb5896efdf781ba4e28bce0827c2e5e80b9ec1d5d530f",
+      "combination": "sqlite_sqlx/auth_jwt/logging_console",
+      "elapsed_ms": {
+        "build ./...": 2397,
+        "mod tidy": 55,
+        "test ./...": 1049
+      },
+      "files": 18,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "7d94db2edd138f9ec6a30b347117747555bfd5ca914b2d9d65a71bb112532c9a",
+      "combination": "sqlite_sqlx/auth_jwt/logging_file",
+      "elapsed_ms": {
+        "build ./...": 2184,
+        "mod tidy": 39,
+        "test ./...": 1043
+      },
+      "files": 18,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "b5e74ede168168e42f8bb4f434b30b5ba07b9c51fb83bfedf0a838aa61affc02",
+      "combination": "sqlite_sqlx/auth_session/logging_none",
+      "elapsed_ms": {
+        "build ./...": 2861,
+        "mod tidy": 36,
+        "test ./...": 1089
+      },
+      "files": 16,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "21aba85cc4e8e5494eb7725911d98dfba202f090fc0a1322a0d727e1532286bb",
+      "combination": "sqlite_sqlx/auth_session/logging_console",
+      "elapsed_ms": {
+        "build ./...": 2171,
+        "mod tidy": 44,
+        "test ./...": 1400
+      },
+      "files": 18,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    },
+    {
+      "approved_files_hash": "9f69fe175641f90f26ac4eb0e9658a025414796e8cec992a9e6e704c47a6fc0c",
+      "combination": "sqlite_sqlx/auth_session/logging_file",
+      "elapsed_ms": {
+        "build ./...": 2159,
+        "mod tidy": 35,
+        "test ./...": 957
+      },
+      "files": 18,
+      "go_mod_sha256": "6a739e336a01d2ab2e717c9bb7e8fded076dc62b9ef8968535d47d385095af4a",
+      "go_sum_sha256": "c0fee7eaab9261affce608ca9b7dfed4d4987172513f87188782d8d04027f1f2",
+      "passed": true
+    }
+  ],
+  "contract_version": "1.2.0",
+  "definition_hash": "54efd5a3fe2b054c708c993592a007385201692d9a784d0e1ecbd46956a1e4b7",
+  "kind": "real_local_template_tools_not_job_acceptance",
+  "passed": true,
+  "tool": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.5",
+      "platform": "darwin_amd64",
+      "binary_sha256": null
+    }
+  ]
+}

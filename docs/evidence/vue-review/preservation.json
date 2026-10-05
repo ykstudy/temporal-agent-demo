@@ -1,0 +1,163 @@
+{
+  "recorded_at": "2026-10-02T09:47:04.811013+00:00",
+  "passed": true,
+  "scope": "Migration preserves recorded backend, frozen norms and legacy public API/types/style bytes; not runtime v2 conformance",
+  "files": [
+    {
+      "path": "backend/go.mod",
+      "before_sha256": "25a1e6f6a4d19e03de49237bb90f73aa20ef341c5aca734c137ab595c9f181de",
+      "current_sha256": "25a1e6f6a4d19e03de49237bb90f73aa20ef341c5aca734c137ab595c9f181de",
+      "unchanged": true
+    },
+    {
+      "path": "backend/go.sum",
+      "before_sha256": "f2b6a8d6068dbce589fc0d1d3481991298688b4654b731fd330afd485e0bd486",
+      "current_sha256": "f2b6a8d6068dbce589fc0d1d3481991298688b4654b731fd330afd485e0bd486",
+      "unchanged": true
+    },
+    {
+      "path": "backend/cmd/server/main.go",
+      "before_sha256": "4e3328585641c0b9cac4b3a180a5bc54dbe0948ea2796b716675d8a25821795a",
+      "current_sha256": "4e3328585641c0b9cac4b3a180a5bc54dbe0948ea2796b716675d8a25821795a",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/execution.go",
+      "before_sha256": "eee3eb29e5cf94e03a3f4973bfc88fdc53c21291f669b3b8858e55fad130626f",
+      "current_sha256": "eee3eb29e5cf94e03a3f4973bfc88fdc53c21291f669b3b8858e55fad130626f",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/verification.go",
+      "before_sha256": "569db15ce1b84d459f9c40f55389abff8f77acf9b02f73878afc1e29722d9f73",
+      "current_sha256": "569db15ce1b84d459f9c40f55389abff8f77acf9b02f73878afc1e29722d9f73",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/service.go",
+      "before_sha256": "cff14d2874760887921b4864041b38ba01b94de4664d0922173a4e3a2e2aee49",
+      "current_sha256": "cff14d2874760887921b4864041b38ba01b94de4664d0922173a4e3a2e2aee49",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/store.go",
+      "before_sha256": "c61e620eb2a5017ac4417097ce79f8eb26b3e38a30761d23007e5ffa5b134460",
+      "current_sha256": "c61e620eb2a5017ac4417097ce79f8eb26b3e38a30761d23007e5ffa5b134460",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/types.go",
+      "before_sha256": "c4987a222e95f4130cc44b8af19fbcbe34bd970d38d9a4a3d439fe47a2c5421e",
+      "current_sha256": "c4987a222e95f4130cc44b8af19fbcbe34bd970d38d9a4a3d439fe47a2c5421e",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/templates_runtime_test.go",
+      "before_sha256": "69229abedc800fd6dfe609a88ec6f4aa33c5521de7f44a1a0d1b308afd10d322",
+      "current_sha256": "69229abedc800fd6dfe609a88ec6f4aa33c5521de7f44a1a0d1b308afd10d322",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/gitlab.go",
+      "before_sha256": "ecf5ce23b0f6c6f425a6e84b1d7177cadbe5ad74275a020aee8f639814caaddc",
+      "current_sha256": "ecf5ce23b0f6c6f425a6e84b1d7177cadbe5ad74275a020aee8f639814caaddc",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/providers_test.go",
+      "before_sha256": "5bb60c5150dd8d59392fcbefbe5ebb5de9ac08beff1a813c89b8bb95da3346b6",
+      "current_sha256": "5bb60c5150dd8d59392fcbefbe5ebb5de9ac08beff1a813c89b8bb95da3346b6",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/contracts.go",
+      "before_sha256": "9a01ad4e019f92b34869af04dbb0177afa7a1325ad5772a7c2d372cbd18d0b6e",
+      "current_sha256": "9a01ad4e019f92b34869af04dbb0177afa7a1325ad5772a7c2d372cbd18d0b6e",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/http.go",
+      "before_sha256": "7e911a5c7242ba7e22ecbee0c3886b65aba3417d27825bac3cf4a838c47d531c",
+      "current_sha256": "7e911a5c7242ba7e22ecbee0c3886b65aba3417d27825bac3cf4a838c47d531c",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/agent_test.go",
+      "before_sha256": "af9a74f6130e5785429250dba497f350e0f107178559e77ffb5e3ec5848385b2",
+      "current_sha256": "af9a74f6130e5785429250dba497f350e0f107178559e77ffb5e3ec5848385b2",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/templates.go",
+      "before_sha256": "c02250e6f495dd7e488fe7fc4ce36b7ee933014fa11484f1120eb5c705b80255",
+      "current_sha256": "c02250e6f495dd7e488fe7fc4ce36b7ee933014fa11484f1120eb5c705b80255",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/model.go",
+      "before_sha256": "46011795e1713b64592ac10065a0fb706f8d0ad62467b25fb8fc96f449fa973d",
+      "current_sha256": "46011795e1713b64592ac10065a0fb706f8d0ad62467b25fb8fc96f449fa973d",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/workflow_test.go",
+      "before_sha256": "d1c6354872435cb81cd23773d1ae4d3ce341de141759b8a66fe30c0f1497b987",
+      "current_sha256": "d1c6354872435cb81cd23773d1ae4d3ce341de141759b8a66fe30c0f1497b987",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/contracts_test.go",
+      "before_sha256": "c1ba30d88a0fdd75fa0d950cae96d4b90bcb4a5cf7f288f09a6475640897ab7c",
+      "current_sha256": "c1ba30d88a0fdd75fa0d950cae96d4b90bcb4a5cf7f288f09a6475640897ab7c",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/workflow.go",
+      "before_sha256": "0bc1995d29dab12effbf3c278080fde8e37346f492df58404044c2749d2c6c18",
+      "current_sha256": "0bc1995d29dab12effbf3c278080fde8e37346f492df58404044c2749d2c6c18",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/templates/logging.go.tmpl",
+      "before_sha256": "2041b64eeb708bafc183fd8a125e6288f2a68b6a95aeca07b49e3ae02316cc39",
+      "current_sha256": "2041b64eeb708bafc183fd8a125e6288f2a68b6a95aeca07b49e3ae02316cc39",
+      "unchanged": true
+    },
+    {
+      "path": "backend/internal/agent/templates/logging_test.go.tmpl",
+      "before_sha256": "eef995a5d975ab0f0a521b3e848374b1d029c50244a4f528073cc89f0cfeb8f5",
+      "current_sha256": "eef995a5d975ab0f0a521b3e848374b1d029c50244a4f528073cc89f0cfeb8f5",
+      "unchanged": true
+    },
+    {
+      "path": "docs/PRODUCT-GUIDE.md",
+      "before_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+      "current_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+      "unchanged": true
+    },
+    {
+      "path": "design/00-invariants/INVARIANTS.md",
+      "before_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+      "current_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/style.css",
+      "before_sha256": "eb597cc544aecd14b5d320e5109d8dbee41a5a5c17f6e5b3bdab9279934d01df",
+      "current_sha256": "eb597cc544aecd14b5d320e5109d8dbee41a5a5c17f6e5b3bdab9279934d01df",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "before_sha256": "ca1f3cd3429453c100af47861c9b6f15f7bb86550341fff5c018f41cd72dd6a7",
+      "current_sha256": "ca1f3cd3429453c100af47861c9b6f15f7bb86550341fff5c018f41cd72dd6a7",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "before_sha256": "43c906bcf41f98ac47657947cafe3956bae0d4d5df69ddba80424014f2d426aa",
+      "current_sha256": "43c906bcf41f98ac47657947cafe3956bae0d4d5df69ddba80424014f2d426aa",
+      "unchanged": true
+    }
+  ]
+}

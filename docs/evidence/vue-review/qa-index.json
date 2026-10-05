@@ -1,0 +1,332 @@
+{
+  "recorded_at": "2026-10-02T09:44:00.784036+00:00",
+  "phase": "final_frozen_vue_review_release",
+  "status": "passed",
+  "scope": "Readonly review UI/data and readonly legacy workspace return; no Agent runtime-v2, live provider, Runner, production deployment claim",
+  "environment": {
+    "recorded_at": "2026-10-02T09:40:59.195414+00:00",
+    "browser_url": "http://127.0.0.1:15182",
+    "api_url": "http://127.0.0.1:18111",
+    "health": {
+      "mode": "local",
+      "ok": true,
+      "temporal_connected": false
+    },
+    "modes": {
+      "execution_mode": "local",
+      "decision_mode": "rules",
+      "delivery_mode": "local"
+    },
+    "bundle_sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+    "bundle_generated_at": "2026-10-02T09:23:49.476116Z",
+    "source_count": 128,
+    "build": {
+      "command": "npm --prefix frontend run build",
+      "status": "passed",
+      "typecheck": "vue-tsc --noEmit",
+      "vite": "7.3.6",
+      "seconds": 2.54
+    },
+    "dist_assets": [
+      {
+        "path": "frontend/dist/assets/index-CABI4HvY.css",
+        "size": 12092,
+        "sha256": "98a026c25616287c900836103986fa1871cfb7f2e9104bd0339fae9d09a70b23"
+      },
+      {
+        "path": "frontend/dist/assets/ReviewWorkbench-DMurJs_h.css",
+        "size": 20251,
+        "sha256": "0dec82d00b37ce275e485fae397d8693610c0df54196557c2f194d4165694496"
+      },
+      {
+        "path": "frontend/dist/assets/index-M_F59mRD.js",
+        "size": 201830,
+        "sha256": "015bf20d8e90e5ba9e7f961f04102d50e2624749e4effd677a8de8a05f93e1c2"
+      },
+      {
+        "path": "frontend/dist/assets/ReviewWorkbench-CxwfJ1zQ.js",
+        "size": 322533,
+        "sha256": "fe80fafa68e49dffb8c58a698939d4e53dfa3a27426fdf38f55ca3afaa72aa4d"
+      }
+    ]
+  },
+  "categories": {
+    "review_ui": {
+      "checks": 187,
+      "passed": 187,
+      "report": "review/review-summary.json",
+      "routes": 11,
+      "screenshots": [
+        "/tmp/agent-vue-review-qa/release/review/review-state-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-responsibility-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-sequence-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-contracts-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-lineage-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-architecture-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-coverage-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-versions-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-knowledge-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-skills-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-context-desktop.png",
+        "/tmp/agent-vue-review-qa/release/review/review-source-dialog.png",
+        "/tmp/agent-vue-review-qa/release/review/review-dark.png",
+        "/tmp/agent-vue-review-qa/release/review/review-knowledge-filtered.png",
+        "/tmp/agent-vue-review-qa/release/review/review-coverage-details.png",
+        "/tmp/agent-vue-review-qa/release/review/review-mobile.png",
+        "/tmp/agent-vue-review-qa/release/review/workspace-readonly-mobile.png"
+      ],
+      "exports": [
+        {
+          "svg": "/tmp/agent-vue-review-qa/release/review/exports/knowledge-searched.svg",
+          "metadata": {
+            "model_id": "knowledge",
+            "diagram_type": "knowledge",
+            "scope": "design",
+            "status": "docs_ready",
+            "baseline": {
+              "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+              "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+              "contract_version": "1.0.0"
+            },
+            "generated_at": "2026-10-02T09:23:49.476116Z",
+            "exported_at": "2026-10-02T09:41:13.983Z",
+            "filters": {
+              "search": "Activity 调度、重试与心跳",
+              "domain": "all",
+              "entity_type": "all",
+              "relation_type": "all",
+              "all_contracts": false,
+              "contract_search": ""
+            },
+            "sources": [
+              {
+                "path": "design/_model/entities.yaml",
+                "sha256": "3be88ef8510703d6f15a1b1efb7bcca24786a4adcf0c86915e505d0fe6dc9ef8"
+              },
+              {
+                "path": "design/_model/relations.yaml",
+                "sha256": "07b3b6193ba6152baf5f4ae072c19d4c2713ca316a730a71107fe92fecfcfe3f"
+              },
+              {
+                "path": "design/_model/SCHEMA.md",
+                "sha256": "03e3e2b732cb93f4e58cd9e557d01ac8e8e2efecb222c619984ab1539612c186"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "core_binding_chain",
+          "svg": "/tmp/agent-vue-review-qa/release/review/exports/contracts-core.svg",
+          "png": "/tmp/agent-vue-review-qa/release/review/exports/contracts-core.png",
+          "width": 2480,
+          "height": 1716,
+          "expected": {
+            "viewBox": [
+              0,
+              0,
+              1240,
+              858
+            ],
+            "nodes": 8,
+            "edges": 7,
+            "edge_paths": 7
+          },
+          "metadata": {
+            "model_id": "contracts",
+            "diagram_type": "class",
+            "scope": "design",
+            "status": "docs_ready",
+            "baseline": {
+              "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+              "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+              "contract_version": "1.0.0"
+            },
+            "generated_at": "2026-10-02T09:23:49.476116Z",
+            "exported_at": "2026-10-02T09:41:16.582Z",
+            "filters": {
+              "search": "",
+              "domain": "domain.agent",
+              "entity_type": "feature",
+              "relation_type": "all",
+              "all_contracts": false,
+              "contract_search": ""
+            },
+            "sources": [
+              {
+                "path": "design/contracts/schemas/agent.schema.json",
+                "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+              },
+              {
+                "path": "design/contracts/schemas/message.schema.json",
+                "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+              },
+              {
+                "path": "design/contracts/schemas/common.schema.json",
+                "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+              },
+              {
+                "path": "design/contracts/AGENT-CONTRACTS.md",
+                "sha256": "88703446fd3d5e39e1117d79cfea3e9ee0c3d9b2d5d0a12d6380a03b48ac30f0"
+              }
+            ]
+          }
+        },
+        {
+          "svg": "/tmp/agent-vue-review-qa/release/review/exports/contracts.svg",
+          "png": "/tmp/agent-vue-review-qa/release/review/exports/contracts.png",
+          "width": 782,
+          "height": 8192,
+          "expected": {
+            "viewBox": [
+              0,
+              0,
+              1354.719970703125,
+              14191
+            ],
+            "interactive": 505,
+            "nodes": 108,
+            "edges": 397,
+            "edge_paths": 397,
+            "label_leaders": 351,
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            }
+          },
+          "metadata": {
+            "model_id": "contracts",
+            "diagram_type": "class",
+            "scope": "design",
+            "status": "docs_ready",
+            "baseline": {
+              "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+              "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+              "contract_version": "1.0.0"
+            },
+            "generated_at": "2026-10-02T09:23:49.476116Z",
+            "exported_at": "2026-10-02T09:41:18.079Z",
+            "filters": {
+              "search": "",
+              "domain": "domain.agent",
+              "entity_type": "feature",
+              "relation_type": "all",
+              "all_contracts": true,
+              "contract_search": ""
+            },
+            "sources": [
+              {
+                "path": "design/contracts/schemas/agent.schema.json",
+                "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+              },
+              {
+                "path": "design/contracts/schemas/message.schema.json",
+                "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+              },
+              {
+                "path": "design/contracts/schemas/common.schema.json",
+                "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+              },
+              {
+                "path": "design/contracts/AGENT-CONTRACTS.md",
+                "sha256": "88703446fd3d5e39e1117d79cfea3e9ee0c3d9b2d5d0a12d6380a03b48ac30f0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "review_loader_source_boundary": {
+      "checks": 15,
+      "passed": 15,
+      "schema_only_probe": {
+        "checks": 1,
+        "passed": 1
+      },
+      "report": "source-bound/source-bound-summary.json"
+    },
+    "review_data": {
+      "passed": true,
+      "report": "bundle-check.json",
+      "sources": 128,
+      "negative_self_tests": 12,
+      "checks": {
+        "meta_schema": true,
+        "publication_schema": true,
+        "format_assertions": true,
+        "offline": true,
+        "frozen_baseline": true,
+        "source_digests": true,
+        "all_element_bindings": true,
+        "endpoints_and_ownership": true,
+        "eleven_models": true,
+        "knowledge_registry": {
+          "entities": 137,
+          "relations": 529
+        },
+        "contract_semantic_bindings": 18,
+        "state_events": 44,
+        "gaps": 21,
+        "cases": 18,
+        "coverage_dimensions": 5,
+        "design_timeline_only": true,
+        "bundle_bytes": 1876064,
+        "build_fixed_publication_digests": true
+      },
+      "publication_negative_self_tests": 2
+    },
+    "migration_path": {
+      "phase": "Earlier production build full smoke/races retained; final phase changed review-only layout/loader/gesture and validated readonly workspace return",
+      "smoke": {
+        "passed": 10,
+        "report": "../production/migration/browser-summary.json",
+        "run_id": "266ebc01-6f14-4765-908b-1c107cf14fda"
+      },
+      "races": {
+        "passed": 5,
+        "report": "../production/migration/browser-races.json"
+      }
+    }
+  },
+  "manual_visual_inspection": {
+    "tool": "view_image",
+    "images": [
+      "review/review-state-desktop.png",
+      "review/review-responsibility-desktop.png",
+      "review/review-architecture-desktop.png",
+      "review/exports/contracts-core.png"
+    ],
+    "observations": [
+      "State and Swimlane long node labels wrap within their node boxes.",
+      "Architecture shows every 12 node in three independent layers; product layer uses three columns.",
+      "Core contracts export contains eight complete nodes, seven bindings, metadata stamp and leader lines."
+    ],
+    "all_objects_view": "108 nodes and 397 paths remain dense; zoom/source details and full-canvas export verified."
+  },
+  "console_errors": [],
+  "review_runtime_writes": [],
+  "source_boundary_runtime_requests": [],
+  "runners": [
+    {
+      "path": "validation/browser/review.mjs",
+      "sha256": "c02dac74569db478023cc7e909a00e4b2e83daf282781d99f7a58c7a7270155f"
+    },
+    {
+      "path": "validation/browser/source-bound.mjs",
+      "sha256": "b975dd4791149a7a03d086a0fd88f0d6fcc94ad9583f17c8ba5f4b612539bda4"
+    }
+  ],
+  "reports_sha256": {
+    "review/review-summary.json": "c6228a37a66350a823727a436d158cafc6aa1030dab621c0ee7505db661d7df5",
+    "source-bound/source-bound-summary.json": "058f655b982f966a2ed266b1ea468aeaf2907cad4129de94454561191e3453f8",
+    "preflight.json": "3ad45e13d309b6081eb462d0ebb57c9d4bfedbc22ea7b7536b268477db5e16ee",
+    "bundle-check.json": "67d136d1acc05fb9157b852d1e5ed38abd1708c3c87ee65ede59c663258bbce1"
+  },
+  "owned_services": {
+    "leave_for_user": [
+      "http://127.0.0.1:15181",
+      "http://127.0.0.1:18111"
+    ],
+    "preview_to_stop": "http://127.0.0.1:15182",
+    "preview_stopped": true
+  }
+}

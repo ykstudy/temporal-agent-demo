@@ -1,0 +1,94 @@
+{
+  "scope": "Independent service-entry review tests with actual local HTTP provider calls and synthetic earlier workspace evidence; not S2 job completion",
+  "normal_test": {
+    "command": "go test ./internal/agent -run '^TestControlIntegrationReview' -count=1",
+    "exit_code": 0,
+    "stdout": "ok  \tagentstudio/internal/agent\t61.919s\n",
+    "source_hashes_at_compilation": null,
+    "scope": "Six top-level tests, tool fatal/invalid success result settlement, model preflight/failure/cancellation/concurrency, all-skills context and private state isolation"
+  },
+  "race_test": {
+    "command": [
+      "go",
+      "test",
+      "-race",
+      "./internal/agent",
+      "-run",
+      "^TestControlIntegrationReviewModelTransportFailuresSettleAndConcurrentReplayReuses$",
+      "-count=1"
+    ],
+    "cwd": "backend",
+    "started_at_utc": "2026-10-02T14:07:28.697905+00:00",
+    "finished_at_utc": "2026-10-02T14:08:04.402780+00:00",
+    "exit_code": 0,
+    "log_path": "docs/evidence/s2-control-integration-review-race.log",
+    "log_sha256": "b9a5772690e70b76769d41da25852358c05351f7a50bfe945eb428af23b17967",
+    "sources_before": [
+      {
+        "path": "backend/internal/agent/control_commands.go",
+        "sha256": "68d394687a507748e61f37a6859a35b9ae45ea6b5d8358feb5f0eadbf97013de"
+      },
+      {
+        "path": "backend/internal/agent/control_execution.go",
+        "sha256": "0830efec93b06238231feaba92c09b5bf7aca6d15b043b4322257525a1eea5a0"
+      },
+      {
+        "path": "backend/internal/agent/control_verify.go",
+        "sha256": "a7c13158c7d47ffdb44a642a4bb5a12f345b3dcdfdd445e658fd2494bd747ac6"
+      },
+      {
+        "path": "backend/internal/agent/model.go",
+        "sha256": "5b8b39e74d3fc5689526c0b5ae6282644679447d1eeb0f51cbbfbfc7bf1bd278"
+      },
+      {
+        "path": "backend/internal/agent/control_integration_review_test.go",
+        "sha256": "5b4fd56f30fa177604c1e784124a4001764af12b558a584f03912cea44ca137c"
+      },
+      {
+        "path": "backend/internal/agent/control_schedule.go",
+        "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+      },
+      {
+        "path": "backend/internal/agent/control_schedule_test.go",
+        "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+      }
+    ],
+    "sources_after": [
+      {
+        "path": "backend/internal/agent/control_commands.go",
+        "sha256": "68d394687a507748e61f37a6859a35b9ae45ea6b5d8358feb5f0eadbf97013de"
+      },
+      {
+        "path": "backend/internal/agent/control_execution.go",
+        "sha256": "0830efec93b06238231feaba92c09b5bf7aca6d15b043b4322257525a1eea5a0"
+      },
+      {
+        "path": "backend/internal/agent/control_verify.go",
+        "sha256": "a7c13158c7d47ffdb44a642a4bb5a12f345b3dcdfdd445e658fd2494bd747ac6"
+      },
+      {
+        "path": "backend/internal/agent/model.go",
+        "sha256": "5b8b39e74d3fc5689526c0b5ae6282644679447d1eeb0f51cbbfbfc7bf1bd278"
+      },
+      {
+        "path": "backend/internal/agent/control_integration_review_test.go",
+        "sha256": "5b4fd56f30fa177604c1e784124a4001764af12b558a584f03912cea44ca137c"
+      },
+      {
+        "path": "backend/internal/agent/control_schedule.go",
+        "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+      },
+      {
+        "path": "backend/internal/agent/control_schedule_test.go",
+        "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+      }
+    ],
+    "reviewed_sources_changed_during_run": false,
+    "scope": "Only actual model transport failure/cancellation and concurrent Prepare replay test"
+  },
+  "limitations": [
+    "Earlier scaffold/skill evidence in verification-entry fixtures is synthetic; no full workspace path acceptance is claimed.",
+    "No live third-party model, GitLab, CI, package or S2 stage-exit acceptance.",
+    "Shared backend may contain parallel edits outside the listed files."
+  ]
+}

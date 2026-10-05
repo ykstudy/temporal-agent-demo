@@ -1,0 +1,51 @@
+{
+  "configuration_present": {
+    "AI_BASE_URL": false,
+    "AI_API_KEY": false,
+    "AI_MODEL": false,
+    "GITLAB_URL": false,
+    "GITLAB_TOKEN": false,
+    "GITLAB_NAMESPACE_ID": false
+  },
+  "blockers": [
+    {
+      "code": "missing_configuration",
+      "field": "AI_BASE_URL"
+    },
+    {
+      "code": "missing_configuration",
+      "field": "AI_API_KEY"
+    },
+    {
+      "code": "missing_configuration",
+      "field": "AI_MODEL"
+    },
+    {
+      "code": "missing_configuration",
+      "field": "GITLAB_URL"
+    },
+    {
+      "code": "missing_configuration",
+      "field": "GITLAB_TOKEN"
+    },
+    {
+      "code": "missing_configuration",
+      "field": "GITLAB_NAMESPACE_ID"
+    },
+    {
+      "code": "authorized_test_target_missing",
+      "fields": [
+        "namespace_id",
+        "project_path"
+      ]
+    }
+  ],
+  "status": "external_blocked",
+  "live_model": "not_run",
+  "gitlab_permissions": "not_run",
+  "runner": "not_run",
+  "per_run_approval": "required_after_exact_proposal",
+  "external_writes": 0,
+  "at": "2026-10-04T18:23:49.546971+00:00",
+  "scope": "local presence and target binding only; no provider request, real Runner, model inference or remote write"
+}

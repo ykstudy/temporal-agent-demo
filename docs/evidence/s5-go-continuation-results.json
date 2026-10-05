@@ -1,0 +1,17 @@
+[
+  {
+    "group": 0,
+    "exit_code": 0,
+    "log": "docs/evidence/s5-go-continuation-0.jsonl"
+  },
+  {
+    "group": 1,
+    "exit_code": 0,
+    "log": "docs/evidence/s5-go-continuation-1.jsonl"
+  },
+  {
+    "group": 2,
+    "exit_code": 1,
+    "log": "docs/evidence/s5-go-continuation-2.jsonl"
+  }
+]

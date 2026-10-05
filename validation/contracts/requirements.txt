@@ -1,0 +1,3 @@
+# Isolated oracle only. The Agent and existing standard-library scenarios do not import this.
+jsonschema[format]==4.25.1
+rfc8785==0.1.4

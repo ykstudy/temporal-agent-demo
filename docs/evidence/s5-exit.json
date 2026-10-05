@@ -1,0 +1,556 @@
+{
+  "at": "2026-10-04T18:43:01.259138+00:00",
+  "status": "passed_with_exclusions",
+  "full_acceptance": false,
+  "scope": "project creation Agent and actual Run Job within single-writer scope; no production release or customer database migration",
+  "phases": {
+    "1_S1": "passed",
+    "2_S2": "passed",
+    "3_S3": "passed",
+    "4_S4_API": "passed",
+    "5_S4_UI": "passed",
+    "6_runtime": "passed",
+    "7_S5": "passed_with_exclusions",
+    "8_live": "external_blocked"
+  },
+  "case_mapping": {
+    "C01": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "definition_skill_sources",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.definition-versioning",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/DefinitionSnapshot"
+      ],
+      "required_positive_and_negative_cases": "完整快照；缺 SystemPrompt/依赖/hash、额外字段拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s5-schema-coverage.json",
+        "docs/evidence/s5-go-regression-summary.json",
+        "docs/evidence/s1-source-audit.json"
+      ]
+    },
+    "C02": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "definition_skill_sources",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.definition-versioning",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/AgentDefinition",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/DefinitionSnapshot"
+      ],
+      "required_positive_and_negative_cases": "vA/vB 并存；同版本异内容拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s5-schema-coverage.json",
+        "docs/evidence/s5-go-regression-summary.json",
+        "docs/evidence/s1-source-audit.json"
+      ]
+    },
+    "C03": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "definition_skill_sources",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.definition-versioning",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/AgentDefinition",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ContextRecord"
+      ],
+      "required_positive_and_negative_cases": "修改最新提示后旧 Run 请求仍含原提示；旧定义不可被当前代码覆盖",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s5-schema-coverage.json",
+        "docs/evidence/s5-go-regression-summary.json",
+        "docs/evidence/s1-source-audit.json"
+      ]
+    },
+    "C04": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "definition_skill_sources",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.skills.skill-contract",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SkillDefinition",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/DatabaseParameters",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/AuthenticationParameters",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/LoggingParameters"
+      ],
+      "required_positive_and_negative_cases": "三 Skill 合法配置；错类型、缺 required、未知字段、范围越界拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s5-schema-coverage.json",
+        "docs/evidence/s5-go-regression-summary.json",
+        "docs/evidence/s1-source-audit.json"
+      ]
+    },
+    "C05": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "definition_skill_sources",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.skills.template-versioning",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/TemplateDependency",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SchemaDependency"
+      ],
+      "required_positive_and_negative_cases": "原模板复用；依赖内容改 hash、缺版本或依赖撤销拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s5-schema-coverage.json",
+        "docs/evidence/s5-go-regression-summary.json",
+        "docs/evidence/s1-source-audit.json"
+      ]
+    },
+    "C06": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "legacy_migration",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.conversation.session-run-management",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/RunSnapshot",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ErrorResponse"
+      ],
+      "required_positive_and_negative_cases": "完整可信来源可投影；未知历史 prompt 返回409和legacy_read_url，不产partial v2、不自动写fallback或继承批准",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s5-browser-legacy.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C07": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "decision_authorization",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.model-decision",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/DecisionAdvice",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/DecisionProposal"
+      ],
+      "required_positive_and_negative_cases": "Advice 正例；Proposal 缺 Run/版本/来源、未知 action、假批准拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/s5-public-authorization-final/summary.json",
+        "validation/reports/s5-temporal-concurrency/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C08": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "decision_authorization",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.action-validation",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ActionValidation",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ExecutionRequest"
+      ],
+      "required_positive_and_negative_cases": "合法获准请求；模型直接发送 ExecutionRequest、任意 shell/秘密读取拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/s5-public-authorization-final/summary.json",
+        "validation/reports/s5-temporal-concurrency/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C09": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "decision_authorization",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.governance.idempotency-and-concurrency",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/CommandReceipt",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/OperationRecord"
+      ],
+      "required_positive_and_negative_cases": "同 payload 重放；异 payload 冲突，unknown 写不重复 POST",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/s5-public-authorization-final/summary.json",
+        "validation/reports/s5-temporal-concurrency/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C10": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "decision_authorization",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.conversation.preview-confirmation",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/Proposal",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/Approval",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/PermissionSnapshot"
+      ],
+      "required_positive_and_negative_cases": "具体批准；旧版本、错 hash、过期及扩大范围拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/s5-public-authorization-final/summary.json",
+        "validation/reports/s5-temporal-concurrency/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C11": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "conversation_provenance",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.conversation.rich-message-protocol",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/message.schema.json#/$defs/MessageEnvelope",
+        "https://agentstudio.invalid/contracts/1.4.0/message.schema.json#/$defs/Part"
+      ],
+      "required_positive_and_negative_cases": "合法 Part；缺版本、未知字段、跨 Run ref、未知执行类型拒绝/安全回退",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s3-exit.json",
+        "validation/reports/s5-model-summary-final/summary.json",
+        "validation/reports/s5-model-summary-failure/summary.json",
+        "validation/reports/s5-schema-sweep-model-summary/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C12": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "conversation_provenance",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.conversation.jsonl-message-store",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/message.schema.json#/$defs/MessageEnvelope",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/CommandReceipt",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SummarySource"
+      ],
+      "required_positive_and_negative_cases": "原文顺序/hash 保留；重复、改内容、截断或坏尾部可检出",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s3-exit.json",
+        "validation/reports/s5-model-summary-final/summary.json",
+        "validation/reports/s5-model-summary-failure/summary.json",
+        "validation/reports/s5-schema-sweep-model-summary/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C13": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "conversation_provenance",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.context-compression",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SummaryRecord",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SummarySource"
+      ],
+      "required_positive_and_negative_cases": "v1/v2 各自源范围可读；错 raw_jsonl_sha256、同摘要身份/版本异内容、摘要伪造批准拒绝",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s3-exit.json",
+        "validation/reports/s5-model-summary-final/summary.json",
+        "validation/reports/s5-model-summary-failure/summary.json",
+        "validation/reports/s5-schema-sweep-model-summary/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C14": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "conversation_provenance",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.agent.context-compression",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ContextRecord",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SummaryAttempt"
+      ],
+      "required_positive_and_negative_cases": "摘要失败仍保留旧版/原文；并发新增不混进冻结范围",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/s3-exit.json",
+        "validation/reports/s5-model-summary-final/summary.json",
+        "validation/reports/s5-model-summary-failure/summary.json",
+        "validation/reports/s5-schema-sweep-model-summary/summary.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C15": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "v2_consumer_delivery",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.frontend.state-stream-sync",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/RunSnapshot",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/SnapshotEvent"
+      ],
+      "required_positive_and_negative_cases": "正常收敛；bool 版本、扁平模式、未知状态、缺口/乱序/跨 Run 拒绝或重取",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/runtime-final-local-delivery/summary.json",
+        "docs/evidence/runtime-browser-main-final.json",
+        "docs/evidence/s5-browser-guards.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C16": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "v2_consumer_delivery",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.frontend.progress-artifact-panels",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/RequiredCheck",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ArtifactManifest",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/ArtifactEntry",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/VerificationReport"
+      ],
+      "required_positive_and_negative_cases": "完整同源集合；缺项、注入 passed、legacy status/passed 矛盾、size/sha256/来源错误拒绝并正确显示",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/runtime-final-local-delivery/summary.json",
+        "docs/evidence/runtime-browser-main-final.json",
+        "docs/evidence/s5-browser-guards.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C17": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "v2_consumer_delivery",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "feature_id": "feature.frontend.conversation-workspace",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/message.schema.json#/$defs/Part",
+        "https://agentstudio.invalid/contracts/1.4.0/message.schema.json#/$defs/ObjectRef"
+      ],
+      "required_positive_and_negative_cases": "旧 proposal 卡绑定旧对象；最新方案不替换历史 Part、切 Run 不污染",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "validation/reports/runtime-final-local-delivery/summary.json",
+        "docs/evidence/runtime-browser-main-final.json",
+        "docs/evidence/s5-browser-guards.json",
+        "docs/evidence/s5-go-regression-summary.json"
+      ]
+    },
+    "C18": {
+      "status": "contract_ready_and_scoped_path_verified",
+      "group": "actual_job_delivery",
+      "schema_release": "1.4.0; original 1.1/1.2 fixtures stay original",
+      "container_extension": "external_blocked: original Docker Hub image token request times out",
+      "feature_id": "feature.deploy.reproducible-delivery",
+      "schema_refs": [
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/VerificationReport",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/PackageReceipt",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/RemoteExecutionReceipt",
+        "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/CIJobEvidence"
+      ],
+      "required_positive_and_negative_cases": "新契约下 local ZIP 真启动；Temporal CAN/并发/VERIFY crash；fixture 显式 mock",
+      "code_snapshot": "docs/evidence/s5-source-audit.json",
+      "configuration": "definition3.3/contract1.4 current paths; prior phase fixture release and per-report modes preserved",
+      "evidence": [
+        "docs/evidence/runtime-exit.json",
+        "validation/reports/runtime-final-local-delivery/summary.json",
+        "validation/reports/runtime-final-temporal-crash/summary.json",
+        "docs/evidence/s5-runtime-remote-2.log",
+        "validation/reports/s5-container-delivery/summary.json"
+      ]
+    }
+  },
+  "gap_scope": "G01-G21 product/contract/consumer defects closed within recorded local and mock paths; A01-A06/J01-J08 implemented; V01 external verification exclusions remain",
+  "external_exclusions": [
+    {
+      "item": "original_generated_Dockerfile_build_and_container_health",
+      "status": "external_blocked",
+      "evidence": "validation/reports/s5-container-delivery/build.log",
+      "reason": "exact golang:1.25.0-bookworm pull cannot reach auth.docker.io; no alternate image or Dockerfile used"
+    },
+    {
+      "item": "live_model_and_GitLab_Runner",
+      "status": "external_blocked",
+      "evidence": "docs/evidence/live-prerequisites.json",
+      "reason": "configuration locations and authorized test namespace/project unavailable; actual Runner permissions unverified"
+    }
+  ],
+  "mode_combinations": {
+    "local/rules/local": "actual three-skill delivery, ZIP/build/health and browser",
+    "temporal/rules/local": "actual delivery/CAN/concurrency/owned crash",
+    "local/model/local": "public advice/authorization/summary path with mock; no current full DONE run",
+    "temporal/model/local": "actual complete delivery with mock model",
+    "local/rules/gitlab": "actual Go/Git/ZIP; explicit mock GitLab/Runner",
+    "local/model/gitlab": "not_run",
+    "temporal/rules/gitlab": "not_run",
+    "temporal/model/gitlab": "not_run"
+  },
+  "reports": [
+    {
+      "path": "docs/evidence/s5-go-regression-summary.json",
+      "sha256": "3eba09dc5e2d3406f2fe7a355eb6cdf4b9763aa5f3ea5d430f954f0903f5d75c"
+    },
+    {
+      "path": "docs/evidence/s5-schema-coverage.json",
+      "sha256": "bcd1120bee0742c97ac6f43dfcebcd8a5f59c39383bad1767e300e1b725179bd"
+    },
+    {
+      "path": "docs/evidence/s5-module-boundaries.json",
+      "sha256": "fe516f2b240d1d842f5baffff25a79c6922dbf611f432bf8b80e525a07117767"
+    },
+    {
+      "path": "docs/evidence/s5-document-examples.json",
+      "sha256": "4d58074417bfe6eebcb1bfda686e2936bef18d68517b45ace6d13da0d3d9e76d"
+    },
+    {
+      "path": "docs/evidence/s5-browser-guards.json",
+      "sha256": "81463b7d223b5699213e188860c71f7217e8d1d97797dfeeb691d59ad7d9a4bd"
+    },
+    {
+      "path": "docs/evidence/s5-browser-legacy.json",
+      "sha256": "187da771aad46a27ffd6cd7c6ddf632124af35e1cdc3e2f5e772c12136d5aeac"
+    },
+    {
+      "path": "docs/evidence/runtime-browser-main-final.json",
+      "sha256": "65156b17487ed116a07a35992554da74e5156cdf640edcde5d2887c2507ce9af"
+    },
+    {
+      "path": "docs/evidence/runtime-browser-diagnostics-final.json",
+      "sha256": "2972f003775dc0cae3d2ebc283765051fba4b63f5ef88f460d10531c28467e61"
+    },
+    {
+      "path": "docs/evidence/s5-final-definitions.log",
+      "sha256": "1b4f129459411370f89a3fed68f460fc0045fc9bdbad9faa60f9f9dd3d4b837e"
+    },
+    {
+      "path": "docs/evidence/s5-final-vet.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/s5-go-source-check.log",
+      "sha256": "ebe8d9308b8f97ce330f140e44544b4ccba5ead3a0d801d7bd1e96b11076506e"
+    },
+    {
+      "path": "docs/evidence/s5-ts-source-check.log",
+      "sha256": "c3371a874d7566d56d936a7b3c1f6098190d99a79b54d3bd20ffe56c2c31739c"
+    },
+    {
+      "path": "docs/evidence/s5-runtime-source-check.log",
+      "sha256": "0040fa8e0286c9629dee92114f8bd79d0f3e118016787e93c2c07f968f1956b3"
+    },
+    {
+      "path": "docs/evidence/s5-runtime-remote-2.log",
+      "sha256": "5975a0cfeecb189f1bd2127ced3b181557fc5c9433a05c51e7f851d1c1209ed8"
+    },
+    {
+      "path": "validation/reports/s5-oracles/definition-final.json",
+      "sha256": "1685f930e718833be634060589dba4e7ee1c45eafee75696207dae2ebfcd2a14"
+    },
+    {
+      "path": "validation/reports/s5-oracles/authorization-final.json",
+      "sha256": "6474cc101597047a78fa2bcfef6b72b552b0da98ab9bd28ce2f91bdc26c98654"
+    },
+    {
+      "path": "validation/reports/s5-oracles/legacy-adapter.json",
+      "sha256": "19e6a5b51a832c3d62805af8e9072004aec8911b9f7872a6d72cb3232f8e838a"
+    },
+    {
+      "path": "validation/reports/s5-public-authorization-final/summary.json",
+      "sha256": "97d3f961971a8f79a3d4ab143f78d9d742f5d3eed51603614baa388f2bdcc883"
+    },
+    {
+      "path": "validation/reports/s5-temporal-model-completion/summary.json",
+      "sha256": "6550d610076ebebfce401353d2a82b7c22dd915e0cbaff30997af5b7505992d6"
+    },
+    {
+      "path": "validation/reports/s5-temporal-concurrency/summary.json",
+      "sha256": "eabebf23d9ee9371a4d460f09e4cf9ab43abddf34ee61db3b62b4f3ea8961835"
+    },
+    {
+      "path": "validation/reports/s5-model-summary-final/summary.json",
+      "sha256": "14cf05928366cb3520dac855188047b69d54a25899bb5adfc5a747c285931953"
+    },
+    {
+      "path": "validation/reports/s5-model-summary-failure/summary.json",
+      "sha256": "071e91dc49d9dc8223d0fa69f34bead09943f6e57bb525924ffcefd0639053c6"
+    },
+    {
+      "path": "validation/reports/runtime-final-local-delivery/summary.json",
+      "sha256": "980c47d06fd48d9324a9604fa7b6de614360b13cd8ff34d0e2eb1e86e133efb9"
+    },
+    {
+      "path": "validation/reports/runtime-final-temporal-crash/summary.json",
+      "sha256": "3bae60876e8cee9b1b18cb70d34a0fd5a2e7ff687fc2aa4c88c578374c5ebd82"
+    },
+    {
+      "path": "validation/reports/runtime-final-temporal-observation/summary.json",
+      "sha256": "90c71306ab425c7e5d75991aae0a22fb512df030be095bf8723d5cffc745181d"
+    },
+    {
+      "path": "validation/reports/s5-container-delivery/summary.json",
+      "sha256": "9c91595decfcb2e621cb66097fcf794dd9c952225cabf28c44d40f91d258abfd"
+    },
+    {
+      "path": "docs/evidence/live-prerequisites.json",
+      "sha256": "f1eb76feb09abbdb6fdb0a6b075bb244d8a73f94c941d54b96700e511a91f0be"
+    },
+    {
+      "path": "validation/reports/s5-legacy-public/20261004T181630Z-38a160e9c4/summary.json",
+      "sha256": "e30accb21ccd59698b028836760ecb2beb32eb5d7fa806bb434c340338b55cbb"
+    },
+    {
+      "path": "docs/evidence/s5-final-design-check.json",
+      "sha256": "9d7c1e9d6dceb15a21db8e2694eb7ff02d06b8546a397f7229127823e86e4b3f"
+    },
+    {
+      "path": "docs/evidence/s5-final-ui-build.log",
+      "sha256": "55610a7f2892e081f406d7e775b60ba3f026201231c4fe6ffdd65a3a0be6a6d5"
+    },
+    {
+      "path": "docs/evidence/s5-final-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/s5-review-data-check.json",
+      "sha256": "fe8c6388db54d88a599d0a6e129bca9b003c58a880634d7129ff5fbc9991e787"
+    },
+    {
+      "path": "docs/evidence/s5-review-browser.json",
+      "sha256": "30616914a575e40c37979649ab6f92c0e4b210d8d3942afdde7759800e09af77"
+    },
+    {
+      "path": "docs/evidence/s5-review-source-browser.json",
+      "sha256": "df75483cad2e4b619fb37500ee49a4ed53d05d1f2c6ee9278310e067d0377141"
+    },
+    {
+      "path": "docs/evidence/s5-process-cleanup.json",
+      "sha256": "5faf302868bc7de58c3bea1fefb118da59dc6f921a4fd8e4a735298ce5ebfac3"
+    },
+    {
+      "path": "docs/evidence/s5-source-audit.json",
+      "sha256": "8e930bf55e431050cb719c7b7016cd005cd43d736aba69d8bb120b96bd35ed1b"
+    },
+    {
+      "path": "docs/evidence/s5-review-check.log",
+      "sha256": "b78d247a8cf3bf0d5a5b6a911a195b6f9a111b6c09e9c43e349d9e19d6325658"
+    }
+  ],
+  "source_identity": "non-Git workspace; exact SHA-256 manifest in s5-source-audit.json",
+  "prior_phase_indices": [
+    "docs/evidence/s1-source-audit.json",
+    "docs/evidence/s2-resume-exit.json",
+    "docs/evidence/s3-exit.json",
+    "docs/evidence/s4-exit.json",
+    "docs/evidence/runtime-exit.json"
+  ],
+  "original_failures_retained": [
+    "docs/evidence/final-backend-suite.jsonl",
+    "docs/evidence/s5-go-continuation-2.jsonl",
+    "docs/evidence/s5-model-summary.log",
+    "docs/evidence/s5-runtime-remote.log",
+    "docs/evidence/s5-container-delivery.log",
+    "docs/evidence/s5-review-browser.log",
+    "docs/evidence/s5-review-browser-final.log"
+  ],
+  "preview_notes": "Initial plain static server lacked API proxy for return-to-workspace; subsequent npm preview used wrong root. Original failures retained. Correct frontend root and existing Vite proxy served the unchanged built bundle; final 186 review checks and 15 source-bound checks plus 1 probe passed.",
+  "reviewable_preview": "http://127.0.0.1:18178"
+}

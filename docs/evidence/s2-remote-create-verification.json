@@ -1,0 +1,66 @@
+{
+  "recorded_at": "2026-10-03T00:30:18.900019+00:00",
+  "scope": "Project creation Agent: controlled create_repository and read-only reconciliation only",
+  "stage": "S2 ongoing",
+  "user_stop_condition": "Stop goal after complete S2 exit acceptance; do not enter S3",
+  "source_manifest": "docs/evidence/s2-remote-create-source-audit.json",
+  "source_aggregate_sha256": "0443a34da38d4d531bcadabf4a2136c3662a59b8ac46c4d234ba82875a00eb85",
+  "configuration": {
+    "platform": "darwin_amd64",
+    "go": "go1.25.5",
+    "execution_mode": "local",
+    "decision_mode": "rules",
+    "gitlab": "mock only",
+    "contract": "1.3.0",
+    "definition": "3.2.0 test registration; public default remains 3.0.1/1.1.0"
+  },
+  "checks": [
+    {
+      "name": "create_receipt_actual_prerequisites_race",
+      "command": "go test -race ./internal/agent -run ^TestControlReconcileCommandReadsOriginalWriteWithoutRevivingTerminalRun$ -count=1 -v",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-remote-create-receipt-race.log",
+      "log_sha256": "940143d193b2c3f35d5627628df6676bcc61970045bebce2b481ef8b2828cbf7",
+      "scope": "146.145s; actual local workspace/tools, mock GitLab; binary predates final nonnull-fact validation; 15 receipt semantic negatives"
+    },
+    {
+      "name": "create_and_legacy_regression",
+      "command": "go test ./internal/agent -run ^TestControlGitLab -count=1 -v",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-remote-create-regression.log",
+      "log_sha256": "0ed9dbe57b6aef930753920c2f5b5a75fd3532100734bd2ddb263d366f1c7fbe",
+      "scope": "209.754s; final source, including extra unknown nonnull-fact negative; synthetic workspace/Go prerequisites for this selected module suite"
+    },
+    {
+      "name": "vet",
+      "command": "go vet ./...",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-remote-create-vet.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "Final product source"
+    },
+    {
+      "name": "build",
+      "command": "go build ./...",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-remote-create-build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "Final product source"
+    },
+    {
+      "name": "independent_export_oracle",
+      "command": "python -m validation.contracts.release13_check; inputs listed in validation/reports/contracts-s2/release13-remote-create-exports.json",
+      "exit_code": 0,
+      "log": "docs/evidence/s2-remote-create-oracle.log",
+      "log_sha256": "6133dfff33226a09678cb9c6ad97a5bb7152daee811fffb67ea86be963bd83dc",
+      "scope": "5 exported public audits, 346 object checks including repeated dependencies; 629 local refs; 2324 structural and 5 hash negatives; no complete semantic/HTTP oracle"
+    }
+  ],
+  "not_covered": [
+    "Controlled Git push and CI",
+    "Complete public S2 creation and C07-C10",
+    "Real Temporal service recovery",
+    "Live GitLab/Runner, model, browser and container",
+    "S3-S8"
+  ]
+}

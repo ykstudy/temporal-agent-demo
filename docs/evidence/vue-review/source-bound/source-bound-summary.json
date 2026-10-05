@@ -1,0 +1,131 @@
+{
+  "category": "review_loader_source_boundary",
+  "status": "passed",
+  "recorded_at": "2026-10-02T09:41:00.411Z",
+  "browser_url": "http://127.0.0.1:15182",
+  "browser_path": "Playwright: Browser plugin not available; CUA iab unavailable and inventory timed out",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "scope": "Public static review loader rejection; no Agent API writes or v2/live claim",
+  "checks": [
+    {
+      "name": "valid_publication_control",
+      "passed": true,
+      "expected": "accepted_diagram",
+      "alert": ""
+    },
+    {
+      "name": "baseline_product_false",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "baseline_invariants_false",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "network_schema_relaxed_with_extra",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "extra_field_original_schema",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "schema_source_text_resigned",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "schema_source_missing",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "product_source_missing",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "invariants_source_resigned",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "source_text_digest_mismatch",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "source_duplicate_path",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "source_duplicate_id",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "source_dangling_binding",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "coverage_missing_cell",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    },
+    {
+      "name": "terminal_transition_changed",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "审查发布摘要不一致，请生成数据后重新构建前端。"
+    }
+  ],
+  "probes": [
+    {
+      "name": "network_schema_unknown_draft",
+      "passed": true,
+      "expected": "rejected_no_diagram",
+      "alert": "发布 Schema 摘要与当前构建不一致。"
+    }
+  ],
+  "console": [],
+  "runtime_requests": [],
+  "screenshots": [
+    "/tmp/agent-vue-review-qa/release/source-bound/valid_publication_control.png",
+    "/tmp/agent-vue-review-qa/release/source-bound/baseline_invariants_false.png",
+    "/tmp/agent-vue-review-qa/release/source-bound/network_schema_relaxed_with_extra.png",
+    "/tmp/agent-vue-review-qa/release/source-bound/schema_source_text_resigned.png"
+  ],
+  "publication": {
+    "bundle_sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+    "schema_sha256": "aedd4f32c50d9827cae27962e964a32f265e500ba702a54ec2d98a144921ca81",
+    "generated_at": "2026-10-02T09:23:49.476116Z",
+    "baseline": {
+      "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+      "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+      "contract_version": "1.0.0"
+    }
+  },
+  "completed_at": "2026-10-02T09:41:18.571Z"
+}

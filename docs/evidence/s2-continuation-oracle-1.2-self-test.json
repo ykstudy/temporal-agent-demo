@@ -1,0 +1,5323 @@
+{
+  "evidence_kind": "synthetic_oracle_self_test",
+  "contract_version": "1.2.0",
+  "cases": [
+    {
+      "name": "complete seven action synthetic audit",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unobserved historical phases stay explicitly uncovered",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "1.2 non-action advice without execution clarification",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "1.2 non-action advice without execution plan",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "1.2 non-action advice without execution diagnosis",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "1.2 non-action advice without execution completion",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:context_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:decision_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:state_sequence",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_message_refs",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:messages",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_context_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:created_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:context_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:context_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:context_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minLength:context_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxLength:context_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:decision_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:decision_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minLength:decision_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxLength:decision_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minimum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maximum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:state_sequence",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minimum:state_sequence",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maximum:state_sequence",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_message_refs",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minItems:input_message_refs",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxItems:input_message_refs",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:additionalProperties:input_message_refs/0/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_message_refs/0/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_message_refs/0/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_message_refs/0/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_message_refs/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:input_message_refs/0/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_message_refs/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:enum:input_message_refs/0/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_message_refs/0/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:input_message_refs/0/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minLength:input_message_refs/0/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxLength:input_message_refs/0/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_message_refs/0/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minimum:input_message_refs/0/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maximum:input_message_refs/0/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_message_refs/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minimum:input_message_refs/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maximum:input_message_refs/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_message_refs/0/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:input_message_refs/0/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:const:input_message_refs/0/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:messages",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:minItems:messages",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxItems:messages",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:additionalProperties:messages/0/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:messages/0/role",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:messages/0/content",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:messages/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:enum:messages/0/role",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:messages/0/content",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxLength:messages/0/content",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:additionalProperties:messages/1/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:messages/1/role",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:required:messages/1/content",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:messages/1",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:enum:messages/1/role",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:messages/1/content",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:maxLength:messages/1/content",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:input_context_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:input_context_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:created_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:created_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:format:created_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:type:context_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ContextRecord:pattern:context_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:execution_deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:execution_deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:execution_deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:ci_windows/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:reconciliation_windows/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ledger_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:execution_started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:execution_deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:updated_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ledger_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ledger_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:ledger_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:ledger_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:execution_started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:execution_started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:execution_started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxItems:ci_windows",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:ci_windows/0/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:ci_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:ci_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:ci_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:ci_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:enum:ci_windows/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:ci_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:ci_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:ci_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:ci_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:ci_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:ci_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:ci_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:ci_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:ci_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:ci_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:ci_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:ci_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ci_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:ci_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:ci_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxItems:reconciliation_windows",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:reconciliation_windows/0/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reconciliation_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reconciliation_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reconciliation_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reconciliation_windows/0/window_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:enum:reconciliation_windows/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reconciliation_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reconciliation_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reconciliation_windows/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reconciliation_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reconciliation_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reconciliation_windows/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:reconciliation_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:reconciliation_windows/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reconciliation_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:reconciliation_windows/0/started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reconciliation_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:reconciliation_windows/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reconciliation_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:reconciliation_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:reconciliation_windows/0/max_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxItems:reservations",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:reservations/0/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:reservations/0/reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:reservations/0/contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reservations/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reservations/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reservations/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reservations/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:reservations/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:reservations/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reservations/0/command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reservations/0/command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reservations/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reservations/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:enum:reservations/0/kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:reservations/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:reservations/0/scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:reservations/0/units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:reservations/0/reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:reservations/0/reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:reservations/0/reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxItems:settlements",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:settlements/0/consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:settlements/0/elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:settlements/0/elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:settlements/0/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/outcome",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/measurement_source",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:settlements/0/settlement_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:const:settlements/0/contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:settlements/0/settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:settlements/0/settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:settlements/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:settlements/0/reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:settlements/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:settlements/0/attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minLength:settlements/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maxLength:settlements/0/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:settlements/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:settlements/0/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:settlements/0/consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:settlements/0/consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:enum:settlements/0/outcome",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:enum:settlements/0/measurement_source",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:settlements/0/settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:settlements/0/settlement_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:settlements/0/settlement_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:totals/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/measured_elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown_elapsed_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:totals/reserved/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/reserved/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/reserved/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/reserved/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/reserved/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/reserved/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/reserved/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/reserved/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/reserved/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/reserved/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/reserved/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/reserved/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/reserved/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/reserved/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/reserved/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:totals/consumed/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/consumed/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/consumed/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/consumed/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/consumed/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/consumed/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/consumed/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/consumed/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/consumed/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/consumed/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/consumed/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/consumed/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/consumed/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/consumed/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/consumed/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:totals/released/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/released/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/released/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/released/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/released/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/released/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/released/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/released/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/released/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/released/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/released/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/released/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/released/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/released/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/released/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:additionalProperties:totals/unknown/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:required:totals/unknown/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown/command",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown/model",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown/action",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown/tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown/ci_poll",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown/reconciliation_read",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/measured_elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/measured_elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/measured_elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:totals/unknown_elapsed_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:minimum:totals/unknown_elapsed_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:maximum:totals/unknown_elapsed_attempts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:updated_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:updated_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:format:updated_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:type:ledger_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetLedger:pattern:ledger_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minimum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maximum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:enum:kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:const:units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:format:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:format:deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:deadline_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:required:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minimum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maximum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:policy_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:enum:kind",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:minLength:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:maxLength:scope_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:const:units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:format:reserved_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:type:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetReservation:pattern:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:const:consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minimum:elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maximum:elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:outcome",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:elapsed_ms",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:measurement_source",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:required:settlement_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minLength:settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maxLength:settlement_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minLength:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maxLength:reservation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:reservation_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maxLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minimum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maximum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:minimum:consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:maximum:consumed_units",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:enum:outcome",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:enum:measurement_source",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:format:settled_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:type:settlement_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "BudgetSettlement:pattern:settlement_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:arguments",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:exit_code",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:approval_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:proposal_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:plan_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:workspace",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:arguments",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:cwd_scope",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:environment_policy",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:input_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:exit_code",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:status",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_sha256",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_truncated",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:receipt_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minimum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maximum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:approval_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:approval_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:proposal_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:proposal_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:plan_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:plan_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:additionalProperties:workspace/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:workspace",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:additionalProperties:tool/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:tool/tool_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:tool/version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:tool/platform",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:tool/binary_sha256",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:tool",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:tool/tool_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:tool/tool_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:tool/tool_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:tool/tool_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:tool/version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:tool/version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:tool/version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:tool/platform",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:tool/platform",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:tool/platform",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:tool/binary_sha256",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:enum:command_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:cwd_scope",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:environment_policy",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:additionalProperties:input_manifest_ref/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:input_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:input_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:input_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:input_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:input_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:input_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:enum:input_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:input_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:input_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:input_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:input_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:input_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minimum:input_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maximum:input_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:input_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minimum:input_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maximum:input_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:input_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:input_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:input_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:additionalProperties:output_manifest_ref/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:required:output_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:enum:output_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minLength:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minimum:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maximum:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minimum:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maximum:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:output_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:const:output_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:format:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:format:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:exit_code",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:minimum:exit_code",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maximum:exit_code",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:enum:status",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:maxLength:output",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_sha256",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:output_sha256",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:output_truncated",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:type:receipt_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "ToolExecutionReceipt:pattern:receipt_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:additionalProperties:output_manifest_ref/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:output_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:output_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:output_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:enum:output_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:output_manifest_ref/object_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minimum:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maximum:output_manifest_ref/object_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minimum:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maximum:output_manifest_ref/source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:output_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:output_manifest_ref/hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:const:output_manifest_ref/object_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:additionalProperties:__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:approval_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:proposal_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:plan_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:workspace",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:action_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:written_paths",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:input_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:output_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:status",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:receipt_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:const:contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:receipt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minimum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maximum:source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:definition_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:execution_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:operation_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:attempt_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:request_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:approval_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:approval_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:approval_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:proposal_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:proposal_snapshot_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:plan_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:plan_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:additionalProperties:workspace/__undeclared__",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:required:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:workspace",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:workspace/workspace_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:workspace/run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:workspace/storage_key",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:enum:action_type",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:written_paths",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxItems:written_paths",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:written_paths/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:written_paths/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:minLength:written_paths/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:maxLength:written_paths/0",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:input_manifest_ref",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:format:started_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:format:completed_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:enum:status",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:type:receipt_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "WorkspaceReceipt:pattern:receipt_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing contract_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing schema_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing run_id",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing modes",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing state",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing source_version",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing state_sequence",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing definition_snapshot",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing plan",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing proposal",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing approval",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing permission_snapshot",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing proposal_history",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing approval_history",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing permission_history",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing decisions",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing validations",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing executions",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing messages",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing contexts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing operations",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing manifest",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing manifest_history",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing budget",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing tool_receipts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing workspace_receipts",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing created_at",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle missing audit_hash",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "S2AuditBundle closed",
+      "kind": "schema_negative",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-1",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-1",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-1",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-1",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-1",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-1",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-2",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-2",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-2",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-2",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-2",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-2",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-3",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-3",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-3",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-3",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-3",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-3",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-5",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-5",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-5",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-5",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-5",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-5",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-6",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-6",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-6",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-6",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "no local remote action create_repository",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-6",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-6",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-7",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-7",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-7",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-7",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "no local remote action push_repository",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-7",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-7",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-8",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-8",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-8",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-8",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "no local remote action trigger_ci",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-8",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-8",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "legal permissions and phase synthetic-execution-9",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "illegal observed phase synthetic-execution-9",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing action permission synthetic-execution-9",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "expanded action permission synthetic-execution-9",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "all seven parameter target hashes synthetic-execution-9",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "target hash cannot include action wrapper synthetic-execution-9",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong policy digest",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "extended execution deadline",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing cumulative execution start",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "command changed scope",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "action changed scope",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong request digest",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong reservation Run",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unknown execution",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong source",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "reservation before frozen request",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "no future deadline",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong settlement attempt",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "settlement missing reservation",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "settlement before reservation",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong window scope",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "window budget raised",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "window deadline raised",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate reservations.reservation_id",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate reservations.attempt_id",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate settlements.settlement_id",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate settlements.reservation_id",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "display counters not authoritative",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unknown consumes once and records unknown elapsed",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unknown cannot be rewritten as released",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "budget settlement released accounting only",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "budget settlement failed accounting only",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "budget settlement interrupted accounting only",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "history cannot drop reservations",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "history cannot drop settlements",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "history cannot drop ci_windows",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "history cannot drop reconciliation_windows",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "restart cannot reset execution_started_at",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "restart cannot reset execution_deadline_at",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "identical ledger replay",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "same ledger version immutable",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unsettled reservations consume available action scope",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unsettled reservations consume available tool scope",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "source change cannot reset same Run action scope",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "global command limit",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "global model limit",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong tool identity",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong argv",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "unknown exit cannot be zero",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "wrong output hash",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "receipt wrong request",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "receipt wrong approval",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "receipt wrong attempt",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "receipt wrong workspace Run",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "write outside proposal",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "write outside skill",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "successful workspace lacks manifest",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "receipt contradicts action",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "UTF-8 byte bound distinct from character bound",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "complete UTF-8 characters at byte boundary",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "self-consistent manifest cannot grant unapproved output bytes",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "workspace receipt cannot hide changed output paths",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing real command identity",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing denied or allowed decision source",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "missing operation",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "current permission with missing history",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "verified operation cannot predate final tool receipt",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "successful action cannot settle before child tool completes",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "verified local operation requires real receipt 0",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "verified local operation requires real receipt 4",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "context exact decision source_version",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "context exact decision state_sequence",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "context exact decision input_context_hash",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "self-consistent context still binds frozen prompt",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "budget canonical Link keeps original registered source",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects missing",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects foreign origin",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects wrong Run",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects missing source",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects duplicate source",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects unsafe integer source",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects changed version",
+      "kind": "semantic",
+      "status": "passed"
+    },
+    {
+      "name": "canonical Link rejects changed hash",
+      "kind": "semantic",
+      "status": "passed"
+    }
+  ],
+  "at": "2026-10-04T13:53:11.232435+00:00",
+  "schema_refs": 502,
+  "scope": "Independent 1.2.0 S2 objects and semantics; no running product, model, tool, Temporal or GitLab evidence",
+  "passed": 1058,
+  "schema_negative": 918,
+  "semantic": 140,
+  "audit_coverage": {
+    "kind": "public_s2_audit_semantics",
+    "decisions": 9,
+    "executions": 9,
+    "release13": {},
+    "exact_objects": 80,
+    "settled_receipts": 7,
+    "budget": {
+      "reservations": 15,
+      "settlements": 15,
+      "unsettled": 0
+    },
+    "observed_execution_stages": 0,
+    "unobserved_execution_stages": 9,
+    "limitations": [
+      "An archive does not prove current permission lifecycle or that a tool/provider actually ran.",
+      "Unobserved historical stages are not inferred from ContextRecord text.",
+      "Released reservation requires separate no-dispatch evidence; the ledger alone cannot prove it.",
+      "This is not full v2 RunSnapshot, S3 message persistence, or live third-party acceptance."
+    ]
+  }
+}

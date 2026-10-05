@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-10-02T14:00:05.616363+00:00",
+  "scope": "S2 pure deterministic scheduling unit verification only",
+  "status": "passed_with_explicit_code_point_scope",
+  "sources": [
+    {
+      "path": "backend/internal/agent/control_schedule.go",
+      "bytes": 32030,
+      "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+    },
+    {
+      "path": "backend/internal/agent/control_schedule_test.go",
+      "bytes": 24176,
+      "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+    }
+  ],
+  "checks": [
+    {
+      "command": "go test ./internal/agent -run '^TestControlSchedule' -count=1",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "ok  \tagentstudio/internal/agent\t35.868s\n",
+      "code_point": "Initial complete schedule suite, before same-parent tool ordering and late pure guards.",
+      "source_sha256_at_execution": null
+    },
+    {
+      "command": "go test ./internal/agent -run '^TestControlSchedule' -count=1",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "ok  \tagentstudio/internal/agent\t36.590s\n",
+      "code_point": "After same-parent tool attempt and command ordering; before final ready-copy cases and late pure guards.",
+      "source_sha256_at_execution": null
+    },
+    {
+      "command": "go test -race ./internal/agent -run '^TestControlSchedule' -count=1",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "ok  \tagentstudio/internal/agent\t321.801s\n",
+      "code_point": "Seven top-level schedule tests, including ready-copy and tool order cases. Binary compiled before the late predecessor-completion timestamp and approved UTF-8 byte-size guards.",
+      "source_sha256_at_execution": null,
+      "tool_session_id": 15211
+    },
+    {
+      "command": "go test ./internal/agent -run '^TestControlScheduleExactOrderAndLocalIsolation$' -count=1",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "ok  \tagentstudio/internal/agent\t16.982s\n",
+      "code_point": "After predecessor-completion timestamp guard; before approved UTF-8 byte-size guard.",
+      "source_sha256_at_execution": null,
+      "tool_session_id": 27466
+    },
+    {
+      "command": "go test ./internal/agent -run '^TestControlScheduleRejectsScopeAndHashTampering$' -count=1",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "ok  \tagentstudio/internal/agent\t3.397s\n",
+      "code_point": "Final source pair in this manifest.",
+      "source_files": [
+        {
+          "path": "backend/internal/agent/control_schedule.go",
+          "bytes": 32030,
+          "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+        },
+        {
+          "path": "backend/internal/agent/control_schedule_test.go",
+          "bytes": 24176,
+          "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+        }
+      ],
+      "tool_session_id": 49027
+    },
+    {
+      "command": "go test -race ./internal/agent -run '^TestControlSchedule(UnknownNeverReissuesWrite|ReadyReusesExactRequestAndReturnsIndependentCopy|RejectsScopeAndHashTampering)$' -count=1",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "ok  \tagentstudio/internal/agent\t42.162s\n",
+      "code_point": "Final source pair in this manifest. Targeted recovery and corruption tests, not a second full-suite race.",
+      "source_files": [
+        {
+          "path": "backend/internal/agent/control_schedule.go",
+          "bytes": 32030,
+          "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+        },
+        {
+          "path": "backend/internal/agent/control_schedule_test.go",
+          "bytes": 24176,
+          "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+        }
+      ],
+      "tool_session_id": 78852
+    },
+    {
+      "command": "go vet ./...",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "",
+      "code_point": "Final scheduler source pair in this manifest; shared backend also contained concurrent S2 integration work.",
+      "source_files": [
+        {
+          "path": "backend/internal/agent/control_schedule.go",
+          "bytes": 32030,
+          "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+        },
+        {
+          "path": "backend/internal/agent/control_schedule_test.go",
+          "bytes": 24176,
+          "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+        }
+      ],
+      "tool_session_id": 87443
+    },
+    {
+      "command": "go build ./...",
+      "cwd": "backend",
+      "exit_code": 0,
+      "stdout": "",
+      "code_point": "Final scheduler source pair in this manifest; shared backend also contained concurrent S2 integration work.",
+      "source_files": [
+        {
+          "path": "backend/internal/agent/control_schedule.go",
+          "bytes": 32030,
+          "sha256": "f6196c123138aa0b7072e7aa8249f51c365770ac10bb248e38021aa3e98f3d31"
+        },
+        {
+          "path": "backend/internal/agent/control_schedule_test.go",
+          "bytes": 24176,
+          "sha256": "a68da7174a5237ff7e3b1dd5ff78c9aa90e8776d2625c3a708ad06c191dbf007"
+        }
+      ],
+      "tool_session_id": 34289
+    }
+  ],
+  "evidence_provenance": {
+    "commands_run_by": "evidence_audit subagent",
+    "stdout_origin": "Exact success lines transcribed from exec tool responses; earlier commands were not redirected to retained /tmp logs.",
+    "historical_source_hashes": "Not captured at compilation time for early runs; do not infer their full-suite result applies to the late guard bytes.",
+    "current_source_hashes": "Captured after final targeted race, vet and build; scheduler pair has not been edited since those commands."
+  },
+  "coverage": [
+    "Seven action kinds in deterministic order; selected skills preserve plan order.",
+    "local omits all three remote actions.",
+    "Original unstarted ExecutionRequest/OperationRecord reuse and independent returned copies.",
+    "sent/unknown returns original identity for read-only reconciliation, including after source changes.",
+    "Full existing governance chain, hashes, scopes and receipt/budget bindings.",
+    "All frozen verify commands from one parent attempt in order with unchanged output manifest.",
+    "Remote CI requires original project/commit/config/pipeline success; package requires actual executor result identity.",
+    "ActionsExhausted is not DONE."
+  ],
+  "not_covered": [
+    "No real workspace generation, Go subprocess execution, GitLab write, CI run or ZIP creation in these scheduler fixtures.",
+    "No S2 job or S2 stage-exit claim.",
+    "No full-suite race rerun after the two late pure validation guards; final targeted race and ordinary guard regressions are listed separately.",
+    "This manifest hashes the owned scheduler source pair, not every concurrently edited backend file."
+  ],
+  "documentation_check": {
+    "command": "python3 design/_model/check.py --self-test --json",
+    "exit_code": 0,
+    "passed": true,
+    "entity_count": 139,
+    "relation_count": 549,
+    "evidence_path": "docs/evidence/s2-control-schedule-doc-check.json",
+    "evidence_sha256": "cd061551e89a538a6dfc149a43b4a8ad06d07ca2a7c8f299acd4c89e6e05edee",
+    "scope": "docs_ready only, no runtime claim"
+  }
+}

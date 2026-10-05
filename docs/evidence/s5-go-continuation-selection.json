@@ -1,0 +1,55 @@
+{
+  "reason": "original aggregate reached 30-minute package timeout; resume only unfinished top-level cases, retaining original timeout report",
+  "original_top_completed_or_skipped": 107,
+  "total_current_top": 147,
+  "already_passed_separately": {
+    "TestRuntime14ActualGitAndMockCIFullDelivery": "docs/evidence/s5-runtime-remote-2.log"
+  },
+  "groups": [
+    [
+      "TestConversationModelSummaryFailurePreservesPriorSourceAndMode",
+      "TestConversationRealCommandsSummaryHistoryAndOriginalBytes",
+      "TestConversationPartialTransactionRecoveryAndCorruptTail",
+      "TestConversationOldProposalReferenceRemainsOriginalAfterRevision",
+      "TestFrozenDefinitionSurvivesStoreReopenAndLaterPublication",
+      "TestFrozenActionPolicyDoesNotGrantOtherExecutionSteps",
+      "TestFrozenUnknownRequiredCheckCannotCompleteRun",
+      "TestFrozenRunRendersOriginalTemplatesAndPromptAcrossPublications",
+      "TestFrozenTemplateAllVariantsMatchExistingGeneration",
+      "TestFrozenDefinitionPublicReadAndLegacyMissingSource",
+      "TestFrozenCompletionRejectsUnsupportedCheckSemantics",
+      "TestFrozenCompletionAcceptsEvidenceSetOrderAndTitleChanges",
+      "TestV2FullRequestsHistoricalSnapshotsAndReceipts",
+      "TestV2SnapshotStreamExactReferenceAndCursor"
+    ],
+    [
+      "TestRuntimeOfflineCopyRecoveryAndMissingDependencies",
+      "TestRuntimeCanonicalBudgetDuringActualCommands",
+      "TestRuntimeActualTemporalHealthAndOwnedWorkerFailure",
+      "TestRuntimeAuditMetricsReadinessAndCorruption",
+      "TestRuntimePublicSchemaNegativeAndOlderCoverage",
+      "TestRuntimePendingAttemptRecoveryPreservesIdentity",
+      "TestRuntimeActualToolFailureReportsAndBudgetExhaustion",
+      "TestGeneratedLoggingRuntime"
+    ],
+    [
+      "TestControlToolsFrozenModuleEnvironment",
+      "TestLegacyPendingWithoutFrozenSourceCannotAcquireApproval",
+      "TestPublishedTemplateCannotWriteUndeclaredFrozenSkillPath",
+      "TestHTTPRejectsDuplicateJSONKeysBeforeEffects",
+      "TestRegeneratePublication310",
+      "TestPublished310TemplatesTidyStableAcrossAllSkillCombinations",
+      "TestPublished310RejectsUndeclaredSumPathAndLegacyExpansion",
+      "TestPublished310DetectsUnapprovedTidyChanges",
+      "TestRegenerateDefinition311",
+      "TestGitLabReconcilesOriginalCommitAndPipeline",
+      "TestTransientGitLabReadRemainsRetryable",
+      "TestModelOutputIsSchemaChecked",
+      "TestModelContextBudgetKeepsCurrentIdentityAndMessage",
+      "TestLogParametersRejectOutOfScopeValues",
+      "TestLoggingCannotOverwriteApprovedSources",
+      "TestTemporalQueryUpdateAndContinueAsNew",
+      "TestTemporalRetryKeepsOldTerminalState"
+    ]
+  ]
+}

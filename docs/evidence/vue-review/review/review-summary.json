@@ -1,0 +1,1487 @@
+{
+  "category": "review_ui",
+  "status": "passed",
+  "recorded_at": "2026-10-02T09:40:59.732Z",
+  "browser_url": "http://127.0.0.1:15182",
+  "browser_path": "Playwright: Browser plugin not available",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "scope": "Static design/current/historical evidence review; no v2/live/Run approval claim",
+  "checks": [
+    {
+      "name": "public_review_bundle_available",
+      "passed": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "public_bundle_matches_expected_release",
+      "passed": true,
+      "detail": {
+        "expected": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6",
+        "actual": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6"
+      }
+    },
+    {
+      "name": "exact_eleven_model_ids",
+      "passed": true
+    },
+    {
+      "name": "review_publication_version_is_separate",
+      "passed": true
+    },
+    {
+      "name": "source_byte_hashes",
+      "passed": true
+    },
+    {
+      "name": "route_state",
+      "passed": true
+    },
+    {
+      "name": "diagram_state",
+      "passed": true
+    },
+    {
+      "name": "meaningful_state",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_state",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_state",
+      "passed": true,
+      "detail": {
+        "buttons": 58
+      }
+    },
+    {
+      "name": "route_responsibility",
+      "passed": true
+    },
+    {
+      "name": "diagram_responsibility",
+      "passed": true
+    },
+    {
+      "name": "meaningful_responsibility",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_responsibility",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_responsibility",
+      "passed": true,
+      "detail": {
+        "buttons": 16
+      }
+    },
+    {
+      "name": "route_sequence",
+      "passed": true
+    },
+    {
+      "name": "diagram_sequence",
+      "passed": true
+    },
+    {
+      "name": "meaningful_sequence",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_sequence",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_sequence",
+      "passed": true,
+      "detail": {
+        "buttons": 25
+      }
+    },
+    {
+      "name": "route_contracts",
+      "passed": true
+    },
+    {
+      "name": "diagram_contracts",
+      "passed": true
+    },
+    {
+      "name": "meaningful_contracts",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_contracts",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_contracts",
+      "passed": true,
+      "detail": {
+        "buttons": 15
+      }
+    },
+    {
+      "name": "route_lineage",
+      "passed": true
+    },
+    {
+      "name": "diagram_lineage",
+      "passed": true
+    },
+    {
+      "name": "meaningful_lineage",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_lineage",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_lineage",
+      "passed": true,
+      "detail": {
+        "buttons": 22
+      }
+    },
+    {
+      "name": "route_architecture",
+      "passed": true
+    },
+    {
+      "name": "diagram_architecture",
+      "passed": true
+    },
+    {
+      "name": "meaningful_architecture",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_architecture",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_architecture",
+      "passed": true,
+      "detail": {
+        "buttons": 66
+      }
+    },
+    {
+      "name": "route_coverage",
+      "passed": true
+    },
+    {
+      "name": "diagram_coverage",
+      "passed": true
+    },
+    {
+      "name": "meaningful_coverage",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_coverage",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_coverage",
+      "passed": true,
+      "detail": {
+        "buttons": 105
+      }
+    },
+    {
+      "name": "route_versions",
+      "passed": true
+    },
+    {
+      "name": "diagram_versions",
+      "passed": true
+    },
+    {
+      "name": "meaningful_versions",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_versions",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_versions",
+      "passed": true,
+      "detail": {
+        "buttons": 7
+      }
+    },
+    {
+      "name": "route_knowledge",
+      "passed": true
+    },
+    {
+      "name": "diagram_knowledge",
+      "passed": true
+    },
+    {
+      "name": "meaningful_knowledge",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_knowledge",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_knowledge",
+      "passed": true,
+      "detail": {
+        "buttons": 18
+      }
+    },
+    {
+      "name": "route_skills",
+      "passed": true
+    },
+    {
+      "name": "diagram_skills",
+      "passed": true
+    },
+    {
+      "name": "meaningful_skills",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_skills",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_skills",
+      "passed": true,
+      "detail": {
+        "buttons": 21
+      }
+    },
+    {
+      "name": "route_context",
+      "passed": true
+    },
+    {
+      "name": "diagram_context",
+      "passed": true
+    },
+    {
+      "name": "meaningful_context",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_context",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_context",
+      "passed": true,
+      "detail": {
+        "buttons": 21
+      }
+    },
+    {
+      "name": "route_contracts",
+      "passed": true
+    },
+    {
+      "name": "diagram_contracts",
+      "passed": true
+    },
+    {
+      "name": "meaningful_contracts",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_contracts",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_contracts",
+      "passed": true,
+      "detail": {
+        "buttons": 15
+      }
+    },
+    {
+      "name": "node_has_public_binding",
+      "passed": true,
+      "detail": {
+        "id": "agent.DefinitionSnapshot",
+        "label": "DefinitionSnapshot"
+      }
+    },
+    {
+      "name": "node_selection_shows_bound_details",
+      "passed": true
+    },
+    {
+      "name": "selected_source_exists",
+      "passed": true
+    },
+    {
+      "name": "source_dialog_actual_path_and_text",
+      "passed": true
+    },
+    {
+      "name": "source_dialog_returns_focus",
+      "passed": true
+    },
+    {
+      "name": "default_core_chain_has_seven_relations",
+      "passed": true,
+      "detail": {
+        "actual": 7
+      }
+    },
+    {
+      "name": "edge_identity_is_unambiguous_0",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.b56149fe20e4090bee17",
+        "label": "字段绑定：definition_snapshot_hash",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_0",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.b56149fe20e4090bee17",
+        "label": "字段绑定：definition_snapshot_hash"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_0",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.b56149fe20e4090bee17",
+        "actual": "semantic_binding.b56149fe20e4090bee17"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_0",
+      "passed": true
+    },
+    {
+      "name": "edge_identity_is_unambiguous_1",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.fcfa9291ec8ce9013ff1",
+        "label": "字段绑定：proposal_id",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_1",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.fcfa9291ec8ce9013ff1",
+        "label": "字段绑定：proposal_id"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_1",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.fcfa9291ec8ce9013ff1",
+        "actual": "semantic_binding.fcfa9291ec8ce9013ff1"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_1",
+      "passed": true
+    },
+    {
+      "name": "edge_identity_is_unambiguous_2",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.ce96f8fd321384b8277b",
+        "label": "字段绑定：decision_id",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_2",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.ce96f8fd321384b8277b",
+        "label": "字段绑定：decision_id"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_2",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.ce96f8fd321384b8277b",
+        "actual": "semantic_binding.ce96f8fd321384b8277b"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_2",
+      "passed": true
+    },
+    {
+      "name": "edge_identity_is_unambiguous_3",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.9123050147a21553367e",
+        "label": "字段绑定：validation_id",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_3",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.9123050147a21553367e",
+        "label": "字段绑定：validation_id"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_3",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.9123050147a21553367e",
+        "actual": "semantic_binding.9123050147a21553367e"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_3",
+      "passed": true
+    },
+    {
+      "name": "edge_identity_is_unambiguous_4",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.daf5870020ef354deba3",
+        "label": "字段绑定：approval.approval_id",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_4",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.daf5870020ef354deba3",
+        "label": "字段绑定：approval.approval_id"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_4",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.daf5870020ef354deba3",
+        "actual": "semantic_binding.daf5870020ef354deba3"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_4",
+      "passed": true
+    },
+    {
+      "name": "edge_identity_is_unambiguous_5",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.bfd4bda778fbd12d5abc",
+        "label": "字段绑定：proposal_id",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_5",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.bfd4bda778fbd12d5abc",
+        "label": "字段绑定：proposal_id"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_5",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.bfd4bda778fbd12d5abc",
+        "actual": "semantic_binding.bfd4bda778fbd12d5abc"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_5",
+      "passed": true
+    },
+    {
+      "name": "edge_identity_is_unambiguous_6",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.9f0137d174ed512852ab",
+        "label": "字段绑定：manifest_ref.object_id",
+        "matches": 1
+      }
+    },
+    {
+      "name": "edge_has_public_binding_6",
+      "passed": true,
+      "detail": {
+        "id": "semantic_binding.9f0137d174ed512852ab",
+        "label": "字段绑定：manifest_ref.object_id"
+      }
+    },
+    {
+      "name": "edge_label_pointer_target_is_own_relation_6",
+      "passed": true,
+      "detail": {
+        "expected": "semantic_binding.9f0137d174ed512852ab",
+        "actual": "semantic_binding.9f0137d174ed512852ab"
+      }
+    },
+    {
+      "name": "edge_selection_shows_bound_details_6",
+      "passed": true
+    },
+    {
+      "name": "theme_changes_rendered_colors",
+      "passed": true,
+      "detail": {
+        "beforeTheme": {
+          "body": "rgba(0, 0, 0, 0)",
+          "canvas": "rgb(255, 255, 255)",
+          "text": "rgb(32, 38, 62)",
+          "shape": "rgb(255, 255, 255)"
+        },
+        "afterTheme": {
+          "body": "rgba(0, 0, 0, 0)",
+          "canvas": "rgb(25, 31, 48)",
+          "text": "rgb(233, 237, 247)",
+          "shape": "rgb(25, 31, 48)"
+        }
+      }
+    },
+    {
+      "name": "theme_survives_reload",
+      "passed": true
+    },
+    {
+      "name": "zoom_changes_canvas_scale",
+      "passed": true,
+      "detail": {
+        "boundsBeforeZoom": {
+          "x": 247,
+          "y": 226.375,
+          "width": 872,
+          "height": 678.625
+        },
+        "boundsAfterZoom": {
+          "x": 219.05795288085938,
+          "y": 204.62939453125,
+          "width": 927.8840637207031,
+          "height": 722.1162109375
+        }
+      }
+    },
+    {
+      "name": "fit_contains_full_canvas",
+      "passed": true,
+      "detail": {
+        "fit": {
+          "x": 241.38125610351562,
+          "y": 222.00228881835938,
+          "width": 883.2375183105469,
+          "height": 687.3703918457031
+        },
+        "wrapper": {
+          "x": 235,
+          "y": 214.375,
+          "width": 896,
+          "height": 702.625
+        }
+      }
+    },
+    {
+      "name": "drag_test_starts_on_canvas_background",
+      "passed": true,
+      "detail": {
+        "x": 239,
+        "y": 218.375,
+        "outsideX": 1151,
+        "outsideY": 565.6875,
+        "isBackground": true
+      }
+    },
+    {
+      "name": "drag_captures_pointer_before_canvas_exit",
+      "passed": true,
+      "detail": {
+        "beforeDrag": "translate(0px, 0px) scale(1)",
+        "afterRelease": "translate(912px, 347.312px) scale(1)"
+      }
+    },
+    {
+      "name": "drag_release_outside_prevents_stuck_pan",
+      "passed": true,
+      "detail": {
+        "released": "translate(912px, 347.312px) scale(1)",
+        "returned": "translate(912px, 347.312px) scale(1)"
+      }
+    },
+    {
+      "name": "fit_resets_dragged_canvas",
+      "passed": true
+    },
+    {
+      "name": "route_knowledge",
+      "passed": true
+    },
+    {
+      "name": "diagram_knowledge",
+      "passed": true
+    },
+    {
+      "name": "meaningful_knowledge",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_knowledge",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_knowledge",
+      "passed": true,
+      "detail": {
+        "buttons": 18
+      }
+    },
+    {
+      "name": "agent_domain_filter_available",
+      "passed": true
+    },
+    {
+      "name": "domain_filter_changes_graph",
+      "passed": true,
+      "detail": {
+        "allNodes": 137,
+        "agentNodes": 28
+      }
+    },
+    {
+      "name": "entity_type_filter_changes_graph",
+      "passed": true,
+      "detail": {
+        "agentNodes": 28,
+        "featureNodes": 6
+      }
+    },
+    {
+      "name": "consumes_predicate_published",
+      "passed": true,
+      "detail": {
+        "consumesPredicate": "consumes #输出"
+      }
+    },
+    {
+      "name": "relation_filter_changes_graph",
+      "passed": true,
+      "detail": {
+        "allEdges": 529,
+        "consumedEdges": 206
+      }
+    },
+    {
+      "name": "search_target_from_public_model",
+      "passed": true
+    },
+    {
+      "name": "search_changes_graph",
+      "passed": true,
+      "detail": {
+        "needle": "Activity 调度、重试与心跳",
+        "searchedNodes": 1,
+        "allNodes": 137
+      }
+    },
+    {
+      "name": "download_knowledge-searched.svg",
+      "passed": true
+    },
+    {
+      "name": "search_export_bound_metadata",
+      "passed": true,
+      "detail": {
+        "search": "Activity 调度、重试与心跳",
+        "domain": "all",
+        "entity_type": "all",
+        "relation_type": "all",
+        "all_contracts": false,
+        "contract_search": ""
+      }
+    },
+    {
+      "name": "search_empty_state_has_no_nodes",
+      "passed": true
+    },
+    {
+      "name": "clear_search_restores_graph",
+      "passed": true
+    },
+    {
+      "name": "route_coverage",
+      "passed": true
+    },
+    {
+      "name": "diagram_coverage",
+      "passed": true
+    },
+    {
+      "name": "meaningful_coverage",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_coverage",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_coverage",
+      "passed": true,
+      "detail": {
+        "buttons": 105
+      }
+    },
+    {
+      "name": "coverage_exact_discrete_cells",
+      "passed": true,
+      "detail": {
+        "expected": 105,
+        "actual": 105
+      }
+    },
+    {
+      "name": "coverage_cell_shows_actual_status",
+      "passed": true
+    },
+    {
+      "name": "live_not_run_is_explicit",
+      "passed": true
+    },
+    {
+      "name": "unknown_view_falls_back_to_contracts",
+      "passed": true
+    },
+    {
+      "name": "unknown_view_notice",
+      "passed": true
+    },
+    {
+      "name": "known_navigation_updates_route",
+      "passed": true
+    },
+    {
+      "name": "unknown_notice_clears_after_known_navigation",
+      "passed": true
+    },
+    {
+      "name": "route_contracts",
+      "passed": true
+    },
+    {
+      "name": "diagram_contracts",
+      "passed": true
+    },
+    {
+      "name": "meaningful_contracts",
+      "passed": true
+    },
+    {
+      "name": "no_overlay_contracts",
+      "passed": true
+    },
+    {
+      "name": "interactive_elements_contracts",
+      "passed": true,
+      "detail": {
+        "buttons": 15
+      }
+    },
+    {
+      "name": "core_export_fixture_is_eight_nodes_seven_paths",
+      "passed": true,
+      "detail": {
+        "viewBox": [
+          0,
+          0,
+          1240,
+          858
+        ],
+        "nodes": 8,
+        "edges": 7,
+        "edge_paths": 7
+      }
+    },
+    {
+      "name": "download_contracts-core.svg",
+      "passed": true
+    },
+    {
+      "name": "core_svg_has_eight_nodes_seven_edges",
+      "passed": true,
+      "detail": {
+        "metadata": {
+          "model_id": "contracts",
+          "diagram_type": "class",
+          "scope": "design",
+          "status": "docs_ready",
+          "baseline": {
+            "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+            "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+            "contract_version": "1.0.0"
+          },
+          "generated_at": "2026-10-02T09:23:49.476116Z",
+          "exported_at": "2026-10-02T09:41:16.582Z",
+          "filters": {
+            "search": "",
+            "domain": "domain.agent",
+            "entity_type": "feature",
+            "relation_type": "all",
+            "all_contracts": false,
+            "contract_search": ""
+          },
+          "sources": [
+            {
+              "path": "design/contracts/schemas/agent.schema.json",
+              "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+            },
+            {
+              "path": "design/contracts/schemas/message.schema.json",
+              "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+            },
+            {
+              "path": "design/contracts/schemas/common.schema.json",
+              "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+            },
+            {
+              "path": "design/contracts/AGENT-CONTRACTS.md",
+              "sha256": "88703446fd3d5e39e1117d79cfea3e9ee0c3d9b2d5d0a12d6380a03b48ac30f0"
+            }
+          ]
+        },
+        "viewBox": [
+          0,
+          0,
+          1240,
+          858
+        ],
+        "nodes": 8,
+        "edges": 7,
+        "edge_paths": 7
+      }
+    },
+    {
+      "name": "core_svg_complete_viewbox",
+      "passed": true
+    },
+    {
+      "name": "core_svg_metadata_current_filter",
+      "passed": true
+    },
+    {
+      "name": "download_contracts-core.png",
+      "passed": true
+    },
+    {
+      "name": "core_png_metadata_current_filter",
+      "passed": true
+    },
+    {
+      "name": "core_png_complete_canvas_ratio",
+      "passed": true,
+      "detail": {
+        "width": 2480,
+        "height": 1716,
+        "viewBox": [
+          0,
+          0,
+          1240,
+          858
+        ]
+      }
+    },
+    {
+      "name": "core_png_decodes_nonblank_diagram",
+      "passed": true,
+      "detail": {
+        "colors": 710,
+        "naturalWidth": 2480,
+        "naturalHeight": 1716
+      }
+    },
+    {
+      "name": "export_fixture_exceeds_viewport",
+      "passed": true
+    },
+    {
+      "name": "download_contracts.svg",
+      "passed": true
+    },
+    {
+      "name": "svg_export_full_nodes_edges",
+      "passed": true,
+      "detail": {
+        "svgInfo": {
+          "metadata": {
+            "model_id": "contracts",
+            "diagram_type": "class",
+            "scope": "design",
+            "status": "docs_ready",
+            "baseline": {
+              "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+              "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+              "contract_version": "1.0.0"
+            },
+            "generated_at": "2026-10-02T09:23:49.476116Z",
+            "exported_at": "2026-10-02T09:41:18.079Z",
+            "filters": {
+              "search": "",
+              "domain": "domain.agent",
+              "entity_type": "feature",
+              "relation_type": "all",
+              "all_contracts": true,
+              "contract_search": ""
+            },
+            "sources": [
+              {
+                "path": "design/contracts/schemas/agent.schema.json",
+                "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+              },
+              {
+                "path": "design/contracts/schemas/message.schema.json",
+                "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+              },
+              {
+                "path": "design/contracts/schemas/common.schema.json",
+                "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+              },
+              {
+                "path": "design/contracts/AGENT-CONTRACTS.md",
+                "sha256": "88703446fd3d5e39e1117d79cfea3e9ee0c3d9b2d5d0a12d6380a03b48ac30f0"
+              }
+            ]
+          },
+          "viewBox": [
+            0,
+            0,
+            1354.719970703125,
+            14191
+          ],
+          "interactive": 505,
+          "nodes": 108,
+          "edges": 397,
+          "edge_paths": 397,
+          "label_leaders": 351,
+          "labels": 1046
+        },
+        "expectedExport": {
+          "viewBox": [
+            0,
+            0,
+            1354.719970703125,
+            14191
+          ],
+          "interactive": 505,
+          "nodes": 108,
+          "edges": 397,
+          "edge_paths": 397,
+          "label_leaders": 351,
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      }
+    },
+    {
+      "name": "svg_export_preserves_displaced_label_leaders",
+      "passed": true,
+      "detail": {
+        "exported": 351,
+        "rendered": 351
+      }
+    },
+    {
+      "name": "svg_export_full_viewbox",
+      "passed": true
+    },
+    {
+      "name": "svg_export_bound_metadata",
+      "passed": true
+    },
+    {
+      "name": "download_contracts.png",
+      "passed": true
+    },
+    {
+      "name": "png_export_bound_metadata",
+      "passed": true
+    },
+    {
+      "name": "png_export_full_canvas_ratio",
+      "passed": true,
+      "detail": {
+        "width": 782,
+        "height": 8192,
+        "wholeRatio": 0.0954633197592224
+      }
+    },
+    {
+      "name": "png_decodes_nonblank_diagram",
+      "passed": true,
+      "detail": {
+        "colors": 1161,
+        "naturalWidth": 782,
+        "naturalHeight": 8192
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_state",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_state",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_responsibility",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_responsibility",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_sequence",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_sequence",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_contracts",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_contracts",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_lineage",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_lineage",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_architecture",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_architecture",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_coverage",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_coverage",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_versions",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_versions",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_knowledge",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_knowledge",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_skills",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_skills",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_canvas_not_occluded_context",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow_context",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "mobile_inspector_opens_and_closes_by_pointer",
+      "passed": true
+    },
+    {
+      "name": "mobile_return_reaches_workspace",
+      "passed": true
+    },
+    {
+      "name": "lazy_workspace_loads_readonly",
+      "passed": true
+    },
+    {
+      "name": "returned_mobile_workspace_no_overflow",
+      "passed": true,
+      "detail": {
+        "content": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "readonly_review_sends_no_runtime_writes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "console_health",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "routes": [
+    {
+      "id": "state",
+      "diagram_type": "state",
+      "interactive_elements": 58
+    },
+    {
+      "id": "responsibility",
+      "diagram_type": "swimlane",
+      "interactive_elements": 16
+    },
+    {
+      "id": "sequence",
+      "diagram_type": "sequence",
+      "interactive_elements": 25
+    },
+    {
+      "id": "contracts",
+      "diagram_type": "class",
+      "interactive_elements": 15
+    },
+    {
+      "id": "lineage",
+      "diagram_type": "lineage",
+      "interactive_elements": 22
+    },
+    {
+      "id": "architecture",
+      "diagram_type": "architecture",
+      "interactive_elements": 66
+    },
+    {
+      "id": "coverage",
+      "diagram_type": "coverage",
+      "interactive_elements": 105
+    },
+    {
+      "id": "versions",
+      "diagram_type": "timeline",
+      "interactive_elements": 7
+    },
+    {
+      "id": "knowledge",
+      "diagram_type": "knowledge",
+      "interactive_elements": 18
+    },
+    {
+      "id": "skills",
+      "diagram_type": "dependency",
+      "interactive_elements": 21
+    },
+    {
+      "id": "context",
+      "diagram_type": "dataflow",
+      "interactive_elements": 21
+    },
+    {
+      "id": "contracts",
+      "diagram_type": "class",
+      "interactive_elements": 15
+    },
+    {
+      "id": "knowledge",
+      "diagram_type": "knowledge",
+      "interactive_elements": 18
+    },
+    {
+      "id": "coverage",
+      "diagram_type": "coverage",
+      "interactive_elements": 105
+    },
+    {
+      "id": "contracts",
+      "diagram_type": "class",
+      "interactive_elements": 15
+    }
+  ],
+  "screenshots": [
+    "/tmp/agent-vue-review-qa/release/review/review-state-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-responsibility-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-sequence-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-contracts-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-lineage-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-architecture-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-coverage-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-versions-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-knowledge-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-skills-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-context-desktop.png",
+    "/tmp/agent-vue-review-qa/release/review/review-source-dialog.png",
+    "/tmp/agent-vue-review-qa/release/review/review-dark.png",
+    "/tmp/agent-vue-review-qa/release/review/review-knowledge-filtered.png",
+    "/tmp/agent-vue-review-qa/release/review/review-coverage-details.png",
+    "/tmp/agent-vue-review-qa/release/review/review-mobile.png",
+    "/tmp/agent-vue-review-qa/release/review/workspace-readonly-mobile.png"
+  ],
+  "exports": [
+    {
+      "svg": "/tmp/agent-vue-review-qa/release/review/exports/knowledge-searched.svg",
+      "metadata": {
+        "model_id": "knowledge",
+        "diagram_type": "knowledge",
+        "scope": "design",
+        "status": "docs_ready",
+        "baseline": {
+          "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+          "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+          "contract_version": "1.0.0"
+        },
+        "generated_at": "2026-10-02T09:23:49.476116Z",
+        "exported_at": "2026-10-02T09:41:13.983Z",
+        "filters": {
+          "search": "Activity 调度、重试与心跳",
+          "domain": "all",
+          "entity_type": "all",
+          "relation_type": "all",
+          "all_contracts": false,
+          "contract_search": ""
+        },
+        "sources": [
+          {
+            "path": "design/_model/entities.yaml",
+            "sha256": "3be88ef8510703d6f15a1b1efb7bcca24786a4adcf0c86915e505d0fe6dc9ef8"
+          },
+          {
+            "path": "design/_model/relations.yaml",
+            "sha256": "07b3b6193ba6152baf5f4ae072c19d4c2713ca316a730a71107fe92fecfcfe3f"
+          },
+          {
+            "path": "design/_model/SCHEMA.md",
+            "sha256": "03e3e2b732cb93f4e58cd9e557d01ac8e8e2efecb222c619984ab1539612c186"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "core_binding_chain",
+      "svg": "/tmp/agent-vue-review-qa/release/review/exports/contracts-core.svg",
+      "png": "/tmp/agent-vue-review-qa/release/review/exports/contracts-core.png",
+      "width": 2480,
+      "height": 1716,
+      "expected": {
+        "viewBox": [
+          0,
+          0,
+          1240,
+          858
+        ],
+        "nodes": 8,
+        "edges": 7,
+        "edge_paths": 7
+      },
+      "metadata": {
+        "model_id": "contracts",
+        "diagram_type": "class",
+        "scope": "design",
+        "status": "docs_ready",
+        "baseline": {
+          "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+          "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+          "contract_version": "1.0.0"
+        },
+        "generated_at": "2026-10-02T09:23:49.476116Z",
+        "exported_at": "2026-10-02T09:41:16.582Z",
+        "filters": {
+          "search": "",
+          "domain": "domain.agent",
+          "entity_type": "feature",
+          "relation_type": "all",
+          "all_contracts": false,
+          "contract_search": ""
+        },
+        "sources": [
+          {
+            "path": "design/contracts/schemas/agent.schema.json",
+            "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+          },
+          {
+            "path": "design/contracts/schemas/message.schema.json",
+            "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+          },
+          {
+            "path": "design/contracts/schemas/common.schema.json",
+            "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+          },
+          {
+            "path": "design/contracts/AGENT-CONTRACTS.md",
+            "sha256": "88703446fd3d5e39e1117d79cfea3e9ee0c3d9b2d5d0a12d6380a03b48ac30f0"
+          }
+        ]
+      }
+    },
+    {
+      "svg": "/tmp/agent-vue-review-qa/release/review/exports/contracts.svg",
+      "png": "/tmp/agent-vue-review-qa/release/review/exports/contracts.png",
+      "width": 782,
+      "height": 8192,
+      "expected": {
+        "viewBox": [
+          0,
+          0,
+          1354.719970703125,
+          14191
+        ],
+        "interactive": 505,
+        "nodes": 108,
+        "edges": 397,
+        "edge_paths": 397,
+        "label_leaders": 351,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "metadata": {
+        "model_id": "contracts",
+        "diagram_type": "class",
+        "scope": "design",
+        "status": "docs_ready",
+        "baseline": {
+          "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+          "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+          "contract_version": "1.0.0"
+        },
+        "generated_at": "2026-10-02T09:23:49.476116Z",
+        "exported_at": "2026-10-02T09:41:18.079Z",
+        "filters": {
+          "search": "",
+          "domain": "domain.agent",
+          "entity_type": "feature",
+          "relation_type": "all",
+          "all_contracts": true,
+          "contract_search": ""
+        },
+        "sources": [
+          {
+            "path": "design/contracts/schemas/agent.schema.json",
+            "sha256": "15db553e630ffb7ca62d431514002b1e65452d9a4f1a3dc49eda540d90ede7c1"
+          },
+          {
+            "path": "design/contracts/schemas/message.schema.json",
+            "sha256": "6d5a0e17f722e52c6f4232919316187e1e3b759441d07dfe4140b5dc4e8bafd6"
+          },
+          {
+            "path": "design/contracts/schemas/common.schema.json",
+            "sha256": "da802ae091fe17aa763c3932ec9d92ac832b8d8941014b9d18f45f9bcfeb34b2"
+          },
+          {
+            "path": "design/contracts/AGENT-CONTRACTS.md",
+            "sha256": "88703446fd3d5e39e1117d79cfea3e9ee0c3d9b2d5d0a12d6380a03b48ac30f0"
+          }
+        ]
+      }
+    }
+  ],
+  "console": [],
+  "runtime_writes": [],
+  "bundle": {
+    "schema_version": 1,
+    "generated_at": "2026-10-02T09:23:49.476116Z",
+    "baseline": {
+      "source_sha256": "51c889d53a694e1047d9a9a168ef2fe753faa50a68519c0ebbcaa59a6895a45b",
+      "invariants_sha256": "dfe0f6eb2a707e640099ffc405d63266e0f457991184e4f5b3e5b68d452a2952",
+      "contract_version": "1.0.0"
+    },
+    "source_count": 128,
+    "sha256": "dd674b3239c1c6c9a3d8949a0c72905715605b313cc37256d9c9ba7417de3ab6"
+  }
+}

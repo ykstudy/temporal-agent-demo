@@ -1,0 +1,1135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentstudio.invalid/runtime/1.0.0/runtime.schema.json",
+  "$defs": {
+    "RuntimeCorrelation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "command_id",
+        "operation_id",
+        "approval_id",
+        "execution_id",
+        "workflow_id",
+        "execution_run_id",
+        "activity_id",
+        "attempt",
+        "attempt_id"
+      ],
+      "properties": {
+        "command_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operation_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "approval_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflow_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_run_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "activity_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "attempt": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "attempt_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "RuntimeParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action",
+        "argument_keys",
+        "summary_hash"
+      ],
+      "properties": {
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "argument_keys": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          }
+        },
+        "summary_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        }
+      }
+    },
+    "RuntimeAuditEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_version",
+        "event_id",
+        "run_id",
+        "sequence",
+        "source_version",
+        "state_sequence",
+        "definition_snapshot_hash",
+        "kind",
+        "step",
+        "correlation",
+        "parameters",
+        "outcome",
+        "elapsed_ms",
+        "evidence_refs",
+        "recorded_at",
+        "previous_hash",
+        "event_hash"
+      ],
+      "properties": {
+        "runtime_version": {
+          "const": "1.0.0"
+        },
+        "event_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        },
+        "kind": {
+          "enum": [
+            "run_created",
+            "business_input",
+            "command_accepted",
+            "command_processed",
+            "command_rejected",
+            "command_result_unknown",
+            "decision_proposed",
+            "authorization",
+            "approval",
+            "operation",
+            "verification",
+            "run_terminal",
+            "activity_started",
+            "activity_finished",
+            "recovery"
+          ]
+        },
+        "step": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "correlation": {
+          "$ref": "#/$defs/RuntimeCorrelation"
+        },
+        "parameters": {
+          "$ref": "#/$defs/RuntimeParameters"
+        },
+        "outcome": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "elapsed_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ObjectRef"
+          }
+        },
+        "recorded_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "previous_hash": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        }
+      }
+    },
+    "RuntimeActivityAttempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attempt_id",
+        "run_id",
+        "mode",
+        "activity_id",
+        "activity_type",
+        "step",
+        "command_id",
+        "workflow_id",
+        "execution_run_id",
+        "attempt",
+        "started_at",
+        "completed_at",
+        "status",
+        "error_code",
+        "elapsed_ms",
+        "last_heartbeat_at",
+        "heartbeat_source",
+        "heartbeat_status"
+      ],
+      "properties": {
+        "attempt_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "mode": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ExecutionMode"
+        },
+        "activity_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "activity_type": {
+          "enum": [
+            "ProcessCommand",
+            "ExecuteStep"
+          ]
+        },
+        "step": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "command_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflow_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_run_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "started_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "completed_at": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "running",
+            "succeeded",
+            "failed",
+            "unknown"
+          ]
+        },
+        "error_code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "elapsed_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_heartbeat_at": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "heartbeat_source": {
+          "enum": [
+            "process",
+            "temporal",
+            "unavailable"
+          ]
+        },
+        "heartbeat_status": {
+          "enum": [
+            "fresh",
+            "stale",
+            "unavailable",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+    "RuntimeCheckpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "availability",
+        "reason",
+        "sampled_at",
+        "checkpoint_at",
+        "workflow_id",
+        "execution_run_id",
+        "state",
+        "source_version",
+        "state_sequence",
+        "commands_processed"
+      ],
+      "properties": {
+        "availability": {
+          "enum": [
+            "available",
+            "stale",
+            "unavailable",
+            "not_applicable"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "sampled_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "checkpoint_at": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflow_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_run_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/RunState"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_version": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state_sequence": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "commands_processed": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "RuntimeMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "availability",
+        "successful_runs",
+        "failed_runs",
+        "activity_retries",
+        "verification_failures",
+        "effective_business_rounds",
+        "total_elapsed_ms",
+        "first_terminal_at",
+        "first_terminal_state",
+        "as_of",
+        "basis"
+      ],
+      "properties": {
+        "availability": {
+          "enum": [
+            "complete",
+            "unavailable"
+          ]
+        },
+        "successful_runs": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "failed_runs": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "activity_retries": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "verification_failures": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_business_rounds": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "total_elapsed_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_terminal_at": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_terminal_state": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/RunState"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "as_of": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "basis": {
+          "const": "first_terminal_actual_attempt_distinct_report_accepted_requirement_v1"
+        }
+      }
+    },
+    "RuntimeFailureDiagnosis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "category",
+        "step",
+        "command_id",
+        "operation_id",
+        "affected_refs",
+        "retryable",
+        "missing_requirements",
+        "suggested_action",
+        "reconciliation_url",
+        "message",
+        "recorded_at"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "category": {
+          "enum": [
+            "input",
+            "model_protocol",
+            "authorization",
+            "tool",
+            "infrastructure",
+            "business_verification",
+            "unknown_result",
+            "budget",
+            "user_cancelled"
+          ]
+        },
+        "step": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "command_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operation_id": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "affected_refs": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ObjectRef"
+          }
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "missing_requirements": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "suggested_action": {
+          "enum": [
+            "correct_input",
+            "revise_and_reapprove",
+            "restore_dependency",
+            "query_original_result",
+            "new_run",
+            "none"
+          ]
+        },
+        "reconciliation_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "recorded_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        }
+      }
+    },
+    "RuntimeAuditTrail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_version",
+        "run_id",
+        "run_ref",
+        "coverage",
+        "events",
+        "head_hash",
+        "audit_hash",
+        "observed_at"
+      ],
+      "properties": {
+        "runtime_version": {
+          "const": "1.0.0"
+        },
+        "run_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "run_ref": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ObjectRef"
+        },
+        "coverage": {
+          "enum": [
+            "complete",
+            "unavailable"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "maxItems": 32768,
+          "items": {
+            "$ref": "#/$defs/RuntimeAuditEvent"
+          }
+        },
+        "head_hash": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "audit_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        },
+        "observed_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        }
+      }
+    },
+    "RuntimeBudgetStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy",
+        "ledger_ref",
+        "execution_deadline",
+        "context_measurement"
+      ],
+      "properties": {
+        "policy": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/agent.schema.json#/$defs/BudgetPolicy"
+        },
+        "ledger_ref": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_deadline": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "context_measurement": {
+          "const": "conservative_utf8_byte_bound_plus_frozen_output_and_protocol_reserves"
+        }
+      }
+    },
+    "RuntimeView": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_version",
+        "run_id",
+        "run_ref",
+        "modes",
+        "observed_at",
+        "checkpoint",
+        "activity_attempts",
+        "metrics",
+        "diagnosis",
+        "budget",
+        "audit_coverage",
+        "audit_head_hash",
+        "view_hash"
+      ],
+      "properties": {
+        "runtime_version": {
+          "const": "1.0.0"
+        },
+        "run_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "run_ref": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ObjectRef"
+        },
+        "modes": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Modes"
+        },
+        "observed_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "checkpoint": {
+          "$ref": "#/$defs/RuntimeCheckpoint"
+        },
+        "activity_attempts": {
+          "type": "array",
+          "maxItems": 4096,
+          "items": {
+            "$ref": "#/$defs/RuntimeActivityAttempt"
+          }
+        },
+        "metrics": {
+          "$ref": "#/$defs/RuntimeMetrics"
+        },
+        "diagnosis": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RuntimeFailureDiagnosis"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "budget": {
+          "$ref": "#/$defs/RuntimeBudgetStatus"
+        },
+        "audit_coverage": {
+          "enum": [
+            "complete",
+            "unavailable"
+          ]
+        },
+        "audit_head_hash": {
+          "anyOf": [
+            {
+              "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "view_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        }
+      }
+    },
+    "RuntimeHealthCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "status",
+        "reason",
+        "checked_at",
+        "affected_capabilities"
+      ],
+      "properties": {
+        "name": {
+          "enum": [
+            "api",
+            "storage",
+            "temporal",
+            "worker",
+            "toolchain",
+            "sandbox",
+            "model_configuration",
+            "gitlab_configuration"
+          ]
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "not_ready",
+            "not_applicable",
+            "configured_unverified"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "checked_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "affected_capabilities": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          }
+        }
+      }
+    },
+    "RuntimeHealth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_version",
+        "live",
+        "ready",
+        "stopping",
+        "instance_id",
+        "execution_mode",
+        "storage_ownership",
+        "checked_at",
+        "checks",
+        "affected_run_ids",
+        "health_hash"
+      ],
+      "properties": {
+        "runtime_version": {
+          "const": "1.0.0"
+        },
+        "live": {
+          "type": "boolean"
+        },
+        "ready": {
+          "type": "boolean"
+        },
+        "stopping": {
+          "type": "boolean"
+        },
+        "instance_id": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+        },
+        "execution_mode": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/ExecutionMode"
+        },
+        "storage_ownership": {
+          "const": "single_writer_locked_directory"
+        },
+        "checked_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "checks": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/$defs/RuntimeHealthCheck"
+          }
+        },
+        "affected_run_ids": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+          }
+        },
+        "health_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        }
+      }
+    },
+    "RuntimeServiceMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_version",
+        "observed_at",
+        "included_run_ids",
+        "excluded_run_ids",
+        "successful_runs",
+        "failed_runs",
+        "activity_retries",
+        "verification_failures",
+        "effective_business_rounds",
+        "total_elapsed_ms",
+        "metrics_hash"
+      ],
+      "properties": {
+        "runtime_version": {
+          "const": "1.0.0"
+        },
+        "observed_at": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Timestamp"
+        },
+        "included_run_ids": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+          }
+        },
+        "excluded_run_ids": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Id"
+          }
+        },
+        "successful_runs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "failed_runs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "activity_retries": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "verification_failures": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "effective_business_rounds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "total_elapsed_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "metrics_hash": {
+          "$ref": "https://agentstudio.invalid/contracts/1.4.0/common.schema.json#/$defs/Hash"
+        }
+      }
+    }
+  }
+}

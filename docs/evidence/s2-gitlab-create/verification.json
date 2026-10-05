@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-02",
+  "scope": "controlled create_repository module with actual mock HTTP; synthetic predecessor workspace/tool receipts; not live GitLab or S2 job acceptance",
+  "initial_tests_seconds": 174.73,
+  "final_changes_tests_seconds": 71.884,
+  "race_seconds": 173.723,
+  "observed_normal_create": {
+    "POST": 1,
+    "GET": 3
+  },
+  "observed_lost_response_after_restart": {
+    "POST": 1,
+    "GET": 3
+  },
+  "observed_crash_after_admission_and_send": {
+    "POST": 1,
+    "GET": 1
+  },
+  "not_implemented": [
+    "push_repository",
+    "trigger_ci"
+  ],
+  "source_sha256": {
+    "backend/internal/agent/control_gitlab.go": "1b36ca4aa6f2f8a0ab5afd6412c22848ac1ee37755bb8f8aee3e74f2c881bb15",
+    "backend/internal/agent/control_gitlab_test.go": "f2684049aa47f6cf6ad2e1a376e85c42f85e094ca839a376e21980520bb61e6f",
+    "docs/analysis/S2-CONTROLLED-GITLAB.md": "ba679a753f4e6adf5cf385148ecc6f4ad9cc2c29846e79ddda3e9cc886d40118"
+  }
+}

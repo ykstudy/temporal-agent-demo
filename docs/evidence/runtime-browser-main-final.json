@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-04T17:58:31.345Z",
+  "browser_path": "Playwright: Browser plugin not available",
+  "url": "http://127.0.0.1:18172",
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "project": "browser-v2-6530048",
+  "run_id": "run_fb82a839cccf442ba2e5df780d5df8fe",
+  "checks": [
+    {
+      "name": "identity_not_blank",
+      "passed": true
+    },
+    {
+      "name": "P1_before_generation",
+      "passed": true
+    },
+    {
+      "name": "actual_frozen_preview",
+      "passed": true
+    },
+    {
+      "name": "old_card_bound_to_original",
+      "passed": true
+    },
+    {
+      "name": "one_current_confirmation",
+      "passed": true
+    },
+    {
+      "name": "real_DONE_complete_checks",
+      "passed": true
+    },
+    {
+      "name": "registered_file_modal",
+      "passed": true
+    },
+    {
+      "name": "verified_zip_download",
+      "passed": true
+    },
+    {
+      "name": "narrow_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "new_Run_requires_new_approval",
+      "passed": true
+    },
+    {
+      "name": "no_framework_overlay",
+      "passed": true
+    },
+    {
+      "name": "console_clean",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

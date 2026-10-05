@@ -1,0 +1,2386 @@
+{
+  "view": {
+    "runtime_version": "1.0.0",
+    "run_id": "s2_f469ab90c9_crash",
+    "run_ref": {
+      "object_type": "run",
+      "object_id": "s2_f469ab90c9_crash",
+      "object_version": 62,
+      "source_version": 2,
+      "hash": "e860e351ca4a9f9153650b6f789fd845bd997dc35eefb431bae4c068e5b1254e"
+    },
+    "modes": {
+      "execution_mode": "temporal",
+      "decision_mode": "rules",
+      "delivery_mode": "local"
+    },
+    "observed_at": "2026-10-04T17:55:03.885818Z",
+    "checkpoint": {
+      "availability": "stale",
+      "reason": "checkpoint_differs_from_durable_snapshot",
+      "sampled_at": "2026-10-04T17:55:03.885818Z",
+      "checkpoint_at": "2026-10-04T17:38:45.008267Z",
+      "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+      "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+      "state": "CANCELLED",
+      "source_version": 2,
+      "state_sequence": 56,
+      "commands_processed": 5
+    },
+    "activity_attempts": [
+      {
+        "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "11",
+        "activity_type": "ProcessCommand",
+        "step": "command",
+        "command_id": "initial_6dfef24d19ab3cdcc97e",
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:36:32.104411Z",
+        "completed_at": "2026-10-04T17:36:34.729562Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 2625,
+        "last_heartbeat_at": "2026-10-04T17:36:32.275643Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_e33772968dad863d465e04fde45efa6737129789",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "22",
+        "activity_type": "ProcessCommand",
+        "step": "command",
+        "command_id": "approve_crash",
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:36:35.799755Z",
+        "completed_at": "2026-10-04T17:36:37.849304Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 2049,
+        "last_heartbeat_at": "2026-10-04T17:36:36.181519Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "28",
+        "activity_type": "ExecuteStep",
+        "step": "scaffold",
+        "command_id": null,
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:36:38.176596Z",
+        "completed_at": "2026-10-04T17:36:44.671162Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 6494,
+        "last_heartbeat_at": "2026-10-04T17:36:38.478948Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "35",
+        "activity_type": "ExecuteStep",
+        "step": "skills",
+        "command_id": null,
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:36:45.229633Z",
+        "completed_at": "2026-10-04T17:36:59.202356Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 13972,
+        "last_heartbeat_at": "2026-10-04T17:36:55.766027Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_2368971a824051d1689534bc4f849eaa4f5a2cb1",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "41",
+        "activity_type": "ExecuteStep",
+        "step": "verify",
+        "command_id": null,
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:36:59.788595Z",
+        "completed_at": "2026-10-04T17:37:08.193557Z",
+        "status": "unknown",
+        "error_code": "activity_interrupted",
+        "elapsed_ms": 8404,
+        "last_heartbeat_at": "2026-10-04T17:36:59.788595Z",
+        "heartbeat_source": "unavailable",
+        "heartbeat_status": "unavailable"
+      },
+      {
+        "attempt_id": "activity_97acb18934813777e66130b5cb547a1acaa4aae5",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "41",
+        "activity_type": "ExecuteStep",
+        "step": "verify",
+        "command_id": null,
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 2,
+        "started_at": "2026-10-04T17:38:31.800529Z",
+        "completed_at": "2026-10-04T17:38:32.441119Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 640,
+        "last_heartbeat_at": "2026-10-04T17:38:32.389833Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_5dea65a8c3e4278e1365aa03bdd97863700071b4",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "51",
+        "activity_type": "ProcessCommand",
+        "step": "command",
+        "command_id": "resume_unknown",
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:38:33.219528Z",
+        "completed_at": "2026-10-04T17:38:36.205569Z",
+        "status": "failed",
+        "error_code": "reconciliation_required",
+        "elapsed_ms": 2986,
+        "last_heartbeat_at": "2026-10-04T17:38:33.825616Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_ce4625c5050101251cd5f197658469a0b38a5272",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "62",
+        "activity_type": "ProcessCommand",
+        "step": "command",
+        "command_id": "cancel_crash",
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:38:41.20637Z",
+        "completed_at": "2026-10-04T17:38:44.400942Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 3194,
+        "last_heartbeat_at": "2026-10-04T17:38:41.847073Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      },
+      {
+        "attempt_id": "activity_e2a8ba94bf012b1521b23e4eda72bd015d39aaa3",
+        "run_id": "s2_f469ab90c9_crash",
+        "mode": "temporal",
+        "activity_id": "73",
+        "activity_type": "ProcessCommand",
+        "step": "command",
+        "command_id": "redo_crash",
+        "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+        "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+        "attempt": 1,
+        "started_at": "2026-10-04T17:38:45.774793Z",
+        "completed_at": "2026-10-04T17:38:53.373054Z",
+        "status": "succeeded",
+        "error_code": null,
+        "elapsed_ms": 7598,
+        "last_heartbeat_at": "2026-10-04T17:38:46.38354Z",
+        "heartbeat_source": "process",
+        "heartbeat_status": "not_applicable"
+      }
+    ],
+    "metrics": {
+      "availability": "complete",
+      "successful_runs": 0,
+      "failed_runs": 0,
+      "activity_retries": 1,
+      "verification_failures": 0,
+      "effective_business_rounds": 1,
+      "total_elapsed_ms": 132146,
+      "first_terminal_at": "2026-10-04T17:38:43.41813Z",
+      "first_terminal_state": "CANCELLED",
+      "as_of": "2026-10-04T17:55:03.885818Z",
+      "basis": "first_terminal_actual_attempt_distinct_report_accepted_requirement_v1"
+    },
+    "diagnosis": {
+      "code": "operation_result_unknown",
+      "category": "unknown_result",
+      "step": "verify",
+      "command_id": null,
+      "operation_id": "op_53807d41cf0c53b120f1f8a8cf176b4f",
+      "affected_refs": [],
+      "retryable": false,
+      "missing_requirements": [
+        "按原operation身份核实准确副作用",
+        "核实仍须符合冻结读取预算"
+      ],
+      "suggested_action": "query_original_result",
+      "reconciliation_url": "/api/runs/s2_f469ab90c9_crash/decision-audit",
+      "message": "原外部或工具尝试结果尚未核实；不表示未执行或已回滚",
+      "recorded_at": "2026-10-04T17:38:53.373371Z"
+    },
+    "budget": {
+      "policy": {
+        "max_commands": 256,
+        "max_model_attempts": 32,
+        "max_files": 128,
+        "max_artifact_bytes": 2097152,
+        "max_step_attempts": 3,
+        "max_tool_seconds": 720,
+        "max_execution_seconds": 7200,
+        "max_ci_wait_seconds": 1800,
+        "max_ci_poll_attempts": 128,
+        "max_reconciliation_seconds": 1800,
+        "max_reconciliation_attempts": 64
+      },
+      "ledger_ref": {
+        "object_type": "budget",
+        "object_id": "s2_f469ab90c9_crash",
+        "object_version": 24,
+        "source_version": 2,
+        "hash": "fa17ce5298250c9b7de11fa847d1e1546a92aa0c709e8ba5cb10f11e32cc48a9"
+      },
+      "execution_deadline": "2026-10-04T19:36:39.144498Z",
+      "context_measurement": "conservative_utf8_byte_bound_plus_frozen_output_and_protocol_reserves"
+    },
+    "audit_coverage": "complete",
+    "audit_head_hash": "45d8b2ead6c57b761d8aef9688f1f7d835f5fc665f5db6eb8242a25bc31dd38c",
+    "view_hash": "f0f68a204446784da701e08670a115351a09a58b504a07f4bbe60e4bc20f733d"
+  },
+  "audit": {
+    "runtime_version": "1.0.0",
+    "run_id": "s2_f469ab90c9_crash",
+    "run_ref": {
+      "object_type": "run",
+      "object_id": "s2_f469ab90c9_crash",
+      "object_version": 62,
+      "source_version": 2,
+      "hash": "e860e351ca4a9f9153650b6f789fd845bd997dc35eefb431bae4c068e5b1254e"
+    },
+    "coverage": "complete",
+    "events": [
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_1",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 1,
+        "source_version": 1,
+        "state_sequence": 1,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "run_created",
+        "step": "control",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "run_created",
+          "argument_keys": [],
+          "summary_hash": "4f277abcdf50abb9bf6d8e7f7ed540518aedef436135b9fcbb101b84018220cb"
+        },
+        "outcome": "INTAKE",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:31.271947Z",
+        "previous_hash": null,
+        "event_hash": "d1507c90b5b605939b734fbc7de5a01f495b6f22a697bd3737004183f26778c6"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_2",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 2,
+        "source_version": 1,
+        "state_sequence": 2,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_accepted",
+        "step": "command",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "message",
+          "argument_keys": [],
+          "summary_hash": "8c350b45e63f8a4ea7583cac5d51484a1e5ee742feba195d94ccb82aa51b126a"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:31.833313Z",
+        "previous_hash": "d1507c90b5b605939b734fbc7de5a01f495b6f22a697bd3737004183f26778c6",
+        "event_hash": "42d99b5fff72e90eeae8e5ce34cc861b274f82250d22d8b8cd1b9d2cfd1ef4be"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_3",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 3,
+        "source_version": 1,
+        "state_sequence": 3,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "command",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "11",
+          "attempt": 1,
+          "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:32.105585Z",
+        "previous_hash": "42d99b5fff72e90eeae8e5ce34cc861b274f82250d22d8b8cd1b9d2cfd1ef4be",
+        "event_hash": "05b4b3092367dd2eac806783325528f16a455fc4f0a2c3de294c333a9d7414f1"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_4",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 4,
+        "source_version": 1,
+        "state_sequence": 5,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "business_input",
+        "step": "control",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "11",
+          "attempt": 1,
+          "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d"
+        },
+        "parameters": {
+          "action": "business_input",
+          "argument_keys": [],
+          "summary_hash": "5ebfba3d4b16d5ed49771ef7ba3c116177f64752970d4bd6589b6f85f3066c83"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "message",
+            "object_id": "initial_6dfef24d19ab3cdcc97e",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "6d020a59c1ad7798abb62ab27a6c23a3fb2cbfbca31c33ecc9ca2e4d0a2bed9f"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:32.530146Z",
+        "previous_hash": "05b4b3092367dd2eac806783325528f16a455fc4f0a2c3de294c333a9d7414f1",
+        "event_hash": "28ddbec8d02810fbf1464e6d721f594be9003de4c77b703d091f0853e293d4f9"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_5",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 5,
+        "source_version": 2,
+        "state_sequence": 6,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_processed",
+        "step": "command",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "11",
+          "attempt": 1,
+          "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d"
+        },
+        "parameters": {
+          "action": "message",
+          "argument_keys": [],
+          "summary_hash": "8c350b45e63f8a4ea7583cac5d51484a1e5ee742feba195d94ccb82aa51b126a"
+        },
+        "outcome": "processed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_6d76b35a1904bb25a6aa",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "fe240afe5d26fa99586123cc8ad4d6227689da02a2e6a2393754c2e2e07a1382"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:33.653386Z",
+        "previous_hash": "28ddbec8d02810fbf1464e6d721f594be9003de4c77b703d091f0853e293d4f9",
+        "event_hash": "47992b806472daf75fd7cd17a0aa6dbdc3a452779330a8155308b5d260e1ab84"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_6",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 6,
+        "source_version": 2,
+        "state_sequence": 6,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "decision_proposed",
+        "step": "control",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "11",
+          "attempt": 1,
+          "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d"
+        },
+        "parameters": {
+          "action": "decision_proposed",
+          "argument_keys": [],
+          "summary_hash": "90819a1d047ba806b381b9eac26c3c3cb3216a053289a81078d96d0136db84c1"
+        },
+        "outcome": "suggested",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_6d76b35a1904bb25a6aa",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "fe240afe5d26fa99586123cc8ad4d6227689da02a2e6a2393754c2e2e07a1382"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:33.633718Z",
+        "previous_hash": "47992b806472daf75fd7cd17a0aa6dbdc3a452779330a8155308b5d260e1ab84",
+        "event_hash": "f63f6dea3476dcd261209778455adaabdca89493728cbb4508f822483c95a9c3"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_7",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 7,
+        "source_version": 2,
+        "state_sequence": 6,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "authorization",
+        "step": "control",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "11",
+          "attempt": 1,
+          "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d"
+        },
+        "parameters": {
+          "action": "authorization",
+          "argument_keys": [],
+          "summary_hash": "edb3162aed8cf190bb245d9679b901afb9a48baf7091dea59903b82b09b9f79a"
+        },
+        "outcome": "allowed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "validation",
+            "object_id": "validation_ed40789d29bb1b0c52c67deab70f2b4c",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "d23967cbf4e7b410fef2b3a8c05dc9411edd01d99c9fd6ab1d108c25ad54f466"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:33.633718Z",
+        "previous_hash": "f63f6dea3476dcd261209778455adaabdca89493728cbb4508f822483c95a9c3",
+        "event_hash": "9db53e83ad25e13dcd1406369b946e0cbccdbc18878f570ce21b816fe1a8af15"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_8",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 8,
+        "source_version": 2,
+        "state_sequence": 7,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "command",
+        "correlation": {
+          "command_id": "initial_6dfef24d19ab3cdcc97e",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "11",
+          "attempt": 1,
+          "attempt_id": "activity_364fa2cd1ebc93ff26b674f34a70b84c9cb6bb1d"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 2625,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:34.729569Z",
+        "previous_hash": "9db53e83ad25e13dcd1406369b946e0cbccdbc18878f570ce21b816fe1a8af15",
+        "event_hash": "93dcfd88bf1973843610d09583c07b48e375b7ed532f0badd9958d2d84a997d4"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_9",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 9,
+        "source_version": 2,
+        "state_sequence": 8,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_accepted",
+        "step": "command",
+        "correlation": {
+          "command_id": "approve_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "accept",
+          "argument_keys": [],
+          "summary_hash": "43ccdb45a11b31220bc14024a7e9c87021358a644fdd872a77dff40c12eeba28"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:35.498117Z",
+        "previous_hash": "93dcfd88bf1973843610d09583c07b48e375b7ed532f0badd9958d2d84a997d4",
+        "event_hash": "21772a88a9e6ea1e2da3533a0af2e7b664028ce0890eeb149c9b1544ca25b547"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_10",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 10,
+        "source_version": 2,
+        "state_sequence": 9,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "command",
+        "correlation": {
+          "command_id": "approve_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "22",
+          "attempt": 1,
+          "attempt_id": "activity_e33772968dad863d465e04fde45efa6737129789"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:35.805095Z",
+        "previous_hash": "21772a88a9e6ea1e2da3533a0af2e7b664028ce0890eeb149c9b1544ca25b547",
+        "event_hash": "1bafefe04682d29222390918d1ee7615b50390567b4f85c8fd5e48c6d8fbc765"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_11",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 11,
+        "source_version": 2,
+        "state_sequence": 12,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_processed",
+        "step": "command",
+        "correlation": {
+          "command_id": "approve_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "22",
+          "attempt": 1,
+          "attempt_id": "activity_e33772968dad863d465e04fde45efa6737129789"
+        },
+        "parameters": {
+          "action": "accept",
+          "argument_keys": [],
+          "summary_hash": "43ccdb45a11b31220bc14024a7e9c87021358a644fdd872a77dff40c12eeba28"
+        },
+        "outcome": "processed",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:37.291474Z",
+        "previous_hash": "1bafefe04682d29222390918d1ee7615b50390567b4f85c8fd5e48c6d8fbc765",
+        "event_hash": "3231c7b725ea8cc5025c780a46e6b2312ca196e8b265198f1e74b863099cfc38"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_12",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 12,
+        "source_version": 2,
+        "state_sequence": 12,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "approval",
+        "step": "control",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "22",
+          "attempt": 1,
+          "attempt_id": "activity_e33772968dad863d465e04fde45efa6737129789"
+        },
+        "parameters": {
+          "action": "approval",
+          "argument_keys": [],
+          "summary_hash": "b9d9d6c3cd242d6a4560ef0877c756f027708561161b65393ff01c8d98d53711"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:37.27556Z",
+        "previous_hash": "3231c7b725ea8cc5025c780a46e6b2312ca196e8b265198f1e74b863099cfc38",
+        "event_hash": "ca6ee03e5afa3e8666f911ab0c34985b1da6e607ef43245d85ee036ae1ed661c"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_13",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 13,
+        "source_version": 2,
+        "state_sequence": 13,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "command",
+        "correlation": {
+          "command_id": "approve_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "22",
+          "attempt": 1,
+          "attempt_id": "activity_e33772968dad863d465e04fde45efa6737129789"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 2049,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:37.849319Z",
+        "previous_hash": "ca6ee03e5afa3e8666f911ab0c34985b1da6e607ef43245d85ee036ae1ed661c",
+        "event_hash": "61061d883a0fa734b3df1eef0fbcf4e985e034b50648f87d73e8a72060e8a136"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_14",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 14,
+        "source_version": 2,
+        "state_sequence": 14,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "scaffold",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:38.181276Z",
+        "previous_hash": "61061d883a0fa734b3df1eef0fbcf4e985e034b50648f87d73e8a72060e8a136",
+        "event_hash": "8d499b89b7f5e7b300ed59882c5b039cdf7a8749606410802643a6569fd51908"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_15",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 15,
+        "source_version": 2,
+        "state_sequence": 17,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "decision_proposed",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_136c87c10a0a91e39d2b2a9b86c3c4ff",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "decision_proposed",
+          "argument_keys": [],
+          "summary_hash": "90819a1d047ba806b381b9eac26c3c3cb3216a053289a81078d96d0136db84c1"
+        },
+        "outcome": "suggested",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_6c86595be3b3a68af012",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "6971bb05e99109f7836995c803a086a7a59cb9996db948a2b61610de94af79b8"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:39.875043Z",
+        "previous_hash": "8d499b89b7f5e7b300ed59882c5b039cdf7a8749606410802643a6569fd51908",
+        "event_hash": "2201a64839c06af4b309ce3512405f29658238204ef13a222f841b1a8692a6f2"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_16",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 16,
+        "source_version": 2,
+        "state_sequence": 17,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "authorization",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_136c87c10a0a91e39d2b2a9b86c3c4ff",
+          "operation_id": "op_af92ade1644409e58d80cdfdd91aa7da",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_e9d0d6c11e59367038d5767394f4b883",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "authorization",
+          "argument_keys": [],
+          "summary_hash": "edb3162aed8cf190bb245d9679b901afb9a48baf7091dea59903b82b09b9f79a"
+        },
+        "outcome": "allowed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "validation",
+            "object_id": "validation_868bae28dc1db65f078c3a15901967eb",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "95dce6ad84a0fcbe7cb0fe9d2f33a398c8d9cf3d2b2d942bba827b887613e9c1"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:39.875043Z",
+        "previous_hash": "2201a64839c06af4b309ce3512405f29658238204ef13a222f841b1a8692a6f2",
+        "event_hash": "21de9cef817c552fdc00aa683c4d3a239ef7860087ee154650aa9d1f47cfa8e9"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_17",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 17,
+        "source_version": 2,
+        "state_sequence": 17,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_136c87c10a0a91e39d2b2a9b86c3c4ff",
+          "operation_id": "op_af92ade1644409e58d80cdfdd91aa7da",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_e9d0d6c11e59367038d5767394f4b883",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "ready",
+        "elapsed_ms": 0,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:39.875043Z",
+        "previous_hash": "21de9cef817c552fdc00aa683c4d3a239ef7860087ee154650aa9d1f47cfa8e9",
+        "event_hash": "00c4257228b7cc82435b0fe5ee033b526d32a8910aa3b03fa5a63f1559083bfa"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_18",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 18,
+        "source_version": 2,
+        "state_sequence": 18,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "execution_e9d0d6c11e59367038d5767394f4b883",
+        "correlation": {
+          "command_id": "schedule_136c87c10a0a91e39d2b2a9b86c3c4ff",
+          "operation_id": "op_af92ade1644409e58d80cdfdd91aa7da",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_e9d0d6c11e59367038d5767394f4b883",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "sent",
+        "elapsed_ms": 1364,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:40.957887Z",
+        "previous_hash": "00c4257228b7cc82435b0fe5ee033b526d32a8910aa3b03fa5a63f1559083bfa",
+        "event_hash": "3c7cef487e5c3f58007529e4c27965602fce064b211811d38e0abf52ca94c3f9"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_19",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 19,
+        "source_version": 2,
+        "state_sequence": 19,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_136c87c10a0a91e39d2b2a9b86c3c4ff",
+          "operation_id": "op_af92ade1644409e58d80cdfdd91aa7da",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_e9d0d6c11e59367038d5767394f4b883",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "verified",
+        "elapsed_ms": 2348,
+        "evidence_refs": [
+          {
+            "object_type": "workspace",
+            "object_id": "workspace_receipt_32b8f6afccbcf0c0e0c66789c30e1ef9",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "2e676a564b7981dc71818576bd47c62d27b5c0f6a95477fb2644345c8ea2697a"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:41.951006Z",
+        "previous_hash": "3c7cef487e5c3f58007529e4c27965602fce064b211811d38e0abf52ca94c3f9",
+        "event_hash": "77c260de748d0c3d80b2c146330849ff936d27e48fe8aad333caa3ea50c1b5e8"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_20",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 20,
+        "source_version": 2,
+        "state_sequence": 21,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "decision_proposed",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_d7f1502377595feb1c446b6849f9bba4",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "decision_proposed",
+          "argument_keys": [],
+          "summary_hash": "90819a1d047ba806b381b9eac26c3c3cb3216a053289a81078d96d0136db84c1"
+        },
+        "outcome": "suggested",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_fc92ba622f9d4f8f9f0c",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "858bd265c425180e52ca992a1f77019b890a10ffc58fa12884c4195b821ab311"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:43.787345Z",
+        "previous_hash": "77c260de748d0c3d80b2c146330849ff936d27e48fe8aad333caa3ea50c1b5e8",
+        "event_hash": "3f5e572be8d4ae7e772b38aa6d931d06e74c72c7c53cb556ba0733593080a82f"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_21",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 21,
+        "source_version": 2,
+        "state_sequence": 21,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "authorization",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_d7f1502377595feb1c446b6849f9bba4",
+          "operation_id": "op_92c69fdd9ff6f993ecbcd4f756a126af",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_ffa84070411eab9be38000ac75369f71",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "authorization",
+          "argument_keys": [],
+          "summary_hash": "edb3162aed8cf190bb245d9679b901afb9a48baf7091dea59903b82b09b9f79a"
+        },
+        "outcome": "allowed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "validation",
+            "object_id": "validation_ca5239ed4a9f857575ff7fe7cf6354a8",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "366e3a5a07a1785d5a00638b19253ea50bff31d3dddba7a1065d8537ef60a1fc"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:43.787345Z",
+        "previous_hash": "3f5e572be8d4ae7e772b38aa6d931d06e74c72c7c53cb556ba0733593080a82f",
+        "event_hash": "2097e7fbd2af4a43f19923b200a3b3e3a08e8139b3b3631b72b4dac8984daa61"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_22",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 22,
+        "source_version": 2,
+        "state_sequence": 21,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_d7f1502377595feb1c446b6849f9bba4",
+          "operation_id": "op_92c69fdd9ff6f993ecbcd4f756a126af",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_ffa84070411eab9be38000ac75369f71",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "ready",
+        "elapsed_ms": 0,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:43.787345Z",
+        "previous_hash": "2097e7fbd2af4a43f19923b200a3b3e3a08e8139b3b3631b72b4dac8984daa61",
+        "event_hash": "a05850ef2b0aa8724caa9b8daa2db675d7d289f050ea1f929d2dbbc70d296f4b"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_23",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 23,
+        "source_version": 2,
+        "state_sequence": 22,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "scaffold",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "28",
+          "attempt": 1,
+          "attempt_id": "activity_875d818bc4c1ac4364e6657857445b9d47efcc08"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 6494,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:44.671168Z",
+        "previous_hash": "a05850ef2b0aa8724caa9b8daa2db675d7d289f050ea1f929d2dbbc70d296f4b",
+        "event_hash": "7e560c3eeeaa18a4d8a0ebe69d91cfa3a35022c174ff31258a504251e27360f8"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_24",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 24,
+        "source_version": 2,
+        "state_sequence": 23,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "skills",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:45.240043Z",
+        "previous_hash": "7e560c3eeeaa18a4d8a0ebe69d91cfa3a35022c174ff31258a504251e27360f8",
+        "event_hash": "174794944bc4f78c0d3466c7c79a4cdae8a86fcedf2ad4f7d764dabff3be41ec"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_25",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 25,
+        "source_version": 2,
+        "state_sequence": 24,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "execution_ffa84070411eab9be38000ac75369f71",
+        "correlation": {
+          "command_id": "schedule_d7f1502377595feb1c446b6849f9bba4",
+          "operation_id": "op_92c69fdd9ff6f993ecbcd4f756a126af",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_ffa84070411eab9be38000ac75369f71",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "sent",
+        "elapsed_ms": 2843,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:46.318844Z",
+        "previous_hash": "174794944bc4f78c0d3466c7c79a4cdae8a86fcedf2ad4f7d764dabff3be41ec",
+        "event_hash": "fbbf88fc64b20561452567d1db0926079149e1562b5b69ab1ad5dfd6ec5ccb12"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_26",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 26,
+        "source_version": 2,
+        "state_sequence": 25,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_d7f1502377595feb1c446b6849f9bba4",
+          "operation_id": "op_92c69fdd9ff6f993ecbcd4f756a126af",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_ffa84070411eab9be38000ac75369f71",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "verified",
+        "elapsed_ms": 3524,
+        "evidence_refs": [
+          {
+            "object_type": "workspace",
+            "object_id": "workspace_receipt_9041b19cfcd36e8a2db6cfba1472be10",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "f2db88d0b6c0a8642da1e1e55a6c95652c02d700e04a3c188f75fce74d8976b3"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:47.010927Z",
+        "previous_hash": "fbbf88fc64b20561452567d1db0926079149e1562b5b69ab1ad5dfd6ec5ccb12",
+        "event_hash": "035a7319b735ca11e24a14387879dcbf02c96abc3d91b95e316673903b63da43"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_27",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 27,
+        "source_version": 2,
+        "state_sequence": 27,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "decision_proposed",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_19abff16700d5b680230bd9a957b33a1",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "decision_proposed",
+          "argument_keys": [],
+          "summary_hash": "90819a1d047ba806b381b9eac26c3c3cb3216a053289a81078d96d0136db84c1"
+        },
+        "outcome": "suggested",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_9cf4423fd34c745a09ab",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "600cdcb8f310c403f0cc7a5ebe1f056f394920ae8058bfea978d489808b58e05"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:48.945033Z",
+        "previous_hash": "035a7319b735ca11e24a14387879dcbf02c96abc3d91b95e316673903b63da43",
+        "event_hash": "7bb9fbed46149d666886133c55f980c06194dd761f021697b6cc5d2c98e61576"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_28",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 28,
+        "source_version": 2,
+        "state_sequence": 27,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "authorization",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_19abff16700d5b680230bd9a957b33a1",
+          "operation_id": "op_8a3215743b36b12e8eede52d28706d97",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a1312422f5d8e1d6477f62f4ea50ef48",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "authorization",
+          "argument_keys": [],
+          "summary_hash": "edb3162aed8cf190bb245d9679b901afb9a48baf7091dea59903b82b09b9f79a"
+        },
+        "outcome": "allowed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "validation",
+            "object_id": "validation_59b1d9a34eedf0d984104f60d11d892a",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "57bb6cbc2f735257ca0e091233c25586d00791137bb3d07a3cb99dc67eb3e849"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:48.945033Z",
+        "previous_hash": "7bb9fbed46149d666886133c55f980c06194dd761f021697b6cc5d2c98e61576",
+        "event_hash": "12dbcf4b71fb8cf00991d6db097755700f4909b4d0ef7ee64dff66ba3f8489ea"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_29",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 29,
+        "source_version": 2,
+        "state_sequence": 27,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_19abff16700d5b680230bd9a957b33a1",
+          "operation_id": "op_8a3215743b36b12e8eede52d28706d97",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a1312422f5d8e1d6477f62f4ea50ef48",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "ready",
+        "elapsed_ms": 0,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:48.945033Z",
+        "previous_hash": "12dbcf4b71fb8cf00991d6db097755700f4909b4d0ef7ee64dff66ba3f8489ea",
+        "event_hash": "e50484258abb8ed40b38ae12abd8dd79be40f362124899b7362c304bbcb0b66b"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_30",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 30,
+        "source_version": 2,
+        "state_sequence": 28,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "execution_a1312422f5d8e1d6477f62f4ea50ef48",
+        "correlation": {
+          "command_id": "schedule_19abff16700d5b680230bd9a957b33a1",
+          "operation_id": "op_8a3215743b36b12e8eede52d28706d97",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a1312422f5d8e1d6477f62f4ea50ef48",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "sent",
+        "elapsed_ms": 1638,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:50.257055Z",
+        "previous_hash": "e50484258abb8ed40b38ae12abd8dd79be40f362124899b7362c304bbcb0b66b",
+        "event_hash": "bdd308cc17f1213493b06065ed0362bd88af7ae70f5996110aaa94fb5fa55b57"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_31",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 31,
+        "source_version": 2,
+        "state_sequence": 29,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_19abff16700d5b680230bd9a957b33a1",
+          "operation_id": "op_8a3215743b36b12e8eede52d28706d97",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a1312422f5d8e1d6477f62f4ea50ef48",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "verified",
+        "elapsed_ms": 2658,
+        "evidence_refs": [
+          {
+            "object_type": "workspace",
+            "object_id": "workspace_receipt_72fda92419cd0b10961308aabd0de3ca",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "cc8eb34771696f4f1c16a85b8ad0e876848db2c0d4e92957f5125e19d689f812"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:51.295269Z",
+        "previous_hash": "bdd308cc17f1213493b06065ed0362bd88af7ae70f5996110aaa94fb5fa55b57",
+        "event_hash": "60acfd3da4fe53519d405d01c13b0ab88a6eccd38f8f5b8d7a01d441a5fed5a5"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_32",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 32,
+        "source_version": 2,
+        "state_sequence": 31,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "decision_proposed",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_64c692d115fafa7e65a74d039c1cc084",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "decision_proposed",
+          "argument_keys": [],
+          "summary_hash": "90819a1d047ba806b381b9eac26c3c3cb3216a053289a81078d96d0136db84c1"
+        },
+        "outcome": "suggested",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_6a2170b1d4420a91f41d",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "471693da6359e5cd2dae4d112b040dab397421b994fea70872c9ab5f62b6afbc"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:53.353218Z",
+        "previous_hash": "60acfd3da4fe53519d405d01c13b0ab88a6eccd38f8f5b8d7a01d441a5fed5a5",
+        "event_hash": "1525d5f42a739096409ffb8da77ced0a3912ac181e30911cef069c9dae764757"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_33",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 33,
+        "source_version": 2,
+        "state_sequence": 31,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "authorization",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_64c692d115fafa7e65a74d039c1cc084",
+          "operation_id": "op_c58b44bf786253a32d0162b1ec496c49",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a29b58dd6214d5a67c1b5bbcbb4a7698",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "authorization",
+          "argument_keys": [],
+          "summary_hash": "edb3162aed8cf190bb245d9679b901afb9a48baf7091dea59903b82b09b9f79a"
+        },
+        "outcome": "allowed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "validation",
+            "object_id": "validation_f5882ac6b126e7f6bb4dd93295568a94",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "4fcb70a0f52c92f1f52e9f37fccf2980ab0588f09cc3ab4e9355109073c1dda2"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:53.353218Z",
+        "previous_hash": "1525d5f42a739096409ffb8da77ced0a3912ac181e30911cef069c9dae764757",
+        "event_hash": "22929788cf94f96b532c4997f41551dc6946003183eeaa41573523cbdfed8cb4"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_34",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 34,
+        "source_version": 2,
+        "state_sequence": 31,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_64c692d115fafa7e65a74d039c1cc084",
+          "operation_id": "op_c58b44bf786253a32d0162b1ec496c49",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a29b58dd6214d5a67c1b5bbcbb4a7698",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "ready",
+        "elapsed_ms": 0,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:53.353218Z",
+        "previous_hash": "22929788cf94f96b532c4997f41551dc6946003183eeaa41573523cbdfed8cb4",
+        "event_hash": "a490adf9409b799e0b7e69da6cb4f206fad8a66ebb55bc43211511432468f9db"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_35",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 35,
+        "source_version": 2,
+        "state_sequence": 32,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "execution_a29b58dd6214d5a67c1b5bbcbb4a7698",
+        "correlation": {
+          "command_id": "schedule_64c692d115fafa7e65a74d039c1cc084",
+          "operation_id": "op_c58b44bf786253a32d0162b1ec496c49",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a29b58dd6214d5a67c1b5bbcbb4a7698",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "sent",
+        "elapsed_ms": 1844,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:54.852818Z",
+        "previous_hash": "a490adf9409b799e0b7e69da6cb4f206fad8a66ebb55bc43211511432468f9db",
+        "event_hash": "d39b6c07ca3ebd156f3a2e01bbb4e577e5c1932e248951b1fd6eda909ecd33d8"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_36",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 36,
+        "source_version": 2,
+        "state_sequence": 33,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_64c692d115fafa7e65a74d039c1cc084",
+          "operation_id": "op_c58b44bf786253a32d0162b1ec496c49",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_a29b58dd6214d5a67c1b5bbcbb4a7698",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "verified",
+        "elapsed_ms": 2685,
+        "evidence_refs": [
+          {
+            "object_type": "workspace",
+            "object_id": "workspace_receipt_f9a6fcb93fb2890466213a6f40f82e97",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "a5afd9b0bac53e83c108758ba8ea6418f6286646a0b85f1196fbb28e3c68a041"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:55.710339Z",
+        "previous_hash": "d39b6c07ca3ebd156f3a2e01bbb4e577e5c1932e248951b1fd6eda909ecd33d8",
+        "event_hash": "ccbc9f17fa87cbb983d42983fc86edd132fe40724e135f3989cbeb5dcc18f7d6"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_37",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 37,
+        "source_version": 2,
+        "state_sequence": 35,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "decision_proposed",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_ee25ac810db967a6689ca9a0d8e5b7a0",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "decision_proposed",
+          "argument_keys": [],
+          "summary_hash": "90819a1d047ba806b381b9eac26c3c3cb3216a053289a81078d96d0136db84c1"
+        },
+        "outcome": "suggested",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "decision",
+            "object_id": "decision_ad43a568efae044e060d",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "950e62e5d1ceff451e6c811eb6cd0d5025bac73fdde59b2e89e1a3d760153419"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:58.004096Z",
+        "previous_hash": "ccbc9f17fa87cbb983d42983fc86edd132fe40724e135f3989cbeb5dcc18f7d6",
+        "event_hash": "3d95fa6e0a39bc173eb7bb961db99fd007722dc2dc3e5717b52e8ae4dfb5a546"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_38",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 38,
+        "source_version": 2,
+        "state_sequence": 35,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "authorization",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_ee25ac810db967a6689ca9a0d8e5b7a0",
+          "operation_id": "op_53807d41cf0c53b120f1f8a8cf176b4f",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_dcfa4c72bd26a165102e648b296bbe58",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "authorization",
+          "argument_keys": [],
+          "summary_hash": "edb3162aed8cf190bb245d9679b901afb9a48baf7091dea59903b82b09b9f79a"
+        },
+        "outcome": "allowed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "validation",
+            "object_id": "validation_88df36816dae95dd10cfe2faa768fdc4",
+            "object_version": 1,
+            "source_version": 2,
+            "hash": "d5140ae315c472c366fdb6f4d481fa636c5a4b8a180d6cbc69e8e62e4c831b01"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:36:58.004096Z",
+        "previous_hash": "3d95fa6e0a39bc173eb7bb961db99fd007722dc2dc3e5717b52e8ae4dfb5a546",
+        "event_hash": "f43d21fc6e28afd3eb798a1bf9302d6b72e685bf9a790a9f577b1800e04cd78d"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_39",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 39,
+        "source_version": 2,
+        "state_sequence": 35,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_ee25ac810db967a6689ca9a0d8e5b7a0",
+          "operation_id": "op_53807d41cf0c53b120f1f8a8cf176b4f",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_dcfa4c72bd26a165102e648b296bbe58",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "ready",
+        "elapsed_ms": 0,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:58.004096Z",
+        "previous_hash": "f43d21fc6e28afd3eb798a1bf9302d6b72e685bf9a790a9f577b1800e04cd78d",
+        "event_hash": "c2091dad0829362959fcea4266ff6e2d4c6ed6fe055d91ef66a4e88078c4efc1"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_40",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 40,
+        "source_version": 2,
+        "state_sequence": 36,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "skills",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "35",
+          "attempt": 1,
+          "attempt_id": "activity_ba2b9ab42c73f90ef7413876c8f9673f5c951871"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 13972,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:59.202363Z",
+        "previous_hash": "c2091dad0829362959fcea4266ff6e2d4c6ed6fe055d91ef66a4e88078c4efc1",
+        "event_hash": "d132253dd713e3e4423341c559e351b092bbe3b46ec7006df7c60714d6387900"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_41",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 41,
+        "source_version": 2,
+        "state_sequence": 37,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "verify",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "41",
+          "attempt": 1,
+          "attempt_id": "activity_2368971a824051d1689534bc4f849eaa4f5a2cb1"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:36:59.805954Z",
+        "previous_hash": "d132253dd713e3e4423341c559e351b092bbe3b46ec7006df7c60714d6387900",
+        "event_hash": "fed90642b95fdfb26589e020d887855ab4a78b7273ecffcaba1ee891f7f0dc49"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_42",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 42,
+        "source_version": 2,
+        "state_sequence": 38,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "execution_dcfa4c72bd26a165102e648b296bbe58",
+        "correlation": {
+          "command_id": "schedule_ee25ac810db967a6689ca9a0d8e5b7a0",
+          "operation_id": "op_53807d41cf0c53b120f1f8a8cf176b4f",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_dcfa4c72bd26a165102e648b296bbe58",
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "41",
+          "attempt": 1,
+          "attempt_id": "activity_2368971a824051d1689534bc4f849eaa4f5a2cb1"
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "sent",
+        "elapsed_ms": 4075,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:37:01.719881Z",
+        "previous_hash": "fed90642b95fdfb26589e020d887855ab4a78b7273ecffcaba1ee891f7f0dc49",
+        "event_hash": "081ca131d88b092a46d325738ebff7b0c78a58caced87e9a7bda0d62a2eb3e1f"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_43",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 43,
+        "source_version": 2,
+        "state_sequence": 40,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "recovery",
+        "step": "verify",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "41",
+          "attempt": 1,
+          "attempt_id": "activity_2368971a824051d1689534bc4f849eaa4f5a2cb1"
+        },
+        "parameters": {
+          "action": "recovery",
+          "argument_keys": [],
+          "summary_hash": "8ca54a88feba45b189e47f06bf2a9f01b9bac294b41e5668297de843c60cca8a"
+        },
+        "outcome": "unknown",
+        "elapsed_ms": 8404,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:37:08.193569Z",
+        "previous_hash": "081ca131d88b092a46d325738ebff7b0c78a58caced87e9a7bda0d62a2eb3e1f",
+        "event_hash": "f96ead085ca16a5c78234684dce1202eb702e40709ea7f9e7dd6ea22b234942f"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_44",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 44,
+        "source_version": 2,
+        "state_sequence": 41,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "operation",
+        "step": "control",
+        "correlation": {
+          "command_id": "schedule_ee25ac810db967a6689ca9a0d8e5b7a0",
+          "operation_id": "op_53807d41cf0c53b120f1f8a8cf176b4f",
+          "approval_id": "approval_c83638b153e2414b241a",
+          "execution_id": "execution_dcfa4c72bd26a165102e648b296bbe58",
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "operation",
+          "argument_keys": [],
+          "summary_hash": "8b7315c932ee0257b1a08daee2ade0511b96824cde97151090b2de559fb9ee29"
+        },
+        "outcome": "unknown",
+        "elapsed_ms": 11238,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:37:08.890607Z",
+        "previous_hash": "f96ead085ca16a5c78234684dce1202eb702e40709ea7f9e7dd6ea22b234942f",
+        "event_hash": "adf01081c5328fbed4c51325225077b8abe22a81489abe6ce3e49548b5d76b1b"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_45",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 45,
+        "source_version": 2,
+        "state_sequence": 42,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_accepted",
+        "step": "command",
+        "correlation": {
+          "command_id": "resume_unknown",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "resume",
+          "argument_keys": [],
+          "summary_hash": "3f85cf34cea57919bbca50efe416e336fc5c9d7f9c2b2e9ef158664c130583f6"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:37:12.878709Z",
+        "previous_hash": "adf01081c5328fbed4c51325225077b8abe22a81489abe6ce3e49548b5d76b1b",
+        "event_hash": "2ec6e71b75a9ba476bb64a81fe7f6a34a321d955af7b53fcbe0d78f047d7721b"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_46",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 46,
+        "source_version": 2,
+        "state_sequence": 43,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "verify",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "41",
+          "attempt": 2,
+          "attempt_id": "activity_97acb18934813777e66130b5cb547a1acaa4aae5"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:31.817265Z",
+        "previous_hash": "2ec6e71b75a9ba476bb64a81fe7f6a34a321d955af7b53fcbe0d78f047d7721b",
+        "event_hash": "b0cb530439a5510db413bf9352a6d72ffd53f0abefe612792f0aa5cffc88fec6"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_47",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 47,
+        "source_version": 2,
+        "state_sequence": 44,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "verify",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "41",
+          "attempt": 2,
+          "attempt_id": "activity_97acb18934813777e66130b5cb547a1acaa4aae5"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 640,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:32.441127Z",
+        "previous_hash": "b0cb530439a5510db413bf9352a6d72ffd53f0abefe612792f0aa5cffc88fec6",
+        "event_hash": "28542c75a563fde7959ccaad6b6cf9c20c8dd55d1135b3479fe540cce059da65"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_48",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 48,
+        "source_version": 2,
+        "state_sequence": 45,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "command",
+        "correlation": {
+          "command_id": "resume_unknown",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "51",
+          "attempt": 1,
+          "attempt_id": "activity_5dea65a8c3e4278e1365aa03bdd97863700071b4"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:33.23701Z",
+        "previous_hash": "28542c75a563fde7959ccaad6b6cf9c20c8dd55d1135b3479fe540cce059da65",
+        "event_hash": "73219721cd665583f3faffff2c7ef9ac8746626d65dcb79dcfa22e483285e76b"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_49",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 49,
+        "source_version": 2,
+        "state_sequence": 48,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_rejected",
+        "step": "command",
+        "correlation": {
+          "command_id": "resume_unknown",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "51",
+          "attempt": 1,
+          "attempt_id": "activity_5dea65a8c3e4278e1365aa03bdd97863700071b4"
+        },
+        "parameters": {
+          "action": "resume",
+          "argument_keys": [],
+          "summary_hash": "3f85cf34cea57919bbca50efe416e336fc5c9d7f9c2b2e9ef158664c130583f6"
+        },
+        "outcome": "rejected",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:35.504255Z",
+        "previous_hash": "73219721cd665583f3faffff2c7ef9ac8746626d65dcb79dcfa22e483285e76b",
+        "event_hash": "a242fda0e56d6e46df0cd556ad1710f394fd4621afbf1f42b88ef573e89b83db"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_50",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 50,
+        "source_version": 2,
+        "state_sequence": 49,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "command",
+        "correlation": {
+          "command_id": "resume_unknown",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "51",
+          "attempt": 1,
+          "attempt_id": "activity_5dea65a8c3e4278e1365aa03bdd97863700071b4"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "failed",
+        "elapsed_ms": 2986,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:36.205582Z",
+        "previous_hash": "a242fda0e56d6e46df0cd556ad1710f394fd4621afbf1f42b88ef573e89b83db",
+        "event_hash": "e8e60789bac87a2fbfe9828a13ac4610fbb45e4b8007830953aaa534a1aaacf8"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_51",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 51,
+        "source_version": 2,
+        "state_sequence": 51,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_accepted",
+        "step": "command",
+        "correlation": {
+          "command_id": "cancel_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "cancel",
+          "argument_keys": [],
+          "summary_hash": "114d362c0c46c35fc39296f1aea31bb269a402ab5504ec0c62de6bd0655bffe8"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:40.626841Z",
+        "previous_hash": "e8e60789bac87a2fbfe9828a13ac4610fbb45e4b8007830953aaa534a1aaacf8",
+        "event_hash": "9fb118ab29bd7f5a8c128e780798fdb21f25e68c27a824af07b6cf443ed95add"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_52",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 52,
+        "source_version": 2,
+        "state_sequence": 52,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "command",
+        "correlation": {
+          "command_id": "cancel_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "62",
+          "attempt": 1,
+          "attempt_id": "activity_ce4625c5050101251cd5f197658469a0b38a5272"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:41.224377Z",
+        "previous_hash": "9fb118ab29bd7f5a8c128e780798fdb21f25e68c27a824af07b6cf443ed95add",
+        "event_hash": "545acb799af1e3a3a06e8b86373ca46a5249ac191ebb87e806995ae706c9dd3f"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_53",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 53,
+        "source_version": 2,
+        "state_sequence": 55,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_processed",
+        "step": "command",
+        "correlation": {
+          "command_id": "cancel_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "62",
+          "attempt": 1,
+          "attempt_id": "activity_ce4625c5050101251cd5f197658469a0b38a5272"
+        },
+        "parameters": {
+          "action": "cancel",
+          "argument_keys": [],
+          "summary_hash": "114d362c0c46c35fc39296f1aea31bb269a402ab5504ec0c62de6bd0655bffe8"
+        },
+        "outcome": "processed",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:43.460094Z",
+        "previous_hash": "545acb799af1e3a3a06e8b86373ca46a5249ac191ebb87e806995ae706c9dd3f",
+        "event_hash": "756e6ab55e1648f97c048ae5769fdd6dfa6433c8bd451a29a844c235467b2a22"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_54",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 54,
+        "source_version": 2,
+        "state_sequence": 55,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "run_terminal",
+        "step": "control",
+        "correlation": {
+          "command_id": null,
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "62",
+          "attempt": 1,
+          "attempt_id": "activity_ce4625c5050101251cd5f197658469a0b38a5272"
+        },
+        "parameters": {
+          "action": "run_terminal",
+          "argument_keys": [],
+          "summary_hash": "68b74e6abaa9d2dfb1454c632edff70231eee87ae737adcf207b781322229f71"
+        },
+        "outcome": "CANCELLED",
+        "elapsed_ms": 132146,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:43.41813Z",
+        "previous_hash": "756e6ab55e1648f97c048ae5769fdd6dfa6433c8bd451a29a844c235467b2a22",
+        "event_hash": "3f397ce233df2593288791af95344a47627c405c7ce59186b786a971c8d933a2"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_55",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 55,
+        "source_version": 2,
+        "state_sequence": 56,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "command",
+        "correlation": {
+          "command_id": "cancel_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "62",
+          "attempt": 1,
+          "attempt_id": "activity_ce4625c5050101251cd5f197658469a0b38a5272"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 3194,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:44.400951Z",
+        "previous_hash": "3f397ce233df2593288791af95344a47627c405c7ce59186b786a971c8d933a2",
+        "event_hash": "9336e93323c173e4edd96c8688efbb870746a3fe0b4897a5d2f2d331f8d8e40a"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_56",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 56,
+        "source_version": 2,
+        "state_sequence": 57,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_accepted",
+        "step": "command",
+        "correlation": {
+          "command_id": "redo_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": null,
+          "execution_run_id": null,
+          "activity_id": null,
+          "attempt": null,
+          "attempt_id": null
+        },
+        "parameters": {
+          "action": "retry",
+          "argument_keys": [],
+          "summary_hash": "05856b118290dbc54889a94635a144e273a31d773c459180d8dda6ace81ded3f"
+        },
+        "outcome": "accepted",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:45.117109Z",
+        "previous_hash": "9336e93323c173e4edd96c8688efbb870746a3fe0b4897a5d2f2d331f8d8e40a",
+        "event_hash": "35d4796f909d6f536395bd7e77d74f570d5131cbec07e6a0b3c8f7fa4dde99e4"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_57",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 57,
+        "source_version": 2,
+        "state_sequence": 58,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_started",
+        "step": "command",
+        "correlation": {
+          "command_id": "redo_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "73",
+          "attempt": 1,
+          "attempt_id": "activity_e2a8ba94bf012b1521b23e4eda72bd015d39aaa3"
+        },
+        "parameters": {
+          "action": "activity_started",
+          "argument_keys": [],
+          "summary_hash": "32f94b74e73044ce22f8f1d8c2dbb16382acb42dfa8d7d117116a3b21b73a893"
+        },
+        "outcome": "running",
+        "elapsed_ms": null,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:45.792369Z",
+        "previous_hash": "35d4796f909d6f536395bd7e77d74f570d5131cbec07e6a0b3c8f7fa4dde99e4",
+        "event_hash": "074b4bfe828f70a7cbdbb7a940ba0f8b8527691718c9bd3237d6de175d82d329"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_58",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 58,
+        "source_version": 2,
+        "state_sequence": 61,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "command_processed",
+        "step": "command",
+        "correlation": {
+          "command_id": "redo_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "73",
+          "attempt": 1,
+          "attempt_id": "activity_e2a8ba94bf012b1521b23e4eda72bd015d39aaa3"
+        },
+        "parameters": {
+          "action": "retry",
+          "argument_keys": [],
+          "summary_hash": "05856b118290dbc54889a94635a144e273a31d773c459180d8dda6ace81ded3f"
+        },
+        "outcome": "processed",
+        "elapsed_ms": null,
+        "evidence_refs": [
+          {
+            "object_type": "run",
+            "object_id": "run_6312ac807322ed47082e2119",
+            "object_version": 7,
+            "source_version": 2,
+            "hash": "1939bdb8cf036e43c2992172469e2902364e7a1a054411f2a3027f78e34b3e5e"
+          }
+        ],
+        "recorded_at": "2026-10-04T17:38:52.459613Z",
+        "previous_hash": "074b4bfe828f70a7cbdbb7a940ba0f8b8527691718c9bd3237d6de175d82d329",
+        "event_hash": "3e4138e31c9b47fe9b6b5aa3e5efdf87d9980f87ec2cd439b142b4ce83454f85"
+      },
+      {
+        "runtime_version": "1.0.0",
+        "event_id": "audit_6dfef24d19ab3cdcc97e_59",
+        "run_id": "s2_f469ab90c9_crash",
+        "sequence": 59,
+        "source_version": 2,
+        "state_sequence": 62,
+        "definition_snapshot_hash": "5bb330616a560aece074eb22db4a3bbb62efc2263398bbd50e681dd7b00f1280",
+        "kind": "activity_finished",
+        "step": "command",
+        "correlation": {
+          "command_id": "redo_crash",
+          "operation_id": null,
+          "approval_id": null,
+          "execution_id": null,
+          "workflow_id": "agentstudio/s2_f469ab90c9_crash",
+          "execution_run_id": "01a107fd-2050-7a5c-8d10-9229474aa48a",
+          "activity_id": "73",
+          "attempt": 1,
+          "attempt_id": "activity_e2a8ba94bf012b1521b23e4eda72bd015d39aaa3"
+        },
+        "parameters": {
+          "action": "activity_finished",
+          "argument_keys": [],
+          "summary_hash": "90a2229fefe5d050cea6f3e26bab52e19bbb61e00c3a61ed49b3e1d743354e23"
+        },
+        "outcome": "succeeded",
+        "elapsed_ms": 7598,
+        "evidence_refs": [],
+        "recorded_at": "2026-10-04T17:38:53.373068Z",
+        "previous_hash": "3e4138e31c9b47fe9b6b5aa3e5efdf87d9980f87ec2cd439b142b4ce83454f85",
+        "event_hash": "45d8b2ead6c57b761d8aef9688f1f7d835f5fc665f5db6eb8242a25bc31dd38c"
+      }
+    ],
+    "head_hash": "45d8b2ead6c57b761d8aef9688f1f7d835f5fc665f5db6eb8242a25bc31dd38c",
+    "audit_hash": "4b7ab903cf0f05cd9cb61d6e8db892d8a02b586128c6284471372e8dd554ca9d",
+    "observed_at": "2026-10-04T17:55:03.908521Z"
+  }
+}

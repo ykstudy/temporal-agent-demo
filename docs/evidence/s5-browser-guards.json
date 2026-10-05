@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-04T18:00:27.063Z",
+  "browser_path": "Playwright: Browser plugin not available",
+  "scope": "Real HTTP reads, UI races and explicit browser-only Part/network fixtures; no fixture action sent to product",
+  "checks": [
+    {
+      "name": "late_Run_response_cannot_switch_selection",
+      "passed": true
+    },
+    {
+      "name": "late_file_response_cannot_replace_modal",
+      "passed": true
+    },
+    {
+      "name": "valid_schema_rehashed_missing_check_rejected",
+      "passed": true
+    },
+    {
+      "name": "cross_Run_event_rejected",
+      "passed": true
+    },
+    {
+      "name": "older_event_ignored",
+      "passed": true
+    },
+    {
+      "name": "gap_refetches_authoritative_snapshot",
+      "passed": true
+    },
+    {
+      "name": "disconnect_readonly_poll_recovers",
+      "passed": true
+    },
+    {
+      "name": "full_parser_and_state_negatives",
+      "passed": true
+    },
+    {
+      "name": "choice_is_input_only",
+      "passed": true
+    },
+    {
+      "name": "diff_reads_original_and_candidate",
+      "passed": true
+    },
+    {
+      "name": "unknown_component_fallback_and_markdown_safe",
+      "passed": true
+    },
+    {
+      "name": "action_keeps_original_command_and_target",
+      "passed": true
+    },
+    {
+      "name": "no_framework_page_errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

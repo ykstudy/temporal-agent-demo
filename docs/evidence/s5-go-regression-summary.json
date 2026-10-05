@@ -1,0 +1,1299 @@
+{
+  "at": "2026-10-04T18:36:01.070099+00:00",
+  "status": "non_opt_in_tests_passed_across_recorded_batches",
+  "original_full_command_status": "failed: stale unpublished-version fixture and agent package 30m timeout retained",
+  "continuation_group_2_status": "failed only stale unpublished-version fixture; separately corrected positive 1.4/negative 9.9.9 race passed",
+  "current_top_level_inventory": 202,
+  "passed_top_level": 197,
+  "skipped_opt_in_or_regeneration": [
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPureSQLiteColdRuns",
+      "status": "skip",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsPublicProxy",
+      "status": "skip",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRegenerateDefinition311",
+      "status": "skip",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRegeneratePublication310",
+      "status": "skip",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRegeneratePublication312",
+      "status": "skip",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    }
+  ],
+  "prior_cold_sqlite_evidence": {
+    "path": "docs/evidence/s2-sqlite-cold-runs.log",
+    "scope": "S2 original 1.3 cold GORM and SQLx, unchanged frozen templates; not relabeled as current 1.4"
+  },
+  "missing": [],
+  "unresolved_failures": [],
+  "original_failures": [
+    {
+      "path": "docs/evidence/final-backend-suite.jsonl",
+      "package": "agentstudio/internal/definitions",
+      "test": "TestPublishedMixedVersionClosuresAreRejected",
+      "time": "2026-10-05T01:57:41.478745+08:00"
+    },
+    {
+      "path": "docs/evidence/final-backend-suite.jsonl",
+      "package": "agentstudio/internal/definitions",
+      "test": null,
+      "time": "2026-10-05T01:57:41.492523+08:00"
+    },
+    {
+      "path": "docs/evidence/final-backend-suite.jsonl",
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsFrozenModuleEnvironment",
+      "time": "2026-10-05T02:24:24.052486+08:00"
+    },
+    {
+      "path": "docs/evidence/final-backend-suite.jsonl",
+      "package": "agentstudio/internal/agent",
+      "test": null,
+      "time": "2026-10-05T02:27:01.769135+08:00"
+    },
+    {
+      "path": "docs/evidence/s5-go-continuation-2.jsonl",
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsFrozenModuleEnvironment",
+      "time": "2026-10-05T02:28:19.622601+08:00"
+    },
+    {
+      "path": "docs/evidence/s5-go-continuation-2.jsonl",
+      "package": "agentstudio/internal/agent",
+      "test": null,
+      "time": "2026-10-05T02:32:52.032763+08:00"
+    }
+  ],
+  "tests": [
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestCanonicalCurrentPermissionCannotReplayOlderGrant",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestCanonicalInputPreservesLongTextAndRevocationCannotRegrant",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestCanonicalObjectsPersistExactDecisionAndApprovalHistory",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestCanonicalReadOnlyRoutesExactReferencesAndLegacyBoundary",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestCanonicalRejectsStaleApprovalAndArchiveMutation",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestConcurrentCreateIdentityIsAtomic",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestContextCompressionPreservesTranscript",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlBudgetPersistsFailedAttemptAndOriginalSource",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCIActualReadsRecoveryAndCompletion",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCIArtifactFormatAndPaginationNegatives",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCandidateModelFailurePreservesOriginalAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCandidateRealRevisionReapprovalNewWorkspaceAndCompletion",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlChainBindsPersistedPlanningAndPrivateFacts",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlChainExecutionCannotExpandOrDetachAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlChainKeepsImmutableHistorySeparateFromCurrentLifecycle",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlChainPreservesRejectedAdviceWithoutExecutionAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCommandCloseProposalDoesNotInventSourceChange",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCommandModelAdviceCannotAuthorizeActionOrCompletion",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCommandModelSavesInputBeforeCallAndChargesFailedRetry",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCommandRestartSettlesUnknownWithoutInventedElapsed",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCommandRulesPersistPlanAndDoNotResetSource",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCompletionActualLocalPackageReportAndReplay",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlCompletionRealModelAdviceDoesNotOverrideChangedBytes",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlExecutionActionInModelRunReallyCallsFrozenProvider",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlExecutionPreparesCompleteRequestAndAtomicallyAdmitsOnce",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlExecutionRechecksSourceAndRevocationBeforeAdmission",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlExpiryReproposalKeepsSourceAndRejectsOldApproval",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLab13CreateReceiptAndRestart",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLab13ReadSecretNeverBecomesEvidence",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabCrashAfterSendSettlesUnknownBeforeRead",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabCreateObservedOnceAndSchedulerContinues",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabLostCreateResponseReopensAndOnlyReadsOriginalIdentity",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabObservationMismatchRemainsUnknown",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabOriginalSourceReconciliationDoesNotReviveTerminalRun",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabPreflightFailureNeverWrites",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabRejectsUnregisteredAlteredAndUnavailableActionBeforeIO",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitLabReservationDeadlineIsAbsolute",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitPushActualAndLostResponse",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitPushOriginalLaunchRecovery",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlGitSandboxActualSixCommands",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlIntegrationReviewAllSelectedSkillsFitFirstActionContext",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlIntegrationReviewFatalBeforeToolsClosesOriginalAttempt",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlIntegrationReviewInvalidSuccessResultCannotLeaveReservedAttempt",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlIntegrationReviewModelPreflightNeverClaimsProviderAttempt",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlIntegrationReviewModelTransportFailuresSettleAndConcurrentReplayReuses",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlIntegrationReviewPrivateScheduleCannotReplaceAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlKnownFailureParameterReplanPreservesHistory",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlModelRedoFailureKeepsStableSuccessor",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPackageActualFileSecretAndSymbolicLinkRejected",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPackageAdmissionFailureAndUnknownKeepOriginalIdentity",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPackageExactApprovedBytesAndDeterminism",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPackagePublicationNeverOverwritesOrFollowsLinks",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPackageRejectsSourceMetadataAndArchiveTampering",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlProgressQueriesPreserveProposalAndAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPublicSelectionAndTerminalRedo",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlPureSQLiteColdRuns",
+      "status": "skip",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlReconcileCommandReadsOriginalWriteWithoutRevivingTerminalRun",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlReconcileCommandRejectsOldPublication",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlRecoveryRealFailureReusesOriginalRequestAndExhaustsBudget",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlRecoveryRejectsMissingUnknownChangedAndTamperedEvidence",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlRuntimeOuterFailurePreservesRecoveryStageAndTerminalFacts",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlScheduleExactOrderAndLocalIsolation",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlSchedulePartialSkillsAndMissingEvidence",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlScheduleReadyReusesExactRequestAndReturnsIndependentCopy",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlScheduleRejectsScopeAndHashTampering",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlScheduleRemoteAndPackageNeedBoundActualResults",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlScheduleUnknownNeverReissuesWrite",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlScheduleVerificationNeedsEveryUnchangedToolReceipt",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlSemanticAdviceCallsActualModelAndCannotChangeState",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlStartupConsumesLostActionAndRejectsResume",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsActualSandboxExecutionAndReplay",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsBoundedStreamingRedaction",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsFrozenModuleEnvironment",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-unknown-module-release-race.log"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsNetworkTablesVersionBoundary",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsPublicProxy",
+      "status": "skip",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsRejectBeforeProcessAndRecoverUnknown",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsRejectPathToolAndCurrentAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsTidyDifferenceRequiresReapproval",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlToolsTimeoutConsumesAttemptAndPreservesSources",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlWorkspaceFullAfterSnapshotOmitsDeletedPaths",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlWorkspaceInputTamperBlocksOriginalOperationWithoutReplay",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlWorkspaceRootRejectsSymlinkAndAtomicWritesStayAnchored",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestControlWorkspaceWritesOnlyEachApprovedScopeAndSurvivesRestart",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestConversationContextTrimsOlderTurnsButPreservesCurrentInput",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestConversationModelSummaryFailurePreservesPriorSourceAndMode",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestConversationOldProposalReferenceRemainsOriginalAfterRevision",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestConversationPartialTransactionRecoveryAndCorruptTail",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestConversationRealCommandsSummaryHistoryAndOriginalBytes",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestCreateRetryAfterModelFailureAndBudgetIncludesFailure",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestDatabaseTemplatesCompile",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestErrorCodesHaveSameLocalAndTemporalHTTPStatus",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestExecutionUsesReviewedSourceSnapshot",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestExpiredProposalAndFirstApplicationRecheck",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFailedCommandRetainsOriginalBusinessIdentity",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenActionPolicyDoesNotGrantOtherExecutionSteps",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenCompletionAcceptsEvidenceSetOrderAndTitleChanges",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenCompletionRejectsUnsupportedCheckSemantics",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenDefinitionPublicReadAndLegacyMissingSource",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenDefinitionSurvivesStoreReopenAndLaterPublication",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenRunRendersOriginalTemplatesAndPromptAcrossPublications",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenTemplateAllVariantsMatchExistingGeneration",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestFrozenUnknownRequiredCheckCannotCompleteRun",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestGeneratedLoggingRuntime",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestGitLabMissingCredentialsBlocks",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestGitLabReconcilesOriginalCommitAndPipeline",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestHTTPPathAndStableMessages",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestHTTPRejectsDuplicateJSONKeysBeforeEffects",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestHistoricalExecutionModeRemainsReadOnly",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestLegacyPendingWithoutFrozenSourceCannotAcquireApproval",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestLocalRestartClearsInterruptedLatchAndPreservesApproval",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestLogParametersRejectOutOfScopeValues",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestLoggingCannotOverwriteApprovedSources",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestModeAndSecretBoundaries",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestModelAdviceFiveKindsPreserveObservedUsageWithoutAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestModelContextBudgetKeepsCurrentIdentityAndMessage",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestModelOutputIsSchemaChecked",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestPauseCancelAndTerminalRetry",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestProgressAndPauseDoNotInvalidateProposal",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestProposalBindingAndIdempotency",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestPublished310DetectsUnapprovedTidyChanges",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestPublished310RejectsUndeclaredSumPathAndLegacyExpansion",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestPublished310TemplatesTidyStableAcrossAllSkillCombinations",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestPublished312PureGoClosureAndCoexistence",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestPublishedTemplateCannotWriteUndeclaredFrozenSkillPath",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRealGeneratedProjects",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRegenerateDefinition311",
+      "status": "skip",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRegeneratePublication310",
+      "status": "skip",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRegeneratePublication312",
+      "status": "skip",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntime14ActualGitAndMockCIFullDelivery",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-runtime-remote-2.log"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimeActualTemporalHealthAndOwnedWorkerFailure",
+      "status": "pass",
+      "evidence": "docs/evidence/runtime-real-health-fault-race.log"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimeActualToolFailureReportsAndBudgetExhaustion",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimeAuditMetricsReadinessAndCorruption",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimeCanonicalBudgetDuringActualCommands",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimeOfflineCopyRecoveryAndMissingDependencies",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimePendingAttemptRecoveryPreservesIdentity",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestRuntimePublicSchemaNegativeAndOlderCoverage",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-1.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestSnapshotTamperingAndGoModTamperingStopExecution",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestStartedApprovalCompletesWithinOriginalScopeAfterExpiry",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestStoreSingleWriterAndMalformedTranscript",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestTemporalControlRefusalDoesNotCallModelAgain",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestTemporalQueryUpdateAndContinueAsNew",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestTemporalRetryKeepsOldTerminalState",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestTransientGitLabReadRemainsRetryable",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-2.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestUnknownPipelineNeverPostsAgainWhileInvisible",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestV2FullRequestsHistoricalSnapshotsAndReceipts",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestV2SnapshotStreamExactReferenceAndCursor",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-go-continuation-0.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/agent",
+      "test": "TestValidation",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestAliasInheritedObjectReferencesPreserveAllFiveFields",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestDecodePreservesSchemaIntegerSemantics",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestDefinitionRequiredAndClosedFields",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestFullSchemaKeywordsAndFormats",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestGeneratedReleaseMatchesSource",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestHashPoliciesPreserveNestedContentAndLifecycleExclusions",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestIndependentJCSVectors",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestPublishedDefinitionSnapshotRoundTrip",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestS2BudgetAndReceiptConditions",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestS2FullGeneratedObjectRoundTrips",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestStrictJSONRejectsInvalidInput",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestStructuralCacheCannotReuseDifferentBytesTypeOrVersion",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/contracts",
+      "test": "TestSupportedReleaseIsolationAndOriginalBytes",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/conversation",
+      "test": "TestAllFivePartFormatsPreserveOriginalBytesAndRejectForeignReferences",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/conversation",
+      "test": "TestMessageRejectsDuplicatePartAndMissingHistoricalReference",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/conversation",
+      "test": "TestSummarySourceAndForgedOrMissingFacts",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestBundled310PublishesExactClosureWithoutChangingOldVersion",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestBundled310RejectsMissingOrChangedPublicationBytes",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestBundled311RevisesOnlyAgentAndReusesExact310Dependencies",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestBundled320FreezesFull13ClosureWithoutChangingOlderPublications",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestBundled330FreezesSummaryProtocolAndPreservesPriorRelease",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestBundledPublicationAssetsHaveCompleteActualHashes",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestCompleteFrozenClosureAndRealHashes",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestContractReleasesCoexistAndFreezeAfterReopen",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestMissingOrTamperedDependencyBlocksWithoutFallback",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestOriginalBundledPublicationRemainsByteIdentical",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestPersistedPublicationRejectsDuplicateJSONKeys",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestPublicContentReaderBindsSnapshot",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestPublicationRejectsHashScopeAndUnboundTool",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestPublishedMixedVersionClosuresAreRejected",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestRegisteredParameterNormalizationAndSemanticBounds",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestRevokedDependencyBlocksBoundSnapshotAndSurvivesRestart",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestSameVersionDifferentDefinitionSkillOrTemplateRefused",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestSnapshotTamperingAndProviderBindingRefused",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/definitions",
+      "test": "TestVersionsCoexistAndOldSnapshotReadsOldBytes",
+      "status": "pass",
+      "evidence": "docs/evidence/s5-final-definitions.log"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestAdviceRejectsBrokenProvenanceAndAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestBudgetAttemptsSettleExactlyOnceAndUnknownIsConsumed",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestBudgetCIAndReconciliationWindowsNeverRestart",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestBudgetExecutionScopesAndDeadlineSurviveSourceAndRestart",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestBudgetLedgerRejectsRehashedSemanticTampering",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestBudgetModelFailureAndReleaseProof",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestBudgetToolUsesFrozenCommandAndShortestLimits",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestCandidatePlanRequiresRegisteredCurrentRevisionEvidence",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestEveryActionRejectsWrongExactScope",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestExecutionRejectsForgedRequestAndChangedCurrentAuthority",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestFiveAdviceKindsNeverGrantExecutionToNonActions",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestMergedFrozenPostCommandsRemainFixedAndUnique",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestModelUsageRequiresObservedProviderProvenance",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestSchedulerExpectationAndObservedToolCannotBeReplaced",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestSevenActionsProduceCompleteDeterministicRequests",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/governance",
+      "test": "TestUnknownWriteOnlyReturnsBudgetedReconciliation",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/storage",
+      "test": "TestObjectsPersistImmutableBodiesAndRejectIdentityReuse",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/storage",
+      "test": "TestObjectsRejectAliasesInvalidShapeAndSymlinks",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/storage",
+      "test": "TestObjectsRejectOversizedStoredBodyBeforeDecoding",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    },
+    {
+      "package": "agentstudio/internal/storage",
+      "test": "TestTranscriptExactPrefixRecoveryAndTamperRejection",
+      "status": "pass",
+      "evidence": "docs/evidence/final-backend-suite.jsonl"
+    }
+  ],
+  "note": "No single whole-suite green claimed. Only unfinished tests resumed; fresh targeted replacements recorded. Actual Temporal health is separate owned-worker Stage6 evidence. Product bytes unchanged during S5; fixtures/tests and independent validation changed."
+}

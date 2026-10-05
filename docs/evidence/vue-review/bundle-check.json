@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "bundle": "frontend/public/review/bundle.json",
+  "report": "docs/evidence/vue-review-data-check.json",
+  "models": 11,
+  "sources": 128,
+  "checks": {
+    "meta_schema": true,
+    "publication_schema": true,
+    "format_assertions": true,
+    "offline": true,
+    "frozen_baseline": true,
+    "source_digests": true,
+    "all_element_bindings": true,
+    "endpoints_and_ownership": true,
+    "eleven_models": true,
+    "knowledge_registry": {
+      "entities": 137,
+      "relations": 529
+    },
+    "contract_semantic_bindings": 18,
+    "state_events": 44,
+    "gaps": 21,
+    "cases": 18,
+    "coverage_dimensions": 5,
+    "design_timeline_only": true,
+    "bundle_bytes": 1876064,
+    "build_fixed_publication_digests": true
+  },
+  "self_tests_passed": 12,
+  "publication_self_tests_passed": 2
+}

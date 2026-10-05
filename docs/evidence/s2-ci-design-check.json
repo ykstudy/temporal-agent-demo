@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "entity_count": 140,
+  "relation_count": 561,
+  "errors": [],
+  "boundary": "校验通过只证明文档结构、来源摘要与认知模型一致；不证明产品状态机、权限、预算、重试、外部副作用或运行验收已实现。",
+  "self_tests": [
+    {
+      "name": "source and frozen invariant hashes",
+      "passed": true,
+      "expected_code": "baseline",
+      "caught_codes": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "missing entity path",
+      "passed": true,
+      "expected_code": "missing_path",
+      "caught_codes": [
+        "missing_path"
+      ]
+    },
+    {
+      "name": "duplicate entity ID",
+      "passed": true,
+      "expected_code": "duplicate_id",
+      "caught_codes": [
+        "duplicate_id"
+      ]
+    },
+    {
+      "name": "dangling relation",
+      "passed": true,
+      "expected_code": "dangling_relation",
+      "caught_codes": [
+        "dangling_relation"
+      ]
+    },
+    {
+      "name": "internal-section dependency",
+      "passed": true,
+      "expected_code": "internal_dependency",
+      "caught_codes": [
+        "dependency_missing",
+        "internal_dependency"
+      ]
+    },
+    {
+      "name": "ADR missing associations",
+      "passed": true,
+      "expected_code": "adr_association",
+      "caught_codes": [
+        "adr_association"
+      ]
+    },
+    {
+      "name": "structural model content pollution",
+      "passed": true,
+      "expected_code": "structure_only",
+      "caught_codes": [
+        "structure_only"
+      ]
+    }
+  ],
+  "guard_tests": [
+    {
+      "name": "feature depends_on bypass",
+      "passed": true,
+      "expected_code": "internal_dependency",
+      "caught_codes": [
+        "internal_dependency"
+      ]
+    },
+    {
+      "name": "unregistered invariant heading",
+      "passed": true,
+      "expected_code": "invariant_coverage",
+      "caught_codes": [
+        "invariant_coverage"
+      ]
+    },
+    {
+      "name": "feature type spoofing",
+      "passed": true,
+      "expected_code": "unregistered",
+      "caught_codes": [
+        "adr_association",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "ADR type spoofing",
+      "passed": true,
+      "expected_code": "unregistered",
+      "caught_codes": [
+        "unregistered"
+      ]
+    }
+  ],
+  "self_test_scope": "This model contains no runtime Task DAG; seventh injection rejects workflow content pollution instead of asserting runtime cycle detection."
+}
