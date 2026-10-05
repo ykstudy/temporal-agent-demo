@@ -1,0 +1,11 @@
+{
+  "command_id": "accept-example",
+  "action": "accept",
+  "target": {
+    "object_type": "run",
+    "object_id": "run_intake_example_1",
+    "object_version": 1,
+    "source_version": 1,
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "contract_version": "1.0.0",
+  "skill_id": "add_logging",
+  "skill_version": "1.0.0",
+  "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "name": "结构化日志",
+  "description": "默认console/json/info，file仅受控logs目录并有轮转与故障策略。",
+  "supported_stacks": [
+    "golang"
+  ],
+  "default_parameters": {
+    "log_level": "info",
+    "log_format": "json",
+    "log_output": "console",
+    "log_path": "logs/app.log",
+    "log_max_size": 10485760,
+    "log_max_backups": 3,
+    "log_max_age": "168h",
+    "log_on_write_error": "degrade"
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "input_contract": {
+    "schema_ref": "agent.schema.json#/$defs/LoggingParameters",
+    "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "output_contract": {
+    "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+    "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "template_dependencies": [
+    {
+      "template_id": "logging",
+      "template_version": "1.0.0",
+      "files": [
+        {
+          "path": "internal/logging/logging.go.tmpl",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "content_ref": {
+            "object_type": "template",
+            "object_id": "logging_source",
+            "object_version": 1,
+            "source_version": 1,
+            "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ],
+      "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "write_paths": [
+    "internal/logging/logging.go",
+    "internal/logging/logging_test.go"
+  ],
+  "required_permissions": [
+    "workspace_read",
+    "workspace_write",
+    "tool_go"
+  ],
+  "required_tools": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.0",
+      "platform": "linux_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "post_commands": [
+    {
+      "command_id": "go.test",
+      "executable": "go",
+      "arguments": [
+        "test",
+        "./..."
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    }
+  ],
+  "required_check_ids": [
+    "check.go_test",
+    "check.go_build",
+    "check.secret_boundary"
+  ]
+}

@@ -1,0 +1,1000 @@
+{
+  "contract_version": "1.0.0",
+  "schema_version": 2,
+  "run_id": "run_intake_example_1",
+  "snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "title": "结构示例：初始Go项目Run",
+  "state": "INTAKE",
+  "source_version": 1,
+  "state_sequence": 9007199254740992,
+  "modes": {
+    "execution_mode": "local",
+    "decision_mode": "rules",
+    "delivery_mode": "local"
+  },
+  "definition_snapshot": {
+    "contract_version": "1.0.0",
+    "definition_id": "project_creation_agent",
+    "definition_version": "1.0.0",
+    "definition_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "snapshot_version": 1,
+    "snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "definition": {
+      "contract_version": "1.0.0",
+      "definition_id": "project_creation_agent",
+      "definition_version": "1.0.0",
+      "definition_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "supported_stacks": [
+        "golang"
+      ],
+      "available_skills": [
+        {
+          "skill_id": "add_database",
+          "skill_version": "1.0.0",
+          "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "skill_id": "add_auth",
+          "skill_version": "1.0.0",
+          "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "skill_id": "add_logging",
+          "skill_version": "1.0.0",
+          "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "system_prompt": {
+        "content": "你是项目创建Agent。只提出结构化建议；不得批准、执行或声称完成。依据绑定定义和当前权威状态输出DecisionAdvice。",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "action_protocol": {
+        "model_output_schema": {
+          "schema_ref": "agent.schema.json#/$defs/DecisionAdvice",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "decision_proposal_schema": {
+          "schema_ref": "agent.schema.json#/$defs/DecisionProposal",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "action_validation_schema": {
+          "schema_ref": "agent.schema.json#/$defs/ActionValidation",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "execution_request_schema": {
+          "schema_ref": "agent.schema.json#/$defs/ExecutionRequest",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "allowed_actions": [
+          "scaffold",
+          "apply_skill",
+          "verify",
+          "create_repository",
+          "push_repository",
+          "trigger_ci",
+          "package"
+        ]
+      },
+      "default_ci": "gitlab_ci",
+      "repository_policy": {
+        "allowed_providers": [
+          "local",
+          "gitlab"
+        ],
+        "visibility": "private",
+        "required_ref": "main",
+        "require_explicit_namespace": true,
+        "overwrite_existing_unowned_project": false,
+        "unknown_write_policy": "block_and_reconcile_original_operation"
+      },
+      "context_policy": {
+        "max_tokens": 8000,
+        "recent_messages": 10,
+        "summary_tokens": 2000,
+        "output_reserve_tokens": 1800,
+        "protocol_reserve_tokens": 128,
+        "compression_threshold": 20,
+        "compression_unit": "message",
+        "summary_generation": "follow_decision_mode",
+        "summary_generator_version": "1.0.0"
+      },
+      "budget_policy": {
+        "max_commands": 256,
+        "max_model_attempts": 32,
+        "max_files": 128,
+        "max_artifact_bytes": 2097152,
+        "max_step_attempts": 3
+      },
+      "completion_policy": {
+        "required_checks": [
+          {
+            "check_id": "check.approved_sources",
+            "title": "批准源代码",
+            "kind": "source",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "source_hash"
+            ]
+          },
+          {
+            "check_id": "check.artifact_manifest",
+            "title": "工件清单",
+            "kind": "manifest",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "manifest_hash"
+            ]
+          },
+          {
+            "check_id": "check.go_mod_tidy",
+            "title": "依赖整理",
+            "kind": "tool",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "tool_exit"
+            ]
+          },
+          {
+            "check_id": "check.go_test",
+            "title": "真实测试",
+            "kind": "tool",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "tool_exit"
+            ]
+          },
+          {
+            "check_id": "check.go_build",
+            "title": "真实构建",
+            "kind": "tool",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "tool_exit"
+            ]
+          },
+          {
+            "check_id": "check.go_mod_file",
+            "title": "模块文件",
+            "kind": "file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "file_hash"
+            ]
+          },
+          {
+            "check_id": "check.gitignore_file",
+            "title": "忽略配置",
+            "kind": "file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "file_hash"
+            ]
+          },
+          {
+            "check_id": "check.ci_config_file",
+            "title": "CI配置",
+            "kind": "file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "file_hash"
+            ]
+          },
+          {
+            "check_id": "check.readme_file",
+            "title": "启动说明",
+            "kind": "file",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "file_hash"
+            ]
+          },
+          {
+            "check_id": "check.secret_boundary",
+            "title": "秘密边界",
+            "kind": "secret_boundary",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "secret_scan"
+            ]
+          },
+          {
+            "check_id": "check.zip_integrity",
+            "title": "交付包",
+            "kind": "package",
+            "delivery_modes": [
+              "local",
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "zip_integrity"
+            ]
+          },
+          {
+            "check_id": "check.remote_repository",
+            "title": "仓库身份",
+            "kind": "remote_repository",
+            "delivery_modes": [
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "remote_identity"
+            ]
+          },
+          {
+            "check_id": "check.remote_commit",
+            "title": "提交内容",
+            "kind": "remote_commit",
+            "delivery_modes": [
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "commit_tree"
+            ]
+          },
+          {
+            "check_id": "check.gitlab_ci",
+            "title": "流水线作业与产物",
+            "kind": "ci",
+            "delivery_modes": [
+              "gitlab"
+            ],
+            "required_evidence_types": [
+              "pipeline_jobs",
+              "coverage_report",
+              "build_artifact"
+            ]
+          }
+        ],
+        "completion_authority": "deterministic_validator",
+        "external_validation_authority": false,
+        "allow_unverified_done": false
+      },
+      "required_tools": [
+        {
+          "tool_id": "go",
+          "version": "go1.25.0",
+          "platform": "linux_amd64",
+          "binary_sha256": null
+        }
+      ],
+      "post_commands": [
+        {
+          "command_id": "go.mod_tidy",
+          "executable": "go",
+          "arguments": [
+            "mod",
+            "tidy"
+          ],
+          "cwd_scope": "run_workspace",
+          "environment_policy": "isolated",
+          "timeout_seconds": 720,
+          "max_attempts": 3
+        },
+        {
+          "command_id": "go.test",
+          "executable": "go",
+          "arguments": [
+            "test",
+            "./..."
+          ],
+          "cwd_scope": "run_workspace",
+          "environment_policy": "isolated",
+          "timeout_seconds": 720,
+          "max_attempts": 3
+        },
+        {
+          "command_id": "go.build",
+          "executable": "go",
+          "arguments": [
+            "build",
+            "./..."
+          ],
+          "cwd_scope": "run_workspace",
+          "environment_policy": "isolated",
+          "timeout_seconds": 720,
+          "max_attempts": 3
+        }
+      ]
+    },
+    "skills": [
+      {
+        "contract_version": "1.0.0",
+        "skill_id": "add_database",
+        "skill_version": "1.0.0",
+        "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "name": "add_database",
+        "description": "结构示例：完整声明该技能输入、依赖与受控生成输出。",
+        "supported_stacks": [
+          "golang"
+        ],
+        "parameters_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "database": {
+              "type": "string",
+              "enum": [
+                "postgres",
+                "mysql",
+                "sqlite"
+              ],
+              "default": "postgres"
+            },
+            "orm": {
+              "type": "string",
+              "enum": [
+                "gorm",
+                "sqlx"
+              ],
+              "default": "gorm"
+            }
+          },
+          "required": [
+            "database",
+            "orm"
+          ]
+        },
+        "default_parameters": {
+          "database": "postgres",
+          "orm": "gorm"
+        },
+        "dependencies": [],
+        "conflicts": [],
+        "input_contract": {
+          "schema_ref": "agent.schema.json#/$defs/DatabaseParameters",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "output_contract": {
+          "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "template_dependencies": [
+          {
+            "template_id": "add_database",
+            "template_version": "1.0.0",
+            "files": [
+              {
+                "path": "internal/database/database.go.tmpl",
+                "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "content_ref": {
+                  "object_type": "template",
+                  "object_id": "add_database_source",
+                  "object_version": 1,
+                  "source_version": 1,
+                  "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              }
+            ],
+            "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "write_paths": [
+          "internal/database/database.go",
+          "internal/database/database_test.go"
+        ],
+        "required_permissions": [
+          "workspace_read",
+          "workspace_write",
+          "tool_go"
+        ],
+        "required_tools": [
+          {
+            "tool_id": "go",
+            "version": "go1.25.0",
+            "platform": "linux_amd64",
+            "binary_sha256": null
+          }
+        ],
+        "post_commands": [
+          {
+            "command_id": "go.test",
+            "executable": "go",
+            "arguments": [
+              "test",
+              "./..."
+            ],
+            "cwd_scope": "run_workspace",
+            "environment_policy": "isolated",
+            "timeout_seconds": 720,
+            "max_attempts": 3
+          }
+        ],
+        "required_check_ids": [
+          "check.go_test",
+          "check.go_build",
+          "check.secret_boundary"
+        ]
+      },
+      {
+        "contract_version": "1.0.0",
+        "skill_id": "add_auth",
+        "skill_version": "1.0.0",
+        "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "name": "add_auth",
+        "description": "结构示例：完整声明该技能输入、依赖与受控生成输出。",
+        "supported_stacks": [
+          "golang"
+        ],
+        "parameters_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "auth": {
+              "type": "string",
+              "enum": [
+                "jwt",
+                "session"
+              ],
+              "default": "jwt"
+            },
+            "token_ttl": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 64,
+              "default": "24h"
+            }
+          },
+          "required": [
+            "auth",
+            "token_ttl"
+          ]
+        },
+        "default_parameters": {
+          "auth": "jwt",
+          "token_ttl": "24h"
+        },
+        "dependencies": [],
+        "conflicts": [],
+        "input_contract": {
+          "schema_ref": "agent.schema.json#/$defs/AuthenticationParameters",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "output_contract": {
+          "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "template_dependencies": [
+          {
+            "template_id": "add_auth",
+            "template_version": "1.0.0",
+            "files": [
+              {
+                "path": "internal/auth/auth.go.tmpl",
+                "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "content_ref": {
+                  "object_type": "template",
+                  "object_id": "add_auth_source",
+                  "object_version": 1,
+                  "source_version": 1,
+                  "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              }
+            ],
+            "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "write_paths": [
+          "internal/auth/auth.go",
+          "internal/auth/auth_test.go"
+        ],
+        "required_permissions": [
+          "workspace_read",
+          "workspace_write",
+          "tool_go"
+        ],
+        "required_tools": [
+          {
+            "tool_id": "go",
+            "version": "go1.25.0",
+            "platform": "linux_amd64",
+            "binary_sha256": null
+          }
+        ],
+        "post_commands": [
+          {
+            "command_id": "go.test",
+            "executable": "go",
+            "arguments": [
+              "test",
+              "./..."
+            ],
+            "cwd_scope": "run_workspace",
+            "environment_policy": "isolated",
+            "timeout_seconds": 720,
+            "max_attempts": 3
+          }
+        ],
+        "required_check_ids": [
+          "check.go_test",
+          "check.go_build",
+          "check.secret_boundary"
+        ]
+      },
+      {
+        "contract_version": "1.0.0",
+        "skill_id": "add_logging",
+        "skill_version": "1.0.0",
+        "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "name": "结构化日志",
+        "description": "默认console/json/info，file仅受控logs目录并有轮转与故障策略。",
+        "supported_stacks": [
+          "golang"
+        ],
+        "parameters_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "log_level": {
+              "type": "string",
+              "enum": [
+                "debug",
+                "info",
+                "warn",
+                "error"
+              ],
+              "default": "info"
+            },
+            "log_format": {
+              "type": "string",
+              "enum": [
+                "json",
+                "text"
+              ],
+              "default": "json"
+            },
+            "log_output": {
+              "type": "string",
+              "enum": [
+                "console",
+                "file"
+              ],
+              "default": "console"
+            },
+            "log_path": {
+              "type": "string",
+              "pattern": "^logs/[A-Za-z0-9._/-]+$",
+              "default": "logs/app.log"
+            },
+            "log_max_size": {
+              "type": "integer",
+              "minimum": 1048576,
+              "maximum": 1073741824,
+              "default": 10485760
+            },
+            "log_max_backups": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 3
+            },
+            "log_max_age": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 64,
+              "default": "168h"
+            },
+            "log_on_write_error": {
+              "type": "string",
+              "enum": [
+                "degrade",
+                "fail_closed"
+              ],
+              "default": "degrade"
+            }
+          },
+          "required": [
+            "log_level",
+            "log_format",
+            "log_output",
+            "log_path",
+            "log_max_size",
+            "log_max_backups",
+            "log_max_age",
+            "log_on_write_error"
+          ]
+        },
+        "default_parameters": {
+          "log_level": "info",
+          "log_format": "json",
+          "log_output": "console",
+          "log_path": "logs/app.log",
+          "log_max_size": 10485760,
+          "log_max_backups": 3,
+          "log_max_age": "168h",
+          "log_on_write_error": "degrade"
+        },
+        "dependencies": [],
+        "conflicts": [],
+        "input_contract": {
+          "schema_ref": "agent.schema.json#/$defs/LoggingParameters",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "output_contract": {
+          "schema_ref": "agent.schema.json#/$defs/ArtifactManifest",
+          "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "template_dependencies": [
+          {
+            "template_id": "logging",
+            "template_version": "1.0.0",
+            "files": [
+              {
+                "path": "internal/logging/logging.go.tmpl",
+                "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "content_ref": {
+                  "object_type": "template",
+                  "object_id": "logging_source",
+                  "object_version": 1,
+                  "source_version": 1,
+                  "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              }
+            ],
+            "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "write_paths": [
+          "internal/logging/logging.go",
+          "internal/logging/logging_test.go"
+        ],
+        "required_permissions": [
+          "workspace_read",
+          "workspace_write",
+          "tool_go"
+        ],
+        "required_tools": [
+          {
+            "tool_id": "go",
+            "version": "go1.25.0",
+            "platform": "linux_amd64",
+            "binary_sha256": null
+          }
+        ],
+        "post_commands": [
+          {
+            "command_id": "go.test",
+            "executable": "go",
+            "arguments": [
+              "test",
+              "./..."
+            ],
+            "cwd_scope": "run_workspace",
+            "environment_policy": "isolated",
+            "timeout_seconds": 720,
+            "max_attempts": 3
+          }
+        ],
+        "required_check_ids": [
+          "check.go_test",
+          "check.go_build",
+          "check.secret_boundary"
+        ]
+      }
+    ],
+    "schema_dependencies": [
+      {
+        "schema_uri": "agent.schema.json",
+        "contract_version": "1.0.0",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "schema_uri": "common.schema.json",
+        "contract_version": "1.0.0",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "schema_uri": "message.schema.json",
+        "contract_version": "1.0.0",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "template_dependencies": [
+      {
+        "template_id": "go_base",
+        "template_version": "1.0.0",
+        "files": [
+          {
+            "path": "cmd/server/main.go.tmpl",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "content_ref": {
+              "object_type": "template",
+              "object_id": "go_base_source",
+              "object_version": 1,
+              "source_version": 1,
+              "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ],
+        "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "template_id": "add_database",
+        "template_version": "1.0.0",
+        "files": [
+          {
+            "path": "internal/database/database.go.tmpl",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "content_ref": {
+              "object_type": "template",
+              "object_id": "add_database_source",
+              "object_version": 1,
+              "source_version": 1,
+              "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ],
+        "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "template_id": "add_auth",
+        "template_version": "1.0.0",
+        "files": [
+          {
+            "path": "internal/auth/auth.go.tmpl",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "content_ref": {
+              "object_type": "template",
+              "object_id": "add_auth_source",
+              "object_version": 1,
+              "source_version": 1,
+              "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ],
+        "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "template_id": "logging",
+        "template_version": "1.0.0",
+        "files": [
+          {
+            "path": "internal/logging/logging.go.tmpl",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "content_ref": {
+              "object_type": "template",
+              "object_id": "logging_source",
+              "object_version": 1,
+              "source_version": 1,
+              "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+            }
+          }
+        ],
+        "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "tool_bindings": [
+      {
+        "tool_id": "go",
+        "version": "go1.25.0",
+        "platform": "linux_amd64",
+        "binary_sha256": null
+      }
+    ],
+    "provider_binding": null,
+    "bound_at": "2026-10-02T00:00:00Z"
+  },
+  "plan": null,
+  "plan_hash": null,
+  "proposal": null,
+  "proposal_history": [],
+  "approval": null,
+  "permission_snapshot": {
+    "permission_version": 1,
+    "actor_id": "local-user",
+    "allowed_permissions": [
+      "workspace_read",
+      "workspace_write",
+      "tool_go",
+      "package_write"
+    ],
+    "delivery_target": {
+      "provider": "local",
+      "destination": "run_package"
+    },
+    "revoked": false,
+    "permission_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "updated_at": "2026-10-02T00:00:00Z"
+  },
+  "messages": [],
+  "summary_records": [],
+  "steps": [],
+  "required_checks": [
+    {
+      "check_id": "check.approved_sources",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.artifact_manifest",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.go_mod_tidy",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.go_test",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.go_build",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.go_mod_file",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.gitignore_file",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.ci_config_file",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.readme_file",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.secret_boundary",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "check_id": "check.zip_integrity",
+      "run_id": "run_intake_example_1",
+      "source_version": 1,
+      "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "proposal_snapshot_hash": null,
+      "status": "not_ready",
+      "detail": "结构示例：尚未执行。",
+      "evidence_refs": [],
+      "started_at": null,
+      "completed_at": null
+    }
+  ],
+  "artifacts": [],
+  "manifest": null,
+  "verification_report": null,
+  "operations": [],
+  "usage": {
+    "commands": 0,
+    "model_attempts": 0,
+    "model_failures": 0,
+    "step_attempts": [],
+    "last_model_error_code": null
+  },
+  "workspace": null,
+  "workflow_checkpoint": null,
+  "history": [
+    {
+      "event_id": "event_create_example_1",
+      "action": "create",
+      "source_version": 1,
+      "state_sequence": 1,
+      "object_refs": [],
+      "detail": "结构教学例，尚未产生或执行提案。",
+      "created_at": "2026-10-02T00:00:00Z"
+    }
+  ],
+  "active_step": null,
+  "pause_requested": false,
+  "cancel_requested": false,
+  "resume_to": null,
+  "retry_of": null,
+  "error": null,
+  "created_at": "2026-10-02T00:00:00Z",
+  "updated_at": "2026-10-02T00:00:00Z"
+}

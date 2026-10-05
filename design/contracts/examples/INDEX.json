@@ -1,0 +1,265 @@
+{
+  "contract_version": "1.0.0",
+  "scope": "S0 structure only; placeholder hashes are not authority",
+  "cases": [
+    {
+      "id": "message-valid",
+      "file": "message-valid.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": true
+    },
+    {
+      "id": "message-known-components-valid",
+      "file": "message-known-components-valid.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": true
+    },
+    {
+      "id": "message-unknown-component-valid",
+      "file": "message-unknown-component-valid.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": true
+    },
+    {
+      "id": "message-invalid-extra-field",
+      "file": "message-invalid-extra-field.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": false
+    },
+    {
+      "id": "message-invalid-proposal-ref",
+      "file": "message-invalid-proposal-ref.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": false
+    },
+    {
+      "id": "message-invalid-known-component",
+      "file": "message-invalid-known-component.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": false
+    },
+    {
+      "id": "message-invalid-unknown-part",
+      "file": "message-invalid-unknown-part.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": false
+    },
+    {
+      "id": "agent-definition.valid",
+      "file": "agent-definition.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "AgentDefinition",
+      "valid": true
+    },
+    {
+      "id": "skill-definition.valid",
+      "file": "skill-definition.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "SkillDefinition",
+      "valid": true
+    },
+    {
+      "id": "decision-proposal.valid",
+      "file": "decision-proposal.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "DecisionProposal",
+      "valid": true
+    },
+    {
+      "id": "run-snapshot-intake.valid",
+      "file": "run-snapshot-intake.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "RunSnapshot",
+      "valid": true
+    },
+    {
+      "id": "snapshot-event.valid",
+      "file": "snapshot-event.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "SnapshotEvent",
+      "valid": true
+    },
+    {
+      "id": "agent-definition.missing-prompt.invalid",
+      "file": "agent-definition.missing-prompt.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "AgentDefinition",
+      "valid": false
+    },
+    {
+      "id": "agent-definition.extra-field.invalid",
+      "file": "agent-definition.extra-field.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "AgentDefinition",
+      "valid": false
+    },
+    {
+      "id": "agent-definition.unknown-action.invalid",
+      "file": "agent-definition.unknown-action.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "AgentDefinition",
+      "valid": false
+    },
+    {
+      "id": "agent-definition.missing-completion.invalid",
+      "file": "agent-definition.missing-completion.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "AgentDefinition",
+      "valid": false
+    },
+    {
+      "id": "agent-definition.bool-budget.invalid",
+      "file": "agent-definition.bool-budget.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "AgentDefinition",
+      "valid": false
+    },
+    {
+      "id": "skill-definition.missing-schema.invalid",
+      "file": "skill-definition.missing-schema.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "SkillDefinition",
+      "valid": false
+    },
+    {
+      "id": "skill-definition.unknown-parameter.invalid",
+      "file": "skill-definition.unknown-parameter.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "SkillDefinition",
+      "valid": false
+    },
+    {
+      "id": "skill-definition.bool-integer.invalid",
+      "file": "skill-definition.bool-integer.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "SkillDefinition",
+      "valid": false
+    },
+    {
+      "id": "decision-proposal.missing-binding.invalid",
+      "file": "decision-proposal.missing-binding.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "DecisionProposal",
+      "valid": false
+    },
+    {
+      "id": "decision-proposal.auto-mode.invalid",
+      "file": "decision-proposal.auto-mode.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "DecisionProposal",
+      "valid": false
+    },
+    {
+      "id": "decision-proposal.mixed-advice.invalid",
+      "file": "decision-proposal.mixed-advice.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "DecisionProposal",
+      "valid": false
+    },
+    {
+      "id": "run-snapshot.legacy-id.invalid",
+      "file": "run-snapshot.legacy-id.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "RunSnapshot",
+      "valid": false
+    },
+    {
+      "id": "run-snapshot.short-modes.invalid",
+      "file": "run-snapshot.short-modes.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "RunSnapshot",
+      "valid": false
+    },
+    {
+      "id": "run-snapshot.bool-version.invalid",
+      "file": "run-snapshot.bool-version.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "RunSnapshot",
+      "valid": false
+    },
+    {
+      "id": "run-snapshot.unknown-state.invalid",
+      "file": "run-snapshot.unknown-state.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "RunSnapshot",
+      "valid": false
+    },
+    {
+      "id": "run-snapshot.unsafe-integer.invalid",
+      "file": "run-snapshot.unsafe-integer.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "RunSnapshot",
+      "valid": false
+    },
+    {
+      "id": "snapshot-event.missing-ref.invalid",
+      "file": "snapshot-event.missing-ref.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "SnapshotEvent",
+      "valid": false
+    },
+    {
+      "id": "message-invalid-calendar-date",
+      "file": "message-invalid-calendar-date.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": false
+    },
+    {
+      "id": "message-invalid-bool-version",
+      "file": "message-invalid-bool-version.json",
+      "schema": "message.schema.json",
+      "definition": "MessageEnvelope",
+      "valid": false
+    },
+    {
+      "id": "error-response.valid",
+      "file": "error-response.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "ErrorResponse",
+      "valid": true
+    },
+    {
+      "id": "error-response.legacy-incomplete.valid",
+      "file": "error-response.legacy-incomplete.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "ErrorResponse",
+      "valid": true
+    },
+    {
+      "id": "error-response.legacy-missing-url.invalid",
+      "file": "error-response.legacy-missing-url.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "ErrorResponse",
+      "valid": false
+    },
+    {
+      "id": "create-run-request.valid",
+      "file": "create-run-request.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "CreateRunRequest",
+      "valid": true
+    },
+    {
+      "id": "control-request.valid",
+      "file": "control-request.valid.json",
+      "schema": "agent.schema.json",
+      "definition": "ControlRequest",
+      "valid": true
+    },
+    {
+      "id": "control-request.missing-proposal.invalid",
+      "file": "control-request.missing-proposal.invalid.json",
+      "schema": "agent.schema.json",
+      "definition": "ControlRequest",
+      "valid": false
+    }
+  ]
+}

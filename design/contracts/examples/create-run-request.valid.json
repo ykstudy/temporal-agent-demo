@@ -1,0 +1,18 @@
+{
+  "contract_version": "1.0.0",
+  "schema_version": 2,
+  "command_id": "create-example",
+  "run_id": "run-example",
+  "title": "示例项目",
+  "modes": {
+    "execution_mode": "local",
+    "decision_mode": "rules",
+    "delivery_mode": "local"
+  },
+  "definition_selection": {
+    "definition_id": "project_creation_agent",
+    "definition_version": "1.0.0",
+    "definition_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "initial_content": "创建 example-api Go 项目，仅本地交付"
+}

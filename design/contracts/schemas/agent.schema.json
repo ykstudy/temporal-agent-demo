@@ -1,0 +1,4608 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentstudio.invalid/contracts/1.0.0/agent.schema.json",
+  "title": "Project creation Agent TARGET contracts 1.0.0; RunSnapshot wire v2",
+  "$comment": "TARGET, not current legacy API. Offline refs only. Structural validation does not establish hashes, permissions, approval or completion. See AGENT-CONTRACTS.md.",
+  "$ref": "#/$defs/RunSnapshot",
+  "$defs": {
+    "RelativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
+    },
+    "HttpEndpoint": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://[^/?#@\\s]+(?:/[^?#@\\s]*)?$",
+      "maxLength": 2048
+    },
+    "ObjectReference": {
+      "$ref": "common.schema.json#/$defs/ObjectRef"
+    },
+    "SchemaDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_uri": {
+          "enum": [
+            "agent.schema.json",
+            "common.schema.json",
+            "message.schema.json"
+          ]
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "schema_uri",
+        "contract_version",
+        "sha256"
+      ]
+    },
+    "SchemaReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_ref": {
+          "type": "string",
+          "pattern": "^(agent|common|message)\\.schema\\.json#/\\$defs/[A-Za-z][A-Za-z0-9_]*$"
+        },
+        "file_sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "schema_ref",
+        "file_sha256"
+      ]
+    },
+    "SystemPrompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32768
+        },
+        "sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "content",
+        "sha256"
+      ]
+    },
+    "ToolIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "platform": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "binary_sha256": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "tool_id",
+        "version",
+        "platform",
+        "binary_sha256"
+      ]
+    },
+    "TemplateFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "content_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "content_ref"
+      ]
+    },
+    "TemplateDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "template_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "template_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TemplateFile"
+          },
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "manifest_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "template_id",
+        "template_version",
+        "files",
+        "manifest_hash"
+      ]
+    },
+    "SkillReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "skill_id": {
+          "enum": [
+            "add_database",
+            "add_auth",
+            "add_logging"
+          ]
+        },
+        "skill_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "skill_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "skill_id",
+        "skill_version",
+        "skill_hash"
+      ]
+    },
+    "DatabaseParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "database": {
+          "enum": [
+            "postgres",
+            "mysql",
+            "sqlite"
+          ]
+        },
+        "orm": {
+          "enum": [
+            "gorm",
+            "sqlx"
+          ]
+        }
+      },
+      "required": [
+        "database",
+        "orm"
+      ]
+    },
+    "AuthenticationParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "auth": {
+          "enum": [
+            "jwt",
+            "session"
+          ]
+        },
+        "token_ttl": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 64
+        }
+      },
+      "required": [
+        "auth",
+        "token_ttl"
+      ]
+    },
+    "LoggingParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "log_level": {
+          "enum": [
+            "debug",
+            "info",
+            "warn",
+            "error"
+          ]
+        },
+        "log_format": {
+          "enum": [
+            "json",
+            "text"
+          ]
+        },
+        "log_output": {
+          "enum": [
+            "console",
+            "file"
+          ]
+        },
+        "log_path": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/RelativePath"
+            },
+            {
+              "pattern": "^logs/"
+            }
+          ]
+        },
+        "log_max_size": {
+          "type": "integer",
+          "minimum": 1048576,
+          "maximum": 1073741824
+        },
+        "log_max_backups": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "log_max_age": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 64
+        },
+        "log_on_write_error": {
+          "enum": [
+            "degrade",
+            "fail_closed"
+          ]
+        }
+      },
+      "required": [
+        "log_level",
+        "log_format",
+        "log_output",
+        "log_path",
+        "log_max_size",
+        "log_max_backups",
+        "log_max_age",
+        "log_on_write_error"
+      ]
+    },
+    "StringParameterSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "string"
+        },
+        "enum": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "minLength": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "maxLength": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "pattern": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "default": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      },
+      "required": [
+        "type",
+        "default"
+      ]
+    },
+    "IntegerParameterSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "integer"
+        },
+        "minimum": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "maximum": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "default": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      },
+      "required": [
+        "type",
+        "default"
+      ]
+    },
+    "ParameterPropertySchema": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/StringParameterSchema"
+        },
+        {
+          "$ref": "#/$defs/IntegerParameterSchema"
+        }
+      ]
+    },
+    "SkillParameterSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "https://json-schema.org/draft/2020-12/schema"
+        },
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "database": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "orm": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "auth": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "token_ttl": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_level": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_format": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_output": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_path": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_max_size": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_max_backups": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_max_age": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            },
+            "log_on_write_error": {
+              "$ref": "#/$defs/ParameterPropertySchema"
+            }
+          },
+          "required": []
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "database",
+              "orm",
+              "auth",
+              "token_ttl",
+              "log_level",
+              "log_format",
+              "log_output",
+              "log_path",
+              "log_max_size",
+              "log_max_backups",
+              "log_max_age",
+              "log_on_write_error"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "$schema",
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ]
+    },
+    "PostCommand": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "command_id": {
+          "enum": [
+            "go.mod_tidy",
+            "go.test",
+            "go.build"
+          ]
+        },
+        "executable": {
+          "const": "go"
+        },
+        "arguments": {
+          "oneOf": [
+            {
+              "const": [
+                "mod",
+                "tidy"
+              ]
+            },
+            {
+              "const": [
+                "test",
+                "./..."
+              ]
+            },
+            {
+              "const": [
+                "build",
+                "./..."
+              ]
+            }
+          ]
+        },
+        "cwd_scope": {
+          "const": "run_workspace"
+        },
+        "environment_policy": {
+          "const": "isolated"
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 720
+        },
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "command_id",
+        "executable",
+        "arguments",
+        "cwd_scope",
+        "environment_policy",
+        "timeout_seconds",
+        "max_attempts"
+      ]
+    },
+    "SkillDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "skill_id": {
+          "enum": [
+            "add_database",
+            "add_auth",
+            "add_logging"
+          ]
+        },
+        "skill_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "skill_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "supported_stacks": {
+          "const": [
+            "golang"
+          ]
+        },
+        "parameters_schema": {
+          "$ref": "#/$defs/SkillParameterSchema"
+        },
+        "default_parameters": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/DatabaseParameters"
+            },
+            {
+              "$ref": "#/$defs/AuthenticationParameters"
+            },
+            {
+              "$ref": "#/$defs/LoggingParameters"
+            }
+          ]
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SkillReference"
+          },
+          "minItems": 0,
+          "maxItems": 3,
+          "uniqueItems": true
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "add_database",
+              "add_auth",
+              "add_logging"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 3,
+          "uniqueItems": true
+        },
+        "input_contract": {
+          "$ref": "#/$defs/SchemaReference"
+        },
+        "output_contract": {
+          "$ref": "#/$defs/SchemaReference"
+        },
+        "template_dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TemplateDependency"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "write_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RelativePath"
+          },
+          "minItems": 1,
+          "maxItems": 128,
+          "uniqueItems": true
+        },
+        "required_permissions": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "workspace_read",
+              "workspace_write",
+              "tool_go"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true
+        },
+        "required_tools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ToolIdentity"
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "post_commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PostCommand"
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "required_check_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Id"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contract_version",
+        "skill_id",
+        "skill_version",
+        "skill_hash",
+        "name",
+        "description",
+        "supported_stacks",
+        "parameters_schema",
+        "default_parameters",
+        "dependencies",
+        "conflicts",
+        "input_contract",
+        "output_contract",
+        "template_dependencies",
+        "write_paths",
+        "required_permissions",
+        "required_tools",
+        "post_commands",
+        "required_check_ids"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "skill_id": {
+                "const": "add_database"
+              }
+            },
+            "required": [
+              "skill_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "default_parameters": {
+                "$ref": "#/$defs/DatabaseParameters"
+              },
+              "parameters_schema": {
+                "properties": {
+                  "properties": {
+                    "required": [
+                      "database",
+                      "orm"
+                    ],
+                    "propertyNames": {
+                      "enum": [
+                        "database",
+                        "orm"
+                      ]
+                    }
+                  },
+                  "required": {
+                    "const": [
+                      "database",
+                      "orm"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "skill_id": {
+                "const": "add_auth"
+              }
+            },
+            "required": [
+              "skill_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "default_parameters": {
+                "$ref": "#/$defs/AuthenticationParameters"
+              },
+              "parameters_schema": {
+                "properties": {
+                  "properties": {
+                    "required": [
+                      "auth",
+                      "token_ttl"
+                    ],
+                    "propertyNames": {
+                      "enum": [
+                        "auth",
+                        "token_ttl"
+                      ]
+                    }
+                  },
+                  "required": {
+                    "const": [
+                      "auth",
+                      "token_ttl"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "skill_id": {
+                "const": "add_logging"
+              }
+            },
+            "required": [
+              "skill_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "default_parameters": {
+                "$ref": "#/$defs/LoggingParameters"
+              },
+              "parameters_schema": {
+                "properties": {
+                  "properties": {
+                    "required": [
+                      "log_level",
+                      "log_format",
+                      "log_output",
+                      "log_path",
+                      "log_max_size",
+                      "log_max_backups",
+                      "log_max_age",
+                      "log_on_write_error"
+                    ],
+                    "propertyNames": {
+                      "enum": [
+                        "log_level",
+                        "log_format",
+                        "log_output",
+                        "log_path",
+                        "log_max_size",
+                        "log_max_backups",
+                        "log_max_age",
+                        "log_on_write_error"
+                      ]
+                    }
+                  },
+                  "required": {
+                    "const": [
+                      "log_level",
+                      "log_format",
+                      "log_output",
+                      "log_path",
+                      "log_max_size",
+                      "log_max_backups",
+                      "log_max_age",
+                      "log_on_write_error"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SkillSelection": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "skill_id": {
+              "const": "add_database"
+            },
+            "skill_version": {
+              "type": "string",
+              "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+              "maxLength": 64
+            },
+            "skill_hash": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            "parameters": {
+              "$ref": "#/$defs/DatabaseParameters"
+            }
+          },
+          "required": [
+            "skill_id",
+            "skill_version",
+            "skill_hash",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "skill_id": {
+              "const": "add_auth"
+            },
+            "skill_version": {
+              "type": "string",
+              "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+              "maxLength": 64
+            },
+            "skill_hash": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            "parameters": {
+              "$ref": "#/$defs/AuthenticationParameters"
+            }
+          },
+          "required": [
+            "skill_id",
+            "skill_version",
+            "skill_hash",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "skill_id": {
+              "const": "add_logging"
+            },
+            "skill_version": {
+              "type": "string",
+              "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+              "maxLength": 64
+            },
+            "skill_hash": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            "parameters": {
+              "$ref": "#/$defs/LoggingParameters"
+            }
+          },
+          "required": [
+            "skill_id",
+            "skill_version",
+            "skill_hash",
+            "parameters"
+          ]
+        }
+      ]
+    },
+    "LocalTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "const": "local"
+        },
+        "destination": {
+          "const": "run_package"
+        }
+      },
+      "required": [
+        "provider",
+        "destination"
+      ]
+    },
+    "GitLabTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "const": "gitlab"
+        },
+        "instance_url": {
+          "$ref": "#/$defs/HttpEndpoint"
+        },
+        "namespace_id": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$",
+          "maxLength": 32
+        },
+        "namespace_path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255,
+          "pattern": "^[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*$"
+        },
+        "project_path": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,62}$"
+        },
+        "ref": {
+          "const": "main"
+        },
+        "visibility": {
+          "const": "private"
+        }
+      },
+      "required": [
+        "provider",
+        "instance_url",
+        "namespace_id",
+        "namespace_path",
+        "project_path",
+        "ref",
+        "visibility"
+      ]
+    },
+    "DeliveryTarget": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/LocalTarget"
+        },
+        {
+          "$ref": "#/$defs/GitLabTarget"
+        }
+      ]
+    },
+    "ProjectPlan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "project_name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,62}$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 16000
+        },
+        "tech_stack": {
+          "const": "golang"
+        },
+        "selected_skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SkillSelection"
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "template_dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TemplateDependency"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "delivery_target": {
+          "$ref": "#/$defs/DeliveryTarget"
+        },
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "contract_version",
+        "project_name",
+        "description",
+        "tech_stack",
+        "selected_skills",
+        "template_dependencies",
+        "delivery_target",
+        "plan_hash"
+      ]
+    },
+    "BudgetPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_commands": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 256
+        },
+        "max_model_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "max_files": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "max_artifact_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2097152
+        },
+        "max_step_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "max_commands",
+        "max_model_attempts",
+        "max_files",
+        "max_artifact_bytes",
+        "max_step_attempts"
+      ]
+    },
+    "ContextPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 8000
+        },
+        "recent_messages": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "summary_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "output_reserve_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1800
+        },
+        "protocol_reserve_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "compression_threshold": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "compression_unit": {
+          "const": "message"
+        },
+        "summary_generation": {
+          "const": "follow_decision_mode"
+        },
+        "summary_generator_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        }
+      },
+      "required": [
+        "max_tokens",
+        "recent_messages",
+        "summary_tokens",
+        "output_reserve_tokens",
+        "protocol_reserve_tokens",
+        "compression_threshold",
+        "compression_unit",
+        "summary_generation",
+        "summary_generator_version"
+      ]
+    },
+    "ActionType": {
+      "enum": [
+        "scaffold",
+        "apply_skill",
+        "verify",
+        "create_repository",
+        "push_repository",
+        "trigger_ci",
+        "package"
+      ]
+    },
+    "ActionProtocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "model_output_schema": {
+          "$ref": "#/$defs/SchemaReference"
+        },
+        "decision_proposal_schema": {
+          "$ref": "#/$defs/SchemaReference"
+        },
+        "action_validation_schema": {
+          "$ref": "#/$defs/SchemaReference"
+        },
+        "execution_request_schema": {
+          "$ref": "#/$defs/SchemaReference"
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ActionType"
+          },
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "model_output_schema",
+        "decision_proposal_schema",
+        "action_validation_schema",
+        "execution_request_schema",
+        "allowed_actions"
+      ]
+    },
+    "CheckDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "check_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "kind": {
+          "enum": [
+            "source",
+            "manifest",
+            "tool",
+            "file",
+            "secret_boundary",
+            "package",
+            "remote_repository",
+            "remote_commit",
+            "ci"
+          ]
+        },
+        "delivery_modes": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/DeliveryMode"
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "required_evidence_types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "source_hash",
+              "manifest_hash",
+              "tool_exit",
+              "file_hash",
+              "secret_scan",
+              "zip_integrity",
+              "remote_identity",
+              "commit_tree",
+              "pipeline_jobs",
+              "coverage_report",
+              "build_artifact"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "check_id",
+        "title",
+        "kind",
+        "delivery_modes",
+        "required_evidence_types"
+      ]
+    },
+    "CompletionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required_checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CheckDefinition"
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "completion_authority": {
+          "const": "deterministic_validator"
+        },
+        "external_validation_authority": {
+          "const": false
+        },
+        "allow_unverified_done": {
+          "const": false
+        }
+      },
+      "required": [
+        "required_checks",
+        "completion_authority",
+        "external_validation_authority",
+        "allow_unverified_done"
+      ]
+    },
+    "RepositoryPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allowed_providers": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/DeliveryMode"
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "visibility": {
+          "const": "private"
+        },
+        "required_ref": {
+          "const": "main"
+        },
+        "require_explicit_namespace": {
+          "const": true
+        },
+        "overwrite_existing_unowned_project": {
+          "const": false
+        },
+        "unknown_write_policy": {
+          "const": "block_and_reconcile_original_operation"
+        }
+      },
+      "required": [
+        "allowed_providers",
+        "visibility",
+        "required_ref",
+        "require_explicit_namespace",
+        "overwrite_existing_unowned_project",
+        "unknown_write_policy"
+      ]
+    },
+    "AgentDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "definition_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "definition_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "definition_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "supported_stacks": {
+          "const": [
+            "golang"
+          ]
+        },
+        "available_skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SkillReference"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "system_prompt": {
+          "$ref": "#/$defs/SystemPrompt"
+        },
+        "action_protocol": {
+          "$ref": "#/$defs/ActionProtocol"
+        },
+        "default_ci": {
+          "const": "gitlab_ci"
+        },
+        "repository_policy": {
+          "$ref": "#/$defs/RepositoryPolicy"
+        },
+        "context_policy": {
+          "$ref": "#/$defs/ContextPolicy"
+        },
+        "budget_policy": {
+          "$ref": "#/$defs/BudgetPolicy"
+        },
+        "completion_policy": {
+          "$ref": "#/$defs/CompletionPolicy"
+        },
+        "required_tools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ToolIdentity"
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "post_commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PostCommand"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "contract_version",
+        "definition_id",
+        "definition_version",
+        "definition_hash",
+        "supported_stacks",
+        "available_skills",
+        "system_prompt",
+        "action_protocol",
+        "default_ci",
+        "repository_policy",
+        "context_policy",
+        "budget_policy",
+        "completion_policy",
+        "required_tools",
+        "post_commands"
+      ]
+    },
+    "ProviderBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "provider_kind": {
+          "const": "openai_compatible"
+        },
+        "endpoint": {
+          "$ref": "#/$defs/HttpEndpoint"
+        },
+        "model_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "provider_kind",
+        "endpoint",
+        "model_id"
+      ]
+    },
+    "DefinitionSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "definition_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "definition_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "definition_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "snapshot_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "definition": {
+          "$ref": "#/$defs/AgentDefinition"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SkillDefinition"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "schema_dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SchemaDependency"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "template_dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TemplateDependency"
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "tool_bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ToolIdentity"
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "provider_binding": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProviderBinding"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bound_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "definition_id",
+        "definition_version",
+        "definition_hash",
+        "snapshot_version",
+        "snapshot_hash",
+        "definition",
+        "skills",
+        "schema_dependencies",
+        "template_dependencies",
+        "tool_bindings",
+        "provider_binding",
+        "bound_at"
+      ]
+    },
+    "ScaffoldParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "plan_hash"
+      ]
+    },
+    "ApplySkillParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "selection": {
+          "$ref": "#/$defs/SkillSelection"
+        }
+      },
+      "required": [
+        "plan_hash",
+        "selection"
+      ]
+    },
+    "VerifyParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "manifest_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "required_check_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Id"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "manifest_ref",
+        "required_check_ids"
+      ]
+    },
+    "CreateRepositoryParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "$ref": "#/$defs/GitLabTarget"
+        }
+      },
+      "required": [
+        "target"
+      ]
+    },
+    "PushRepositoryParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "$ref": "#/$defs/GitLabTarget"
+        },
+        "project_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "manifest_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "expected_branch_sha": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "target",
+        "project_id",
+        "manifest_ref",
+        "expected_branch_sha"
+      ]
+    },
+    "TriggerCIParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "$ref": "#/$defs/GitLabTarget"
+        },
+        "project_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "ci_config_sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "target",
+        "project_id",
+        "commit_sha",
+        "ci_config_sha256"
+      ]
+    },
+    "PackageParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "manifest_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        }
+      },
+      "required": [
+        "manifest_ref"
+      ]
+    },
+    "CandidateAction": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "scaffold"
+            },
+            "parameters": {
+              "$ref": "#/$defs/ScaffoldParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "apply_skill"
+            },
+            "parameters": {
+              "$ref": "#/$defs/ApplySkillParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "verify"
+            },
+            "parameters": {
+              "$ref": "#/$defs/VerifyParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "create_repository"
+            },
+            "parameters": {
+              "$ref": "#/$defs/CreateRepositoryParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "push_repository"
+            },
+            "parameters": {
+              "$ref": "#/$defs/PushRepositoryParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "trigger_ci"
+            },
+            "parameters": {
+              "$ref": "#/$defs/TriggerCIParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action_type": {
+              "const": "package"
+            },
+            "parameters": {
+              "$ref": "#/$defs/PackageParameters"
+            }
+          },
+          "required": [
+            "action_type",
+            "parameters"
+          ]
+        }
+      ]
+    },
+    "Diagnosis": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "enum": [
+            "input",
+            "constraint",
+            "permission",
+            "budget",
+            "infrastructure",
+            "business",
+            "unknown_result"
+          ]
+        },
+        "code": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "suggested_remedy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "category",
+        "code",
+        "message",
+        "evidence_refs",
+        "suggested_remedy"
+      ]
+    },
+    "DecisionAdvice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "clarification",
+            "plan",
+            "action",
+            "diagnosis",
+            "completion"
+          ]
+        },
+        "question": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "plan": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProjectPlan"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "action": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CandidateAction"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "diagnosis": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Diagnosis"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completion_hint": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "kind",
+        "question",
+        "plan",
+        "action",
+        "diagnosis",
+        "completion_hint",
+        "reason"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "clarification"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "plan": {
+                "type": "null"
+              },
+              "diagnosis": {
+                "type": "null"
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "completion_hint": {
+                "type": "null"
+              },
+              "action": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "plan"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "plan": {
+                "$ref": "#/$defs/ProjectPlan"
+              },
+              "diagnosis": {
+                "type": "null"
+              },
+              "question": {
+                "type": "null"
+              },
+              "completion_hint": {
+                "type": "null"
+              },
+              "action": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "action"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "plan": {
+                "type": "null"
+              },
+              "diagnosis": {
+                "type": "null"
+              },
+              "question": {
+                "type": "null"
+              },
+              "completion_hint": {
+                "type": "null"
+              },
+              "action": {
+                "$ref": "#/$defs/CandidateAction"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "diagnosis"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "plan": {
+                "type": "null"
+              },
+              "diagnosis": {
+                "$ref": "#/$defs/Diagnosis"
+              },
+              "question": {
+                "type": "null"
+              },
+              "completion_hint": {
+                "type": "null"
+              },
+              "action": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "completion"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "plan": {
+                "type": "null"
+              },
+              "diagnosis": {
+                "type": "null"
+              },
+              "question": {
+                "type": "null"
+              },
+              "completion_hint": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096
+              },
+              "action": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ModelUsage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "input_tokens": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "output_tokens": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "total_tokens": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provider_request_id": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "input_tokens",
+        "output_tokens",
+        "total_tokens",
+        "provider_request_id"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "known"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "input_tokens": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "output_tokens": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "total_tokens": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "input_tokens": {
+                "type": "null"
+              },
+              "output_tokens": {
+                "type": "null"
+              },
+              "total_tokens": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "DecisionProposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "decision_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "decision_mode": {
+          "$ref": "common.schema.json#/$defs/DecisionMode"
+        },
+        "advice": {
+          "$ref": "#/$defs/DecisionAdvice"
+        },
+        "model_usage": {
+          "$ref": "#/$defs/ModelUsage"
+        },
+        "input_message_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "input_context_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "decision_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "decision_id",
+        "run_id",
+        "source_version",
+        "state_sequence",
+        "definition_snapshot_hash",
+        "decision_mode",
+        "advice",
+        "model_usage",
+        "input_message_refs",
+        "input_context_hash",
+        "decision_hash",
+        "created_at"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "decision_mode": {
+                "const": "rules"
+              }
+            },
+            "required": [
+              "decision_mode"
+            ]
+          },
+          "then": {
+            "properties": {
+              "model_usage": {
+                "properties": {
+                  "status": {
+                    "const": "not_applicable"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "model_usage": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "known",
+                      "unknown"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ValidationFinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "code": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "rule_id",
+        "passed",
+        "code",
+        "detail"
+      ]
+    },
+    "ApprovalBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "approval_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "proposal_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "proposal_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "proposal_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "permission_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "issued_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "expires_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "approval_id",
+        "proposal_id",
+        "proposal_version",
+        "source_version",
+        "proposal_snapshot_hash",
+        "definition_snapshot_hash",
+        "permission_hash",
+        "issued_at",
+        "expires_at"
+      ]
+    },
+    "WorkspaceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "workspace_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "storage_key": {
+          "$ref": "#/$defs/RelativePath"
+        }
+      },
+      "required": [
+        "workspace_id",
+        "run_id",
+        "storage_key"
+      ]
+    },
+    "ExecutionRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "execution_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "operation_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "command_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence_at_validation": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "validation_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "validation_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "approval": {
+          "$ref": "#/$defs/ApprovalBinding"
+        },
+        "workspace": {
+          "$ref": "#/$defs/WorkspaceReference"
+        },
+        "action": {
+          "$ref": "#/$defs/CandidateAction"
+        },
+        "required_permission_ids": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "workspace_read",
+              "workspace_write",
+              "tool_go",
+              "gitlab_create",
+              "gitlab_push",
+              "gitlab_ci",
+              "package_write"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true
+        },
+        "request_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "execution_id",
+        "operation_id",
+        "command_id",
+        "run_id",
+        "source_version",
+        "state_sequence_at_validation",
+        "definition_snapshot_hash",
+        "plan_hash",
+        "validation_id",
+        "validation_hash",
+        "approval",
+        "workspace",
+        "action",
+        "required_permission_ids",
+        "request_hash",
+        "created_at"
+      ]
+    },
+    "ActionValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "validation_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "decision_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "decision_kind": {
+          "enum": [
+            "clarification",
+            "plan",
+            "action",
+            "diagnosis",
+            "completion"
+          ]
+        },
+        "verdict": {
+          "enum": [
+            "allowed",
+            "rejected",
+            "needs_clarification"
+          ]
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ValidationFinding"
+          },
+          "minItems": 1,
+          "maxItems": 64
+        },
+        "normalized_advice": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DecisionAdvice"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_request": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExecutionRequest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "validation_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "validated_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "validation_id",
+        "decision_id",
+        "run_id",
+        "source_version",
+        "state_sequence",
+        "definition_snapshot_hash",
+        "decision_kind",
+        "verdict",
+        "findings",
+        "normalized_advice",
+        "execution_request",
+        "validation_hash",
+        "validated_at"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "verdict": {
+                "const": "allowed"
+              }
+            },
+            "required": [
+              "verdict"
+            ]
+          },
+          "then": {
+            "properties": {
+              "normalized_advice": {
+                "$ref": "#/$defs/DecisionAdvice"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "normalized_advice": {
+                "type": "null"
+              },
+              "execution_request": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "verdict": {
+                "const": "allowed"
+              },
+              "decision_kind": {
+                "const": "action"
+              }
+            },
+            "required": [
+              "verdict",
+              "decision_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "execution_request": {
+                "$ref": "#/$defs/ExecutionRequest"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "execution_request": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SummarySource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "first_message_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "last_message_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "message_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/Id"
+          },
+          "minItems": 1,
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "first_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "last_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "raw_jsonl_sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "first_message_id",
+        "last_message_id",
+        "message_ids",
+        "first_sequence",
+        "last_sequence",
+        "raw_jsonl_sha256"
+      ]
+    },
+    "SummaryGenerator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "$ref": "common.schema.json#/$defs/DecisionMode"
+        },
+        "generator_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "model_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "prompt_sha256": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "generator_version",
+        "model_id",
+        "prompt_sha256"
+      ]
+    },
+    "SummaryRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "summary_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "summary_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "source": {
+          "$ref": "#/$defs/SummarySource"
+        },
+        "generator": {
+          "$ref": "#/$defs/SummaryGenerator"
+        },
+        "previous_summary_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ObjectReference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "content_sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "summary_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "summary_id",
+        "summary_version",
+        "run_id",
+        "source_version",
+        "definition_snapshot_hash",
+        "source",
+        "generator",
+        "previous_summary_ref",
+        "content",
+        "content_sha256",
+        "summary_hash",
+        "created_at"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "generator": {
+                "properties": {
+                  "mode": {
+                    "const": "model"
+                  }
+                },
+                "required": [
+                  "mode"
+                ]
+              }
+            },
+            "required": [
+              "generator"
+            ]
+          },
+          "then": {
+            "properties": {
+              "generator": {
+                "properties": {
+                  "model_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4096
+                  },
+                  "prompt_sha256": {
+                    "$ref": "common.schema.json#/$defs/Hash"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "generator": {
+                "properties": {
+                  "model_id": {
+                    "type": "null"
+                  },
+                  "prompt_sha256": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "FileChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "operation": {
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        "before": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2097152
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "before_sha256": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "after": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2097152
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "after_sha256": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "path",
+        "operation",
+        "before",
+        "before_sha256",
+        "after",
+        "after_sha256"
+      ],
+      "oneOf": [
+        {
+          "properties": {
+            "operation": {
+              "const": "create"
+            },
+            "before": {
+              "type": "null"
+            },
+            "before_sha256": {
+              "type": "null"
+            },
+            "after": {
+              "type": "string"
+            },
+            "after_sha256": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            }
+          }
+        },
+        {
+          "properties": {
+            "operation": {
+              "const": "update"
+            },
+            "before": {
+              "type": "string"
+            },
+            "before_sha256": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            "after": {
+              "type": "string"
+            },
+            "after_sha256": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            }
+          }
+        },
+        {
+          "properties": {
+            "operation": {
+              "const": "delete"
+            },
+            "before": {
+              "type": "string"
+            },
+            "before_sha256": {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            "after": {
+              "type": "null"
+            },
+            "after_sha256": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "PreflightCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "check_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "check_id",
+        "passed",
+        "detail"
+      ]
+    },
+    "Proposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposal_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "proposal_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "blocked",
+            "accepted",
+            "rejected",
+            "revision_requested",
+            "expired",
+            "superseded"
+          ]
+        },
+        "plan": {
+          "$ref": "#/$defs/ProjectPlan"
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FileChange"
+          },
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "impact": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ActionType"
+          },
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true
+        },
+        "required_permission_ids": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "workspace_read",
+              "workspace_write",
+              "tool_go",
+              "gitlab_create",
+              "gitlab_push",
+              "gitlab_ci",
+              "package_write"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true
+        },
+        "permission_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PreflightCheck"
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "issued_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "expires_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "proposal_id",
+        "run_id",
+        "proposal_version",
+        "source_version",
+        "definition_snapshot_hash",
+        "plan_hash",
+        "snapshot_hash",
+        "title",
+        "status",
+        "plan",
+        "changes",
+        "impact",
+        "allowed_actions",
+        "required_permission_ids",
+        "permission_hash",
+        "checks",
+        "issued_at",
+        "expires_at"
+      ]
+    },
+    "Approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "approval_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "actor_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "proposal_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "proposal_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "proposal_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "permission_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ActionType"
+          },
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true
+        },
+        "delivery_target": {
+          "$ref": "#/$defs/DeliveryTarget"
+        },
+        "issued_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "expires_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "accepted_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "started_at": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revoked_at": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "started",
+            "revoked",
+            "expired"
+          ]
+        },
+        "approval_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "contract_version",
+        "approval_id",
+        "run_id",
+        "actor_id",
+        "proposal_id",
+        "proposal_version",
+        "source_version",
+        "proposal_snapshot_hash",
+        "definition_snapshot_hash",
+        "plan_hash",
+        "permission_hash",
+        "allowed_actions",
+        "delivery_target",
+        "issued_at",
+        "expires_at",
+        "accepted_at",
+        "started_at",
+        "revoked_at",
+        "status",
+        "approval_hash"
+      ]
+    },
+    "ArtifactEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "path": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "sha256": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "artifact_id",
+        "path",
+        "size",
+        "sha256",
+        "media_type"
+      ]
+    },
+    "ArtifactManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "manifest_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "proposal_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "proposal_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "proposal_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "plan_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ArtifactEntry"
+          },
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "manifest_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "contract_version",
+        "manifest_id",
+        "run_id",
+        "source_version",
+        "proposal_id",
+        "proposal_version",
+        "proposal_snapshot_hash",
+        "definition_snapshot_hash",
+        "plan_hash",
+        "files",
+        "hash",
+        "created_at",
+        "manifest_version"
+      ]
+    },
+    "RequiredCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "check_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "proposal_snapshot_hash": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "not_ready",
+            "running",
+            "passed",
+            "failed",
+            "not_verified"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "started_at": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completed_at": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "check_id",
+        "run_id",
+        "source_version",
+        "definition_snapshot_hash",
+        "proposal_snapshot_hash",
+        "status",
+        "detail",
+        "evidence_refs",
+        "started_at",
+        "completed_at"
+      ]
+    },
+    "Step": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "step_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "running",
+            "completed",
+            "failed",
+            "skipped"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "execution_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        }
+      },
+      "required": [
+        "step_id",
+        "title",
+        "state",
+        "detail",
+        "source_version",
+        "execution_refs"
+      ]
+    },
+    "OperationRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operation_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "action_type": {
+          "$ref": "#/$defs/ActionType"
+        },
+        "operation_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "request_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "target_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "sent",
+            "unknown",
+            "verified",
+            "rejected"
+          ]
+        },
+        "external_object_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4096
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "updated_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "operation_id",
+        "run_id",
+        "source_version",
+        "action_type",
+        "operation_sequence",
+        "request_hash",
+        "target_hash",
+        "status",
+        "external_object_id",
+        "evidence_refs",
+        "created_at",
+        "updated_at"
+      ]
+    },
+    "StepAttempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "step_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "attempts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "step_id",
+        "attempts"
+      ]
+    },
+    "Usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "commands": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "model_attempts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "model_failures": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "step_attempts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StepAttempt"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "last_model_error_code": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "commands",
+        "model_attempts",
+        "model_failures",
+        "step_attempts",
+        "last_model_error_code"
+      ]
+    },
+    "PermissionSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "permission_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "actor_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "allowed_permissions": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "workspace_read",
+              "workspace_write",
+              "tool_go",
+              "gitlab_create",
+              "gitlab_push",
+              "gitlab_ci",
+              "package_write"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true
+        },
+        "delivery_target": {
+          "$ref": "#/$defs/DeliveryTarget"
+        },
+        "revoked": {
+          "type": "boolean"
+        },
+        "permission_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "updated_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "permission_version",
+        "actor_id",
+        "allowed_permissions",
+        "delivery_target",
+        "revoked",
+        "permission_hash",
+        "updated_at"
+      ]
+    },
+    "Failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "category": {
+          "enum": [
+            "input",
+            "constraint",
+            "permission",
+            "budget",
+            "infrastructure",
+            "business",
+            "unknown_result"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "operation_id": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        }
+      },
+      "required": [
+        "code",
+        "category",
+        "message",
+        "operation_id",
+        "evidence_refs"
+      ]
+    },
+    "HistoryEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "action": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "object_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "event_id",
+        "action",
+        "source_version",
+        "state_sequence",
+        "object_refs",
+        "detail",
+        "created_at"
+      ]
+    },
+    "WorkflowCheckpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "workflow_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "execution_run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "commands_processed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "query_state": {
+          "$ref": "common.schema.json#/$defs/RunState"
+        },
+        "checkpoint_state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "workflow_id",
+        "execution_run_id",
+        "commands_processed",
+        "query_state",
+        "checkpoint_state_sequence"
+      ]
+    },
+    "RunSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "schema_version": {
+          "const": 2
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "state": {
+          "$ref": "common.schema.json#/$defs/RunState"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "modes": {
+          "$ref": "common.schema.json#/$defs/Modes"
+        },
+        "definition_snapshot": {
+          "$ref": "#/$defs/DefinitionSnapshot"
+        },
+        "plan": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProjectPlan"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "plan_hash": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Hash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proposal": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Proposal"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proposal_history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Proposal"
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "approval": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Approval"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "permission_snapshot": {
+          "$ref": "#/$defs/PermissionSnapshot"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "message.schema.json#/$defs/MessageEnvelope"
+          },
+          "minItems": 0,
+          "maxItems": 1024
+        },
+        "summary_records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SummaryRecord"
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Step"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "required_checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RequiredCheck"
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ArtifactEntry"
+          },
+          "minItems": 0,
+          "maxItems": 128
+        },
+        "manifest": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactManifest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OperationRecord"
+          },
+          "minItems": 0,
+          "maxItems": 256
+        },
+        "usage": {
+          "$ref": "#/$defs/Usage"
+        },
+        "workspace": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WorkspaceReference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflow_checkpoint": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WorkflowCheckpoint"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/HistoryEvent"
+          },
+          "minItems": 1,
+          "maxItems": 1024
+        },
+        "active_step": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pause_requested": {
+          "type": "boolean"
+        },
+        "cancel_requested": {
+          "type": "boolean"
+        },
+        "resume_to": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/RunState"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retry_of": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "error": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Failure"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "updated_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "verification_report": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/VerificationReport"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "contract_version",
+        "schema_version",
+        "run_id",
+        "snapshot_hash",
+        "title",
+        "state",
+        "source_version",
+        "state_sequence",
+        "modes",
+        "definition_snapshot",
+        "plan",
+        "plan_hash",
+        "proposal",
+        "proposal_history",
+        "approval",
+        "permission_snapshot",
+        "messages",
+        "summary_records",
+        "steps",
+        "required_checks",
+        "artifacts",
+        "manifest",
+        "operations",
+        "usage",
+        "workspace",
+        "workflow_checkpoint",
+        "history",
+        "active_step",
+        "pause_requested",
+        "cancel_requested",
+        "resume_to",
+        "retry_of",
+        "error",
+        "created_at",
+        "updated_at",
+        "verification_report"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "modes": {
+                "properties": {
+                  "execution_mode": {
+                    "const": "local"
+                  }
+                },
+                "required": [
+                  "execution_mode"
+                ]
+              }
+            },
+            "required": [
+              "modes"
+            ]
+          },
+          "then": {
+            "properties": {
+              "workflow_checkpoint": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "PLAN"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "properties": {
+              "plan": {
+                "$ref": "#/$defs/ProjectPlan"
+              },
+              "proposal": {
+                "$ref": "#/$defs/Proposal"
+              },
+              "plan_hash": {
+                "$ref": "common.schema.json#/$defs/Hash"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "DONE"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "properties": {
+              "manifest": {
+                "$ref": "#/$defs/ArtifactManifest"
+              },
+              "approval": {
+                "$ref": "#/$defs/Approval"
+              },
+              "error": {
+                "type": "null"
+              },
+              "verification_report": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/VerificationReport"
+                  },
+                  {
+                    "properties": {
+                      "outcome": {
+                        "const": "passed"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "VerificationReport": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "report_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "report_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "definition_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "proposal_snapshot_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "manifest_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RequiredCheck"
+          },
+          "minItems": 1,
+          "maxItems": 32
+        },
+        "outcome": {
+          "enum": [
+            "not_ready",
+            "passed",
+            "failed"
+          ]
+        },
+        "report_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "report_id",
+        "report_version",
+        "run_id",
+        "source_version",
+        "definition_snapshot_hash",
+        "proposal_snapshot_hash",
+        "manifest_ref",
+        "checks",
+        "outcome",
+        "report_hash",
+        "created_at"
+      ],
+      "allOf": [
+        {
+          "properties": {
+            "manifest_ref": {
+              "properties": {
+                "object_type": {
+                  "const": "manifest"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "passed"
+              }
+            },
+            "required": [
+              "outcome"
+            ]
+          },
+          "then": {
+            "properties": {
+              "checks": {
+                "items": {
+                  "properties": {
+                    "status": {
+                      "const": "passed"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "DefinitionSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "definition_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "definition_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$",
+          "maxLength": 64
+        },
+        "definition_hash": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        }
+      },
+      "required": [
+        "definition_id",
+        "definition_version",
+        "definition_hash"
+      ]
+    },
+    "CreateRunRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "schema_version": {
+          "const": 2
+        },
+        "command_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "modes": {
+          "$ref": "common.schema.json#/$defs/Modes"
+        },
+        "definition_selection": {
+          "$ref": "#/$defs/DefinitionSelection"
+        },
+        "initial_content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        }
+      },
+      "required": [
+        "contract_version",
+        "schema_version",
+        "command_id",
+        "run_id",
+        "title",
+        "modes",
+        "definition_selection",
+        "initial_content"
+      ]
+    },
+    "MessageRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "schema_version": {
+          "const": 2
+        },
+        "command_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "target": {
+          "allOf": [
+            {
+              "$ref": "message.schema.json#/$defs/ObjectRef"
+            },
+            {
+              "properties": {
+                "object_type": {
+                  "const": "run"
+                }
+              }
+            }
+          ]
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        }
+      },
+      "required": [
+        "contract_version",
+        "schema_version",
+        "command_id",
+        "target",
+        "content"
+      ]
+    },
+    "ControlRequest": {
+      "$ref": "message.schema.json#/$defs/ActionIntent"
+    },
+    "CommandReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "schema_version": {
+          "const": 2
+        },
+        "command_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "command_fingerprint": {
+          "$ref": "common.schema.json#/$defs/Hash"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "queued",
+            "processed",
+            "rejected",
+            "result_unknown"
+          ]
+        },
+        "run_ref": {
+          "anyOf": [
+            {
+              "allOf": [
+                {
+                  "$ref": "message.schema.json#/$defs/ObjectRef"
+                },
+                {
+                  "properties": {
+                    "object_type": {
+                      "const": "run"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "result_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObjectReference"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "error": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Failure"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "accepted_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        },
+        "updated_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "schema_version",
+        "command_id",
+        "run_id",
+        "command_fingerprint",
+        "status",
+        "run_ref",
+        "result_refs",
+        "error",
+        "accepted_at",
+        "updated_at"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "rejected"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "error": {
+                "$ref": "#/$defs/Failure"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "error": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SnapshotEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "schema_version": {
+          "const": 2
+        },
+        "event_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "run_id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "state_sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "run_ref": {
+          "allOf": [
+            {
+              "$ref": "message.schema.json#/$defs/ObjectRef"
+            },
+            {
+              "properties": {
+                "object_type": {
+                  "const": "run"
+                }
+              }
+            }
+          ]
+        },
+        "occurred_at": {
+          "$ref": "common.schema.json#/$defs/Timestamp"
+        }
+      },
+      "required": [
+        "contract_version",
+        "schema_version",
+        "event_id",
+        "run_id",
+        "source_version",
+        "state_sequence",
+        "run_ref",
+        "occurred_at"
+      ]
+    },
+    "ErrorResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "code": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "legacy_read_url": {
+          "type": "string",
+          "pattern": "^/api/runs/[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 160
+        }
+      },
+      "required": [
+        "error",
+        "code"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "code": {
+                "const": "legacy_contract_incomplete"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          },
+          "then": {
+            "required": [
+              "legacy_read_url"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "legacy_read_url"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

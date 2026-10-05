@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "contract_version": "1.0.0",
+  "run_id": "run-example",
+  "message_id": "message-unknown-part",
+  "sequence": 3,
+  "source_version": 1,
+  "state_sequence": 2,
+  "role": "assistant",
+  "created_at": "2026-10-02T02:00:00Z",
+  "modes": {
+    "execution_mode": "temporal",
+    "decision_mode": "rules",
+    "delivery_mode": "local"
+  },
+  "parts": [
+    {
+      "part_id": "part-future",
+      "part_version": 1,
+      "type": "html",
+      "fallback_text": "当前阅读器不支持此 Part",
+      "html": "<button>确认</button>"
+    }
+  ]
+}

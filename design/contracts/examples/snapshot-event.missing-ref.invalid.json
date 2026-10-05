@@ -1,0 +1,9 @@
+{
+  "contract_version": "1.0.0",
+  "schema_version": 2,
+  "event_id": "snapshot_event_example_1",
+  "run_id": "run_intake_example_1",
+  "source_version": 1,
+  "state_sequence": 1,
+  "occurred_at": "2026-10-02T00:00:00Z"
+}

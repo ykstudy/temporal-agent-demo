@@ -1,0 +1,17 @@
+# 契约 1.4.0：原始消息、摘要来源与持久回执
+
+2026-10-04，按[ADR-051](../../../10-decisions/ADR-051-conversation-provenance.md)发布。三份Schema为完整发布源，schema_version仍为2。1.0–1.3及旧定义原字节保留；新定义3.3.0显式使用1.4.0。先通过文档检查，再实现S3；本发布不表示S3/S4已验收。
+
+ContextPolicy新增必需summary_prompt（完整内容和SHA256）、summary_output_schema（SummaryAdvice的发布源引用和文件SHA256），沿DefinitionSnapshot冻结。模型只建议items，每项包含来源message_id和连续原文excerpt；控制面验证片段确实存在于指定来源消息的text或只读fallback中，拒绝未登记来源和编造事实。含失败、阻塞、待确认信息的消息必须保留对应片段；不能以摘要改变阶段或批准。rules明确使用规则片段摘要。摘要输出和请求均受冻结预算限制，model失败不切rules。
+
+新SummaryAttempt记录每次成功、失败或重启后结果未知的生成尝试，含完整SummarySource、generator、真实model_usage（未知不填零）、成功summary_ref或失败码、服务端时间及attempt_hash。SummaryRecord保持原完整结构；新版本追加，previous_summary_ref准确引用上一版；源范围连续、最多256条，排除最近窗口。每批覆盖一个尚未压缩的连续范围；上下文从已登记摘要中按时间选择冻结summary_tokens预算内的最近完整记录，各条明确标记其原source和派生身份；历史source摘要仅作背景，不授予当前权限。原文和所有旧摘要仍保留可读，recent_messages是近期窗口上限。按完整请求UTF-8字节保守上界加冻结输出/协议预留执行预算；先移除窗口内较旧且非当前指令的完整消息，再移除最旧派生摘要，保留固定规则、权威事实及最近完整用户指令。实际入选message/summary引用登记在ContextRecord，原文与摘要历史均不改写。仅必要层仍超限才显式失败。ContextRecord新增必需summary_refs，绑定真正使用的摘要，不能从上下文文本反推引用。
+
+所有新Run从创建开始持久记录五类Part及HistoryEvent的真实source/state_sequence。原文文件是每个完整MessageEnvelope的JCS UTF-8字节加单个LF，按sequence递增；SummarySource.raw_jsonl_sha256只计算其连续行的实际字节。持久快照和原文用先落盘待提交快照、再追加并fsync原文、再原子提交快照的单写者协议。重启只根据已落盘待提交快照完成相同字节的剩余部分追加；冲突、未经待提交快照解释的尾部、丢失或改写均拒绝启动，不删除原文或猜测批准。
+
+ConversationAuditBundle是S3只读观察接口，包含完整messages、summaries、summary_attempts、command_receipts、history及transcript_sha256；不替代S4的RunSnapshot。GET `/api/runs/{run_id}/conversation-audit` 返回该对象；GET `/api/runs/{run_id}/transcript?first_sequence=N&last_sequence=N` 返回所指定的已提交连续原始JSONL行，Content-Type为application/x-ndjson；默认全范围，不使用分页游标。对象历史继续通过已发布精确引用读取。RunSnapshot增加summary_attempts；WorkflowCheckpoint.workflow_id允许Temporal实际的斜线分隔身份，execution_run_id仍为原Temporal执行身份。
+
+CommandReceipt以稳定command_id和完整请求JCS指纹持久化；S3 legacy命令入口以实际规范化Command为请求，S4 v2入口必须以实际完整wire请求为请求，二者不得混用指纹。每次提交归档完整RunSnapshot，回执run_ref绑定该次已落盘的准确快照；重放同一已处理命令返回原结果引用，异内容冲突。queued/result_unknown仅查询原身份，不能以换command_id重发外部写。终态回执不得改写成另一个业务结果；一次失败后显式重试可沿稳定命令身份保留输入并记录新尝试，旧尝试历史保留。
+
+新增hash规则：SummaryAttempt只排除attempt_hash；ConversationAuditBundle只排除audit_hash。其他对象沿既有规则，ContextRecord/RunSnapshot新字段自然进入完整hash。ObjectReference新增summary_attempt类型，以attempt_id/1/source_version/attempt_hash绑定；摘要及消息引用沿原规则。禁止给旧Run补造原始Part、HistoryEvent、SummaryAttempt或原文哈希；缺完整来源时v2返回409 legacy_contract_incomplete并保留legacy只读入口。
+
+验收分开登记：发布源及派生一致性、C11–C14结构和跨对象负例、原文追加/部分提交/损坏恢复、摘要失败保留/并发冻结/预算、CAN原文保持。完整v2传输、浏览器和live提供方仍需后续阶段证据。

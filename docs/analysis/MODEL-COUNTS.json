@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "domain": 9,
+    "feature": 45,
+    "adr": 47,
+    "invariant": 36
+  },
+  "entities": 137,
+  "relations": 529,
+  "checks": 15
+}

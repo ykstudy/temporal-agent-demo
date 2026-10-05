@@ -1,0 +1,133 @@
+{
+  "contract_version": "1.0.0",
+  "definition_id": "project_creation_agent",
+  "definition_version": "1.0.0",
+  "definition_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "supported_stacks": [
+    "golang"
+  ],
+  "available_skills": [
+    {
+      "skill_id": "add_database",
+      "skill_version": "1.0.0",
+      "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "skill_id": "add_auth",
+      "skill_version": "1.0.0",
+      "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "skill_id": "add_logging",
+      "skill_version": "1.0.0",
+      "skill_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "system_prompt": {
+    "content": "你是项目创建Agent。只提出结构化建议；不得批准、执行或声称完成。依据绑定定义和当前权威状态输出DecisionAdvice。",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "action_protocol": {
+    "model_output_schema": {
+      "schema_ref": "agent.schema.json#/$defs/DecisionAdvice",
+      "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "decision_proposal_schema": {
+      "schema_ref": "agent.schema.json#/$defs/DecisionProposal",
+      "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "action_validation_schema": {
+      "schema_ref": "agent.schema.json#/$defs/ActionValidation",
+      "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "execution_request_schema": {
+      "schema_ref": "agent.schema.json#/$defs/ExecutionRequest",
+      "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "allowed_actions": [
+      "scaffold",
+      "apply_skill",
+      "verify",
+      "create_repository",
+      "push_repository",
+      "trigger_ci",
+      "package"
+    ]
+  },
+  "default_ci": "gitlab_ci",
+  "repository_policy": {
+    "allowed_providers": [
+      "local",
+      "gitlab"
+    ],
+    "visibility": "private",
+    "required_ref": "main",
+    "require_explicit_namespace": true,
+    "overwrite_existing_unowned_project": false,
+    "unknown_write_policy": "block_and_reconcile_original_operation"
+  },
+  "context_policy": {
+    "max_tokens": 8000,
+    "recent_messages": 10,
+    "summary_tokens": 2000,
+    "output_reserve_tokens": 1800,
+    "protocol_reserve_tokens": 128,
+    "compression_threshold": 20,
+    "compression_unit": "message",
+    "summary_generation": "follow_decision_mode",
+    "summary_generator_version": "1.0.0"
+  },
+  "budget_policy": {
+    "max_commands": 256,
+    "max_model_attempts": 32,
+    "max_files": 128,
+    "max_artifact_bytes": 2097152,
+    "max_step_attempts": 3
+  },
+  "required_tools": [
+    {
+      "tool_id": "go",
+      "version": "go1.25.0",
+      "platform": "linux_amd64",
+      "binary_sha256": null
+    }
+  ],
+  "post_commands": [
+    {
+      "command_id": "go.mod_tidy",
+      "executable": "go",
+      "arguments": [
+        "mod",
+        "tidy"
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    },
+    {
+      "command_id": "go.test",
+      "executable": "go",
+      "arguments": [
+        "test",
+        "./..."
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    },
+    {
+      "command_id": "go.build",
+      "executable": "go",
+      "arguments": [
+        "build",
+        "./..."
+      ],
+      "cwd_scope": "run_workspace",
+      "environment_policy": "isolated",
+      "timeout_seconds": 720,
+      "max_attempts": 3
+    }
+  ]
+}

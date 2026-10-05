@@ -1,0 +1,68 @@
+{
+  "contract_version": "1.0.0",
+  "decision_id": "decision_example_1",
+  "run_id": "run_example_1",
+  "source_version": 1,
+  "state_sequence": 1,
+  "definition_snapshot_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "decision_mode": "rules",
+  "advice": {
+    "kind": "plan",
+    "question": null,
+    "plan": {
+      "contract_version": "1.0.0",
+      "project_name": "example-service",
+      "description": "结构教学例：本地创建Go服务。",
+      "tech_stack": "golang",
+      "selected_skills": [],
+      "template_dependencies": [
+        {
+          "template_id": "go_base",
+          "template_version": "1.0.0",
+          "files": [
+            {
+              "path": "cmd/server/main.go.tmpl",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "content_ref": {
+                "object_type": "template",
+                "object_id": "go_base_source",
+                "object_version": 1,
+                "source_version": 1,
+                "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+              }
+            }
+          ],
+          "manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "delivery_target": {
+        "provider": "local",
+        "destination": "run_package"
+      },
+      "plan_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "action": null,
+    "diagnosis": null,
+    "completion_hint": null,
+    "reason": "参数已规范化；此建议尚未批准或应用。"
+  },
+  "model_usage": {
+    "status": "not_applicable",
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "provider_request_id": null
+  },
+  "input_message_refs": [
+    {
+      "object_type": "message",
+      "object_id": "message_example_1",
+      "object_version": 1,
+      "source_version": 1,
+      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "input_context_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "decision_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "created_at": "2026-10-02T00:00:00Z"
+}

@@ -1,0 +1,53 @@
+# Node.js dependencies and Vue/TypeScript build output
+node_modules/
+/frontend/dist/
+*.tsbuildinfo
+
+# Local Go binaries and coverage output
+/backend/bin/
+/backend/server
+/backend/server.exe
+/backend/statebackup
+/backend/statebackup.exe
+/backend/**/*.test
+/backend/**/*.test.exe
+/backend/coverage.out
+/backend/coverage.html
+/backend/coverage/
+/frontend/coverage/
+/coverage/
+
+# Python bytecode and local virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Agent runtime data and local logs
+.data/
+*.log
+
+# Local verification attachments; keep source documents and summary reports
+/docs/evidence/**/*.png
+/docs/evidence/**/*.svg
+/docs/evidence/**/*.zip
+/docs/evidence/**/*.jsonl
+/docs/DESIGN-REFACTOR-OUTPUT.md
+
+# Local environment configuration; keep shareable examples and templates
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+
+# Operating-system metadata and editor scratch files
+.DS_Store
+._*
+.idea/
+*.swp
+*.swo
+*~

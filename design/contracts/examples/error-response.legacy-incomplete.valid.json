@@ -1,0 +1,5 @@
+{
+  "error": "旧记录缺少完整定义",
+  "code": "legacy_contract_incomplete",
+  "legacy_read_url": "/api/runs/run-example"
+}

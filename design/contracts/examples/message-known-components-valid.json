@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "contract_version": "1.0.0",
+  "run_id": "run-example",
+  "message_id": "message-known-components",
+  "sequence": 3,
+  "source_version": 1,
+  "state_sequence": 2,
+  "role": "assistant",
+  "created_at": "2026-10-02T02:00:00Z",
+  "modes": {
+    "execution_mode": "temporal",
+    "decision_mode": "rules",
+    "delivery_mode": "local"
+  },
+  "parts": [
+    {
+      "part_id": "part-clarify",
+      "part_version": 1,
+      "type": "component",
+      "fallback_text": "只读组件摘要",
+      "component_id": "cmp-part-clarify",
+      "component_version": 1,
+      "component_type": "clarification",
+      "component_schema": "urn:agentstudio:component:clarification:1.0.0",
+      "payload": {
+        "question": "请选择项目名",
+        "field_ids": [
+          "project-name"
+        ]
+      }
+    },
+    {
+      "part_id": "part-proposal",
+      "part_version": 1,
+      "type": "component",
+      "fallback_text": "只读组件摘要",
+      "component_id": "cmp-part-proposal",
+      "component_version": 1,
+      "component_type": "proposal_diff",
+      "component_schema": "urn:agentstudio:component:proposal_diff:1.0.0",
+      "payload": {
+        "proposal_ref": {
+          "object_type": "proposal",
+          "object_id": "proposal-example",
+          "object_version": 1,
+          "source_version": 1,
+          "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "summary": "未应用提案",
+        "changed_paths": [
+          "README.md"
+        ]
+      }
+    },
+    {
+      "part_id": "part-manifest",
+      "part_version": 1,
+      "type": "component",
+      "fallback_text": "只读组件摘要",
+      "component_id": "cmp-part-manifest",
+      "component_version": 1,
+      "component_type": "artifact_manifest",
+      "component_schema": "urn:agentstudio:component:artifact_manifest:1.0.0",
+      "payload": {
+        "manifest_ref": {
+          "object_type": "manifest",
+          "object_id": "manifest-example",
+          "object_version": 1,
+          "source_version": 1,
+          "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "artifact_count": 13,
+        "summary": "完整清单按引用读取"
+      }
+    },
+    {
+      "part_id": "part-verification",
+      "part_version": 1,
+      "type": "component",
+      "fallback_text": "只读组件摘要",
+      "component_id": "cmp-part-verification",
+      "component_version": 1,
+      "component_type": "verification_report",
+      "component_schema": "urn:agentstudio:component:verification_report:1.0.0",
+      "payload": {
+        "report_ref": {
+          "object_type": "verification_report",
+          "object_id": "report-example",
+          "object_version": 1,
+          "source_version": 1,
+          "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "result": "not_ready",
+        "summary": "本条是读取引用，不是完成门判定"
+      }
+    }
+  ]
+}

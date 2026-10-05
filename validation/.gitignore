@@ -1,0 +1,5 @@
+# Local scenario reports, generated workspaces, and launcher state
+/reports/
+
+# Isolated JSON Schema validation environment
+/.contract-env/
